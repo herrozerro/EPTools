@@ -1,40 +1,44 @@
-﻿<h3>Creature Tempalte</h3>
+﻿@inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
+<h3>Creature Template</h3>
+
+@foreach (var item in templates)
+    {
+    <button @onclick="() => ResetTemplate(item.TemplateName)">@(item.TemplateName)</button>
+    }
 
 <textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
 
 <div class='entity creature'>
-    @((MarkupString)ParseInput(MyText))
+    @if (MyText == null)
+    {
+        <span>Loading</span>
+    }
+    else
+    {
+        @((MarkupString)ParseInput(MyText))
+    }
+
 </div>
 
 @code {
 
-    public string MyText
+    private string MyText
     {
         get; set;
     }
 
-    protected override void OnInitialized()
+    private List<EPTools.Blazor.Models.StatBlockTemplate> templates { get; set; } = new List<Models.StatBlockTemplate>();
+
+    private void ResetTemplate(string Name)
     {
-        MyText = @"Stress Test: SV 1d6 – 2
---
-Initiative: 7, Fray: 50, AV: 4/10 Light Armor Vest
-WT: 7, DUR: 35, DR: 53 (or as morph)
-Threat Pool: 3
---
-Eelware: 65, DV 1d6, shock effect, touch-only
-Psychic Stab: 70, DV 2d10 ▶285
---
-Perceive: 50 (60)
-Move: Walker (Medium 4/20)
-COG: 15^45 INT: 20^60 REF: 15^45 SAV: 20^60 SOM: 10^30 WIL: 15^45
-Skills: Athletics 40, Deceive 60 (70), Free Fall 40, Guns 45, Infiltrate 60, Kinesics 50 (60), Melee 45, Persuade 55, Provoke 50, Psi 70
---
-Ware: Biomods, Cortical Stack, Eelware, Mesh Inserts
-Traits: Mental Disorder (Choose Two), Psi (Level Two)
---
-Notes: Stats above assume an exalt morph; adjust as appropriate.
-Psi-Chi Sleights: Heightened Awareness, Scramble, Superior Kinesics; adjust as needed
-Psi-Gamma Sleights: Deep Scan, Illusion, Psychic Stab, Sense Infection, Subliminal; adjust as needed";
+        MyText = templates.First(x => x.TemplateName == Name).Template;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        templates = await templatesService.GetStatBlockTemplates();
+
+        MyText = templates.First().Template;
     }
 
     private string ParseInput(string str)
