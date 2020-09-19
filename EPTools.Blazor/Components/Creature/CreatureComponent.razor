@@ -1,0 +1,81 @@
+﻿<h3>Creature Tempalte</h3>
+
+<textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
+
+<div class='entity creature'>
+    @((MarkupString)ParseInput(MyText))
+</div>
+
+@code {
+
+    public string MyText
+    {
+        get; set;
+    }
+
+    protected override void OnInitialized()
+    {
+        MyText = @"Stress Test: SV 1d6 – 2
+--
+Initiative: 7, Fray: 50, AV: 4/10 Light Armor Vest
+WT: 7, DUR: 35, DR: 53 (or as morph)
+Threat Pool: 3
+--
+Eelware: 65, DV 1d6, shock effect, touch-only
+Psychic Stab: 70, DV 2d10 ▶285
+--
+Perceive: 50 (60)
+Move: Walker (Medium 4/20)
+COG: 15^45 INT: 20^60 REF: 15^45 SAV: 20^60 SOM: 10^30 WIL: 15^45
+Skills: Athletics 40, Deceive 60 (70), Free Fall 40, Guns 45, Infiltrate 60, Kinesics 50 (60), Melee 45, Persuade 55, Provoke 50, Psi 70
+--
+Ware: Biomods, Cortical Stack, Eelware, Mesh Inserts
+Traits: Mental Disorder (Choose Two), Psi (Level Two)
+--
+Notes: Stats above assume an exalt morph; adjust as appropriate.
+Psi-Chi Sleights: Heightened Awareness, Scramble, Superior Kinesics; adjust as needed
+Psi-Gamma Sleights: Deep Scan, Illusion, Psychic Stab, Sense Infection, Subliminal; adjust as needed";
+    }
+
+    private string ParseInput(string str)
+    {
+        var sb = new System.Text.StringBuilder();
+        var splits = str.Split(Environment.NewLine);
+
+        foreach (var item in splits)
+        {
+            if (item.StartsWith("--"))
+            {
+                sb.Append("<div class='divider'><div class='hex'><span>&#x2B22;</span></div></div>");
+            }
+            else
+            {
+                sb.Append("<div class='section'>");
+
+                var newstring = item;
+
+                var SuperScript = new System.Text.RegularExpressions.Regex(@"(\^\w{0,3})");
+                var FirstBold = new System.Text.RegularExpressions.Regex(@"(^.{0,20}?:)");
+                var GeneralBold = new System.Text.RegularExpressions.Regex(@"(\w{0,20}?:)");
+
+                newstring = SuperScript.Replace(newstring, "<sup>$1</sup>");
+                newstring = newstring.Replace("^", "");
+                newstring = FirstBold.Replace(newstring, "<b>$1</b>");
+
+                if (GeneralBold.Matches(newstring).Count > 1)
+                {
+                    foreach (var match in GeneralBold.Matches(newstring).Skip(1).Reverse())
+                    {
+                        newstring = newstring.Replace(match.Index, match.Length, $"<b>{match.Value}</b>");
+                    }
+                }
+                sb.AppendLine(newstring);
+                sb.Append("</div>");
+            }
+
+
+        }
+
+        return sb.ToString();
+    }
+}
