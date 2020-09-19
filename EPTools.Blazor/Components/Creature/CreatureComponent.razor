@@ -1,10 +1,13 @@
 ﻿@inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
 <h3>Creature Template</h3>
 
-@foreach (var item in templates)
+<div>
+    @foreach (var item in templates)
     {
-    <button @onclick="() => ResetTemplate(item.TemplateName)">@(item.TemplateName)</button>
+        <button @onclick="() => ResetTemplate(item.TemplateName)">@(item.TemplateName)</button>
     }
+</div>
+
 
 <textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
 
