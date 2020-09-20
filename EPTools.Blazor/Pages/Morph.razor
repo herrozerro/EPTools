@@ -1,0 +1,97 @@
+﻿@page "/Morph"
+@inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
+
+<h3>Morph</h3>
+
+<div>
+    @foreach (var item in templates)
+    {
+        <button @onclick="() => ResetTemplate(item.TemplateName)">@(item.TemplateName)</button>
+    }
+</div>
+
+
+<textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
+
+<div class='entity morph'>
+    @if (MyText == null)
+    {
+        <span>Loading</span>
+    }
+    else
+    {
+        @((MarkupString)ParseInput(MyText))
+    }
+
+</div>
+
+@code {
+
+    private string MyText
+    {
+        get; set;
+    }
+
+    private List<EPTools.Blazor.Models.StatBlockTemplate> templates { get; set; } = new List<Models.StatBlockTemplate>();
+
+    private void ResetTemplate(string Name)
+    {
+        MyText = templates.First(x => x.TemplateName == Name).Template;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        templates = await templatesService.GetStatBlockTemplates();
+
+        templates = templates.Where(x => x.TemplateType == "Morph").ToList();
+
+        MyText = templates.First().Template;
+    }
+
+    private string ParseInput(string str)
+    {
+        var sb = new System.Text.StringBuilder();
+        var splits = str.Split(Environment.NewLine);
+        var i = 0;
+
+
+        foreach (var item in splits)
+        {
+            if (item.StartsWith("--"))
+            {
+                sb.Append("<div class='divider'><div class='hex'><span>&#x2B22;</span></div></div>");
+            }
+            else
+            {
+                var s = i == 0 ? "headerright" : "";
+                sb.Append($"<div class='section {s}'>");
+
+                var newstring = item;
+
+                var SuperScript = new System.Text.RegularExpressions.Regex(@"(\^\w{0,3})");
+                var FirstBold = new System.Text.RegularExpressions.Regex(@"(^.{0,20}?:)");
+                var GeneralBold = new System.Text.RegularExpressions.Regex(@"(\w{0,20}?:)");
+
+                newstring = SuperScript.Replace(newstring, "<sup>$1</sup>");
+                newstring = newstring.Replace("^", "");
+                newstring = FirstBold.Replace(newstring, "<b>$1</b>");
+
+                if (GeneralBold.Matches(newstring).Count > 1)
+                {
+                    foreach (var match in GeneralBold.Matches(newstring).Skip(1).Reverse())
+                    {
+                        newstring = newstring.Replace(match.Index, match.Length, $"<b>{match.Value}</b>");
+                    }
+                }
+                sb.AppendLine(newstring);
+                sb.Append("</div>");
+            }
+
+            i++;
+
+        }
+
+        return sb.ToString();
+    }
+}
+

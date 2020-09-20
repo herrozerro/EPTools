@@ -1,4 +1,5 @@
-﻿@inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
+﻿@page "/creature"
+@inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
 <h3>Creature Template</h3>
 
 <div>
@@ -40,6 +41,8 @@
     protected override async Task OnInitializedAsync()
     {
         templates = await templatesService.GetStatBlockTemplates();
+
+        templates = templates.Where(x => x.TemplateType == "Creature").ToList();
 
         MyText = templates.First().Template;
     }
