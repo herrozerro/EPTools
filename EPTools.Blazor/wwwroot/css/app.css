@@ -222,11 +222,29 @@ sup {
     width: 390px;
 }
 
+.creature .hex {
+    position: relative;
+    left: -199px;
+    top: -198px;
+    z-index: 0;
+    transform: rotate(-90deg);
+    color: #F66969;
+    font-size: 20px;
+}
+
 .morph {
     width: 230px;
 }
 
-
+.morph .hex {
+    position: relative;
+    left: -117px;
+    top: -118px;
+    z-index: 0;
+    transform: rotate(-90deg);
+    color: #F66969;
+    font-size: 20px;
+}
 
 .section {
     text-indent: -26px;
@@ -238,15 +256,7 @@ sup {
     text-align: right;
 }
 
-.hex {
-    position: relative;
-    left: -199px;
-    top: -198px;
-    z-index: 0;
-    transform: rotate(-90deg);
-    color: #F66969;
-    font-size: 20px;
-}
+
 
 .divider {
     position: relative;
