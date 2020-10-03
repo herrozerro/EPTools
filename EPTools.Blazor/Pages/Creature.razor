@@ -12,16 +12,19 @@
 
 <textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
 
-<div class='entity creature'>
-    @if (MyText == null)
-    {
-        <span>Loading</span>
-    }
-    else
-    {
-        @((MarkupString)ParseInput(MyText))
-    }
+<div>
+    <div class="creature name">@(GetCreatureName(MyText ?? ""))</div>
+    <div class='entity creature'>
+        @if (MyText == null)
+        {
+            <span>Loading</span>
+        }
+        else
+        {
+            @((MarkupString)ParseInput(MyText))
+        }
 
+    </div>
 </div>
 
 @code {
@@ -54,6 +57,10 @@
 
         foreach (var item in splits)
         {
+            if (item.ToLower().StartsWith("name:"))
+            {
+                continue;
+            }
             if (item.StartsWith("--"))
             {
                 sb.Append("<div class='divider'><div class='hex'><span>&#x2B22;</span></div><div class='hex2'><span>&#x2B22;</span></div></div>");
@@ -87,5 +94,23 @@
         }
 
         return sb.ToString();
+    }
+
+    private string GetCreatureName(string str)
+    {
+        var sb = new System.Text.StringBuilder();
+        var splits = str.Split(Environment.NewLine);
+
+
+        foreach (var item in splits)
+        {
+            if (item.ToLower().StartsWith("name:"))
+            {
+                return item.Split(':').Last().Trim();
+            }
+
+        }
+
+        return "";
     }
 }
