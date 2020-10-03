@@ -14,21 +14,31 @@
 
 <textarea rows="10" cols="54" id="text" @bind-value="MyText" @bind-value:event="oninput" />
 
-<div class='entity morph'>
-    @if (MyText == null)
-    {
-        <span>Loading</span>
-    }
-    else
-    {
-        @((MarkupString)ParseInput(MyText))
-    }
+<div>
+    <div class="entity">@(GetMorphName(MyText ?? ""))</div>
+    <div class='entity morph'>
 
+        @if (MyText == null)
+        {
+            <span>Loading</span>
+        }
+        else
+        {
+            @((MarkupString)ParseInput(MyText))
+        }
+
+    </div>
 </div>
+
 
 @code {
 
     private string MyText
+    {
+        get; set;
+    }
+
+    private string MorphName
     {
         get; set;
     }
@@ -60,9 +70,14 @@
 
         foreach (var item in splits)
         {
+            if (item.ToLower().StartsWith("morphname:"))
+            {
+                MorphName = item.Split(':').Last().Trim();
+                continue;
+            }
             if (item.StartsWith("--"))
             {
-                sb.Append("<div class='divider'><div class='hex'><span>&#x2B22;</span></div></div>");
+                sb.Append("<div class='divider'><div class='hex'><span>&#x2B22;</span></div><div class='hex2'><span>&#x2B22;</span></div></div>");
             }
             else
             {
@@ -95,6 +110,24 @@
         }
 
         return sb.ToString();
+    }
+
+    private string GetMorphName(string str)
+    {
+        var sb = new System.Text.StringBuilder();
+        var splits = str.Split(Environment.NewLine);
+
+
+        foreach (var item in splits)
+        {
+            if (item.ToLower().StartsWith("morphname:"))
+            {
+                return item.Split(':').Last().Trim();
+            }
+
+        }
+
+        return "";
     }
 }
 

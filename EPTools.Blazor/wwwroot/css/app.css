@@ -192,7 +192,7 @@ app {
 
 
 .entity {
-    border: black 1px solid;
+    border: black 2px solid;
     display: block;
     margin-left: 10px;
     background-color: #E4D2BA;
@@ -222,29 +222,49 @@ sup {
     width: 390px;
 }
 
-.creature .hex {
-    position: relative;
-    left: -199px;
-    top: -198px;
-    z-index: 0;
-    transform: rotate(-90deg);
-    color: #F66969;
-    font-size: 20px;
-}
+    .creature .hex {
+        position: relative;
+        left: -198px;
+        top: -197px;
+        z-index: 0;
+        transform: rotate(-90deg);
+        color: #F66969;
+        font-size: 20px;
+    }
+
+    .creature .hex2 {
+        position: relative;
+        left: -198px;
+        top: -229px;
+        z-index: -1;
+        transform: rotate(-90deg);
+        color: #000000;
+        font-size: 25px;
+    }
 
 .morph {
     width: 230px;
 }
 
-.morph .hex {
-    position: relative;
-    left: -117px;
-    top: -118px;
-    z-index: 0;
-    transform: rotate(-90deg);
-    color: #F66969;
-    font-size: 20px;
-}
+    .morph .hex {
+        position: relative;
+        left: -116px;
+        top: -117px;
+        z-index: 0;
+        transform: rotate(-90deg);
+        color: #F66969;
+        font-size: 20px;
+    }
+
+    .morph .hex2 {
+        position: relative;
+        left: -116px;
+        top: -149px;
+        z-index: -1;
+        transform: rotate(-90deg);
+        color: #000000;
+        font-size: 25px;
+    }
 
 .section {
     text-indent: -26px;
