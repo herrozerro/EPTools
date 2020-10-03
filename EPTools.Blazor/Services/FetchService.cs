@@ -20,5 +20,10 @@ namespace EPTools.Blazor.Services
         {
             return await httpClient.GetFromJsonAsync<T>($"data/{filename}.json");
         }
+
+        public async Task<T> GetTFromEPFileAsync<T> (string filename)
+        {
+            return await httpClient.GetFromJsonAsync<T>($"data/EP-Data/{filename}.json");
+        }
     }
 }

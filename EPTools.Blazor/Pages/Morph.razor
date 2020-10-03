@@ -1,5 +1,6 @@
 ﻿@page "/Morph"
 @inject EPTools.Blazor.Services.StatBlockTemplateService templatesService
+@inject EPTools.Blazor.Services.EPDataService dataService
 
 <h3>Morph</h3>
 
@@ -46,6 +47,8 @@
         templates = templates.Where(x => x.TemplateType == "Morph").ToList();
 
         MyText = templates.First().Template;
+
+        var morphs = dataService.GetMorphs();
     }
 
     private string ParseInput(string str)
