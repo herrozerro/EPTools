@@ -195,7 +195,7 @@ app {
     border: black 2px solid;
     display: block;
     margin-left: 10px;
-    background-color: #E4D2BA;
+    background-color: #EADDD9;
 }
 
     .entity::after {
@@ -228,18 +228,18 @@ sup {
         top: -197px;
         z-index: 0;
         transform: rotate(-90deg);
-        color: #F66969;
+        color: #B5827A;
         font-size: 20px;
     }
 
     .creature .hex2 {
         position: relative;
         left: -198px;
-        top: -229px;
+        top: -228px;
         z-index: -1;
         transform: rotate(-90deg);
         color: #000000;
-        font-size: 25px;
+        font-size: 23px;
     }
 
 .morph {
@@ -252,23 +252,23 @@ sup {
         top: -117px;
         z-index: 0;
         transform: rotate(-90deg);
-        color: #F66969;
+        color: #B5827A;
         font-size: 20px;
     }
 
     .morph .hex2 {
         position: relative;
         left: -116px;
-        top: -149px;
+        top: -148px;
         z-index: -1;
         transform: rotate(-90deg);
         color: #000000;
-        font-size: 25px;
+        font-size: 23px;
     }
 
 .name {
     font-weight: bold;
-    color: maroon;
+    color: #822A39;
     text-shadow: 0px 2px white;
     text-align: right;
     margin-bottom: -6px;
