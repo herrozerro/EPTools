@@ -27,11 +27,9 @@ jobs:
     - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
       run: sed -i 's/<base href="\/" \/>/<base href="\/EPTools\/" \/>/g' release/wwwroot/index.html
       
-    # Generate the website
-    - name: Publish
-      run: |
-          cp release/wwwroot/index.html release/wwwroot/404.html
-          dotnet publish myapp.csproj --configuration Release
+    # Add 404 handler
+    - name: Copy index to 404
+      run: cp release/wwwroot/index.html release/wwwroot/404.html
       
     # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
     - name: Add .nojekyll file
