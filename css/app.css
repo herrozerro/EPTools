@@ -192,7 +192,7 @@ app {
 
 
 .entity {
-    border: black 2px solid;
+    border-left: black 2px solid;
     display: block;
     margin-left: 10px;
     background-color: #EADDD9;
@@ -279,13 +279,13 @@ sup {
     text-indent: -26px;
     padding-left: 26px;
     font-size: small;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .headerright {
     text-align: right;
 }
-
-
 
 .divider {
     position: relative;
