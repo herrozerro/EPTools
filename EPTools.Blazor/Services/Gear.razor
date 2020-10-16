@@ -1,0 +1,30 @@
+﻿@page "/Gear"
+@inject EPDataService epData;
+
+<h3>Gear</h3>
+
+@if (gearWares == null)
+{
+    <span>Loading...</span>
+}
+else
+{
+    var gwGroups = gearWares.GroupBy(x => x.subcategory).OrderBy(x => x.Key);
+    foreach (var group in gwGroups)
+    {
+        <EPTools.Blazor.Components.WareComponent Title="@group.Key" GearWares="@group.ToList()"></EPTools.Blazor.Components.WareComponent>
+    }
+}
+
+
+@code {
+
+    private List<EPTools.Blazor.Models.GearWare> gearWares { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        gearWares = await epData.GetGearWare();
+
+
+    }
+}

@@ -1,0 +1,40 @@
+﻿<h5>@Title</h5>
+
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Cmp/GP</td>
+            <td>Bio</td>
+            <td>Cyber</td>
+            <td>Hard</td>
+            <td>Mesh</td>
+            <td>Nano</td>
+            <td>Summary</td>
+        </tr>
+        
+    </thead>
+    @foreach (var ware in GearWares)
+    {
+        <tr>
+            <td>@ware.name</td>
+            <td>@ware.complexity</td>
+            <td>@(ware.bioware ? "X" : "")</td>
+            <td>@(ware.cyberware ? "X" : "")</td>
+            <td>@(ware.hardware ? "X" : "")</td>
+            <td>@(ware.meshware ? "X" : "")</td>
+            <td>@(ware.nanoware ? "X" : "")</td>
+            <td>@ware.summary</td>
+        </tr>
+    }
+</table>
+
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public List<EPTools.Blazor.Models.GearWare> GearWares { get; set; }
+}

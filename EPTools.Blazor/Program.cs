@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using EPTools.Blazor.Services;
+using Blazored.Modal;
 
 namespace EPTools.Blazor
 {
@@ -18,6 +19,7 @@ namespace EPTools.Blazor
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
 
+            builder.Services.AddBlazoredModal();
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
             builder.Services.AddScoped<FetchService>();
             builder.Services.AddScoped<StatBlockTemplateService>();
