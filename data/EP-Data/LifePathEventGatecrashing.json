@@ -1,0 +1,1559 @@
+[
+  {
+    "Name": "You go on 1d10 gatecrashing missions, with no major consequences. You do see some cool things, though.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "You go on 1d10 gatecrashing missions, with no major consequences. You do see some cool things, though.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You serve on 1d10 missions. +10 Know: Exoplanets skill.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Exoplanets",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You serve on 1d10 missions and are considered reliable. +10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make a new home on Portal or some other exoplanet outpost.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "You make a new home on Portal or some other exoplanet outpost.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You go through a gate but never come through on the other side. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You receive some focused training in gate operations. Gain the Interface (Pandora Gates) specialization.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You receive some focused training in gate operations. Gain the Interface (Pandora Gates) specialization.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You acquire an alien pet. You’re not allowed to bring it back to the Solar System, however. Work with the GM to determine the creature’s characteristics.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You acquire an alien pet. You’re not allowed to bring it back to the Solar System, however. Work with the GM to determine the creature’s characteristics.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find an alien artifact, but they didn’t let you keep it. Gain the Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Another person on your mission turns out to be an async who does not handle the gate experience well. Gain the Psi Vulnerability (Level 2) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi Vulnerability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission backers upgrade/downgrade your capabilities. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in some eye-opening research. +10 Know: Astrobiology.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Astrobiology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help establish several new colonies without major incident. Gain 1 ego Flex.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You disappear on a mission and are never found. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You only go on a few gate ops, but they are all notable. +20 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are lucky to be one of the few to experiment with the alien communication devices on the exoplanet Giza (EP2) before access to it is lost. You learned something in your chat with an alleged alien that you have not shared with anyone else.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You are lucky to be one of the few to experiment with the alien communication devices on the exoplanet Giza (EP2) before access to it is lost. You learned something in your chat with an alleged alien that you have not shared with anyone else.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission encounters an exsurgent threat, and you help a secretive group called Firewall deal with. +10 i-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A mission goes horribly wrong, and the aftermath haunts you. Gain the Mental Disorder (PTSD) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "PTSD",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "PTSD",
+          "Type": "Disorder",
+          "Description": "PTSD",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You receive some focused training in gate address controls. Gain the Program (Pandora Gates) specialization.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You receive some focused training in gate address controls. Gain the Program (Pandora Gates) specialization.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You join a semi-successful colonization effort for a year. +10 to a Know skill with a Professional Training field of your choice.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Professional Training",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You uncover evidence of a previously unknown but long-dead alien race. +10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your crasher teams encounters a trap left by the TITANs. Gain the Sensitive (Level 2) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sensitive",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After a successful op, you are rewarded with a free hazardous recovery bond (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "After a successful op, you are rewarded with a free hazardous recovery bond (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You severely botch a rescue operation. Lives are lost and stacks are not recovered. −10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After a successful op, you are rewarded with 2 minutes of gate time at the Vulcanoid Gate.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "After a successful op, you are rewarded with 2 minutes of gate time at the Vulcanoid Gate.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience something while going through a gate that makes you never want to go through again. Gain the Mental Disorder (Phobia: Pandora Gates) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Phobia",
+          "Type": "Disorder",
+          "Description": "Pandora Gates",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Phobia: Pandora Gates",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in a dangerous rescue operation. +10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You receive some focused training about the gates themselves. +10 Know: Pandora Gates.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Pandora Gates",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You come into possession of your very own blue box (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You come into possession of your very own blue box (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help smuggle back samples of an alien plant that a cartel wants to synthesize a new drug. +10 g-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You claim salvage on an abandoned dwarf bot (EP2) and repair it. It now follows you like a loyal dog.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You claim salvage on an abandoned dwarf bot (EP2) and repair it. It now follows you like a loyal dog.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission is sabotaged by an unknown party. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You step through a gate and arrive somewhere other than you expected. Your jaunt is adventurous, but you make it back safe. +10 Survival skill.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You receive some focused training in archeological missions. +10 Know: Xeno-archeology.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Xeno-archeology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Post-mission, you vacation at the scum settlement Carnivale, known for its psychoactive xenoflora. +10 Know: Drugs.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Drugs",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You end up in the middle of an exoplanet property-claim dispute. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in a rescue op that cashes in on a sizable recovery bond. Gain the Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience something while passing through a gate that still haunts you. Gain the Mental Disorder (Cosmic Anxiety) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Cosmic Anxiety",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Anxiety",
+          "Type": "Disorder",
+          "Description": "Cosmic Anxiety",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with a group of neo-synergists and are invited to join their group mind. Gain a hypermesh link if you choose.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You work with a group of neo-synergists and are invited to join their group mind. Gain a hypermesh link if you choose.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You financially contribute to a mission that goes bust. Lose 1 level of Resources trait. If you lack Resources, lose 10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You financially contribute to a mission that goes bust. Lose 1 level of Resources trait. If you lack Resources, lose 10 x-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission sponsor requires mandatory psychosurgery. Gain the Restricted Behavior (Level 2) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Restricted Behavior",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with a multicultural crew. Gain a language (your choice or roll on the Random Language table).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathNativeTongue",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You intern on a project that studies alien relics. +10 Know: Xenotech.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Xenotech",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You accidentally destroy some very expensive equipment belonging to some shady people. Gain the Debt trait.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Debt",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find a stash of alien artifacts, but keep it secret and hidden. You hope to get back some day, but the destination is now restricted.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You find a stash of alien artifacts, but keep it secret and hidden. You hope to get back some day, but the destination is now restricted.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You exit a gate onto an unexpected and hostile destination. You manage to survive for a week, but when the gate re-activates and you pass through, you find you have only been gone for a few seconds. +10 Survival.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You survive a lengthy gatehopping adventure. +10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission encounters hostile xeno-life and you take care of the injured. +10 Medicine: Paramedic.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover the hard way that alien critters really squick you out. Gain the Stress Vulnerability (Alien Life).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stress Vulnerability",
+          "Type": "Trait",
+          "Description": "Alien Life",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You put in several months of grueling work on a terraforming project. +10 Know: Terraforming.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Terraforming",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pass through a gate and come out … changed. Gain the Psi (Level 1) trait and one psi-chi sleight (pick or roll randomly on the Sleights table).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsChi",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You only gatecrash once and it is uneventful. Six months later, however, you find yourself expressing new abilities. Gain the Psi (Level 2) trait and one psi-gamma sleight (pick or roll randomly on the Sleights table).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsGamma",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work a mission that is recorded and released as a moderately successful XP. +10 f-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You don’t return from a mission, and the details are sealed by someone powerful. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover a new xenocritter and its unique predatory capabilities. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience something while passing through a gate that still haunts you. Gain the Instability (Level 2) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Instability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are recruited to help the science team. +10 Research skill.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mission scores a major resource find. Gain the Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You bring supplies to a new colony, but the gate fails to re-establish a new connection for 6 months. By the time you are rescued, everyone hates each other. −10 x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "XRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in a mission that gathers useful scientific data but loses a lot of money. +10 r-rep but −10 c-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find something interesting, but the details are forcibly erased from your mind. Gain the Edited Memories trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "While gatecrashing, you encounter and rescue a team from a rival faction. +10 to a rep score you don’t have.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "While gatecrashing, you encounter and rescue a team from a rival faction. +10 to a rep score you don’t have.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You join a mission that sees contention between rival inner and outer system gatecrasher teams. Choose a side. +10 to either @-rep or c-rep, and −10 to the other.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You join a mission that sees contention between rival inner and outer system gatecrasher teams. Choose a side. +10 to either @-rep or c-rep, and −10 to the other.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You interact with a lot of xenocritters. +10 Exotic Skill: Animal Handling.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exotic Skill: Animal Handling",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You go on several long but boring gate ops, but you do pick up another language from one of your teammates. Gain 1 language, your choice or roll on the Random Language table.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathNativeTongue",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You accidentally expose a xenocritter smuggling ring. −10 g-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You join a rescue mission that fails spectacularly. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Hostility erupts between your team and a group of scientists along for the mission. −10 r-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You score a severely battered but functional standard hardsuit (EP2) as salvage.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You score a severely battered but functional standard hardsuit (EP2) as salvage.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You sign up for field testing and are assigned a whiplash exomorph.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Whiplash",
+          "Type": "Morph",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You step through a gate and find yourself not on the expected exoplanet, but floating in space. You manage to catch and pull yourself back through, but you swear you saw something that looked like a Factor ship on the other side …",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You step through a gate and find yourself not on the expected exoplanet, but floating in space. You manage to catch and pull yourself back through, but you swear you saw something that looked like a Factor ship on the other side …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Someone anonymously sends you a map of an exoplanet that claims to show the location of a cache of alien technology. However, as far as you can tell, the exoplanet does not show up in official listings …",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Someone anonymously sends you a map of an exoplanet that claims to show the location of a cache of alien technology. However, as far as you can tell, the exoplanet does not show up in official listings …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You rescue a lost gatecrasher and cash in on their recovery bond. Gain the Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in a colony mission that ends in disaster. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover left-behind TITAN machines. They are displeased. Roll on the Random Morph tables.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After 1d10 missions, you’ve gotten a lot of exoplanet hiking in. +10 Athletics.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Athletics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate on an op that makes a scientific discovery. +10 r-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are placed on a mission that is intended to be a reality XP hit, but things go badly sideways. −10 f-rep or x-rep.",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You are placed on a mission that is intended to be a reality XP hit, but things go badly sideways. −10 f-rep or x-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You come into possession of an Iktomi dream shell (EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You come into possession of an Iktomi dream shell (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your passage through a gate inflicts a number of false memories upon you. Gain the Mental Disorder (Paramnesia) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventGatecrashing",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Paramnesia",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Paramnesia",
+          "Type": "Disorder",
+          "Description": "Paramnesia",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

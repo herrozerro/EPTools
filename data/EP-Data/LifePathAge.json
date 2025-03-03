@@ -1,0 +1,237 @@
+[
+  {
+    "Name": "In your 20s",
+    "Type": "BackgroundAge",
+    "Description": "In your 20s. Do not roll on Step 7: Pre-Fall event table. Skip Directly to Step 8.",
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": [
+      [
+        {
+          "Name": "Skip Prefall",
+          "Type": "Skip",
+          "Description": "Skip Prefall",
+          "Value": 7,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "In your 20s",
+          "Type": "Age",
+          "Description": "In your 20s",
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 30s",
+    "Type": "BackgroundAge",
+    "Description": "In your 30s. Proceed to Step 7.",
+    "Value": 0,
+    "Weight": 30,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 30s",
+          "Type": "Age",
+          "Description": "In your 30s",
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 40s",
+    "Type": "BackgroundAge",
+    "Description": "In your 40s. Proceed to Step 7.",
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 40s",
+          "Type": "Age",
+          "Description": "In your 40s",
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 50s",
+    "Type": "BackgroundAge",
+    "Description": "In your 50s. Proceed to Step 7.",
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 50s",
+          "Type": "Age",
+          "Description": "In your 50s",
+          "Value": 50,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 60s",
+    "Type": "BackgroundAge",
+    "Description": "In your 60s. Roll on the 6.1 Advanced Age table with a +3 modifier then proceed to Step 7.",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 60s",
+          "Type": "Age",
+          "Description": "In your 60s",
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 3,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 70s",
+    "Type": "BackgroundAge",
+    "Description": "In your 70s. Roll on the 6.1 Advanced Age table with a +2 modifier then proceed to Step 7.",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 70s",
+          "Type": "Age",
+          "Description": "In your 70s",
+          "Value": 70,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 80s",
+    "Type": "BackgroundAge",
+    "Description": "In your 80s. Roll on the Advanced Age table with a +1 modifier then proceed to Step 7.",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 80s",
+          "Type": "Age",
+          "Description": "In your 80s",
+          "Value": 80,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In your 90s",
+    "Type": "BackgroundAge",
+    "Description": "In your 90s. Roll on the Advanced Age table then proceed to Step 7.",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "In your 90s",
+          "Type": "Age",
+          "Description": "In your 90s",
+          "Value": 90,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Over 100 years (up to 130)",
+    "Type": "BackgroundAge",
+    "Description": "Over 100 years (up to 130). Roll on the Advanced Age table twice.",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Over 100 years ",
+          "Type": "Age",
+          "Description": "Over 100 years ",
+          "Value": 90,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "LifePathAdvancedAge",
+          "Type": "Table",
+          "Description": "LifePathAdvancedAge",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

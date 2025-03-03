@@ -545,7 +545,7 @@
     "subcategory": "Armor Mods",
     "name": "Shock",
     "energy": "Proof",
-    "kinetic": "+0 +0",
+    "kinetic": "+0",
     "complexity": "Min/1",
     "notes": "+20 to SOM Checks vs. shock.",
     "description": "<p>Shock proof mods are electronically insulated to discharge and reduce the effect of shock weapons. Apply a +20 modifier to SOM Checks made to resist shock effects.</p>",

@@ -1,0 +1,466 @@
+[
+  {
+    "Name": "Accounting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Administration",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Asteroid Mining",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Banking",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Biodesign",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Body Bank Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bodyguarding",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cool Hunting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Con Artistry",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Culture Jamming",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Customs Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Darknet Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Data Processing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Distribution",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ego Hunting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Emergency Services",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Entertainment",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Escorting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Excavation",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fencing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "First-Contact Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Flight Crew Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Forensics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Freelancing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gas Mining",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gatecrashing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Habitat Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hacktivism",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Info Brokerage",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Instruction",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Investigation",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Journalism",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Lab Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Medical Services",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mesh Networking",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mesh Security",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Military Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Morph Brokerage",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Morph Design",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nanofacturing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Network Engineering",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Police Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psychotherapy",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Public Relations/Spin Control",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Racketeering",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Scavenging",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Salvage Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Security Ops",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Service Work",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Skipjacking",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Smuggling",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Social Engineering",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Social Services",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spycraft",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Surveying",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Terraforming",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Viral Marketing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "XP Production",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  }
+]

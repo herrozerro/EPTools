@@ -1,0 +1,170 @@
+[
+  {
+    "Name": "Architecture",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "AR Design",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bodysculpting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cooking",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Criticism",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Dance",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Digital Art",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Drama",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Drawing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Erotic Entertainment",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fashion",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Game Design",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Music",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Painting",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Performance",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Poetry",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sculpture",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Singing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Speech",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "VR Design",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Writing",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  }
+]

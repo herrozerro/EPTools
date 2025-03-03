@@ -1,0 +1,674 @@
+[
+  {
+    "Name": "After a long stretch of bad, you hit bottom. No way left to go but up.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You participate as a test subject in a research project. You suffer no ill effects … that you can tell.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You leak confidential information to a journalist or the mesh at large.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You hear from an unknown source that Oversight has taken an interest in your affairs.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You have an unfortunate run-in with Jovian Republic troops, but manage to extricate yourself.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "After years, you finally get a chance to inflict revenge on someone. Do you take it or walk away?",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You survive a major disaster, such as a habitat failure, ship collision, terrorist attack, or a freak but deadly accident.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Circumstances force you to move from one end of the Solar System to the other.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your habitat goes through a regime change. Which side are you on?",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are falsely accused of a crime but then cleared.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You develop a long-term rival. The relationship is complex and non-dangerous, but it does occasionally interfere or consume your attention.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You develop a long-term life-partner relationship.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You suffer through the failure of a major long-term relationship.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You enter into a convenience-based, contract-defined, romantic relationship.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You develop an ongoing polyamorous relationship with a group of friends.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are pursued by an irritating but (mostly) harmless suitor/stalker.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are recruited to secretly help some faction. Randomly determine that faction from the Faction table.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are re-united with a lover/relative/friend thought lost during the Fall or previous conflicts.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Political upheaval in your local habitat/polity throws your life into turmoil.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are the only survivor of a deadly accident on board a ship or small hab, which raises some suspicion …",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your life has been blissfully serene and untroubled. Your friends may secretly resent you.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You find out that one or both of your parents weren’t really your parents.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You pursue a period of self-isolation and introspection.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You catch an authority figure doing something illicit, but you don’t have the means to prove it.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You take a sabbatical with the Solarians, Ringers, or other space-faring clade.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You have an affair.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are privileged enough to meet a Factor.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You discover an unknown and intriguing or devastating secret about your family’s past.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "An unfortunate accident leaves you stuck in a healing vat for a couple of weeks.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "While traveling by spacecraft, a malfunction takes you months off course.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You use someone to get ahead.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Someone uses you to get ahead.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You unexpectedly make a close friend with someone from a rival or even hostile faction.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You have a falling out with a formerly close friend.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are forced into a thankless position of heavy responsibility.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Facing unwanted responsibilities, you pack up and move on.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are persecuted for your nature or beliefs.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You finalize a particularly good research paper, work of art, commercial enterprise, or similar achievement.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Someone close to you opts for a real, final death.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You discover a new subculture to embed yourself in.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You befriend a brinker with some interesting ideas and unbelievable stories. Well, almost unbelievable.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You find repeat evidence that someone has you under close surveillance — but why?",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are fairly certain that your new friend is secretly a singularity seeker.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You come across an interesting surveillance blind-spot in your local habitat.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "A string of disappearances in your habitat has everyone on edge.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "A friend discovers disturbing information about a powerful entity, and they are considering blowing the whistle.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You don’t have what it takes, and your current job/prospect ends in a washout.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your inquisitive nature leads you to discover a secret that could get you into trouble.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You receive a wake-up call that challenges your current priorities.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your current job/pursuits take you somewhere dangerous.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "A friend reveals a terrible secret to you.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You become estranged from a parent or other family member.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You finally get recognition for something you deserve.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You experiment with your sexuality.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "A friend or relative goes missing under mysterious circumstances.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You throw your hat in the ring for an important position but do not get it.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Someone you respect shows their true colors, and they aren’t pretty.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Everything is going great, but you still somehow manage to fuck up something major in your life.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You fall victim to disinformation or a scam.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your hard work and contributions are overlooked.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are the victim of a crime, but the perpetrator is caught.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "A sibling or friend relies on you for support until they get back on their feet.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You get fired or kicked out. You start over somewhere new.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You spend years (from your perspective) inside a time-accelerated VR simulspace.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You go through a long period of stagnation.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Your local living conditions become increasingly threatening in some way.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You test out life with multiple forks active at once, with mixed results.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You receive an unexpected gift.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You find out someone close to you has been living a double life.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You lose yourself in the hedonism of a scum swarm for several months.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Through no fault of your own, you let a lot of people down.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You have a major disagreement with a sub-group within your faction.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are witness to (but not an active participant in) a historical event of some kind.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You modify your personality with psychosurgery, but revert the process a short period later.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You ditch your friend group and start over with new friends.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You go out of your way to help someone out, but they don’t really acknowledge it or reciprocate.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You change your opinion on a major political stance.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You acquire a new pet.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You switch your gender identity.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Someone you looked up to does something that shatters your respect for them.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You cross paths with an influential oligarch.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "You have a near-death experience.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are influenced by an async’s sleight, but you may not know exactly what that is or how, nor can you prove anything.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "You are forced to interact with a faction you normally would have nothing to do with.",
+    "Type": "LifePathStoryEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]

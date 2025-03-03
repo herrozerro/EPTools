@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "Aerospace",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  },
+  {
+    "Name": "Armorer",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 13,
+    "OptionLists": []
+  },
+  {
+    "Name": "Demolitions",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 13,
+    "OptionLists": []
+  },
+  {
+    "Name": "Electronics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  },
+  {
+    "Name": "Groundcraft",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 13,
+    "OptionLists": []
+  },
+  {
+    "Name": "Industrial",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nautical",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Robotics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  }
+]

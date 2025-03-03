@@ -1,0 +1,2012 @@
+[
+  {
+    "Name": "Gain +1 ego Flex and roll on the Story Event table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathEventStory",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You win the gatecrashing lottery and a free ticket to Pandora. Roll on the Gatecrashing Event table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventGatecrashing",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are embroiled in underworld affairs. Roll on the Crime Event table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventCrime",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find a morph that fits you like a glove. Gain the Morph Attunement trait. Roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Attunement",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Gain the Morph Attunement trait. Roll on the Random Morph tables.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]]
+  },
+  {
+    "Name": "You are recruited into Firewall early after the Fall. Roll on the Firewall Event table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventFirewall",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You attempt to modify your mind, but it goes poorly. Gain the Messy Mind trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Messy Mind",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You fall victim to a terrorist attack or factional dispute. Roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You reinvent yourself. Increase one aptitude by 5 and reduce another by 5. Roll 1d6: 1 COG, 2 INT, 3 REF, 4 SAV, 5 SOM, 6 WIL.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "COG",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "INT",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "REF",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SAV",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SOM",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "COG",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "INT",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "REF",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SAV",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SOM",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get caught in a post-Fall breakout and are infected with Watts-MacLeod (EP2). Gain the Psi (Level 1) trait and 2 psichi sleights (pick or roll randomly on the Sleights table).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsChi",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsChi",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find it hard to cope with the Fall and its aftermath. Gain the Addiction (Level 2) trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Addiction",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get caught in a post-Fall breakout and are infected with Watts-MacLeod (EP2). +10 Psi skill and gain the Psi (Level 2) trait and 1 psi-gamma sleight (pick or roll randomly on the Sleights table).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsGamma",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You use the post-Fall chaos to establish a new identity. Gain a fake ego ID (EP2) for free.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "You use the post-Fall chaos to establish a new identity. Fake Ego ID",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You piss off some influential people and are made into an example. −10 @-rep, g-rep, or c-rep.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 @-rep, g-rep, or c-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After surviving the Fall, you decide some self-defense training is in order. +10 to either Guns or Melee skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 to either Guns or Melee skill.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You run afoul of a criminal cartel agent. You walk away unscathed, but the matter is far from resolved. Gain the Enemy trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enemy",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You commit a crime, get caught, and suffer the punishment. Gain the Restricted Behavior (Level 2) trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Restricted Behavior",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have died enough times that your mind really can’t take it any more. Roll on the Random Morph tables and gain the Mental Disorder (Phobia: Death) trait (also on Disorders, EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Phobia: Death",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Phobia",
+          "Type": "Disorder",
+          "Description": "Death",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You interact with people from an opposing faction often, and you get good at pressing their buttons. +10 Provoke skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An ownerless bot follows you and never leaves your side. Gain a servitor, saucer, or gnat bot (EP2) for free.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "An ownerless bot follows you and never leaves your side. Gain a servitor, saucer, or gnat bot (EP2) for free.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An unknown party leaves you a portable QE comm unit with a qubit reservoir (EP2), telling you only to expect a call in the future.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "An unknown party leaves you a portable QE comm unit with a qubit reservoir (EP2), telling you only to expect a call in the future.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You travel extensively. Gain a new language and roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "New Language",
+          "Type": "Language",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You’ve gotten really good at resleeving. Roll on the Random Morph tables and gain the Adaptability (Level 2) trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Adaptability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Roll on the Random Morph tables and gain the Adaptability (Level 2) trait (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You create a major diplomatic incident. Gain the Black Mark (Level 2) trait (EP2). Roll on the Faction table to determine which.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You create a major diplomatic incident. Gain the Black Mark (Level 2) trait (EP2). Roll on the Faction table to determine which.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Black Mark",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You barely survive a murder attempt. Increase INT by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "INT",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A close-call with people out to get you puts you on the defensive. Gain the Data Control (Level 2) trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Data Control",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You come into possession of 5 doses of the psi-opener drug (EP2). Roll on the Sleights table to determine effects.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "You come into possession of 5 doses of the psi-opener drug (EP2). Roll on the Sleights table to determine effects.",
+        "Type": "PlayerChoice",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You fall on hard times. Lose one level of Resources trait. If you don’t have Resources, roll on the Random Morph tables but only take a synthmorph or infomorph of MP 2 or less.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "if you don’t have Resources, lose 10 c-rep or g-rep",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]]
+  },
+  {
+    "Name": "You establish a relationship with someone in-the-know. Gain the Contact trait (EP2). Choose a rep network or roll randomly on the Rep Networks table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Contact",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "You establish a relationship with someone in-the-know. Gain the Contact trait (EP2). Choose a rep network or roll randomly on the Rep Networks table.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are victimized by an async. Gain the Psi Defense (Level 2) trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi Defense",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A long string of personal failures has you questioning your own resolve. Reduce WIL by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "No matter how often your friends warn you, you are promiscuous about your online data. Gain the Data Footprint (Level 2) trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Data Footprint",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Nothing ever seems to go your way — your cursed luck is legendary. Gain the Bad Luck trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Bad Luck",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You complete a project of major importance. +10 to the rep score most appropriate to your faction.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 to the rep score most appropriate to your faction.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A project of major importance fails under your direction. −10 to the rep score most appropriate to your faction.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to the rep score most appropriate to your faction.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are obsessed with the Factors. +10 Know: Factors skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Factors",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You try a lot of morphs, but only one hits the spot. Gain the Morph Familiarity trait (EP2). Choose a morph or roll randomly on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Familiarity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Choose a morph or roll randomly on the Random Morph tables.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An unpopular choice burns many bridges. Gain the Blocklisted Rep trait (EP2). Choose a rep network or roll randomly on the Rep Networks table.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Blocklisted Rep",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "An unpopular choice burns many bridges. Gain the Blocklisted Rep trait (EP2). Choose a rep network or roll randomly on the Rep Networks table.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A friend or relative opts for true death, but bequeaths you their estate. Gain Resources (Level 2) trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experiment with a number of morphs. Increase SOM by 5 and roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "SOM",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You become complacent in a bout of post-Fall depression. Reduce SOM by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "SOM",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "As transhumanity re-organizes, you find a role in influencing others. Increase SAV by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "SAV",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have difficulty coming to grips with regular resleeving. Gain the Identity Crisis trait (EP2) and roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Identity Crisis",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Roll on the Random Morph tables and gain the Identity Crisis trait.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A resleeve goes particularly poorly, and now it haunts you. Roll on the Random Morph tables and gain the Morphing Disorder (Level 2) trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morphing Disorder",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Roll on the Random Morph tables and gain the Morphing Disorder trait.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are an avid fan of gatecrashing XP and vids. +10 Know: Exoplanets skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Exoplanets",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take up a sport. +10 Athletics skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Athletics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find peace on one specific habitat of your choice. Gain the Habitat Tranquility trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Habitat Tranquility",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have an accident with a drone, so you get really good at making them obey you. Gain the Drone Whisperer trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Drone Whisperer",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You decide to take a risk and let the universe decide your fate. Gain the No Backup Insurance trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "No Backup Insurance",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Someone impersonates you. Gain the Stolen Identity trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stolen Identity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You switch factional allegiances. Roll for your new faction. Gain Know: [New Faction] Interests 10 skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Roll for your new faction. Gain Know: [New Faction] Interests 10 skill.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend a significant portion of your life in one habitat. Gain the Home Turf trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Home Turf",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are hired to work on a ship and eventually become the captain. Gain the Spacecraft trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Spacecraft",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You do the right thing but piss off someone with power. −10 f-rep or c-rep.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 f-rep or c-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make friends with a group of AGIs online. Gain the AGI Affinity trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "AGI Affinity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You rely heavily on forks. Gain the Improved Beta trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Improved Beta",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are caught in an isolated outpost with few resources, but you make do. Gain the Scrounging Talent trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Scrounging Talent",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You push the boundaries of using and re-merging forks. Gain the Merging Mastery trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Merging Mastery",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Unknown to you, someone takes an unfriendly interest in your affairs. Gain the Subverted Mind trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Subverted Mind",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend years on a micrograv habitat. +10 Free Fall skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 Free Fall skill.",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The merging of an overdue fork goes poorly, and inaccessible backups leave you permanently changed. Gain the Botched Merge trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Botched Merge",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are embroiled in a messy professional dispute. −10 r-rep or c-rep.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 r-rep or c-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lose a contractual dispute in Extropian space. Gain the Deferred Indenture trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deferred Indenture",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have an exceptionally horrible resleeving experience and swear off that type of morph. Roll on the Random Morph tables and gain the Morph Aversion (Level 2) trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Aversion",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Roll on the Random Morph tables and gain the Morph Aversion trait.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The state of post-Fall transhumanity inspires you to up your game. Increase COG by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "COG",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Through a strange set of circumstances, you end up with a stash of 5 inquisitive green petal flowers (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "you end up with a stash of 5 inquisitive green petal flowers (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get stuck with a boring, repetitive job, but at least you get really good at it. Gain one specialization (EP2) in a skill of your choice.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain one specialization (EP2) in a skill of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Doing your part to aid transhumanity’s regrowth, you have a kid. Gain the Dependent trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Dependent",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are killed in a severe accident. Decrease REF by 5 and roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "REF",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You achieve something that the members of your faction will never forget. Gain the Gold Star (Level 2) trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gold Star",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You impressively win a public competition. Increase REF by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "REF",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A troll hacker damages your rep but leaves you with a gift. −10 to a rep score of your choice but gain a kaos ALI (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to a rep score of your choice but gain a kaos ALI (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take in an abandoned animal. Gain a smart dog, smart monkey, or smart rat (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain a smart dog, smart monkey, or smart rat (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover that you work well with machines. Gain the Drone Affinity trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Drone Affinity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Someone you trust takes advantage of you. Reduce INT by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "INT",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A severe personal failure inspires you to make some radical changes. Increase WIL by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You step up for your faction in a way few people will forget. Gain the Untarnished Rep trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Untarnished Rep",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You team up with a partner to get the job done. Gain the Minion/Partner trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Minion/Partner",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pick up drone piloting as a hobby. +10 Pilot skill in a field of your choice.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pilot: PlayerChoice",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your exceptional nature is noticed. Gain the Patron trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Patron",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You win a bodyware lottery. Start play with an extra ware of Major complexity (your choice) installed in your morph, but you are followed by a company bot that records everything you do for promotional and evaluation purposes.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Start play with an extra ware of Major complexity (your choice) installed in your morph, but you are followed by a company bot that records everything you do for promotional and evaluation purposes.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience a catastrophic sleeving accident. Start play with 10 points of stress and roll on the Random Morph tables.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Stress",
+          "Type": "Attribute",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You fall for someone’s smooth lies. Reduce SAV by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "SAV",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You split off an alpha fork to handle an important situation, but it does not come back. Gain the Errant Fork trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Errant Fork",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You fall in with a new crowd — one that will have your back. Gain the Allies trait (EP2).",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Allies",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are inadvertently featured in a prominent meme. Gain the Meme Fame trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Meme Fame",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "With so many friends changing morphs, you get good at telling who’s who. +10 Kinesics skill.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your best friend is an uplift. Gain the Uplift Affinity trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Uplift Affinity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make a dumb and costly mistake. Decrease COG by 5.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "COG",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "While no specific morph outshines the others, you definitely lean towards a type. Roll on the Random Morph tables and gain the Morph Mastery trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Mastery",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Roll on the Random Morph tables and gain the Morph Mastery trait.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend a long time living or interacting with synthmorphs or infomorphs. Gain the Synth Kinesics trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Synth Kinesics",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You face trouble when one of your forks refuses to come back. Gain the Divergent Personality trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Divergent Personality",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You encounter something you hope never to experience again. Gain the Stress Vulnerability trait.",
+    "Type": "PostFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stress Vulnerability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

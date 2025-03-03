@@ -1,0 +1,258 @@
+[
+  {
+    "Name": "1. Start with 1 point of Flex",
+    "Type": "CharacterGenStep",
+    "Description": "1. Start with 1 point of Flex",
+    "Value": 1,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "2. Roll Aptitude Template",
+    "Type": "CharacterGenStep",
+    "Description": "2. Roll Aptitude Template",
+    "Value": 2,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathAptitudeTemplate",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "3. Roll Native Tongue",
+    "Type": "CharacterGenStep",
+    "Description": "3. Roll Native Tongue",
+    "Value": 3,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathNativeTongue",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "4. Roll Background Path",
+    "Type": "CharacterGenStep",
+    "Description": "4. Roll Background Path",
+    "Value": 4,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathBackgroundPath",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "5. Roll Youth Event",
+    "Type": "CharacterGenStep",
+    "Description": "5. Roll Youth Event",
+    "Value": 5,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventYouth",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "6. Roll Character\u2019s Age",
+    "Type": "CharacterGenStep",
+    "Description": "6. Roll Character\u2019s Age",
+    "Value": 6,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathAge",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "7. Pre-Fall Life Event",
+    "Type": "CharacterGenStep",
+    "Description": "7. Pre-Fall Life Event",
+    "Value": 7,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventPreFall",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "8. The Fall",
+    "Type": "CharacterGenStep",
+    "Description": "8. The Fall",
+    "Value": 8,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventTheFall",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "9. Roll Career Path",
+    "Type": "CharacterGenStep",
+    "Description": "9. Roll Career Path",
+    "Value": 9,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathCareerPath",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "10. Roll Interests Path",
+    "Type": "CharacterGenStep",
+    "Description": "10. Roll Interests Path",
+    "Value": 10,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathInterest",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "11. Determine Faction Alignment",
+    "Type": "CharacterGenStep",
+    "Description": "11. Determine Faction Alignment",
+    "Value": 11,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathFaction",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "12. Post-Fall Event",
+    "Type": "CharacterGenStep",
+    "Description": "12. Post-Fall Event",
+    "Value": 12,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventPostFall",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "13. Campaign Event",
+    "Type": "CharacterGenStep",
+    "Description": "13. Campaign Event",
+    "Value": 13,
+    "Weight": 0,
+    "OptionLists": [
+    ]
+  },
+  {
+    "Name": "14. Story Event",
+    "Type": "CharacterGenStep",
+    "Description": "14. Story Event",
+    "Value": 14,
+    "Weight": 0,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventStory",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

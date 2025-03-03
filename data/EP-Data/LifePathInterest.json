@@ -1,0 +1,1114 @@
+[
+  {
+    "Name": "Animal Handler",
+    "Type": "CharacterGenInterest",
+    "Description": "You train and care for smart animals.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Animal Handler",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Animal Empathy",
+          "Type": "Trait",
+          "Description": "Animal Empathy trait (EP2)",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Exotic Skill: Animal Handling",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Veterinary",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Smart Animals",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Artist/Icon",
+    "Type": "CharacterGenInterest",
+    "Description": "You are a creative or celebrity figure.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Artist/Icon",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Music",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Async",
+    "Type": "CharacterGenInterest",
+    "Description": "You are infected with the Watts-MacLeod strain of the exsurgent virus (EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Async",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": "Psi (Level 2) trait (EP2)",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "4 Psi Sleights",
+          "Type": "Slight",
+          "Description": "4 Psi Sleights",
+          "Value": 4,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Psi",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Asyncs",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Commander",
+    "Type": "CharacterGenInterest",
+    "Description": "You are an executive, officer, elected official, or autonomist organizer.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Commander",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Administration",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Fighter",
+    "Type": "CharacterGenInterest",
+    "Description": "You’ve picked up some self-defense capabilities.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fighter",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Security Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Forensics Specialist",
+    "Type": "CharacterGenInterest",
+    "Description": "You’re trained to analyze crime scenes and perform autopsies.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Forensics Specialist",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Armorer",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Forensics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Perceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Physiology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Jack-of-All-Trades",
+    "Type": "CharacterGenInterest",
+    "Description": "You’ve seen and done a little bit of everything.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Jack-of-All-Trades",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "@Rep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Electronics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Black Markets",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Jammer",
+    "Type": "CharacterGenInterest",
+    "Description": "You’re a drone operator with a talent for manipulating machines.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Jammer",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Robotics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Air",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Ground",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Bot Models",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Networker",
+    "Type": "CharacterGenInterest",
+    "Description": "You know how to engage and connect with people.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Networker",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Rep Nets",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Paramedic",
+    "Type": "CharacterGenInterest",
+    "Description": "You have picked up some first aid training.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Paramedic",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Emergency Services",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Pilot",
+    "Type": "CharacterGenInterest",
+    "Description": "You prefer to do the driving no matter how skilled the ALI is.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pilot",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Aerospace",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Air",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Ground",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Space",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Flight Crew Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Rogue",
+    "Type": "CharacterGenInterest",
+    "Description": "You have a shady side.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Rogue",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Exotic Skill: Sleight of Hand",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Black Markets",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Slacker",
+    "Type": "CharacterGenInterest",
+    "Description": "You prefer to enjoy the good things in life.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Slacker",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Electronics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: VR Games",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Spacer",
+    "Type": "CharacterGenInterest",
+    "Description": "You’ve spent your fair share of time on ships and in smaller habitats.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Spacer",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Free Fall",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Aerospace",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: Space",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Flight Crew Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Student",
+    "Type": "CharacterGenInterest",
+    "Description": "You are in the process of learning.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Student",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Mathematics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Survivalist",
+    "Type": "CharacterGenInterest",
+    "Description": "The Fall reinforced the notion that you need to be prepared.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Survivalist",
+          "Type": "Interest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Industrial",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Habitat Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

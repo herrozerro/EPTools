@@ -1,0 +1,1626 @@
+[
+  {
+    "Name": "You get caught and serve some time. +10 g-rep but −10 c-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 11,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Exposure to the violence and cruelty of the underworld leaves you scarred and toughened. Gain the Hardening trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardening",
+          "Type": "Trait",
+          "Description": "Violence",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "To get by, you learn some B&E techniques. +10 Infiltrate skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend so much time concealing your illicit activities that lies become second nature. +10 Deceive skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You establish a useful relationship with someone on the black market. Gain the Contact trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Contact",
+          "Type": "Trait",
+          "Description": "Black Market",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Something about your personality veers you towards the thug life. Gain the Mental Disorder (Impulse Control) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Impulse Control Disorder",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Legit work with the Galaxy Entertainment Group leads to illicit work for the 14k Triad. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A hacker shows you some of their tricks. +10 Infosec skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend enough time in the underworld that you learn how to tussle. +10 Melee skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You score big on a heist. Gain Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get in the middle of a gang war. Roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A thief shows you how not to get caught. +10 Exotic Skill: Sleight of Hand.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exotic Skill: Sleight of Hand",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your activities draw police attention. −10 g-rep or c-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep or CRep",
+          "Type": "UserChoice",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You unwisely associate with someone smuggling TITAN tech. Gain the Edited Memories trait (EP2) and roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn a cartel boss’s dirty secret. Problem is, someone else that you don’t trust knows that you know …",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You learn a cartel boss’s dirty secret. Problem is, someone else that you don’t trust knows that you know …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You ruthlessly use people to get your way. Gain the Manipulative Streak trait.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Manipulative Streak",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You figure out some good ways to separate people from their credits. +10 Know: Con Artistry skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Con Artistry",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your fellow criminals are well armed and soon you are too. +10 Guns skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You “acquire” the details on an asteroid that allegedly contains a stash of Earth relics. Only problem is, the asteroid is remote and deep in the Kuiper belt …",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You “acquire” the details on an asteroid that allegedly contains a stash of Earth relics. Only problem is, the asteroid is remote and deep in the Kuiper belt …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You sell drugs for the Shui Fong triad. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your criminal aspirations are noticed and land you a job doing hypercorp dirty work. +10 c-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work as a freelance operator in the criminal underworld. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The cartel you associate with sends you to school. +10 Know: Credit Laundering.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Credit Laundering",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are linked to a fork-napping operation in an autonomist hab. −10 @-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 @-rep.",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You aspire to become a fixer. Gain the Networking Talent trait.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Networking Talent",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You end up with a cache of corporate research in your possession that proves too hot to move. So you release it to the public mesh. +10 r-rep but −10 c-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are sold a preserved “alien” in a jar, but a friend tells you that they think it’s a skrik exsurgent (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You are sold a preserved “alien” in a jar, but a friend tells you that they think it’s a skrik exsurgent (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You come into possession of your very own covert ops tool (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You come into possession of your very own covert ops tool (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You become a middle-person in a Nine Lives ego-trading operation. +10 g-rep but −10 @-rep or c-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 @-rep or c-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover the hard way that you now have a powerful foe. Gain the Enemy trait (EP2) and roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enemy",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are accused of ratting someone out. The truth of it is up to you. −10 @-rep or g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You are accused of ratting someone out. The truth of it is up to you. −10 @-rep or g-rep.",
+          "Type": "UserChoice",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help the Sun Yee On triad crack some nanofabbers. +10 Program skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You freelance for the Night Cartel. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An encounter with security forces goes poorly. Gain the Restricted Behavior (Level 2) trait (EP2) and roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Restricted Behavior",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are kidnapped by a rival gang/cartel but escape. +10 Exotic Skill: Escape Artist.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exotic Skill: Escape Artist",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Under condition of anonymity, you agree to let a group of sociologists study your criminal network and endeavors … but the project turns out not to be as discreet as you were told. +10 r-rep but −10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with a street gang protection racket. +10 Know: Racketeering skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Racketeering",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An assassin shows you how to handle an archaic but silent weapon. +10 Exotic Skill: [Bow, Garrote, or Throwing Knives].",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exotic Skill: [Bow, Garrote, or Throwing Knives]",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lose big when gambling. Reduce your Resources trait by 1 level. If you lack Resources, gain the Debt trait.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "If you lack Resources, gain the Debt trait.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "As part of a smuggling operation, you are exposed to something better off avoided. Gain the Psi (Level 2) trait and one psi-gamma sleight (pick or roll randomly on the Sleights table).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlightsGamma",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You play a prominent role in mediating a conflict between criminal groups. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You “acquire” some vid/XP footage that is potentially incriminating to someone with moderate influence and power. What do you do with it?",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You “acquire” some vid/XP footage that is potentially incriminating to someone with moderate influence and power. What do you do with it?",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You run drugs for the Big Circle Gang, but the availability proves tempting. Gain the Addiction (Level 2) trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Addiction",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You deal restricted substances to an influential socialite and become popular with their posse. +10 f-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn that telling the truth is not always the best option for survival. +10 Deceive skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You end up working with a pirate crew. +10 to either Pilot: Space, Free Fall, or Hardware: Demolitions.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 to either Pilot: Space, Free Fall, or Hardware: Demolitions.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pull off a job that people said no one could do. +20 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are caught and convicted in an Extropian hab, but the victim holds off on claiming your indenture. Gain the Deferred Indenture trait.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deferred Indenture",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your criminal activities become known, creating some problems. Gain the Blocklisted Rep (Level 2) trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Blocklisted Rep",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take a fall and serve time in an actual physical prison. Lose 1 ego Flex.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Facing trouble, you duck out. Gain the On the Run trait.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "On the Run",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You deal regularly with a gang/cartel possessing a strong cultural identity. Gain a language (your choice or roll on the Random Language table).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathNativeTongue",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "For a while at least, you go full Robin Hood with your crime, taking from the rich and giving to the poor. +10 @-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Rep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A black-market exchange leaves you with a piece of electronics allegedly infected with the digital exsurgent virus (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "A black-market exchange leaves you with a piece of electronics allegedly infected with the digital exsurgent virus (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get arrested but you keep your mouth shut and beat the charges. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You steal a container that, if labeled correctly, contains a sample of Factor dust (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You steal a container that, if labeled correctly, contains a sample of Factor dust (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You enjoy drugs so much you start dealing … leading to more drugs. Start play with 5 doses of your drug of choice.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You enjoy drugs so much you start dealing … leading to more drugs. Start play with 5 doses of your drug of choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend enough time working the streets and hustling that you excel at looking out for yourself. Gain 1 ego Flex.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get roughed up enough to know that you have no taste for it. Gain the Low Pain Tolerance trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Low Pain Tolerance",
+          "Type": "Trait",
+          "Description": "Pain",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find out the secret location of an extremely valuable Night Cartel stash. Problem is, it is very well guarded.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You find out the secret location of an extremely valuable Night Cartel stash. Problem is, it is very well guarded.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "To pay off a debt to you, someone leaves you with a bag full of cortical stacks. What will you do with them?",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "To pay off a debt to you, someone leaves you with a bag full of cortical stacks. What will you do with them?",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take odd jobs from your local habitat gang. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make a black-market trade that leaves you with the backdoor (EP2) into a powerful hypercorp’s mesh systems.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You make a black-market trade that leaves you with the backdoor (EP2) into a powerful hypercorp’s mesh systems.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The criminal life is rough, and you and your accomplices get roughed up a lot. +10 Medicine: Paramedic.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "If there’s one thing you’ve learned in the Guanxi underworld, it’s to keep people afraid of you. Gain the Intimidation specialization for Provoke skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain the Intimidation specialization for Provoke skill.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn how to circumvent security. +10 Know: Smuggling skill.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Smuggling",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take a bullet meant for a friend. +10 g-rep and roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help a cabal of suits execute a white-collar crime scheme and are well rewarded. Gain Resources (Level 1) trait (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You participate in a salvage op in Earth orbit that uncovers useful sensor data. +5 g-rep and +5 r-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are hired by the Organization in Earth orbit to spy on a few opponents. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You gain some notoriety when a criminal you associate with sells XP of his experiences. +10 f-rep but −10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You suspect someone you work with of being an informant, but you have no way yet to prove it.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "You suspect someone you work with of being an informant, but you have no way yet to prove it.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work at a robotics chop-shop for a bit. +10 Hardware: Electronics or Hardware: Robotics.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardware: Electronics or Hardware: Robotics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You don’t back down from a fight that you probably should have. +10 g-rep but roll on the Random Morph tables.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You “acquire” hacked files that allegedly include the details and crypto codes for an active farcasting station on Earth …",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You “acquire” hacked files that allegedly include the details and crypto codes for an active farcasting station on Earth …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Pax Familae hires you for assistance on a difficult job. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You steal an Earth relic, but you’re not sure if it’s real or counterfeit.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You steal an Earth relic, but you’re not sure if it’s real or counterfeit.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pull some favors for skin-thieving gangs on Titan. The next time you are on Titan, you can double the Availability of one morph that you seek.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "The next time you are on Titan, you can double the Availability of one morph that you seek.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pull some favors for the ID crew. Gain a fake ego ID (EP2).",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fake Ego ID",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The Hidden Concern offers you work, and you know better than to turn them down. +10 g-rep.",
+    "Type": "LifePathEventCrime",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]
