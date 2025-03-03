@@ -1,0 +1,1516 @@
+[
+  {
+    "Name": "Gain \u002B1 ego Flex and roll on the Story Event table (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Gain \u002B1 ego Flex and roll on the Story Event table (p. XX).",
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": "Flex",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "LifePathEventStory",
+          "Type": "Table",
+          "Description": "LifePathEventStory",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "One (or both) of your parents is bilingual. Gain an extra language (your choice or roll randomly, p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "One (or both) of your parents is bilingual. Gain an extra language (your choice or roll randomly, p. XX).",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain an extra language",
+          "Type": "Language",
+          "Description": "Gain an extra language",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You leave home at an early age and forge your own path. Choose a new motivation (or roll for one on p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You leave home at an early age and forge your own path. Choose a new motivation (or roll for one on p. XX).",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Choose a new motivation",
+          "Type": "Motivation",
+          "Description": "Choose a new motivation",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The people that raise you do not tolerate foolishness. Gain the Common Sense trait (p. 73, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "The people that raise you do not tolerate foolishness. Gain the Common Sense trait (p. 73, EP2).",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Common Sense",
+          "Type": "Trait",
+          "Description": "Common Sense",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are glued to the mesh from an early age. Gain the Online Obsession trait (p. XX)",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are glued to the mesh from an early age. Gain the Online Obsession trait (p. XX)",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Online Obsession",
+          "Type": "Trait",
+          "Description": "Online Obsession",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Some threat or danger looms over your youth. You learn to watch for trouble. \u002B10 Perceive skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Some threat or danger looms over your youth. You learn to watch for trouble. \u002B10 Perceive skill.",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Perceive",
+          "Type": "Skill",
+          "Description": "Perceive",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are good with computers from a young age. \u002B10 Interface skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are good with computers from a young age. \u002B10 Interface skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": "Interface",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A childhood injury or disease limits your physical activities. You gain the Poor Coordination (Level 2) trait (p. 79, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A childhood injury or disease limits your physical activities. You gain the Poor Coordination (Level 2) trait (p. 79, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Poor Coordination",
+          "Type": "Trait",
+          "Description": "Poor Coordination",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are kept at home and not allowed to play sports or with other kids. Reduce your REF by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are kept at home and not allowed to play sports or with other kids. Reduce your REF by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": "Ref",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You grow up in a maze-like urban area or a difficult rural area. Gain the Direction Sense trait (p. 73, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You grow up in a maze-like urban area or a difficult rural area. Gain the Direction Sense trait (p. 73, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Direction Sense",
+          "Type": "Trait",
+          "Description": "Direction Sense",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You grow up in an environment where carelessness can get you killed. Increase INT by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You grow up in an environment where carelessness can get you killed. Increase INT by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": "Int",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have a falling out with your parents and cut ties. Gain the Stalwart (Level 2) trait (p. 75, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You have a falling out with your parents and cut ties. Gain the Stalwart (Level 2) trait (p. 75, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stalwart",
+          "Type": "Trait",
+          "Description": "Stalwart",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your muse helps you out in some rough situations. Gain the Exceptional Muse (p. XX) trait.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your muse helps you out in some rough situations. Gain the Exceptional Muse (p. XX) trait.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exceptional Muse",
+          "Type": "Trait",
+          "Description": "Exceptional Muse",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You skip too much school. You gain the Obtuseness (Level 2) trait (p. 79, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You skip too much school. You gain the Obtuseness (Level 2) trait (p. 79, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Obtuseness",
+          "Type": "Trait",
+          "Description": "Obtuseness",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Constant torment from abusive siblings takes its toll. Reduce WIL by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Constant torment from abusive siblings takes its toll. Reduce WIL by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": "Wil",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Growing up isolated from others, you develop introvert tendencies. Reduce your SAV by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Growing up isolated from others, you develop introvert tendencies. Reduce your SAV by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": "Sav",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "While your friends throw themselves into VR gaming worlds, you simply throw up. Gain the VR Vertigo trait (p. 80, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "While your friends throw themselves into VR gaming worlds, you simply throw up. Gain the VR Vertigo trait (p. 80, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "VR Vertigo",
+          "Type": "Trait",
+          "Description": "VR Vertigo",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your life is a struggle for survival, but you persevere. Gain the Hard Knocks trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your life is a struggle for survival, but you persevere. Gain the Hard Knocks trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hard Knocks",
+          "Type": "Trait",
+          "Description": "Hard Knocks",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Raised in an environment of constant stimulus, you are forced to tune out. Gain the Obliviousness trait (p. 79, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Raised in an environment of constant stimulus, you are forced to tune out. Gain the Obliviousness trait (p. 79, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Obliviousness",
+          "Type": "Trait",
+          "Description": "Obliviousness",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are extremely sheltered. Gain the Real World Na\u00EFvet\u00E9 trait (p. 80, EP2) and skip Step 7 (XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are extremely sheltered. Gain the Real World Na\u00EFvet\u00E9 trait (p. 80, EP2) and skip Step 7 (XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Real World Na\u00EFvet\u00E9",
+          "Type": "Trait",
+          "Description": "Real World Na\u00EFvet\u00E9",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Skip Step 7",
+          "Type": "Skip",
+          "Description": "Skip Step 7",
+          "Value": 7,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Through no fault of your own, you inherit the Mental Disorder (Bipolar) trait (pp. 79 and 224, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Through no fault of your own, you inherit the Mental Disorder (Bipolar) trait (pp. 79 and 224, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Bipolar",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Bipolar",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You grow up in a melting-pot, polyglot culture. Gain the Hyper Linguistics (Level 2) trait (p. 74, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You grow up in a melting-pot, polyglot culture. Gain the Hyper Linguistics (Level 2) trait (p. 74, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hyper Linguistics",
+          "Type": "Trait",
+          "Description": "Hyper Linguistics",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You party too hard. \u201310 to two separate skills of your choice.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You party too hard. \u201310 to two separate skills of your choice.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Skill of your choice.",
+          "Type": "Skill",
+          "Description": "Skill of your choice.",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Skill of your choice.",
+          "Type": "Skill",
+          "Description": "Skill of your choice.",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The quality of your childhood education is poor. \u201310 to one Know skill of your choice.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "The quality of your childhood education is poor. \u201310 to one Know skill of your choice.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know skill of your choice.",
+          "Type": "Skill",
+          "Description": "Know skill of your choice.",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A healthy amount of physical activities improves your abilities. Increase SOM by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A healthy amount of physical activities improves your abilities. Increase SOM by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": "Som",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are put in charge of other children at a young age. Increase WIL by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are put in charge of other children at a young age. Increase WIL by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": "Wil",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You challenge your intellect by learning things online. Gain the Acumen (Level 2) trait (p. 72, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You challenge your intellect by learning things online. Gain the Acumen (Level 2) trait (p. 72, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Acumen",
+          "Type": "Trait",
+          "Description": "Acumen",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A misunderstood situation makes you the laughing stock of your peer group. Gain the Social Ineptitude trait (p. XX)",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A misunderstood situation makes you the laughing stock of your peer group. Gain the Social Ineptitude trait (p. XX)",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Social Ineptitude",
+          "Type": "Trait",
+          "Description": "Social Ineptitude",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Shoplifting and stealing are either hobbies or a necessity. Increase REF by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Shoplifting and stealing are either hobbies or a necessity. Increase REF by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": "Ref",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experiment with drugs, but it isn\u2019t for you. Gain the Temptation Immunity trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You experiment with drugs, but it isn\u2019t for you. Gain the Temptation Immunity trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Temptation Immunity",
+          "Type": "Trait",
+          "Description": "Temptation Immunity",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Exposure to death/violence alters your mind. Gain the Mental Disorder (Impulse Control) trait (pp. 79 \u0026 225, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Exposure to death/violence alters your mind. Gain the Mental Disorder (Impulse Control) trait (pp. 79 \u0026 225, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Impulse Control",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Impulse Control",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You focus on learning or socializing more than playtime or sports. Gain the Feebleness (level 2) trait (p. 78, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You focus on learning or socializing more than playtime or sports. Gain the Feebleness (level 2) trait (p. 78, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Feebleness",
+          "Type": "Trait",
+          "Description": "Feebleness",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A dysfunctional home life keeps you from doing well in school. Reduce your COG by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A dysfunctional home life keeps you from doing well in school. Reduce your COG by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": "Cog",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Being a bully has its advantages. Increase Provoke by 5 and gain the Intimidation specialization.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Being a bully has its advantages. Increase Provoke by 5 and gain the Intimidation specialization.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Provoke-Intimidation",
+          "Type": "Skill",
+          "Description": "Provoke-Intimidation",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A series of traumatic events leaves you disturbed. Gain the Mental Disorder (Insomnia) trait (pp. 79 and 225, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A series of traumatic events leaves you disturbed. Gain the Mental Disorder (Insomnia) trait (pp. 79 and 225, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Insomnia",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Insomnia",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A strict environment stunts your creativity. Reduce INT by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A strict environment stunts your creativity. Reduce INT by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": "Int",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You receive your first cortical stack at an early age\u2014and luckily just in time. Roll on the Random Morph table (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You receive your first cortical stack at an early age\u2014and luckily just in time. Roll on the Random Morph table (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lead your friends into all sorts of trouble. \u201310 c-rep but \u002B10 g-rep.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You lead your friends into all sorts of trouble. \u201310 c-rep but \u002B10 g-rep.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": "CRep",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": "GRep",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have few friends and rarely socialize with other kids. You gain the Indifference (Level 2) trait (p. 78, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You have few friends and rarely socialize with other kids. You gain the Indifference (Level 2) trait (p. 78, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Indifference",
+          "Type": "Trait",
+          "Description": "Indifference",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your parents raise you with some unusual ideas. Gain the Implicit Bias trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your parents raise you with some unusual ideas. Gain the Implicit Bias trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Implicit Bias",
+          "Type": "Trait",
+          "Description": "Implicit Bias",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You cheat your way through school. \u201310 to one skill of your choice.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You cheat your way through school. \u201310 to one skill of your choice.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Skill of your choice",
+          "Type": "Skill",
+          "Description": "Skill of your choice",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You enjoy urban exploration and getting into off-limits areas. \u002B10 Infiltrate skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You enjoy urban exploration and getting into off-limits areas. \u002B10 Infiltrate skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": "Infiltrate",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "As a free-range kid, you learn how to get around on your own. \u002B10 Survival skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "As a free-range kid, you learn how to get around on your own. \u002B10 Survival skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": "Survival",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend too much time online, ignoring/escaping the real world. You gain the Poor Instincts (Level 2) trait (p. 80, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You spend too much time online, ignoring/escaping the real world. You gain the Poor Instincts (Level 2) trait (p. 80, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Poor Instincts",
+          "Type": "Trait",
+          "Description": "Poor Instincts",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You either excel in your studies or fall under the care of a mentor who helps you learn. Increase COG by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You either excel in your studies or fall under the care of a mentor who helps you learn. Increase COG by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": "Cog",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A traumatic childhood leaves you with a warped sense of self. Gain the Mental Disorder (Narcissitic Personality) trait (pp. 79 and 225, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A traumatic childhood leaves you with a warped sense of self. Gain the Mental Disorder (Narcissitic Personality) trait (pp. 79 and 225, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Narcissitic Personality",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Narcissitic Personality",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your parents are highly private and extremely strict. Gain the Poor Socialization trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your parents are highly private and extremely strict. Gain the Poor Socialization trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Poor Socialization",
+          "Type": "Trait",
+          "Description": "Poor Socialization",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A personality quirk gains the attention of your peers, then becomes a noticeable part of your daily behavior. Gain the Identifiable Quirk trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A personality quirk gains the attention of your peers, then becomes a noticeable part of your daily behavior. Gain the Identifiable Quirk trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Identifiable Quirk",
+          "Type": "Trait",
+          "Description": "Identifiable Quirk",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Na\u00EFvet\u00E9 trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Na\u00EFvet\u00E9 trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mesh Na\u00EFvet\u00E9",
+          "Type": "Trait",
+          "Description": "Mesh Na\u00EFvet\u00E9",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You either take track or learn to run from bullies. Gain the Fitness (Level 2) trait (p. 74, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You either take track or learn to run from bullies. Gain the Fitness (Level 2) trait (p. 74, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fitness",
+          "Type": "Trait",
+          "Description": "Fitness",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn the hard way to trust your intuition. Gain the Good Instincts (Level 2) trait (p. 74, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You learn the hard way to trust your intuition. Gain the Good Instincts (Level 2) trait (p. 74, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Good Instincts",
+          "Type": "Trait",
+          "Description": "Good Instincts",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A series of childhood injuries leaves you struggling to catch up physically. Reduce SOM by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "A series of childhood injuries leaves you struggling to catch up physically. Reduce SOM by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": "Som",
+          "Value": -5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lose all of your close friends in a horribly awkward teen social situation. Gain the Uncooperative Tendencies trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You lose all of your close friends in a horribly awkward teen social situation. Gain the Uncooperative Tendencies trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Uncooperative Tendencies",
+          "Type": "Trait",
+          "Description": "Uncooperative Tendencies",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Tormented by bullies as a kid, you learn to stand up for yourself. \u002B10 Melee skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Tormented by bullies as a kid, you learn to stand up for yourself. \u002B10 Melee skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": "Melee",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The strictness of your parents leaves you only one choice: to excel at lying. \u002B10 Deceive skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "The strictness of your parents leaves you only one choice: to excel at lying. \u002B10 Deceive skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": "Deceive",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your friends have rough childhoods, but you help them out. Gain the Empathy (Level 2) trait (p. 74, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your friends have rough childhoods, but you help them out. Gain the Empathy (Level 2) trait (p. 74, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Empathy",
+          "Type": "Trait",
+          "Description": "Empathy",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You grow up around violence but learn to avoid it. Gain the Quickness (level 2) trait (p. 75, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You grow up around violence but learn to avoid it. Gain the Quickness (level 2) trait (p. 75, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Quickness",
+          "Type": "Trait",
+          "Description": "Quickness",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After seeing friends and family ruined by drugs and vices, you resolve yourself against temptation. Gain the Resolve (level 2) trait (p. 75, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "After seeing friends and family ruined by drugs and vices, you resolve yourself against temptation. Gain the Resolve (level 2) trait (p. 75, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resolve",
+          "Type": "Trait",
+          "Description": "Resolve",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your youth is stressful. Gain the Mental Disorder (Anxiety) trait (pp. 79 and 224, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your youth is stressful. Gain the Mental Disorder (Anxiety) trait (pp. 79 and 224, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Anxiety",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Anxiety",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You resleeve at an early age, but come to hate your new body. Gain the Morph Aversion trait (p. XX) and roll on the Random Morph table (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You resleeve at an early age, but come to hate your new body. Gain the Morph Aversion trait (p. XX) and roll on the Random Morph table (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Aversion",
+          "Type": "Trait",
+          "Description": "Morph Aversion",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "You resleeve at an early age, but come to hate your new body. Gain the Morph Aversion trait (p. XX) and roll on the Random Morph table (p. XX).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Adults are rarely up-to-speed on technological changes, and you use that to your advantage. Gain \u002B10 Infosec skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Adults are rarely up-to-speed on technological changes, and you use that to your advantage. Gain \u002B10 Infosec skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": "Infosec",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are a juvenile delinquent and frequently get into trouble. \u201310 c-rep.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are a juvenile delinquent and frequently get into trouble. \u201310 c-rep.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": "CRep",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your family\u2019s assets take a hit. Lose 1 level of the Resources trait. If you don\u2019t have Resources, a relative is indentured.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your family\u2019s assets take a hit. Lose 1 level of the Resources trait. If you don\u2019t have Resources, a relative is indentured.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": "Resources",
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are raised in dangerous conditions where you have to adapt or die. \u002B10 Fray skill.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are raised in dangerous conditions where you have to adapt or die. \u002B10 Fray skill.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": "Fray",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You fall in with the wrong crowd. Replace one active skill with Melee (or Guns if you already have Melee) at the same value.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You fall in with the wrong crowd. Replace one active skill with Melee (or Guns if you already have Melee) at the same value.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Replace 1 Active Skill with Melee, Or guns if you already have melee at the same value",
+          "Type": "Skill",
+          "Description": "Replace 1 Active Skill with Melee, Or guns if you already have melee at the same value",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your mind is either unusually shaped (if AGI/uplift) or damaged when young. Gain the Anomalous Mind trait (p. XX).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your mind is either unusually shaped (if AGI/uplift) or damaged when young. Gain the Anomalous Mind trait (p. XX).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Anomalous Mind",
+          "Type": "Trait",
+          "Description": "Anomalous Mind",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are raised in an abusive environment. Gain the Pain Tolerance (Level 1) trait (p. 74, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are raised in an abusive environment. Gain the Pain Tolerance (Level 1) trait (p. 74, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pain Tolerance",
+          "Type": "Trait",
+          "Description": "Pain Tolerance",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take apart the family robots (or any you get your hands on). \u002B10 Hardware: Electronics or Hardware: Robotics.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You take apart the family robots (or any you get your hands on). \u002B10 Hardware: Electronics or Hardware: Robotics.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardware: Electronics or Hardware: Robotics.",
+          "Type": "Skill",
+          "Description": "Hardware: Electronics or Hardware: Robotics.",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You fall deep into some type of fandom. \u002B10 Research skill and replace one Know skill field with one relevant to the fandom.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You fall deep into some type of fandom. \u002B10 Research skill and replace one Know skill field with one relevant to the fandom.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": "Research",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Replace one Know skill field with one relevant to the fandom.",
+          "Type": "Skill",
+          "Description": "Replace one Know skill field with one relevant to the fandom.",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "In an effort to inhibit your deviant/criminal behavior, you are forcefully subjected to mind editing as a young adult. Gain the Restricted Behavior (Level 2) trait (p. 78, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "In an effort to inhibit your deviant/criminal behavior, you are forcefully subjected to mind editing as a young adult. Gain the Restricted Behavior (Level 2) trait (p. 78, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Restricted Behavior-Criminal Behavior",
+          "Type": "Trait",
+          "Description": "Restricted Behavior-Criminal Behavior",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are orphaned and spend your early life in uncaring foster homes. Lose 1 ego Flex.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are orphaned and spend your early life in uncaring foster homes. Lose 1 ego Flex.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": "Flex",
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are a hardcore nerd. Replace one Active skill with a Know skill of your choice at an equivalent rating.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are a hardcore nerd. Replace one Active skill with a Know skill of your choice at an equivalent rating.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Replace one Active skill with a Know skill of your choice at an equivalent rating.",
+          "Type": "Skill",
+          "Description": "Replace one Active skill with a Know skill of your choice at an equivalent rating.",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your family scores a windfall. Gain the Resource (level 1) trait (p. 75, EP2).",
+    "Type": "BackgroundYouthEvent",
+    "Description": "Your family scores a windfall. Gain the Resource (level 1) trait (p. 75, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": "Resources",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You teach yourself to drive \u2026 years before you are allowed to. \u002B10 Pilot: Ground but \u201310 c-rep.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You teach yourself to drive \u2026 years before you are allowed to. \u002B10 Pilot: Ground but \u201310 c-rep.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pilot: Ground",
+          "Type": "Skill",
+          "Description": "Pilot: Ground",
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": "CRep",
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are the most popular kid in school. Increase your SAV by 5.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are the most popular kid in school. Increase your SAV by 5.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": "Sav",
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are taught unusual things at a young age. Gain one Exotic Skill (p. 48, EP2) of your choice at 30.",
+    "Type": "BackgroundYouthEvent",
+    "Description": "You are taught unusual things at a young age. Gain one Exotic Skill (p. 48, EP2) of your choice at 30.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Exotic Skill of your choice",
+          "Type": "Skill",
+          "Description": "Exotic Skill of your choice",
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

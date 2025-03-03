@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Apiary",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Aviary",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bard",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cleric",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Conjurer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Crafter",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fighter",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Rogue",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Wizard",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  }
+]

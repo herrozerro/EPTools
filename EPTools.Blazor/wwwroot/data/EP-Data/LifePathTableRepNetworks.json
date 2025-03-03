@@ -1,0 +1,58 @@
+[
+  {
+    "Name": "@-rep",
+    "Type": "Reputation Network",
+    "Description": "A-List",
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "c-rep",
+    "Type": "Reputation Network",
+    "Description": "CivicNet",
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  },
+  {
+    "Name": "f-rep",
+    "Type": "Reputation Network",
+    "Description": "Fame",
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "g-rep",
+    "Type": "Reputation Network",
+    "Description": "Guanxi",
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "i-rep",
+    "Type": "Reputation Network",
+    "Description": "The Eye",
+    "Value": 0,
+    "Weight": 18,
+    "OptionLists": []
+  },
+  {
+    "Name": "r-rep",
+    "Type": "Reputation Network",
+    "Description": "RNA",
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  },
+  {
+    "Name": "x-rep",
+    "Type": "Reputation Network",
+    "Description": "eXploreNet",
+    "Value": 0,
+    "Weight": 14,
+    "OptionLists": []
+  }
+]

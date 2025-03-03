@@ -1,0 +1,314 @@
+[
+  {
+    "Name": "Alpiner",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Aquanaut",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ariel",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bouncer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bruiser",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cloud Skate",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Crasher",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 8,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Dvergr",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Exalt",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Faust",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Flat",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Freeman",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fury",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Futura",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Garuda",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ghost",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Glider",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Grey",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hazer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hibernoid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hulder",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hyperbright",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Imp",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Menton",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neotenic",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nishakara (Surya)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nomad",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Observer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Olympian",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Remade",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 7,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ring Flyer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ruster",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Salamander",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Selkie",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Splicer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Surya",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 9,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sylph",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Theseus",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 7,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Venusian Glider",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]

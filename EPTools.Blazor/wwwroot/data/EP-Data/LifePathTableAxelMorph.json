@@ -1,0 +1,154 @@
+[
+  {
+    "Name": "Automech",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Barracuda",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cycle",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Docbot",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Explorenaut",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gnat",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Guardian Angel",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Manipulator",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Microcar",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Portable Plane",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Robomule",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Saucer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Servitor",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Shield Drone",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spider Hand",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Squishbot",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Transporter",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Trike",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Zephyr",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 5,
+    "OptionLists": []
+  }
+]

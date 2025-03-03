@@ -1,0 +1,3912 @@
+[
+  {
+    "Name": "Academic",
+    "Type": "CareerPath",
+    "Description": "You devote your efforts to the pursuit of knowledge.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Archivest",
+          "Type": "Career",
+          "Description": "You store and maintain transhumanity’s collective knowledge.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [
+            [
+              {
+              "Name": "+Protect Knowledge",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Administration",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Computational Archeology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Data Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]
+          ]
+        },
+        {
+          "Name": "Researcher",
+          "Type": "Career",
+          "Description": "You find secrets hidden within the data.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Research",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Cog",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Data Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Lab Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Mathematics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Professor",
+          "Type": "Career",
+          "Description": "You educate the next generation of transhumans.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Education",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Int",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Anthropology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: History",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Instruction",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Covert Operative",
+    "Type": "CareerPath",
+    "Description": "You are skilled at accessing places you don’t belong.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Smuggler",
+          "Type": "Career",
+          "Description": "You ghost your way past habitat security restrictions.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [
+            [{
+              "Name": "+Wealth",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Athletics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infiltrate",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Spacecraft",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Security Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smuggling",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }]
+          ]
+        },
+        {
+          "Name": "Spy",
+          "Type": "Career",
+          "Description": "You infiltrate organizations to ferret out secrets or destroy them from within.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [
+            [{
+              "Name": "+Uncover Secrets",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SAV",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infiltrate",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Hypercorps",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Spycraft",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }]
+          ]
+        },
+        {
+          "Name": "Thief",
+          "Type": "Career",
+          "Description": "You have your way with security systems in the cause of redistributing wealth.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [
+            [{
+              "Name": "+Don’t Get Caught",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "REF",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 35,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infiltrate",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Black Markets",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Security Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }]
+          ]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Enforcer",
+    "Type": "CareerPath",
+    "Description": "You’re a thug, whether for hire or for a dedicated cause.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Autonomist Militia",
+          "Type": "Career",
+          "Description": "You’re part of a volunteer group that defends your hab and handles conflict resolution.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Protect Community",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "ARep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Conflict Resolution",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Security Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Cartel Goon",
+          "Type": "Career",
+          "Description": "You serve the criminal whims of your syndicate’s leaders.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Wealth",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SOM",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Cartel Politics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Racketeering",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Gang Member",
+          "Type": "Career",
+          "Description": "You and your gang band together for safety and weight of numbers.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Thrill-Seeking",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Gangs",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Police Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Explorer",
+    "Type": "CareerPath",
+    "Description": "You walk on alien worlds and see things others wouldn’t believe.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Crew",
+          "Type": "Career",
+          "Description": "You handle the grunt work of exploration: base camps, field tests, and support.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Adventure",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "XRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Athletics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Groundcraft",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Industrial",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Forensics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Ground",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Survival",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Astrobiology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Gatecrashing",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Scout",
+          "Type": "Career",
+          "Description": "You specialize in survey and recon.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Exploration",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "INT",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "XRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Athletics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infiltrate",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Air",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Survival",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Geology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Surveying",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Search and Rescue",
+          "Type": "Career",
+          "Description": "You seek out gatecrashers that are lost or in trouble.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists":[ [
+            {
+              "Name": "+Help Others",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "XRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Athletics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Paramedic",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Ground",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Survival",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Emergency Services",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Gatecrashing",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Face",
+    "Type": "CareerPath",
+    "Description": "You excel at convincing others, even when it is not in their best interests.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Con Artist",
+          "Type": "Career",
+          "Description": "You deceive others for fun and profit. Or you work in advertising/marketing. Same thing.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Wealth",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SAV",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Con Artistry",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Skipjacking",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Fixer",
+          "Type": "Career",
+          "Description": "You work your connections to make sure everyone gets what they are after.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Wealth",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SAV",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Black Markets",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smuggling",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Negotiator",
+          "Type": "Career",
+          "Description": "You work deals and deploy leverage to get your way.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Skill Mastery",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "WIL",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Deceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Hypercorps",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Politics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Genehacker",
+    "Type": "CareerPath",
+    "Description": "DNA is your artistic medium.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Astrobiologist",
+          "Type": "Career",
+          "Description": "You are fascinated with alien life and what makes it tick.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Research",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "XRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Forensics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Veterinary",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Astrobiology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Computational Biology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Zoology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Bio Tinkerer",
+          "Type": "Career",
+          "Description": "You dabble: body mods, neogenetics, gene therapies, smart drugs, and more.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Science!",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "COG",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Lab Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Neogenetics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smart Drugs",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Uplift Specialist",
+          "Type": "Career",
+          "Description": "Your veterinary science background extends to smart animals and uplifts.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Uplift",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Exotic Skill: Animal Handling",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Veterinary",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Genetics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smart Animals",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Zoology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Hacker",
+    "Type": "CareerPath",
+    "Description": "Software heeds your beck and call.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Blue Team",
+          "Type": "Career",
+          "Description": "You specialize in defending systems from intruders.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Protect Systems",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Computer Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: System Administration",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Digital Intruder",
+          "Type": "Career",
+          "Description": "You penetrate systems to liberate their secrets.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists":[ [
+            {
+              "Name": "+Thrill-Seeking",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "COG",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Info Brokers",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Mesh Security",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Hacktivist",
+          "Type": "Career",
+          "Description": "You hack hypercorp/gov sites and reverse engineer tech in support of social causes.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Solidarity",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "ARep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Hypercorps",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Mesh Security",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Politics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Investigator",
+    "Type": "CareerPath",
+    "Description": "Few details escape your scrutiny.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Detective",
+          "Type": "Career",
+          "Description": "You attempt to solve crimes.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Solve Mysteries",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Forensics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Investigation",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Cartels",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Ego Hunter",
+          "Type": "Career",
+          "Description": "You track down escaped and wanted egos.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Locate Fugitives",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Ego Hunting",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smuggling",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Journalist",
+          "Type": "Career",
+          "Description": "You bring important subjects to the public’s attention.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Uncover Secrets",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "FRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Journalism",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Current Events",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Medic",
+    "Type": "CareerPath",
+    "Description": "You have a background in medicine.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morph Tech",
+          "Type": "Career",
+          "Description": "You tweak and modify biomorphs and assist with resleeving.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Creative Expression",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "FRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Psychosurgery",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Genetics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Morphs",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Cognitive Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Paramedic",
+          "Type": "Career",
+          "Description": "You provide emergency medical services.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Help Others",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "ARep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Paramedic",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Drugs",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Emergency Services",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Physician",
+          "Type": "Career",
+          "Description": "You are a general practice doctor with a few unusual specializations.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Solve Problems",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Biotech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Psychosurgery",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Genetics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Infectious Diseases",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Cognitive Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Mindhacker",
+    "Type": "CareerPath",
+    "Description": "You meld minds and memories.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Memeticist",
+          "Type": "Career",
+          "Description": "Whether a viral marketer or culture hacker, you specialize in infectious ideas.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Go Viral",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "FRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Psychosurgery",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Provoke",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Influencers",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Memetics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Psychosurgeon",
+          "Type": "Career",
+          "Description": "You are a mindshaper, helping people sculpt their mental palaces.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Skill Mastery",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "COG",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Psychosurgery",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Cognitive Science",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychiatry",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Psychotherapist",
+          "Type": "Career",
+          "Description": "You help people cope with mental trauma and improve their cognitive skills.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Help Others",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SAV",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Psychosurgery",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Pharmacology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Persuade",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 15,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychiatry",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Psychology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Social Services",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Scavenger",
+    "Type": "CareerPath",
+    "Description": "You scrounge through wrecks and ruins, seeking value in destruction.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Junk Dealer",
+          "Type": "Career",
+          "Description": "You make a living by resurrecting abandoned tech.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Prosperity",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "ARep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Armorer",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Air",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Black Markets",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Bot Models",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Proprietary Tech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Salvage Crew",
+          "Type": "Career",
+          "Description": "You strip abandoned ships and habs for anything of value.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists":[ [
+            {
+              "Name": "+Wealth",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Aerospace",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Demolitions",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Industrial",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Space",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Flight Crew Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Scavenging",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Spacecraft",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Zone Stalker",
+          "Type": "Career",
+          "Description": "You raid quarantine zones for artifacts.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Thrill-Seeking",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Demolitions",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Ground",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Quarantine Zones",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Smuggling",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: TITAN Tech",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Scientist",
+    "Type": "CareerPath",
+    "Description": "You excel at convincing others, even when it is not in their best interests.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Field Scientist",
+          "Type": "Career",
+          "Description": "You use your training in the life sciences to study exoplanets.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Discovery",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "COG",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Medicine: Forensics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Survival",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Botany",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Ecology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Geology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Physicist",
+          "Type": "Career",
+          "Description": "You excel in the hard sciences.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Science!",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "COG",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Space",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Astronomy",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Chemistry",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Physics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Xeno-Archeologist",
+          "Type": "Career",
+          "Description": "You investigate the remains of dead alien civilizations.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Uncover Secrets",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "RRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "XRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Demolitions",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Research",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Survival",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Astrobiology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Surveying",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Xeno-Archeology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Soldier",
+    "Type": "CareerPath",
+    "Description": "You deploy violence — or the threat of it.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Bodyguard",
+          "Type": "Career",
+          "Description": "You place yourself between your client and potential harm.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Protect Client",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Kinesics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Bodyguarding",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Security Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Mercenary",
+          "Type": "Career",
+          "Description": "You’re a gun for hire.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Survival",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "SOM",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Perceive",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 25,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Conflict Zones",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Mercenary Groups",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Military Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Operative",
+          "Type": "Career",
+          "Description": "You’re an assassin, street ronin, special ops, or general badass.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Current Objective",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "REF",
+              "Type": "Attribute",
+              "Description": "",
+              "Value": 5,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "GRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Fray",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Demolitions",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 15,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infiltrate",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Guns",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Melee",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Black Markets",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Security Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Techie",
+    "Type": "CareerPath",
+    "Description": "You make and fix things.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Artifex",
+          "Type": "Career",
+          "Description": "You’re a nano-engineer.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [
+            [{
+              "Name": "+Creative Expression",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Infosec",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Nanofacturing",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Nanotechnology",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Hab Tech",
+          "Type": "Career",
+          "Description": "You keep the life support running.",
+          "Value": 0,
+          "Weight": 34,
+          "OptionLists": [[
+            {
+              "Name": "+Solve Problems",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "ARep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 10,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Groundcraft",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Industrial",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Interface",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Ground",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Engineering",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Habitat Ops",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        },
+        {
+          "Name": "Roboticist",
+          "Type": "Career",
+          "Description": "You operate drones and repair synths.",
+          "Value": 0,
+          "Weight": 33,
+          "OptionLists": [[
+            {
+              "Name": "+Skill Mastery",
+              "Type": "Motivation",
+              "Description": "",
+              "Value": 0,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "CRep",
+              "Type": "Reputation",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Aerospace",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Electronics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Hardware: Robotics",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 50,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Air",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Pilot: Ground",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 20,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Program",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 40,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Bot Models",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 60,
+              "Weight": 0,
+              "OptionLists": []
+            },
+            {
+              "Name": "Know: Synthmorphs",
+              "Type": "Skill",
+              "Description": "",
+              "Value": 30,
+              "Weight": 0,
+              "OptionLists": []
+            }
+          ]]
+        }
+      ]
+    ]
+  }
+]

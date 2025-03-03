@@ -1,0 +1,1213 @@
+[
+  {
+    "Name": "Gain +1 ego Flex and roll on the Story Event table.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "LifePathEventStory",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You travel extensively. Learn an additional language (your choice or roll randomly).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Learn an additional language (your choice or roll randomly).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experiment with a new body. Roll on the Random Morph tables, but ignore pods.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": "Ignore: Pods",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An unfortunate accident ends your life. Roll on the Random Morph tables, but ignore pods and uplifts.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": "Reroll: Pods,Uplifts",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You simply are not very comfortable with this whole resleeving thing. Gain the Morphing Disorder (Level 2) trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Morphing Disorder",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are a slacker. −10 to one skill of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to one skill of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You commit or experience something so terrible, you purge it from your mind. Gain the Edited Memories trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take up a sport. +10 to Athletics skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Athletics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You drop out of school to work. −10 to two skills of your choice but gain the Resources (Level 1) trait.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 to two skills of your choice",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You mess up and your career hopes are dashed. −10 to either c-rep or r-rep and gain the motivation −Hypercorps.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to either c-rep or r-rep",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "-Hypercorps",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pick up a new hobby. +20 to one Know skill with an Arts or Interests field (EP2) of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "+20 to one Know skill with an Arts or Interests field (EP2) of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take some risks and things do not go your way. Lose 1 level of Resources trait (if you lack Resources, −10 to one rep score of your choice).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 to one rep score of your choice",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You travel extensively in Earth’s remaining wilderness. +10 Survival skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your work requires you to change your morph. Roll on the Random Morph tables, but re-roll pods and uplifts.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": "Reroll: Pods,Uplifts",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You educate yourself to get ahead. +10 to one Know skill with an Academics or Professional Training field (EP2) of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 to one Know skill with an Academics or Professional Training field (EP2) of your choice.",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You become entwined in extralegal affairs. Roll once on the Crime Event table, then proceed to Step 8.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventCrime",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are accused of being a snitch. −10 to either @-rep or g-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to either @-rep or g-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Something goes seriously glitchy with your muse and you are nearly hurt. Gain the Mental Disorder (Phobia: Muse) trait (also on Disorders, EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Phobia",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Phobia: Muse",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are a pioneer in the practice of egocasting. Gain the Ego Plasticity (Level 1: Merging) trait and roll on the Random Morph tables.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Ego Plasticity",
+          "Type": "Trait",
+          "Description": "Merging",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You piss off someone with a lot of clout. −10 to one rep score of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to one rep score of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experiment with mental self-modification. Gain the Enhanced Behavior (Level 2) trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enhanced Behavior",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You exhibit a serious lack of willpower in coping with your adult life. Gain the Addiction (Level 2) trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Addiction",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You teach yourself how to code to get additional work. +10 Program skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You contribute to some important research. +10 r-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The poor state of affairs on Earth before the Fall heavily impacts your mental health. Gain the Mental Disorder (Depression) trait (also on Disorders, EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Depression",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Depression",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend time in Earth’s orbital colonies. +10 Free Fall skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Free Fall",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spend time in the rougher, crisis-impacted areas on Earth before the Fall. Gain +10 Fray skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A period of poverty leaves you with the skills to get by. Gain the Scrounging Talent trait.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Scrounging Talent",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are implicated in a news-making scandal. −10 c-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are badly injured in an accident. You become more cautious. +10 Perceive skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Perceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You contribute to an activist/resistance cause. +10 @-rep but −10 c-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You join a ship’s crew and the pilot shows you a few things. +10 Pilot: Space.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pilot: Space",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Everything around you keeps breaking, so you learn how to fix it. +10 to a Hardware skill of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardware: PlayersChoice",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The stress of rapid technological change overwhelms you. Gain the Mental Disorder (ADHD) trait (also on Disorders, EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "ADHD",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ADHD",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You study or train hard. Gain a free specialization (EP2) of your choosing in one skill you possess.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain a free specialization (EP2) of your choosing in one skill you possess.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take up a martial art. Gain +10 Melee skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You choose your own path over what others tell you. Replace any one active skill with another active skill of your choosing at the same rating.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Replace any one active skill with another active skill of your choosing at the same rating.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take care of someone in a way that is noticed by others. +10 c-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn the hard way that ignoring money management lessons was a bad idea. Reduce your Resources trait by one level. If you do not have that trait, gain the Debt trait instead.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Debt",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take the fall for a crime you may or may not have been complicit in. +10 g-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An accident on a space elevator leaves you fearful of weightlessness. Gain the Mental Disorder (Phobia: Microgravity) trait (also on Disorders, EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Phobia",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Phobia: Microgravity",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You start up an unusual hobby. Gain +20 to one Exotic Skill (EP2) in a field of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain +20 to one Exotic Skill (EP2) in a field of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lose a bet and sleeve a pod or uplift morph before it was cool. Roll on the Random Morph tables, re-rolling any result that is not an uplift or pod.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make some risky but ambitious decisions that pay off well. Gain the Resources (Level 1) trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After you encounter someone experiencing a medical emergency, you take first aid training to be more prepared. +10 Medicine: Paramedic.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After several opportunities are pulled away from you, you become better at getting your way. +10 Persuade skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lose a limb in a traumatic incident, but grow it back. Lose 1 ego flex.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You lie to get a job or something you need. +10 Deceive skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help others study and learn. +10 Research skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You assist an activist in resisting serious charges. +10 @-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are taken advantage of, but you won’t let it happen again. +10 Kinesics skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You briefly become mesh famous. +10 f-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are included in a reality XP show that gets bad ratings. −10 f-rep.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You get really into biohacking and body mods. +10 Medicine: Biotech.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medicine: Biotech",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Victimized by crime, you learn to defend yourself. +10 Guns skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience Earth’s waterways, either on vacation or due to climate issues. +10 Pilot: Nautical skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Pilot: Nautical",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You save an animal from danger. Gain the Animal Empathy trait (EP2).",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Animal Empathy",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are stalked by online trolls, but you get better at defending yourself. +10 Infosec skill.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are not a slacker. You take on part-time jobs or additional training. +10 to one skill of your choice.",
+    "Type": "PreFallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "+10 to skill of choice",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

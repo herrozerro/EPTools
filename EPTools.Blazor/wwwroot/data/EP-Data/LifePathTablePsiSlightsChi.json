@@ -1,0 +1,162 @@
+[
+  {
+    "Name": "Charisma",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Control Behavior",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Eco-Empathy",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Enhanced Creativity",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Enhanced Memory",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Grok",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Heightened Awareness",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "High Pain Threshold",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Inner Spark",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pattern Recognition",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Predictive Boost",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psi Armor",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Qualia",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Savant Calculation",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Scramble",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Self Control",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Social Cunning",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Somatic Control",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Superior Kinesics",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xeno-Empathy",
+    "Type": "Slight",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  }
+]

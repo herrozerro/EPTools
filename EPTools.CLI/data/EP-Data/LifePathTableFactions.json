@@ -1,0 +1,178 @@
+[
+  {
+    "Name": "Anarchist",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Argonaut",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Barsoomian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Brinker",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Criminal",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Extropian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hypercorp",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 12,
+    "OptionLists": []
+  },
+  {
+    "Name": "Jovian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Lunar/Orbital",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mercurial",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Reclaimer",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Scum",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Socialite",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Titanian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Venusian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Belter",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Europan",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ringer",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sapient",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sifter",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Skimmer",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Solarian",
+    "Type": "Faction",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]

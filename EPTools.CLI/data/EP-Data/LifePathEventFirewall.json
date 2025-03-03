@@ -1,0 +1,1298 @@
+[
+  {
+    "Name": "You are recruited by someone you know because of your skill sets.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "You are recruited by someone you know because of your skill sets.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You accidentally stumble onto a Firewall op, and luckily for you they decide the best option is to recruit you.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "You accidentally stumble onto a Firewall op, and luckily for you they decide the best option is to recruit you.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Someone you are close to is a Firewall proxy; they recruit you to help them out.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Someone you are close to is a Firewall proxy; they recruit you to help them out.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Firewall recruits you as an informant, to keep tabs on someone/something they are worried about. +10 Perceive skill.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Perceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your ego was jailed/lost on Earth/forknapped/in cold storage, but Firewall broke you out in return for your aid.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Your ego was jailed/lost on Earth/forknapped/in cold storage, but Firewall broke you out in return for your aid.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your proxies provide a solid briefing on various threats facing transhumanity. +10 Know: X-Risks.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: X-Risks",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are infected and secretly operate as a sleeper exsurgent for months or even years. Firewall restores you from an old backup. Gain the Edited Memories trait (EP2) and roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have an unexpected close encounter with the TQZ on Mars, the New Mumbai Containment Zone of Luna, or Iapetus. Roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An exhuman raid leaves you and others dead; Firewall helps sort out the mess. Roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A previously dormant TITAN nanoplague rampages through your habitat. Roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You find a relic. Bad things happen. Firewall cleans up the mess. −10 to one rep score of your choice.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to one rep score of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You were a member/supporter of one of the groups that evolved into Firewall from before the Fall. You took some time off, but now you’re back. +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You were involved in a cover-up of a TITAN- or exsurgent-related secret during the Fall. Firewall brings you in to get the story. +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You don’t remember how or why Firewall recruited you. Gain the Edited Memories trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your ship stops to investigate/help a derelict craft and is never heard from again. Roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Thanks to a particular skill you have, Firewall has consulted with you for years without revealing themselves. They decide to fill you in on the full story. +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You step into an unknown fray and are lucky enough to pick the right side. +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are recruited to help Firewall cover up a secret or outbreak. +10 i-rep but −10 to one rep score of your choice.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 to one rep score of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You uncover someone smuggling or dealing TITAN technology. Firewall deals with it, then recruits you. −10 g-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 g-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You uncover a sleeper exsurgent cell the hard way. Gain the Mental Disorder (Phobia: Exsurgents) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Phobia: Exsurgents",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Phobia",
+          "Type": "Disorder",
+          "Description": "Phobia: Exsurgents",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Some of the horrors you encounter no longer both you. Gain the Stress Immunity trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stress Immunity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help the backup faction of Firewall (EP2) establish an exoplanet cache. Roll on the Gatecrashing Event table and proceed to Step 15.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventGatecrashing",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You single-handedly foil an impending outbreak, but the local authorities blame you for the carnage. Firewall helps you escape. Gain the On the Run trait and +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "On the Run",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You spot someone acting suspiciously and report them. They turn out to be a Firewall async. You are repaid with recruitment and training. Gain the Async Familiarity trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Async Familiarity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are a bit too good at ferreting out certain secrets online. Firewall brings you in to the fold to keep your mouth shut. +10 Infosec skill.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Someone you loved becomes infected. You keep it secret and protect them for a time, until everything goes bad. Firewall rescues you, then recruits you. +10 Know: Exsurgents but −10 i-rep (or c-rep if you don’t have i-rep).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Exsurgents",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 i-rep (or c-rep if you don’t have i-rep).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You discover a lost cache on an isolated asteroid. Firewall actually lets you keep some of the find. Gain the Resources (Level 1) trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A package you are hired to deliver turns out to be an alien artifact. When it causes problems, you go to a friend of a friend, who turns out to be a Firewall proxy. They solve the problem, but you fail to make the delivery. Gain the Enemy trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enemy",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Firewall pragmatists (EP2) assign you to help some Argonauts research TITAN tech. +10 Know: TITANs.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: TITANs",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help a conservative faction (EP2) server destroy a TITAN threat, but the local authorities have some questions for you. Gain the On the Run trait and +10 i-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "On the Run",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The pragmatist faction of Firewall (EP2) has you working with async sentinels. +10 Know: Asyncs.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Asyncs",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A proxy from your server from the structuralist faction (EP2) is censured by Firewall for editing egos without consent. Gain either the Edited Memories (EP2) or Restricted Behavior (Level 2) trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Gain either the Edited Memories (EP2) or Restricted Behavior (Level 2) trait (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help out the maverick faction of Firewall (EP2) on an op, but it requires bending quite a few laws. Roll on the Crime Event table and proceed to Step 15.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathEventCrime",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "One of your forks is transformed into a TITAN puppet. Firewall recruits you to track it. Gain the Errant Fork trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Errant Fork",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You assist a member of the structuralist faction of Firewall (EP2) in (re)connecting with people in the Titanian security services. Gain the Contact trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Contact",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are one of the few survivors of an exsurgent outbreak on your habitat. Gain the Psi Defense (Level 2) trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi Defense",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After a run-in with an exsurgent, you are infected with Watts-MacLeod (EP2). Firewall recruits you and shows you the ropes. +10 Psi skill, gain the Psi (Level 2) trait, and gain 2 sleights (pick or roll randomly on the Sleights table). However, you start play with 1 trauma and 10 stress.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Psi",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Trauma",
+          "Type": "Attribute",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Stress",
+          "Type": "Attribute",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlights",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTablePsiSlights",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your proxy ask you to infiltrate a potentially dangerous cult that turns out to be harmless … you hope. +10 Deceive skill.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help the backup faction of Firewall (EP2) secure a batch of egos for off-world storage, but come under suspicion of ego-trading. +10 i-rep but −10 @-rep or c-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 @-rep or c-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Firewall conservatives (EP2) have you monitor Factor activity within the Solar System. +10 Know: Factors.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Factors",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You’re a secret agent now, so you improve your opsec. +10 Infosec skill.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You were recruited for Firewall, but something seems to have happened to your proxy server. You haven’t heard from them in months …",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You were recruited for Firewall, but something seems to have happened to your proxy server. You haven’t heard from them in months …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "When working with sentinels from the maverick faction of Firewall (EP2), you bury a small cache of antimatter on Mars. You’re not sure that was the best idea for dealing with it, but you know where it is …",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "When working with sentinels from the maverick faction of Firewall (EP2), you bury a small cache of antimatter on Mars. You’re not sure that was the best idea for dealing with it, but you know where it is …",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with/for someone who turns out to be an exhuman or supporter. Once you get over the shock, Firewall recruits you. +10 Know; Exhumans skill.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know; Exhumans",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with the pragmatist faction of Firewall (EP2) to handle an outbreak, but using the enemy’s weapons against them is unnerving and you seek out ways to cope. Gain the Addictive Personality (Level 2) trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Addictive Personality",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You work with the conservative faction of Firewall (EP2). They equip you with an emergency farcaster (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You work with the conservative faction of Firewall (EP2). They equip you with an emergency farcaster (EP2).",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You destroy critical vid/XP footage of an outbreak before it can be aired. +10 i-rep but −10 f-rep.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Nightmares are real. You’ve seen them. Gain the Stress Vulnerability trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stress Vulnerability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your first Firewall op pits your team against a TITAN nanoswarm. +10 Know: Nanotechnology and roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Nanotechnology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You’ve been on enough ops to start feeling like a jaded vet. Gain the Hardening trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardening",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You uncover a conspiracy within your faction and Firewall steps in to help you deal with it. +10 to a rep score of your choice.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "You uncover a conspiracy within your faction and Firewall steps in to help you deal with it. +10 to a rep score of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You don’t survive your first few ops, but you learn a few lessons. +10 Fray and roll on the Random Morph tables.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take on jobs for Firewall, but it impacts your personal finances. Lose 1 level of Resources trait (or −10 c-rep if you lack Resources).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Lose 1 level of Resources trait (or −10 c-rep if you lack Resources)..",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Working with Firewall, you see some things. You learn to cope. Gain the Composure trait (EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Composure",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The first time you face an exsurgent, everyone but you flees. Gain the Mental Fortitude trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Fortitude",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The best part of working for Firewall is coming home after an op. Gain the Habitat Tranquility trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Habitat Tranquility",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After a mass casualty event, you are one of the first survivors to bounce back, drawing Firewall’s attention. Gain the Resilient Mind trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resilient Mind",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You come into possession of a recorded basilisk hack (EP2). For whatever reason, you do not tell your proxies.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You come into possession of a recorded basilisk hack (EP2). For whatever reason, you do not tell your proxies.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are part of a rescue op that discovers a ship full of exsurgents. As the only survivor, Firewall recruits you — and you get the salvage claim. Gain the Spacecraft trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Spacecraft",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "On your first op, dozens die. Gain the Mental Disorder (Fugue) trait (also on Disorders, EP2).",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Fugue",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Fugue",
+          "Type": "Disorder",
+          "Description": "Fugue",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your recruitment into Firewall may be part of a larger plan. Gain the Subverted Mind trait.",
+    "Type": "LifePathEventFirewall",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Subverted Mind",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]
+

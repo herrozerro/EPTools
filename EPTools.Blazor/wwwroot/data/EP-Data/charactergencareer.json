@@ -1,0 +1,788 @@
+[
+  {
+    "Name": "Academic",
+    "Type": "CharacterGenCareer",
+    "Description": "You devote your efforts to the pursuit of knowledge.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Academic",
+          "Type": "Career"
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Administration, Instruction, Lab Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Administration, Instruction, Lab Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Administration, Instruction, Lab Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Covert Operative",
+    "Type": "CharacterGenCareer",
+    "Description": "You are a spy, infiltrator, thief, or undercover agent, skilled at accessing places you don\u2019t belong.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Covert Operative",
+          "Type": "Career"
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Security Ops, Smuggling, Spycraft",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Black Markets, Current Events, Politics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Enforcer",
+    "Type": "CharacterGenCareer",
+    "Description": "You\u2019re a thug, whether you\u2019re wielding force for a hypercorp, cartel, habitat overseer, or autonomist militia.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enforcer",
+          "Type": "Career"
+        },
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 50,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Provoke",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Bodyguarding, Racketeering, Security Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Cartel Politics, Gambling, Night Clubs",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Explorer",
+    "Type": "CharacterGenCareer",
+    "Description": "You\u2019ve walked on alien worlds and seen things with your own eyes that others wouldn\u2019t believe.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Explorer",
+          "Type": "Career"
+        },
+        {
+          "Name": "Athletics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: (Choose One) Common Fields: Air, Ground, Nautical, Space",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: First-Contact Ops, Gatecrashing, Surveying",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Astrobiology, Geology, Xenoarcheology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Face",
+    "Type": "CharacterGenCareer",
+    "Description": "You excel at convincing others, even when it\u2019s not in their best interest.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Face",
+          "Type": "Career"
+        },
+        {
+          "Name": "Deceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Fencing, Police Ops, Smuggling",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Black Markets, Drugs, Underground XP",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Genehacker",
+    "Type": "CharacterGenCareer",
+    "Description": "DNA is your artistic medium, proteins your weapon of choice.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Genehacker",
+          "Type": "Career"
+        },
+        {
+          "Name": "Medicine: Biotech",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Pharmacology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Biology, Genetics, Physiology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Lab Ops, Medical Services, Morph Design",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Hacker",
+    "Type": "CharacterGenCareer",
+    "Description": "Software heeds your beck and call, whether you seek to exploit systems or protect them.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hacker",
+          "Type": "Career"
+        },
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Interface",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Computer Science, Cryptography, Mathematics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Data Processing, Network Engineering, System Administration",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Investigator",
+    "Type": "CharacterGenCareer",
+    "Description": "Few details escape your scrutiny, whether you are a journalist, private investigator, detective, or insurance claims investigator.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Investigator",
+          "Type": "Career"
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Perceive",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Ego Hunting, Investigation, Journalism",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Black Markets, Current Events, Cartels",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Medic",
+    "Type": "CharacterGenCareer",
+    "Description": "You have a background in medicine and experience as a physician, surgeon, paramedic,\tbody bank tech, or other type of medical specialist.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medic",
+          "Type": "Career"
+        },
+        {
+          "Name": "Kinesics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Biotech",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Biology, Genetics, Psychology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Body Bank Ops, Emergency Services, Surgical Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Mindhacker",
+    "Type": "CharacterGenCareer",
+    "Description": "You meld and shape minds and memories. You might be a therapist, memeticist, or psychosurgeon pushing the bounds of cognition.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mindhacker",
+          "Type": "Career"
+        },
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Pharmacology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Medicine: Psychosurgery",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Cognitive Science, Memetics, Psychology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Body Bank Ops, Medical Services, Social Services",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Scavenger",
+    "Type": "CharacterGenCareer",
+    "Description": "You scrounge through wrecks and ruins of the Fall, seeking value in the destruction.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Scavenger",
+          "Type": "Career"
+        },
+        {
+          "Name": "Hardware: (Choose One) Common Fields: Electronics, Industrial, Robotics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Hardware: Demolitions",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Pilot: (Choose One) Common Fields: Air, Ground, Nautical, Space",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Flight Crew Ops, Scavenging, Smuggling",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Black Markets, Spacecraft, TITAN Machines",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Scientist",
+    "Type": "CharacterGenCareer",
+    "Description": "You seek to understand how the universe works \u2014 or at least certain elements of it.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Scientist",
+          "Type": "Career"
+        },
+        {
+          "Name": "Hardware: (Choose One) Common Fields: Electronics, Robotics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Research",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Astrobiology, Memetics, Physics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Field Science, Investigation, Lab Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Soldier",
+    "Type": "CharacterGenCareer",
+    "Description": "You serve a habitat polity, hypercorp, or mercenary outfit.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Soldier",
+          "Type": "Career"
+        },
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Melee",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Bodyguarding, Military Ops, Security Ops",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Conflict Zones, Gambling, Mercenary Groups",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Techie",
+    "Type": "CharacterGenCareer",
+    "Description": "You make and fix things. You might be a roboticist, habitat tech, or artifex nano - engineer.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Techie",
+          "Type": "Career"
+        },
+        {
+          "Name": "Hardware: (Choose One) Common Fields: Electronics, Industrial, Robotics",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Construction, Habitat Ops, Mining, Nanofacturing",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 60,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: (Choose One) Common Fields: Computer Science, Engineering, Nanotechnology",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "TemplateName": "Standard Creature",
+    "TemplateType": "Creature",
+    "Template": "Name: Standard Creature\nStress Test: SV 1d6\n--\nInitiative: 7, Fray: 50, AV: 4/10 Light Armor Vest\nWT: 7, DUR: 35, DR: 53\nThreat Pool: 3\n--\nAttacks:\n--\nPerceive: 50\nMove: Walker (Medium 4/20)\nCOG: 10^30 INT: 10^30 REF: 10^30 SAV: 10^30 SOM: 10^30 WIL: 10^30\nSkills:\n--\nWare: Biomods, Cortical Stack, Eelware, Mesh Inserts\nTraits: \n--\nNotes:"
+  },
+  {
+    "TemplateName": "Boss Creature",
+    "TemplateType": "Creature",
+    "Template": "Name: Boss Creature\nStress Test: SV 1d6\n--\nInitiative: 10, Fray: 60, AV: 10 (mesh armor)\nWT: 20, DUR: 100, DR: 200\nInsight: 10 Moxie: 5 Vigor: 1 Flex: 5\n--\nAttacks: \n--\nPerceive: 50 (60)\nMove: Walker (Medium 4/20)\n--\nCOG: 30^90 INT: 30^90 REF: 20^60 SAV: 30^90 SOM: 20^60 WIL: 30^90\nSkills: \n--\nWare: \nApps: \nTraits: \n--\nNote:"
+  },
+  {
+    "TemplateName": "Morph",
+    "TemplateType": "Morph",
+    "Template": "Name: Morph\nCost: 0mp * Avail: 50\n--\nWT: 6 * DUR: 30 * DR: 45\nInsight: 0 Moxie: 2 Vigor: 1 Flex: 0\n--\nMovement Rate: Walker 4/2\nWare: Biomods, Cortical Stack\nMorph Traits:\nCommon Extras:\nNotes:"
+  }
+]

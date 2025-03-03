@@ -1,0 +1,362 @@
+[
+  {
+    "Name": "Arachnikoma (Arachnoid)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 9,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Arachnoid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Biocore",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Blackbird (Ornithope)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Case",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cetus",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cloud Skimmer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Combat Mech (Daitya)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Courier",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Daitya",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Dragonfly",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fenrir",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 20,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fierce Kite (Kite)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTableFlexbot",
+    "Type": "Table",
+    "Description": "Flexbot (roll on the Flexbot table)",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Galatea",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gargoyle",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Golem (Galatea)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Griefer",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Guard",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 8,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Kite",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Liquid Silver (Steel Morph)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 7,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mimic",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nautiloid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 25,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Oobleck",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Opteryx",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ornithope",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Prime (Guard)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 10,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Q-Morph",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 13,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Raptor",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 8,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Reaper",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 12,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Rover",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Savant",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Skulker (Swarmanoid)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Slitheroid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Smart Swarm",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spare",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sphere",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Steel Morph",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sundiver",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 10,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Swarmanoid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Synth",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "Synthtaur",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Takko",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ultra Kite (Kite)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xu Fu",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  }
+]

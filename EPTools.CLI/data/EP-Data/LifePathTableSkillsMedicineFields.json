@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Biotech",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Forensics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Paramedic",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pharmacology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psychosurgery",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Veterinary",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  }
+]

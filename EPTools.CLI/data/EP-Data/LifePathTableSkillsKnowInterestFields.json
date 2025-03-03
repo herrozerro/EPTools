@@ -1,0 +1,452 @@
+[
+  {
+    "Name": "Alien Relics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Apps",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Beers/Wine",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Black/Red Markets",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Blogs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bot Models",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Celebrity Gossip",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Conspiracies",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cultural Memes & Trends",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Current Events",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cutting-Edge Technology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Drug Dealers",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Drugs/Petals/Narcos",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Earth Relics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Exhumans",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Exoplanets",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Exoplanet Colonies",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Factors",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Food",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gambling",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Gangs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Habitats",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "(Faction/Location) History",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Literature",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "MARGs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Martial Arts",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "(Topic) Mesh Forums",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Metacelebrities",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Morphs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Music",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nanofab Designs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nightclubs",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Old-Earth Nation-States",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pandora Gates",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "(Location) Places of Interest",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Politics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pop Culture",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pornography",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "(AGI/Uplift) Rights",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Rumors",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Science Fiction",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Smart Animals",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spaceship Models",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sports",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  [
+    {
+      "Name": "Stock Market",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 1,
+      "OptionLists": []
+    },
+    {
+      "Name": "Strategy Games",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 3,
+      "OptionLists": []
+    },
+    {
+      "Name": "TITANs",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "TITAN Tech",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 3,
+      "OptionLists": []
+    },
+    {
+      "Name": "Transhuman Factions",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 3,
+      "OptionLists": []
+    },
+    {
+      "Name": "Trivia",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 1,
+      "OptionLists": []
+    },
+    {
+      "Name": "Underground XP",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "Vehicle Models",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "VR Games",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "Weapons",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "X-Casters",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    },
+    {
+      "Name": "XP",
+      "Type": "Skill",
+      "Description": null,
+      "Value": 0,
+      "Weight": 2,
+      "OptionLists": []
+    }
+  ]
+]

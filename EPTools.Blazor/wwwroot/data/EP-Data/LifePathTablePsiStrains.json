@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "The Architect",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "The Beast",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "The Haunter",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "The Stranger",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "The Xenomorph",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  }
+]

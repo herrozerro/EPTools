@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "Animal Handling",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bows",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 12,
+    "OptionLists": []
+  },
+  {
+    "Name": "Disguise",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Escape Artist",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 12,
+    "OptionLists": []
+  },
+  {
+    "Name": "Plasma Cutters",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sleight of Hand",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 18,
+    "OptionLists": []
+  },
+  {
+    "Name": "Throwing Knives",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Whips",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  }
+]

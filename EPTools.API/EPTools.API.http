@@ -1,0 +1,6 @@
+@EPTools.API_HostAddress = http://localhost:5190
+
+GET {{EPTools.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

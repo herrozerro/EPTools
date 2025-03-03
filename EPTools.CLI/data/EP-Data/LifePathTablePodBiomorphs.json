@@ -1,0 +1,194 @@
+[
+  {
+    "Name": "Augur",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ayah",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Basic Pod",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "Chickcharnie",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Critter (Humanoid Beast)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Critter (Quadruped Hybrid)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Critter (Small Mammal)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Defender (Ayah)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Digger",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Flying Squid",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hypergibbon",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Novacrab",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pleasure Pod",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 12,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ripwing",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Samsa",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Scurrier (Quadruped)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Scurrier",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Security Pod",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Shaper",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Space Marine (Security Pod)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Traceur",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Vac Pod",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Whiplash",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Worker Pod",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 10,
+    "OptionLists": []
+  }
+]

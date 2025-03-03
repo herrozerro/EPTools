@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Air",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 30,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ground",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 30,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nautical",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "Space",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 30,
+    "OptionLists": []
+  }
+]

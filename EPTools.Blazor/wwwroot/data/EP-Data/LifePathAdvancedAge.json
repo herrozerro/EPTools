@@ -1,0 +1,235 @@
+[
+  {
+    "Name": "Reduce one aptitude by 5",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Reduce one aptitude by 5.",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": "Cog",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": "Int",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": "Ref",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": "Sav",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": "Som",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": "Wil",
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Increase one aptitude by 5",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Increase one aptitude by 5.",
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": "Cog",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": "Int",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": "Ref",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": "Sav",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": "Som",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ],
+      [
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": "Wil",
+          "Value": 5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Gain the Mental Disorder (Depression) trait (p",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Gain the Mental Disorder (Depression) trait (p. 225, EP2).",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder-Depression",
+          "Type": "Trait",
+          "Description": "Mental Disorder-Depression",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Gain the Enhanced Behavior (Bored, Level 2) trait(p",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Gain the Enhanced Behavior (Bored, Level 2) trait(p. 78, EP2)",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Enhanced Behavior-Bored",
+          "Type": "Trait",
+          "Description": "Enhanced Behavior-Bored",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Gain the Restricted Behavior (Caring, Level 2) trait(p",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Gain the Restricted Behavior (Caring, Level 2) trait(p. 80, EP2)",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Restricted Behavior-Caring",
+          "Type": "Trait",
+          "Description": "Restricted Behavior-Caring",
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Reduce your motivations by one",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "Reduce your motivations by one.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Reduce your motivations by one.",
+          "Type": "Motivation",
+          "Description": "Reduce your motivations by one.",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "No effect",
+    "Type": "BackgroundAdvancedAge",
+    "Description": "No effect",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "No effect",
+          "Type": "",
+          "Description": "No effect",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

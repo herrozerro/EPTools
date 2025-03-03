@@ -1,0 +1,29 @@
+﻿@page "/randomcharacter"
+@inject DiscordWebhookService Dsw
+@inject EPDataService Epd
+@inject LifepathService Lps
+@inject IJSRuntime JsRuntime
+
+<h3>RandomCharacter</h3>
+
+<button @onclick="DownloadText">Download text file</button>
+
+@code {
+    async Task DownloadBinary()
+    {
+        // Generate a file
+        byte[] file = Enumerable.Range(0, 100).Select(value => (byte)value).ToArray();
+
+        // Send the data to JS to actually download the file
+        await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "file.bin", "application/octet-stream", file);
+    }
+
+    async Task DownloadText()
+    {
+        // Generate a text file
+        var s = System.Text.Json.JsonSerializer.Serialize(await Lps.GenerateEgo());
+        byte[] file = System.Text.Encoding.UTF8.GetBytes(s);
+        await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "RandomCharacter.json", "text/plain", file);
+    }
+}
+

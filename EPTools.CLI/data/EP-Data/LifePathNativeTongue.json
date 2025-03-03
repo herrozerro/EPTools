@@ -1,0 +1,515 @@
+[
+  {
+    "Name": "Arabic",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Arabic",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Arabic",
+          "Type": "Language",
+          "Description": "Arabic",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Bengali",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Bengali",
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Bengali",
+          "Type": "Language",
+          "Description": "Bengali",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Cantonese/Yue",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Cantonese/Yue",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cantonese/Yue",
+          "Type": "Language",
+          "Description": "Cantonese/Yue",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Dutch",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Dutch",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Dutch",
+          "Type": "Language",
+          "Description": "Dutch",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "English",
+    "Type": "BackgroundNativeTongue",
+    "Description": "English",
+    "Value": 0,
+    "Weight": 9,
+    "OptionLists": [
+      [
+        {
+          "Name": "English",
+          "Type": "Language",
+          "Description": "English",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Farsi/Persian",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Farsi/Persian",
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Farsi/Persian",
+          "Type": "Language",
+          "Description": "Farsi/Persian",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "French",
+    "Type": "BackgroundNativeTongue",
+    "Description": "French",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "French",
+          "Type": "Language",
+          "Description": "French",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "German",
+    "Type": "BackgroundNativeTongue",
+    "Description": "German",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "German",
+          "Type": "Language",
+          "Description": "German",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Hindi",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Hindi",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hindi",
+          "Type": "Language",
+          "Description": "Hindi",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Italian",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Italian",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Italian",
+          "Type": "Language",
+          "Description": "Italian",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Japanese",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Japanese",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Japanese",
+          "Type": "Language",
+          "Description": "Japanese",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Javanese",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Javanese",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Javanese",
+          "Type": "Language",
+          "Description": "Javanese",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Korean",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Korean",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Korean",
+          "Type": "Language",
+          "Description": "Korean",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Mandarin",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Mandarin",
+    "Value": 0,
+    "Weight": 9,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mandarin",
+          "Type": "Language",
+          "Description": "Mandarin",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Polish",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Polish",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Polish",
+          "Type": "Language",
+          "Description": "Polish",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Portuguese",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Portuguese",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Portuguese",
+          "Type": "Language",
+          "Description": "Portuguese",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Punjabi",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Punjabi",
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Punjabi",
+          "Type": "Language",
+          "Description": "Punjabi",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Russian",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Russian",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Russian",
+          "Type": "Language",
+          "Description": "Russian",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Skandinaviska",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Skandinaviska",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Skandinaviska",
+          "Type": "Language",
+          "Description": "Skandinaviska",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Spanish",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Spanish",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Spanish",
+          "Type": "Language",
+          "Description": "Spanish",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Swedish",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Swedish",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Swedish",
+          "Type": "Language",
+          "Description": "Swedish",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Tamil",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Tamil",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Tamil",
+          "Type": "Language",
+          "Description": "Tamil",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Turkish",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Turkish",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Turkish",
+          "Type": "Language",
+          "Description": "Turkish",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Urdu",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Urdu",
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Urdu",
+          "Type": "Language",
+          "Description": "Urdu",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Vietnamese",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Vietnamese",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Vietnamese",
+          "Type": "Language",
+          "Description": "Vietnamese",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Wu",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Wu",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Wu",
+          "Type": "Language",
+          "Description": "Wu",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Other",
+    "Type": "BackgroundNativeTongue",
+    "Description": "Other",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Other",
+          "Type": "Language",
+          "Description": "Other",
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]
