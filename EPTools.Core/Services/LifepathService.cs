@@ -102,7 +102,7 @@ namespace EPTools.Core.Services
                     break;
                 case "Attribute":
                     //TODO: implement the ability to start with stress
-                    //throw new NotImplementedException(); 
+                    //throw new NotImplementedException();
                     break;
                 case "PlayerChoice":
                     ApplyPlayerChoice(ego, option);

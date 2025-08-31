@@ -520,6 +520,39 @@
     "id": "unique-id-for-faust"
   },
   {
+    "name": "Flat",
+    "book": "EP2E",
+    "type": "Biomorph",
+    "cost": 0,
+    "availability": 30,
+    "wound_threshold": 6,
+    "durability": 30,
+    "death_rating": 45,
+    "pools": {
+      "insight": 0,
+      "moxie": 0,
+      "vigor": 0,
+      "flex": 0
+    },
+    "movement_rate": [
+      {      "movement_type": "Walker",
+        "base": 4,
+        "full": 20
+      }
+    ],  "ware": [  ],
+    "morph_traits": [],
+    "common_extras": [
+      "Many have the Genetic Defect trait."
+    ],
+    "notes": [],
+    "common_shape_adjustments": [],
+    "image": "flat.png",
+    "description": "Flats are baseline unmodified humans, born with all of the natural defects, hereditary diseases, and other genetic mutations that evolution so lovingly applies. Flats are increasingly rare outside bioconservative enclaves — most died off with the rest of humanity during the Fall.",
+    "resource": "EP2E",
+    "reference": "",
+    "id": "unique-id-for-flat"
+  },
+  {
     "name": "Freeman",
     "book": "Character Options",
     "type": "Biomorph",
@@ -1773,7 +1806,7 @@
     "id": "unique-id-for-surya"
   },
   {
-    "name": "Nishakara",
+    "name": "Nishakara (Surya)",
     "book": "Character Options",
     "type": "Biomorph",
     "cost": 6,
@@ -2726,7 +2759,7 @@
     "id": "unique-id-for-ayah"
   },
   {
-    "name": "Defender",
+    "name": "Defender (Ayah)",
     "book": "Character Options",
     "type": "Pod",
     "cost": 6,
@@ -3556,7 +3589,7 @@
     "id": "unique-id-for-security-pod"
   },
   {
-    "name": "Space Marine",
+    "name": "Space Marine (Security Pod)",
     "book": "Character Options",
     "type": "Pod",
     "cost": 6,
@@ -3859,7 +3892,7 @@
     "id": "unique-id-for-scurrier"
   },
   {
-    "name": "Quadruped Scurrier",
+    "name": "Scurrier (Quadruped)",
     "book": "Character Options",
     "type": "Exomorph",
     "cost": 2,
@@ -4033,7 +4066,7 @@
     "id": "unique-id-for-arachnoid"
   },
   {
-    "name": "Arachnikoma",
+    "name": "Arachnikoma (Arachnoid)",
     "book": "Character Options",
     "type": "Synthmorph",
     "cost": 9,
@@ -4372,7 +4405,7 @@
     "id": "unique-id-for-courier"
   },
   {
-    "name": "Combat Mech (Daitya)",
+    "name": "Daitya",
     "book": "Character Options",
     "type": "Synthmorph",
     "cost": 13,
@@ -4428,7 +4461,7 @@
     "id": "unique-id-for-daitya"
   },
   {
-    "name": "Combat Mech",
+    "name": "Combat Mech (Daitya)",
     "book": "Character Options",
     "type": "Synthmorph",
     "cost": 21,

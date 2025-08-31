@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Apiary",
+    "Name": "Apiary Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 3,
@@ -8,7 +8,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Aviary",
+    "Name": "Aviary Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 2,
@@ -16,7 +16,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Bard",
+    "Name": "Bard Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 3,
@@ -24,7 +24,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Cleric",
+    "Name": "Cleric Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 2,
@@ -32,7 +32,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Conjurer",
+    "Name": "Conjurer Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 1,
@@ -40,7 +40,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Crafter",
+    "Name": "Crafter Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 2,
@@ -48,7 +48,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Fighter",
+    "Name": "Fighter Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 3,
@@ -56,7 +56,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Rogue",
+    "Name": "Rogue Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 2,
@@ -64,7 +64,7 @@
     "OptionLists": []
   },
   {
-    "Name": "Wizard",
+    "Name": "Wizard Module (Flexbot)",
     "Type": "Morph",
     "Description": null,
     "Value": 2,

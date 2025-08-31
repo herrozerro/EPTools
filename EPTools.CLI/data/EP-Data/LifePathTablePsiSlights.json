@@ -8,7 +8,7 @@
     "OptionLists": []
   },
   {
-    "Name": "LifePathTableUpliftPsiGamma",
+    "Name": "LifePathTablePsiGamma",
     "Type": "Table",
     "Description": "Psi Gamma Slights",
     "Value": 0,

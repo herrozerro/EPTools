@@ -6,6 +6,9 @@ namespace EPTools.Core.Extensions
     {
         public static T GetWeightedItem<T>(this IEnumerable<T> weightedList, int weightedListModifier = 0) where T : IWeightedItem
         {
+            if (weightedList.Count() == 0)
+                throw new ArgumentException(nameof(weightedList));
+            
             var weightedItems = weightedList.ToList();
 
             var totalWeight = weightedItems.Sum(x => x.Weight);
