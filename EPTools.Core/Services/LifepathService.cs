@@ -1,4 +1,5 @@
-﻿using EPTools.Core.Extensions;
+﻿using System.Diagnostics;
+using EPTools.Core.Extensions;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 
@@ -15,8 +16,20 @@ namespace EPTools.Core.Services
         {
             NewEgo = new Ego
             {
-                Identities = [new Identity()]
+                Identities = [new Identity(){ Alias = "Default Identity"}]
             };
+            
+            var skills = await ePDataService.GetSkills();
+            foreach (var skill in skills)
+            {
+                SkillType skilltype = skill.Name switch
+                {
+                    { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
+                    { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
+                    _ => SkillType.EgoSkill
+                };
+                NewEgo.Skills.Add(new EgoSkill { Name = skill.Name, Rank = 0, Specialization = "", Aptitude = skill.Aptitude, SkillType = skilltype });
+            }
 
             var charGenSteps = await ePDataService.GetCharacterGenTable("LifePathSteps");
 
@@ -43,7 +56,7 @@ namespace EPTools.Core.Services
                     await ApplyMorph(ego, option);
                     break;
                 case "Skill":
-                    ApplySkill(ego, option);
+                    await ApplySkill(ego, option);
                     break;
                 case "Trait":
                     await ApplyTrait(ego, option);
@@ -190,11 +203,7 @@ namespace EPTools.Core.Services
             string aptitudeToChange = (await ePDataService.GetAptitudes()).FirstOrDefault(x => x.ShortName == option.Name.ToUpper())?.Name ?? "";
             aptitudeToChange = char.ToUpper(aptitudeToChange[0]) + aptitudeToChange[1..];
 
-            var aptitudeProperty = typeof(Ego).GetProperty(aptitudeToChange);
-            if (aptitudeProperty != null)
-            {
-                aptitudeProperty.SetValue(ego, option.Value + (int)(aptitudeProperty.GetValue(NewEgo) ?? throw new InvalidOperationException()));
-            }
+            ego.Aptitudes.Add(new EgoAptitude { Name = aptitudeToChange, ShortName = option.Name, AptitudeValue = option.Value, CheckMod = 0 });
         }
 
         private void ApplyReputation(Ego ego, LifePathNode option)
@@ -228,9 +237,36 @@ namespace EPTools.Core.Services
             }
         }
 
-        private void ApplySkill(Ego ego, LifePathNode option)
+        private async Task ApplySkill(Ego ego, LifePathNode option)
         {
-            ego.Skills.Add(new EgoSkill { Name = option.Name.Split("-")[0], Rank = option.Value, Specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "" });
+            var skills = await ePDataService.GetSkills();
+            var skillName = option.Name.Split("-")[0];
+            var skill = skills.FirstOrDefault(x => x.Name == option.Name.Split("-")[0]);
+            SkillType skillType = skillName switch
+            {
+                { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
+                { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
+                _ => SkillType.EgoSkill
+            };
+
+            if (NewEgo.Skills.Any(x => x.Name == skillName))
+            {
+                NewEgo.Skills.First(x=>x.Name == skillName).Rank += option.Value;
+                var specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "";
+                NewEgo.Skills.First(x=>x.Name == skillName).Specialization += specialization;
+            }
+            else
+            {
+                ego.Skills.Add(
+                    new EgoSkill
+                    {
+                        Name = option.Name.Split("-")[0], 
+                        Rank = option.Value, 
+                        Specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "",
+                        Aptitude = skills.FirstOrDefault(x=>x.Name == option.Name.Split("-")[0].Split(":")[0])?.Aptitude ?? "",
+                        SkillType = skillType
+                    });
+            }
         }
 
         private async Task ApplyMorph(Ego ego, LifePathNode option)

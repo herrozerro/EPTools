@@ -1,0 +1,21 @@
+@using EPTools.Core.Models.Ego
+<h3>CharacterNetwork</h3>
+
+@foreach (var item in Identities)
+{
+    <MudCard>
+        <MudTextField T="string" @bind-Value="@item.Alias" Label="Alias"/>
+        <MudTextField T="int" @bind-Value="@item.RRep" Label="R-rep"/>
+        <MudTextField T="int" @bind-Value="@item.ARep" Label="A-rep"/>
+        <MudTextField T="int" @bind-Value="@item.CRep" Label="C-rep"/>
+        <MudTextField T="int" @bind-Value="@item.FRep" Label="F-rep"/>
+        <MudTextField T="int" @bind-Value="@item.GRep" Label="G-rep"/>
+        <MudTextField T="int" @bind-Value="@item.IRep" Label="I-rep"/>
+    </MudCard>
+}
+
+@code {
+    [Parameter] 
+    public required IEnumerable<Identity> Identities { get; set; }
+
+}

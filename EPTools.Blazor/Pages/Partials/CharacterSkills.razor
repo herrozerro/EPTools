@@ -1,0 +1,102 @@
+@using EPTools.Blazor.ViewModels
+@using EPTools.Core.Models.Ego
+
+<h3>CharacterSkills</h3>
+
+<MudTable T="SkillViewModel" Items="@Skills" Breakpoint="Breakpoint.Sm" GroupBy="@_groupDefinition" GroupHeaderStyle="background-color:var(--mud-palette-background-gray)"
+          GroupFooterClass="mb-4" Dense="true">
+    <HeaderContent>
+        <MudTh>Name</MudTh>
+        <MudTh>Aptitude</MudTh>
+        <MudTh>Specialization</MudTh>
+        <MudTh>Rank</MudTh>
+        <MudTh>Total</MudTh>
+        <MudTh></MudTh>
+    </HeaderContent>
+    <GroupHeaderTemplate>
+        <MudTh Class="mud-table-cell-custom-group" colspan="4">@($"{context.GroupName}: {context.Key}")</MudTh>
+        <MudTh colspan="2">
+            @if (context.Key is not SkillType.EgoSkill)
+            {
+                <MudButton Color="Color.Primary" EndIcon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="@(() => HandleAddClick(context.Key))">Add</MudButton>           
+            }
+        </MudTh>
+    </GroupHeaderTemplate>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Aptitude">
+            @switch (context.Type)
+            {
+                case SkillType.ExoticSkill:
+                    <MudSelect T="string" Value="@context.Aptitude" ValueChanged="@((string value) => OnSkillChanged.InvokeAsync((context.Id, value, context.Rank, context.Specialization)))">
+                        @foreach (var aptitude in Aptitudes)
+                        {
+                            <MudSelectItem value="@aptitude.Name">@aptitude.Name</MudSelectItem>
+                        }
+                    </MudSelect>
+                    break;
+                case SkillType.KnowledgeSkill:
+                    <MudSelect T="string" Value="@context.Aptitude" ValueChanged="@((string value) => OnSkillChanged.InvokeAsync((context.Id, value, context.Rank, context.Specialization)))">
+                        @foreach (var aptitude in _knowAptitudes)
+                        {
+                            <MudSelectItem value="@aptitude">@aptitude</MudSelectItem>
+                        }
+                    </MudSelect>
+                    break;
+                default:
+                    @context.Aptitude
+                    break;
+            }
+        </MudTd>
+        <MudTd DataLabel="Specialization"><MudTextField T="string" Value="@context.Specialization" ValueChanged="@((string value)=> OnSkillChanged.InvokeAsync((context.Id, context.Aptitude, context.Rank, value)))" /></MudTd>
+        <MudTd DataLabel="Rank"><MudTextField T="int" Value="@context.Rank" ValueChanged="@((int value)=> OnSkillChanged.InvokeAsync((context.Id, context.Aptitude, value, context.Specialization)))"/></MudTd>
+        <MudTd>@context.TotalValue</MudTd>
+        <MudTd>
+            @if (context.Type is not SkillType.EgoSkill)
+            {
+                <MudButton Color="Color.Primary" EndIcon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="@(() => DeleteSkill.InvokeAsync(context.Id))"/>           
+            }
+        </MudTd>
+    </RowTemplate>
+</MudTable>
+
+@code {
+    [Parameter] 
+    public required IEnumerable<SkillViewModel> Skills { get; set; }
+    [Parameter] 
+    public required IEnumerable<EgoAptitude> Aptitudes { get; set; }
+    [Parameter]
+    public EventCallback<(Guid, string, int, string)> OnSkillChanged { get; set; }
+    [Parameter]
+    public EventCallback<SkillType> AddSkill { get; set; }
+    [Parameter]
+    public EventCallback<Guid> DeleteSkill { get; set; }
+
+    private readonly IEnumerable<string> _knowAptitudes = ["Intuition", "Cognition"];
+    
+    // This is your new, safe helper method
+    private async Task HandleAddClick(object key)
+    {
+        // Use 'is' for a safe cast
+        if (key is SkillType type)
+        {
+            // The key was a valid SkillType, so invoke the parent's event
+            Console.WriteLine($"SkillType was {type}.");
+            await AddSkill.InvokeAsync(type);
+        }
+        else
+        {
+            // The cast failed (key was null or not a SkillType)
+            // You can log this to see what's happening
+            Console.WriteLine("Error: 'context.Key' was not a valid SkillType.");
+        }
+    }
+    
+    private readonly TableGroupDefinition<SkillViewModel> _groupDefinition = new()
+    {
+        GroupName = "Type",
+        Indentation = false,
+        Expandable = false,
+        Selector = (e) => e.Type
+    };
+}

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using EPTools.Blazor;
+using EPTools.Blazor.Services;
 using EPTools.Core.Interfaces;
 using EPTools.Core.Services;
 using MudBlazor.Services;
@@ -16,5 +17,6 @@ builder.Services.AddScoped<StatBlockTemplateService>();
 builder.Services.AddScoped<EPDataService>();
 builder.Services.AddScoped<DiscordWebhookService>();
 builder.Services.AddScoped<LifepathService>();
+builder.Services.AddSingleton<AppDataService>();
 builder.Services.AddMudServices();
 await builder.Build().RunAsync();

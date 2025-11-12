@@ -16,7 +16,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Anarchist Interests",
+          "Name": "Know: Anarchist Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -75,7 +75,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Argonaut Interests",
+          "Name": "Know: Argonaut Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -134,7 +134,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Barsoomian Interests",
+          "Name": "Know: Barsoomian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -201,7 +201,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Brinker Interests",
+          "Name": "Know: Brinker Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -260,7 +260,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Criminal Interests",
+          "Name": "Know: Criminal Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -319,7 +319,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Extropian Interests",
+          "Name": "Know: Extropian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -386,7 +386,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Hypercorp Interests",
+          "Name": "Know: Hypercorp Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -445,7 +445,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Jovian Interests",
+          "Name": "Know: Jovian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -504,7 +504,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Lunar/Orbital Interests",
+          "Name": "Know: Lunar/Orbital Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -563,7 +563,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Mercurial Interests",
+          "Name": "Know: Mercurial Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -630,7 +630,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Reclaimer Interests",
+          "Name": "Know: Reclaimer Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -689,7 +689,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Scum Interests",
+          "Name": "Know: Scum Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -756,7 +756,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Socialite Interests",
+          "Name": "Know: Socialite Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -815,7 +815,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Titanian Interests",
+          "Name": "Know: Titanian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -874,7 +874,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Venusian Interests",
+          "Name": "Know: Venusian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -941,7 +941,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Belter Interests",
+          "Name": "Know: Belter Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1008,7 +1008,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Europan Interests",
+          "Name": "Know: Europan Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1083,7 +1083,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Ringer Interests",
+          "Name": "Know: Ringer Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1142,7 +1142,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Sapient Interests",
+          "Name": "Know: Sapient Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1201,7 +1201,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Sifter Interests",
+          "Name": "Know: Sifter Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1260,7 +1260,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Skimmer Interests",
+          "Name": "Know: Skimmer Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,
@@ -1327,7 +1327,7 @@
           "OptionLists": []
         },
         {
-          "Name": "Solarian Interests",
+          "Name": "Know: Solarian Interests",
           "Type": "Skill",
           "Description": null,
           "Value": 20,

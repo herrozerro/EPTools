@@ -2,6 +2,7 @@
 {
     public class EgoSkill
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; } = string.Empty;
         public string Specialization { get; set; } = string.Empty;
         public int Rank { get; set; }
@@ -9,7 +10,7 @@
         public int Modifier { get; set; }
         public int SkillTotal { get; set; }
         
-        public SkillType SkillType { get; set; }
+        public SkillType SkillType { get; init; }
     }
 
     public enum SkillType

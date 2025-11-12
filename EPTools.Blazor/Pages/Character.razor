@@ -1,0 +1,140 @@
+@page "/Character"
+@using EPTools.Blazor.Pages.Partials
+@using EPTools.Blazor.Services
+@using EPTools.Blazor.ViewModels
+@using EPTools.Core.Models.Ego
+@inject AppDataService AppData
+@inject LifepathService LifepathService
+<h3>Character</h3>
+
+<MudTabs>
+    <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
+        <CharacterNetwork Identities="@AppData.ego.Identities"></CharacterNetwork>
+    </MudTabPanel>
+    <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
+        <CharacterSkills 
+            Skills="@_skillViewModels" 
+            Aptitudes="@AppData.ego.Aptitudes"
+            OnSkillChanged="@HandleSkillUpdate" 
+            AddSkill="@AddSkill"
+            DeleteSkill="@DeleteSkill"/>
+    </MudTabPanel>
+    <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
+        <MudSelect T="string" Label="Morph" @bind-Value="_selectedMorph">
+            @foreach (var morph in AppData.ego.Morphs)
+            {
+                <MudSelectItem T="string" Value="@morph.Name">@morph.Name</MudSelectItem>
+            }
+        </MudSelect>
+        @if (_selectedMorph is { Length: > 0 })
+        {
+            <CharacterMorphPartial Morph="@AppData.ego.Morphs.First(x => x.Name == _selectedMorph)"></CharacterMorphPartial>
+        }
+    </MudTabPanel>
+    <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
+        <MudText>Content Disabled</MudText>
+    </MudTabPanel>
+</MudTabs>
+
+@code {
+
+    private string _selectedMorph = string.Empty;
+    private List<SkillViewModel> _skillViewModels = new();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        AppData.ego = await LifepathService.GenerateEgo();
+        AppData.ego.Morphs.Add(new Core.Models.Ego.Morph() { Name = "Default Morph" });
+        _skillViewModels = BuildSkillViewModels();
+        StateHasChanged();
+    }
+
+    private List<SkillViewModel> BuildSkillViewModels()
+    {
+        var models = AppData.ego.Skills.Select(x =>
+            new SkillViewModel()
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Aptitude = x.Aptitude,
+                Rank = x.Rank,
+                Specialization = x.Specialization,
+                Type = x.SkillType,
+                TotalValue = AppData.ego.SkillTotal(x.Id)
+            })
+            .ToList();
+        return models;
+    }
+
+    private void DeleteSkill(Guid skillId)
+    {
+        var skillToRemove = AppData.ego.Skills.First(x => x.Id == skillId);
+        AppData.ego.Skills.Remove(skillToRemove);
+        var skillViewModelToRemove = _skillViewModels.First(x => x.Id == skillId);
+        _skillViewModels.Remove(skillViewModelToRemove);
+    }
+    
+    private void AddSkill(SkillType skillType)
+    {
+        Console.WriteLine($"Trying to add Skill of Type: {skillType}");
+        var id = Guid.NewGuid();
+        var skill = new EgoSkill()
+        {
+            Aptitude = "Cognition",
+            Rank = 0,
+            Specialization = string.Empty,
+            Name = "New Skill",
+            SkillTotal = 0,
+            SkillType = skillType,
+            Id = id
+        };
+        AppData.ego.Skills.Add(skill);
+        _skillViewModels.Add(new SkillViewModel()
+        {
+            Aptitude = skill.Aptitude,
+            Id = skill.Id,
+            Name = skill.Name,
+            Rank = skill.Rank,
+            Specialization = skill.Specialization,
+            TotalValue = skill.SkillTotal,
+            Type = skillType
+        });
+    }
+    
+    private void UpdateSkillViewModels(Guid skillId)
+    {
+        var viewModelToUpdate = _skillViewModels.Find(s => s.Id == skillId);
+        var skill = AppData.ego.Skills.Find(x => x.Id == skillId);
+        
+        if (viewModelToUpdate == null || skill == null) return;
+        
+        viewModelToUpdate.Aptitude = skill.Aptitude;
+        viewModelToUpdate.Rank = skill.Rank;
+        viewModelToUpdate.Specialization = skill.Specialization;
+        viewModelToUpdate.TotalValue = AppData.ego.SkillTotal(skillId);
+        Console.WriteLine($"Total Skills: {AppData.ego.Skills.Count}");
+    }
+    
+    private void HandleSkillUpdate((Guid, string, int, string) data)
+    {
+        // 1. Deconstruct the tuple for clarity
+        var skillId = data.Item1;
+        var newAttributeName = data.Item2;
+        var newSkillRank = data.Item3;
+        var newSkillSpecialization = data.Item4;
+        
+        Console.WriteLine("Updating Skill {0}, rank {1}, aptitude {2}", skillId, newSkillRank, newAttributeName);
+        
+        // 2. Find the "real" skill in your source of truth
+        var skillToUpdate = AppData.ego.Skills.Find(s => s.Id == skillId);
+        
+        if (skillToUpdate != null)
+        {
+            // 3. Update the "source of truth" (the model)
+            skillToUpdate.Aptitude = newAttributeName;
+            skillToUpdate.Rank = newSkillRank;
+            skillToUpdate.Specialization = newSkillSpecialization;
+        }
+        UpdateSkillViewModels(skillId);
+    }
+}

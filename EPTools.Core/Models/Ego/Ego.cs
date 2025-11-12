@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using EPTools.Core.Models.EPDataModels;
 using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.Ego
@@ -26,32 +27,13 @@ namespace EPTools.Core.Models.Ego
         public string Languages { get; set; } = string.Empty;
         [JsonPropertyOrder(10)]
         public List<string> Motivations { get; set; } = [];
-
+        
+        
+        
         //Aptitudes
-        [JsonPropertyOrder(11)]
-        public int Cognition { get; set; }
-        [JsonPropertyOrder(12)]
-        public int CognitionCheckMod { get; set; }
-        [JsonPropertyOrder(13)]
-        public int Intuition { get; set; }
-        [JsonPropertyOrder(14)]
-        public int IntuitionCheckMod { get; set; }
-        [JsonPropertyOrder(15)]
-        public int Reflex { get; set; }
-        [JsonPropertyOrder(16)]
-        public int ReflexCheckMod { get; set; }
-        [JsonPropertyOrder(17)]
-        public int Savvy { get; set; }
-        [JsonPropertyOrder(18)]
-        public int SavvyCheckMod { get; set; }
-        [JsonPropertyOrder(19)]
-        public int Somatics { get; set; }
-        [JsonPropertyOrder(20)]
-        public int SomaticsCheckMod { get; set; }
-        [JsonPropertyOrder(21)]
-        public int Willpower { get; set; }
         [JsonPropertyOrder(22)]
-        public int WillpowerCheckMod { get; set; }
+        public List<EgoAptitude> Aptitudes { get; set; } = [];
+
         [JsonPropertyOrder(23)]
         public int EgoFlex { get; set; }
 
@@ -105,5 +87,26 @@ namespace EPTools.Core.Models.Ego
         
         [JsonPropertyOrder(36)]
         public List<string> PlayerChoices { get; set; } = [];
+
+
+        public int SkillTotal(Guid skillId)
+        {
+            var skill = Skills.Find(x => x.Id == skillId);
+            if (skill == null) return 0;
+            
+            var skillAttribute = Aptitudes.Find(x => x.Name == skill.Aptitude);
+            if (skillAttribute == null) return skill.Rank;
+            return skill.Rank + skillAttribute.AptitudeValue;
+        }
+    }
+
+    public class EgoAptitude
+    {
+        public string Name { get; set; } = string.Empty;
+        public string ShortName { get; set; } = string.Empty;
+        public int AptitudeValue { get; set; }
+        public int CheckMod { get; set; }
+        
+        public int CheckRating => AptitudeValue * 3 + CheckMod;
     }
 }

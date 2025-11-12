@@ -28,6 +28,7 @@ namespace EPTools.Core.Services
         private List<GearVehicle> _gear_vehicles = new();
         private List<GearWare> _gear_ware = new();
         private List<Morph> _morphs = new();
+        private List<Skill> _skills = new();
 
         private List<Trait> _traits = new();
         private List<LifePathNode> _lifepathNativeTongue = new();
@@ -292,6 +293,14 @@ namespace EPTools.Core.Services
         {
             return await fetchService.GetTFromEpFileAsync<List<LifePathNode>>(tableName);
         }
-
+        
+        public async Task<List<Skill>> GetSkills()
+        {
+            if (_skills.Count == 0)
+            {
+                _skills = await fetchService.GetTFromEpFileAsync<List<Skill>>("skills");
+            }
+            return _skills;
+        }
     }
 }
