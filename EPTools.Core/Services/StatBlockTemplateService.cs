@@ -9,7 +9,7 @@ namespace EPTools.Core.Services
 
         public async Task<List<StatBlockTemplate>> GetStatBlockTemplates()
         {
-            return await FetchService.GetTFromFileAsync<List<StatBlockTemplate>>("StatBlockTemplates");
+            return await FetchService.GetTFromFileAsync<List<StatBlockTemplate>>("statblocktemplates");
         }
     }
 }
