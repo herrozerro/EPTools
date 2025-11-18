@@ -1,0 +1,177 @@
+@using EPTools.Core.Models.Ego
+
+<MudPaper Class="pa-4">
+    <MudGrid>
+        <MudItem xs="12" Class="d-flex align-center gap-2">
+            <MudSelect T="Morph" 
+                       Label="Select Morph to View" 
+                       Variant="Variant.Outlined"
+                       @bind-Value="_selectedMorph"
+                       ToStringFunc="@(m => m?.Name ?? "Unknown")"
+                       Dense="true"
+                       Margin="Margin.Dense"
+                       Class="flex-grow-1">
+                @foreach (var morph in Morphs)
+                {
+                    <MudSelectItem Value="@morph">
+                        @morph.Name (@morph.MorphType)
+                        @if(morph.ActiveMorph)
+                        {
+                             <MudChip T="string" Size="Size.Small" Color="Color.Success" Class="ms-2">ACTIVE</MudChip>
+                        }
+                    </MudSelectItem>
+                }
+            </MudSelect>
+
+            @if (_selectedMorph != null)
+            {
+                <MudTooltip Text="@(_selectedMorph.ActiveMorph ? "Currently Sleeved" : "Resleeve into this Morph")">
+                    <MudIconButton Icon="@(_selectedMorph.ActiveMorph ? Icons.Material.Filled.CheckCircle : Icons.Material.Outlined.RadioButtonUnchecked)"
+                                   Color="@(_selectedMorph.ActiveMorph ? Color.Success : Color.Default)"
+                                   OnClick="@ToggleActiveStatus" />
+                </MudTooltip>
+            }
+        </MudItem>
+
+        @if (_selectedMorph != null)
+        {
+            <MudItem xs="12"><MudDivider /></MudItem>
+
+            <MudItem xs="12" sm="6">
+                <MudTextField @bind-Value="_selectedMorph.Name" Label="Morph Name" Variant="Variant.Outlined" Margin="Margin.Dense" />
+            </MudItem>
+            <MudItem xs="6" sm="3">
+                <MudTextField @bind-Value="_selectedMorph.MorphType" Label="Type" HelperText="Biomorph, Synthmorph, etc." Variant="Variant.Outlined" Margin="Margin.Dense" />
+            </MudItem>
+            <MudItem xs="6" sm="3">
+                <MudTextField @bind-Value="_selectedMorph.Size" Label="Size" Variant="Variant.Outlined" Margin="Margin.Dense" />
+            </MudItem>
+            <MudItem xs="6" sm="3">
+                <MudTextField @bind-Value="_selectedMorph.MorphSex" Label="Sex" Variant="Variant.Outlined" Margin="Margin.Dense" />
+            </MudItem>
+
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2" Class="mt-2 mb-1">Pools</MudText>
+                <div class="d-flex gap-2 flex-wrap">
+                    <MudPaper Class="pa-2 d-flex flex-column align-center mud-theme-primary" Width="80px">
+                        <MudText Typo="Typo.caption">VIGOR</MudText>
+                        <MudNumericField @bind-Value="_selectedMorph.Vigor" Variant="Variant.Text" HideSpinButtons="true" Class="centered-white-input" />
+                    </MudPaper>
+                    
+                    <MudPaper Class="pa-2 d-flex flex-column align-center mud-theme-secondary" Width="80px">
+                        <MudText Typo="Typo.caption">INSIGHT</MudText>
+                        <MudNumericField @bind-Value="_selectedMorph.Insight" Variant="Variant.Text" HideSpinButtons="true" Class="centered-white-input" />
+                    </MudPaper>
+                    
+                    <MudPaper Class="pa-2 d-flex flex-column align-center mud-theme-warning" Width="80px">
+                        <MudText Typo="Typo.caption">MOXIE</MudText>
+                        <MudNumericField @bind-Value="_selectedMorph.Moxie" Variant="Variant.Text" HideSpinButtons="true" Class="centered-white-input" />
+                    </MudPaper>
+                    
+                    <MudPaper Class="pa-2 d-flex flex-column align-center mud-theme-dark" Width="80px">
+                        <MudText Typo="Typo.caption">FLEX</MudText>
+                        <MudNumericField @bind-Value="_selectedMorph.MorphFlex" Variant="Variant.Text" HideSpinButtons="true" Class="centered-white-input" />
+                    </MudPaper>
+                </div>
+            </MudItem>
+
+            <MudItem xs="12" md="6">
+                <MudCard Outlined="true" Class="mt-2">
+                    <MudCardHeader>
+                        <CardHeaderContent><MudText Typo="Typo.subtitle2">Traits</MudText></CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardContent Class="pa-0" Style="max-height: 200px; overflow-y: auto;">
+                        <MudList T="Trait" Dense="true">
+                            @foreach (var trait in _selectedMorph.Traits)
+                            {
+                                <MudListItem>
+                                    <div class="d-flex justify-space-between">
+                                        <MudText Typo="Typo.body2">@trait.Name</MudText>
+                                        <MudText Typo="Typo.caption" Color="Color.Default">Lv @trait.Level</MudText>
+                                    </div>
+                                </MudListItem>
+                            }
+                            @if(!_selectedMorph.Traits.Any()) { <MudText Class="pa-3" Typo="Typo.caption">No traits added.</MudText> }
+                        </MudList>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+
+            <MudItem xs="12" md="6">
+                <MudCard Outlined="true" Class="mt-2">
+                    <MudCardHeader>
+                        <CardHeaderContent><MudText Typo="Typo.subtitle2">Wares</MudText></CardHeaderContent>
+                    </MudCardHeader>
+                     <MudCardContent Class="pa-0" Style="max-height: 200px; overflow-y: auto;">
+                        <MudList T="Ware" Dense="true">
+                            @foreach (var ware in _selectedMorph.Wares)
+                            {
+                                <MudListItem>
+                                    <div class="d-flex justify-space-between">
+                                        <MudText Typo="Typo.body2">@ware.Name</MudText>
+                                        <MudChip T="string" Size="Size.Small" Variant="Variant.Text">x @ware.Quantity</MudChip>
+                                    </div>
+                                </MudListItem>
+                            }
+                            @if(!_selectedMorph.Wares.Any()) { <MudText Class="pa-3" Typo="Typo.caption">No wares installed.</MudText> }
+                        </MudList>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        }
+        else
+        {
+            <MudItem xs="12"><MudAlert Severity="Severity.Info">No Morphs found.</MudAlert></MudItem>
+        }
+    </MudGrid>
+</MudPaper>
+
+@code {
+    [Parameter] public List<Morph> Morphs { get; set; } = new();
+
+    private Morph? _selectedMorph;
+
+    protected override void OnParametersSet()
+    {
+        // 1. If we have a selection already, keep it.
+        if (_selectedMorph != null) return;
+
+        // 2. Otherwise, try to select the ACTIVE morph first.
+        var active = Morphs.FirstOrDefault(m => m.ActiveMorph);
+        if (active != null)
+        {
+            _selectedMorph = active;
+        }
+        // 3. Fallback to the first one in the list.
+        else if (Morphs.Any())
+        {
+            _selectedMorph = Morphs.First();
+        }
+    }
+
+    private void ToggleActiveStatus()
+    {
+        if (_selectedMorph == null) return;
+
+        // If it's already active, do nothing (you must be active somewhere!)
+        if (_selectedMorph.ActiveMorph) return;
+
+        // Set all others to inactive
+        foreach (var m in Morphs)
+        {
+            m.ActiveMorph = false;
+        }
+
+        // Set selected to active
+        _selectedMorph.ActiveMorph = true;
+    }
+}
+
+<style>
+    /* Helper to center text inside the colored numeric fields */
+    .centered-white-input input {
+        text-align: center;
+        color: white !important; 
+        font-weight: bold;
+    }
+</style>

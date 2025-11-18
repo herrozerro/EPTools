@@ -7,9 +7,83 @@
 @inject LifepathService LifepathService
 <h3>Character</h3>
 
+
+    <MudGrid Spacing="2">
+        
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Name" 
+                          @bind-Value="EgoModel.Name" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Background" 
+                          @bind-Value="EgoModel.Background" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Career" 
+                          @bind-Value="EgoModel.Career" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Interest" 
+                          @bind-Value="EgoModel.Interest" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Faction" 
+                          @bind-Value="EgoModel.Faction" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Languages" 
+                          @bind-Value="EgoModel.Languages" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Age" 
+                             @bind-Value="EgoModel.EgoAge" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Sex" 
+                          @bind-Value="EgoModel.EgoSex" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Gender" 
+                          @bind-Value="EgoModel.EgoGender" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Motivations" 
+                          @bind-Value="MotivationsDisplay" 
+                          Variant="Variant.Outlined"
+                          HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Ego Flex" 
+                             @bind-Value="EgoModel.EgoFlex" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Notes" 
+                          @bind-Value="EgoModel.Notes" 
+                          Variant="Variant.Outlined" 
+                          Lines="1" />
+        </MudItem>
+
+    </MudGrid>
+    <CharacterAptitude Aptitudes="@EgoModel.Aptitudes"></CharacterAptitude>
+
 <MudTabs>
     <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
-        <CharacterNetwork Identities="@AppData.ego.Identities"></CharacterNetwork>
+        <CharacterNetwork Identities="@AppData.ego.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
     </MudTabPanel>
     <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
         <CharacterSkills 
@@ -20,16 +94,7 @@
             DeleteSkill="@DeleteSkill"/>
     </MudTabPanel>
     <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
-        <MudSelect T="string" Label="Morph" @bind-Value="_selectedMorph">
-            @foreach (var morph in AppData.ego.Morphs)
-            {
-                <MudSelectItem T="string" Value="@morph.Name">@morph.Name</MudSelectItem>
-            }
-        </MudSelect>
-        @if (_selectedMorph is { Length: > 0 })
-        {
-            <CharacterMorphPartial Morph="@AppData.ego.Morphs.First(x => x.Name == _selectedMorph)"></CharacterMorphPartial>
-        }
+        <CharacterMorphs Morphs="@EgoModel.Morphs"></CharacterMorphs>
     </MudTabPanel>
     <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
         <MudText>Content Disabled</MudText>
@@ -38,17 +103,47 @@
 
 @code {
 
-    private string _selectedMorph = string.Empty;
+    private Ego EgoModel = new Ego();
     private List<SkillViewModel> _skillViewModels = new();
     
     protected override async Task OnInitializedAsync()
     {
         AppData.ego = await LifepathService.GenerateEgo();
         AppData.ego.Morphs.Add(new Core.Models.Ego.Morph() { Name = "Default Morph" });
+        EgoModel = AppData.ego;
         _skillViewModels = BuildSkillViewModels();
         StateHasChanged();
     }
-
+    
+    private void HandleIdentityAdded(Identity newIdentity)
+    {
+        // ACTUAL LOGIC: Parent modifies the list
+        EgoModel.Identities.Add(newIdentity);
+        
+        // Force UI refresh (Blazor usually does this automatically for EventCallbacks)
+        StateHasChanged(); 
+    }
+    
+    // HELPER: Handles the conversion between List<string> and the Text Field
+    private string MotivationsDisplay
+    {
+        get => string.Join(", ", EgoModel.Motivations);
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                EgoModel.Motivations = new List<string>();
+            }
+            else
+            {
+                // Splits by comma, trims whitespace, and removes empty entries
+                EgoModel.Motivations = value
+                    .Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+            }
+        }
+    }
+    
     private List<SkillViewModel> BuildSkillViewModels()
     {
         var models = AppData.ego.Skills.Select(x =>

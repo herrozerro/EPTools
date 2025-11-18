@@ -6,6 +6,13 @@ namespace EPTools.Core.Models.Ego
 {
     public class Ego
     {
+        public Ego()
+        {
+            Identities.Add(new Identity{ Alias = "Default Alias"});
+        }
+        
+        public Guid Id { get; set; } = Guid.NewGuid();
+        
         //General Information
         [JsonPropertyOrder(0)] 
         public string Name { get; set; } = string.Empty;

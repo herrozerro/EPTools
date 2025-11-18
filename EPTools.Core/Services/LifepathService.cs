@@ -14,10 +14,7 @@ namespace EPTools.Core.Services
 
         public async Task<Ego> GenerateEgo()
         {
-            NewEgo = new Ego
-            {
-                Identities = [new Identity(){ Alias = "Default Identity"}]
-            };
+            NewEgo = new Ego();
             
             var skills = await ePDataService.GetSkills();
             foreach (var skill in skills)
@@ -200,19 +197,32 @@ namespace EPTools.Core.Services
 
         private async Task ApplyAptitude(Ego ego, LifePathNode option)
         {
-            string aptitudeToChange = (await ePDataService.GetAptitudes()).FirstOrDefault(x => x.ShortName == option.Name.ToUpper())?.Name ?? "";
+            string aptitudeToChange = (await ePDataService.GetAptitudes()).FirstOrDefault(x => string.Equals(x.ShortName, option.Name, StringComparison.CurrentCultureIgnoreCase))?.Name ?? "";
             aptitudeToChange = char.ToUpper(aptitudeToChange[0]) + aptitudeToChange[1..];
-
-            ego.Aptitudes.Add(new EgoAptitude { Name = aptitudeToChange, ShortName = option.Name, AptitudeValue = option.Value, CheckMod = 0 });
+            
+            //check if aptitude already exists and add value to it
+            var existingAptitude = ego.Aptitudes.FirstOrDefault(x => x.Name == aptitudeToChange);
+            if (existingAptitude != null)
+                existingAptitude.AptitudeValue += option.Value;
+            else
+                ego.Aptitudes.Add(new EgoAptitude { Name = aptitudeToChange, ShortName = option.Name, AptitudeValue = option.Value, CheckMod = 0 });
+            
         }
 
         private void ApplyReputation(Ego ego, LifePathNode option)
         {
-            var repnetwork = typeof(Identity).GetProperty(option.Name);
-            if (repnetwork != null)
+            var repToChange = option.Name switch
             {
-                repnetwork.SetValue(ego.Identities[0], option.Value);
-            }
+                "ARep" => ego.Identities[0].ARep,
+                "CRep" => ego.Identities[0].CRep,
+                "GRep" => ego.Identities[0].GRep,
+                "IRep" => ego.Identities[0].IRep,
+                "XRep" => ego.Identities[0].XRep,
+                "RRep" => ego.Identities[0].RRep,
+                _ => null
+            };
+            if (repToChange == null) return;
+            repToChange.Score += option.Value;
         }
 
         private void ApplyPool(Ego ego, LifePathNode option)

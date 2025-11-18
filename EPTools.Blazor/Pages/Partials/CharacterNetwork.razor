@@ -1,21 +1,100 @@
 @using EPTools.Core.Models.Ego
-<h3>CharacterNetwork</h3>
 
-@foreach (var item in Identities)
-{
-    <MudCard>
-        <MudTextField T="string" @bind-Value="@item.Alias" Label="Alias"/>
-        <MudTextField T="int" @bind-Value="@item.RRep" Label="R-rep"/>
-        <MudTextField T="int" @bind-Value="@item.ARep" Label="A-rep"/>
-        <MudTextField T="int" @bind-Value="@item.CRep" Label="C-rep"/>
-        <MudTextField T="int" @bind-Value="@item.FRep" Label="F-rep"/>
-        <MudTextField T="int" @bind-Value="@item.GRep" Label="G-rep"/>
-        <MudTextField T="int" @bind-Value="@item.IRep" Label="I-rep"/>
-    </MudCard>
-}
+<MudPaper Class="pa-4">
+    <MudGrid>
+        <MudItem xs="12" Class="d-flex gap-2">
+            <MudSelect T="Identity" 
+                       Label="Active Alias / Identity" 
+                       Variant="Variant.Outlined"
+                       @bind-Value="_selectedIdentity"
+                       ToStringFunc="@(id => id?.Alias ?? "Unknown")"
+                       AnchorOrigin="Origin.BottomCenter">
+                @foreach (var identity in Identities)
+                {
+                    <MudSelectItem Value="@identity">
+                        @identity.Alias 
+                        @if(!string.IsNullOrEmpty(identity.Location)) 
+                        { 
+                            <span class="mud-text-secondary ms-2">(@identity.Location)</span> 
+                        }
+                    </MudSelectItem>
+                }
+            </MudSelect>
+            
+            <MudIconButton Icon="@Icons.Material.Filled.Add" 
+                           Color="Color.Primary" 
+                           OnClick="CreateNewIdentity" 
+                           Title="Add New Identity"/>
+        </MudItem>
+
+        @if (_selectedIdentity != null)
+        {
+            <MudItem xs="12">
+                <MudDivider Class="my-2"/>
+            </MudItem>
+
+            <MudItem xs="12" sm="6">
+                <MudTextField @bind-Value="@_selectedIdentity.Alias" 
+                              Label="Alias Name" 
+                              Variant="Variant.Outlined" />
+            </MudItem>
+            <MudItem xs="12" sm="6">
+                <MudTextField @bind-Value="@_selectedIdentity.Location" 
+                              Label="Location / Mesh Address" 
+                              Variant="Variant.Outlined" />
+            </MudItem>
+
+            <MudItem xs="12">
+                <MudText Typo="Typo.subtitle2" Class="mt-2 mb-2">Reputation & Favors</MudText>
+
+                <div class="d-flex flex-wrap gap-2 justify-center">
+                    <RepWidget Label="@("@-rep (Anarchist)")" Rep="_selectedIdentity.ARep" />
+                    <RepWidget Label="c-rep (Civic)"      Rep="_selectedIdentity.CRep" />
+                    <RepWidget Label="f-rep (Fame)"       Rep="_selectedIdentity.FRep" />
+                    <RepWidget Label="g-rep (Guanxi)"     Rep="_selectedIdentity.GRep" />
+                    <RepWidget Label="i-rep (The Eye)"    Rep="_selectedIdentity.IRep" />
+                    <RepWidget Label="r-rep (Research)"   Rep="_selectedIdentity.RRep" />
+                    <RepWidget Label="x-rep (Explore)"    Rep="_selectedIdentity.XRep" />
+                </div>
+            </MudItem>
+        }
+        else
+        {
+            <MudItem xs="12">
+                <MudAlert Severity="Severity.Info">No Identities created yet.</MudAlert>
+            </MudItem>
+        }
+    </MudGrid>
+</MudPaper>
 
 @code {
     [Parameter] 
     public required IEnumerable<Identity> Identities { get; set; }
+    [Parameter] 
+    public EventCallback<Identity> OnIdentityAdded { get; set; }
+    private Identity? _selectedIdentity;
+    
+    // Define the width once here to keep them uniform
+    private string RepStyle = "width: 85px;";
 
+    protected override void OnParametersSet()
+    {
+        if (_selectedIdentity == null && Identities.Any())
+        {
+            _selectedIdentity = Identities.First();
+        }
+    }
+    
+    
+    // 2. Trigger the event
+    private async Task CreateNewIdentity()
+    {
+        var newId = new Identity { Alias = "New Cover ID", Location = "Unknown" };
+        
+        // Notify the parent
+        await OnIdentityAdded.InvokeAsync(newId);
+        
+        // Select the new item locally
+        _selectedIdentity = newId;
+    }
 }

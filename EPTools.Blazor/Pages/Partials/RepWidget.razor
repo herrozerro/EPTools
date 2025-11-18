@@ -1,0 +1,74 @@
+@using EPTools.Core.Models.Ego
+
+<MudPaper Class="d-flex flex-column align-center pa-2" Elevation="0" Outlined="true" Style="width: 130px;">
+    <MudText Typo="Typo.caption" Class="mud-text-secondary mb-1">@Label</MudText>
+
+    <MudNumericField @bind-Value="Rep.Score" 
+                     Variant="Variant.Outlined" 
+                     Margin="Margin.Dense" 
+                     HideSpinButtons="true" 
+                     Class="centered-input mb-1"
+                     Style="font-weight:bold; font-size: 1.1em;" />
+
+    <div class="d-flex flex-column gap-1 w-100 mt-1">
+        
+        <div class="d-flex justify-center gap-1">
+            @* Minor 1 *@
+            <MudTooltip Text="Minor Favor">
+                <MudToggleIconButton @bind-Toggled="@Rep.Minor1Used"
+                                     Icon="@Icons.Material.Outlined.Circle" 
+                                     ToggledIcon="@Icons.Material.Filled.Circle"
+                                     Color="Color.Info" 
+                                     ToggledColor="Color.Info"
+                                     Size="Size.Small" Class="pa-0" />
+            </MudTooltip>
+            
+            @* Minor 2 *@
+            <MudTooltip Text="Minor Favor">
+                <MudToggleIconButton @bind-Toggled="@Rep.Minor2Used"
+                                     Icon="@Icons.Material.Outlined.Circle" 
+                                     ToggledIcon="@Icons.Material.Filled.Circle"
+                                     Color="Color.Info" 
+                                     ToggledColor="Color.Info"
+                                     Size="Size.Small" Class="pa-0" />
+            </MudTooltip>
+            
+            @* Minor 3 *@
+            <MudTooltip Text="Minor Favor">
+                <MudToggleIconButton @bind-Toggled="@Rep.Minor3Used"
+                                     Icon="@Icons.Material.Outlined.Circle" 
+                                     ToggledIcon="@Icons.Material.Filled.Circle"
+                                     Color="Color.Info" 
+                                     ToggledColor="Color.Info"
+                                     Size="Size.Small" Class="pa-0" />
+            </MudTooltip>
+        </div>
+
+        <div class="d-flex justify-center gap-1">
+            @* Moderate (Orange Ring) *@
+            <MudTooltip Text="Moderate Favor">
+                <MudToggleIconButton @bind-Toggled="@Rep.ModerateUsed"
+                                     Icon="@Icons.Material.Outlined.Circle" 
+                                     ToggledIcon="@Icons.Material.Filled.Circle"
+                                     Color="Color.Warning" 
+                                     ToggledColor="Color.Warning"
+                                     Size="Size.Small" Class="pa-0" />
+            </MudTooltip>
+            <span class="mud-text-disabled mx-1">|</span>
+            @* Major (Red Ring) *@
+            <MudTooltip Text="Major Favor">
+                <MudToggleIconButton @bind-Toggled="@Rep.MajorUsed"
+                                     Icon="@Icons.Material.Outlined.Circle" 
+                                     ToggledIcon="@Icons.Material.Filled.Circle"
+                                     Color="Color.Error" 
+                                     ToggledColor="Color.Error"
+                                     Size="Size.Small" Class="pa-0" />
+            </MudTooltip>
+        </div>
+    </div>
+</MudPaper>
+
+@code {
+    [Parameter] public string Label { get; set; }
+    [Parameter] public RepNetwork Rep { get; set; }
+}
