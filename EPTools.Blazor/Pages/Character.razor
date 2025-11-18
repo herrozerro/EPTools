@@ -5,81 +5,81 @@
 @using EPTools.Core.Models.Ego
 @inject AppDataService AppData
 @inject LifepathService LifepathService
-<h3>Character</h3>
+<MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
+    <MudProgressCircular Color="Color.Secondary" Indeterminate="true" />
+</MudOverlay>
+<MudGrid Spacing="2">
+    
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Name" 
+                      @bind-Value="_egoModel.Name" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Background" 
+                      @bind-Value="_egoModel.Background" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Career" 
+                      @bind-Value="_egoModel.Career" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
 
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Interest" 
+                      @bind-Value="_egoModel.Interest" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Faction" 
+                      @bind-Value="_egoModel.Faction" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Languages" 
+                      @bind-Value="_egoModel.Languages" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
 
-    <MudGrid Spacing="2">
-        
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Name" 
-                          @bind-Value="EgoModel.Name" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Background" 
-                          @bind-Value="EgoModel.Background" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Career" 
-                          @bind-Value="EgoModel.Career" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudNumericField Label="Age" 
+                         @bind-Value="_egoModel.EgoAge" 
+                         Variant="Variant.Outlined" 
+                         Min="0" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Sex" 
+                      @bind-Value="_egoModel.EgoSex" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Gender" 
+                      @bind-Value="_egoModel.EgoGender" 
+                      Variant="Variant.Outlined" />
+    </MudItem>
 
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Interest" 
-                          @bind-Value="EgoModel.Interest" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Faction" 
-                          @bind-Value="EgoModel.Faction" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Languages" 
-                          @bind-Value="EgoModel.Languages" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Motivations" 
+                      @bind-Value="MotivationsDisplay" 
+                      Variant="Variant.Outlined"
+                      HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudNumericField Label="Ego Flex" 
+                         @bind-Value="_egoModel.EgoFlex" 
+                         Variant="Variant.Outlined" 
+                         Min="0" />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <MudTextField Label="Notes" 
+                      @bind-Value="_egoModel.Notes" 
+                      Variant="Variant.Outlined" 
+                      Lines="1" />
+    </MudItem>
 
-        <MudItem xs="12" sm="4">
-            <MudNumericField Label="Age" 
-                             @bind-Value="EgoModel.EgoAge" 
-                             Variant="Variant.Outlined" 
-                             Min="0" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Sex" 
-                          @bind-Value="EgoModel.EgoSex" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Gender" 
-                          @bind-Value="EgoModel.EgoGender" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Motivations" 
-                          @bind-Value="MotivationsDisplay" 
-                          Variant="Variant.Outlined"
-                          HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudNumericField Label="Ego Flex" 
-                             @bind-Value="EgoModel.EgoFlex" 
-                             Variant="Variant.Outlined" 
-                             Min="0" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Notes" 
-                          @bind-Value="EgoModel.Notes" 
-                          Variant="Variant.Outlined" 
-                          Lines="1" />
-        </MudItem>
-
-    </MudGrid>
-    <CharacterAptitude Aptitudes="@EgoModel.Aptitudes"></CharacterAptitude>
+</MudGrid>
+<CharacterAptitude Aptitudes="@_egoModel.Aptitudes"></CharacterAptitude>
 
 <MudTabs>
     <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
@@ -94,7 +94,7 @@
             DeleteSkill="@DeleteSkill"/>
     </MudTabPanel>
     <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
-        <CharacterMorphs Morphs="@EgoModel.Morphs"></CharacterMorphs>
+        <CharacterMorphs Morphs="@_egoModel.Morphs"></CharacterMorphs>
     </MudTabPanel>
     <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
         <MudText>Content Disabled</MudText>
@@ -102,23 +102,24 @@
 </MudTabs>
 
 @code {
-
-    private Ego EgoModel = new Ego();
+    private bool _loading = true; // Start as true
+    private Ego _egoModel = new Ego();
     private List<SkillViewModel> _skillViewModels = new();
     
     protected override async Task OnInitializedAsync()
     {
         AppData.ego = await LifepathService.GenerateEgo();
         AppData.ego.Morphs.Add(new Core.Models.Ego.Morph() { Name = "Default Morph" });
-        EgoModel = AppData.ego;
+        _egoModel = AppData.ego;
         _skillViewModels = BuildSkillViewModels();
         StateHasChanged();
+        _loading = false;
     }
     
     private void HandleIdentityAdded(Identity newIdentity)
     {
         // ACTUAL LOGIC: Parent modifies the list
-        EgoModel.Identities.Add(newIdentity);
+        _egoModel.Identities.Add(newIdentity);
         
         // Force UI refresh (Blazor usually does this automatically for EventCallbacks)
         StateHasChanged(); 
@@ -127,17 +128,17 @@
     // HELPER: Handles the conversion between List<string> and the Text Field
     private string MotivationsDisplay
     {
-        get => string.Join(", ", EgoModel.Motivations);
+        get => string.Join(", ", _egoModel.Motivations);
         set
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                EgoModel.Motivations = new List<string>();
+                _egoModel.Motivations = new List<string>();
             }
             else
             {
                 // Splits by comma, trims whitespace, and removes empty entries
-                EgoModel.Motivations = value
+                _egoModel.Motivations = value
                     .Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
                     .ToList();
             }
