@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.EPDataModels
 {
@@ -12,4 +13,5 @@ namespace EPTools.Core.Models.EPDataModels
         [property: JsonPropertyName("resource")]string Resource,
         [property: JsonPropertyName("reference")]string Reference,
         [property: JsonPropertyName("id")]string Id);
+    
 }

@@ -8,61 +8,11 @@
     "OptionLists": [
       [
         {
-          "Name": "Cog",
-          "Type": "Aptitude",
-          "Description": "Cog",
-          "Value": -5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Int",
-          "Type": "Aptitude",
-          "Description": "Int",
-          "Value": -5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Ref",
-          "Type": "Aptitude",
-          "Description": "Ref",
-          "Value": -5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Sav",
-          "Type": "Aptitude",
-          "Description": "Sav",
-          "Value": -5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Som",
-          "Type": "Aptitude",
-          "Description": "Som",
-          "Value": -5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Wil",
-          "Type": "Aptitude",
-          "Description": "Wil",
-          "Value": -5,
-          "Weight": 1,
+          "Name": "Reduce one aptitude by 5.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
           "OptionLists": []
         }
       ]
@@ -77,61 +27,11 @@
     "OptionLists": [
       [
         {
-          "Name": "Cog",
-          "Type": "Aptitude",
-          "Description": "Cog",
-          "Value": 5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Int",
-          "Type": "Aptitude",
-          "Description": "Int",
-          "Value": 5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Ref",
-          "Type": "Aptitude",
-          "Description": "Ref",
-          "Value": 5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Sav",
-          "Type": "Aptitude",
-          "Description": "Sav",
-          "Value": 5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Som",
-          "Type": "Aptitude",
-          "Description": "Som",
-          "Value": 5,
-          "Weight": 1,
-          "OptionLists": []
-        }
-      ],
-      [
-        {
-          "Name": "Wil",
-          "Type": "Aptitude",
-          "Description": "Wil",
-          "Value": 5,
-          "Weight": 1,
+          "Name": "Increase one aptitude by 5.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
           "OptionLists": []
         }
       ]
@@ -157,7 +57,7 @@
     ]
   },
   {
-    "Name": "Gain the Enhanced Behavior (Bored, Level 2) trait(p",
+    "Name": "Gain the Enhanced Behavior (Bored, Level 2) trait(p. 78, EP2)",
     "Type": "BackgroundAdvancedAge",
     "Description": "Gain the Enhanced Behavior (Bored, Level 2) trait(p. 78, EP2)",
     "Value": 0,
@@ -176,7 +76,7 @@
     ]
   },
   {
-    "Name": "Gain the Restricted Behavior (Caring, Level 2) trait(p",
+    "Name": "Gain the Restricted Behavior (Caring, Level 2) trait(p. 80, EP2)",
     "Type": "BackgroundAdvancedAge",
     "Description": "Gain the Restricted Behavior (Caring, Level 2) trait(p. 80, EP2)",
     "Value": 0,

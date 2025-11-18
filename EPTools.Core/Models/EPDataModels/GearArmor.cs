@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.EPDataModels
 {
@@ -16,5 +17,5 @@ namespace EPTools.Core.Models.EPDataModels
         string Resource,
         string Reference,
         string Id
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
 }

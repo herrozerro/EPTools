@@ -96,11 +96,8 @@ namespace EPTools.Core.Models.Ego
         public List<string> PlayerChoices { get; set; } = [];
 
 
-        public int SkillTotal(Guid skillId)
+        public int SkillTotal(EgoSkill skill)
         {
-            var skill = Skills.Find(x => x.Id == skillId);
-            if (skill == null) return 0;
-            
             var skillAttribute = Aptitudes.Find(x => x.Name == skill.Aptitude);
             if (skillAttribute == null) return skill.Rank;
             return skill.Rank + skillAttribute.AptitudeValue;

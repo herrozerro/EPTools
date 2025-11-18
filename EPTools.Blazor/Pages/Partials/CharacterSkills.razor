@@ -1,9 +1,8 @@
 @using EPTools.Blazor.ViewModels
 @using EPTools.Core.Models.Ego
+@inject IDialogService DialogService
 
-<h3>CharacterSkills</h3>
-
-<MudTable T="SkillViewModel" Items="@Skills" Breakpoint="Breakpoint.Sm" GroupBy="@_groupDefinition" GroupHeaderStyle="background-color:var(--mud-palette-background-gray)"
+<MudTable T="EgoSkill" Items="@CurrentEgo?.Skills" Breakpoint="Breakpoint.Sm" GroupBy="@_groupDefinition" GroupHeaderStyle="background-color:var(--mud-palette-background-gray)"
           GroupFooterClass="mb-4" Dense="true">
     <HeaderContent>
         <MudTh>Name</MudTh>
@@ -12,10 +11,11 @@
         <MudTh>Rank</MudTh>
         <MudTh>Total</MudTh>
         <MudTh></MudTh>
+        <MudTh></MudTh>
     </HeaderContent>
     <GroupHeaderTemplate>
         <MudTh Class="mud-table-cell-custom-group" colspan="4">@($"{context.GroupName}: {context.Key}")</MudTh>
-        <MudTh colspan="2">
+        <MudTh colspan="3">
             @if (context.Key is not SkillType.EgoSkill)
             {
                 <MudButton Color="Color.Primary" EndIcon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="@(() => HandleAddClick(context.Key))">Add</MudButton>           
@@ -23,20 +23,30 @@
         </MudTh>
     </GroupHeaderTemplate>
     <RowTemplate>
-        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="Name">
+            @switch (context.SkillType)
+            {
+                case SkillType.EgoSkill:
+                    @context.Name
+                    break;
+                default:
+                    <MudTextField T="string" @bind-Value="@context.Name"/>
+                    break;
+            }
+        </MudTd>
         <MudTd DataLabel="Aptitude">
-            @switch (context.Type)
+            @switch (context.SkillType)
             {
                 case SkillType.ExoticSkill:
-                    <MudSelect T="string" Value="@context.Aptitude" ValueChanged="@((string value) => OnSkillChanged.InvokeAsync((context.Id, value, context.Rank, context.Specialization)))">
-                        @foreach (var aptitude in Aptitudes)
+                    <MudSelect T="string" @bind-Value="@context.Aptitude">
+                        @foreach (var aptitude in CurrentEgo.Aptitudes)
                         {
                             <MudSelectItem value="@aptitude.Name">@aptitude.Name</MudSelectItem>
                         }
                     </MudSelect>
                     break;
                 case SkillType.KnowledgeSkill:
-                    <MudSelect T="string" Value="@context.Aptitude" ValueChanged="@((string value) => OnSkillChanged.InvokeAsync((context.Id, value, context.Rank, context.Specialization)))">
+                    <MudSelect T="string" @bind-Value="@context.Aptitude">
                         @foreach (var aptitude in _knowAptitudes)
                         {
                             <MudSelectItem value="@aptitude">@aptitude</MudSelectItem>
@@ -48,29 +58,26 @@
                     break;
             }
         </MudTd>
-        <MudTd DataLabel="Specialization"><MudTextField T="string" Value="@context.Specialization" ValueChanged="@((string value)=> OnSkillChanged.InvokeAsync((context.Id, context.Aptitude, context.Rank, value)))" /></MudTd>
-        <MudTd DataLabel="Rank"><MudTextField T="int" Value="@context.Rank" ValueChanged="@((int value)=> OnSkillChanged.InvokeAsync((context.Id, context.Aptitude, value, context.Specialization)))"/></MudTd>
-        <MudTd>@context.TotalValue</MudTd>
+        <MudTd DataLabel="Specialization"><MudTextField T="string" @bind-Value="@context.Specialization" /></MudTd>
+        <MudTd DataLabel="Rank"><MudTextField T="int" @bind-Value="@context.Rank"/></MudTd>
+        <MudTd>@CurrentEgo?.SkillTotal(context)</MudTd>
         <MudTd>
-            @if (context.Type is not SkillType.EgoSkill)
+            <MudIconButton Icon="@Icons.Material.Filled.Casino" 
+                           OnClick="@(() => OpenSkillCheck(context.Name, CurrentEgo.SkillTotal(context)))" 
+                           Color="Color.Primary" />
+        </MudTd>
+        <MudTd>
+            @if (context.SkillType is not SkillType.EgoSkill)
             {
-                <MudButton Color="Color.Primary" EndIcon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="@(() => DeleteSkill.InvokeAsync(context.Id))"/>           
+                <MudButton Color="Color.Primary" EndIcon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="@(() => DeleteSkill(context))"/>           
             }
         </MudTd>
     </RowTemplate>
 </MudTable>
 
 @code {
-    [Parameter] 
-    public required IEnumerable<SkillViewModel> Skills { get; set; }
-    [Parameter] 
-    public required IEnumerable<EgoAptitude> Aptitudes { get; set; }
-    [Parameter]
-    public EventCallback<(Guid, string, int, string)> OnSkillChanged { get; set; }
-    [Parameter]
-    public EventCallback<SkillType> AddSkill { get; set; }
-    [Parameter]
-    public EventCallback<Guid> DeleteSkill { get; set; }
+    [CascadingParameter(Name = "EgoModel")] 
+    public Ego? CurrentEgo { get; set; }
 
     private readonly IEnumerable<string> _knowAptitudes = ["Intuition", "Cognition"];
     
@@ -82,7 +89,7 @@
         {
             // The key was a valid SkillType, so invoke the parent's event
             Console.WriteLine($"SkillType was {type}.");
-            await AddSkill.InvokeAsync(type);
+            CurrentEgo.Skills.Add(new EgoSkill{ SkillType = type, Name = "New Skill"});
         }
         else
         {
@@ -91,12 +98,34 @@
             Console.WriteLine("Error: 'context.Key' was not a valid SkillType.");
         }
     }
+
+    private async Task DeleteSkill(EgoSkill skillToDelete)
+    {
+        CurrentEgo.Skills.Remove(skillToDelete);
+    }
     
-    private readonly TableGroupDefinition<SkillViewModel> _groupDefinition = new()
+    private readonly TableGroupDefinition<EgoSkill> _groupDefinition = new()
     {
         GroupName = "Type",
         Indentation = false,
         Expandable = false,
-        Selector = (e) => e.Type
+        Selector = (e) => e.SkillType
     };
+    
+    private async Task OpenSkillCheck(string skillName, int baseScore)
+    {
+        // 1. Prepare the list of modifiers
+        var mods = new List<RollModifier>();
+
+        
+        var parameters = new DialogParameters<DiceRollerDialog>
+        {
+            { x => x.SkillName, skillName },
+            { x => x.TargetNumber, baseScore },
+            { x => x.Modifiers, mods } // Pass the list here
+        };
+
+        var options = new DialogOptions { MaxWidth = MaxWidth.Small, FullWidth = true };
+        await DialogService.ShowAsync<DiceRollerDialog>("Roll", parameters, options);
+    }
 }

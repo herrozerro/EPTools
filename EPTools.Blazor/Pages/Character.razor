@@ -5,101 +5,101 @@
 @using EPTools.Core.Models.Ego
 @inject AppDataService AppData
 @inject LifepathService LifepathService
-<MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
-    <MudProgressCircular Color="Color.Secondary" Indeterminate="true" />
-</MudOverlay>
-<MudGrid Spacing="2">
-    
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Name" 
-                      @bind-Value="_egoModel.Name" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Background" 
-                      @bind-Value="_egoModel.Background" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Career" 
-                      @bind-Value="_egoModel.Career" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
 
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Interest" 
-                      @bind-Value="_egoModel.Interest" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Faction" 
-                      @bind-Value="_egoModel.Faction" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Languages" 
-                      @bind-Value="_egoModel.Languages" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
+<CascadingValue Value="_egoModel" Name="EgoModel">
 
-    <MudItem xs="12" sm="4">
-        <MudNumericField Label="Age" 
-                         @bind-Value="_egoModel.EgoAge" 
-                         Variant="Variant.Outlined" 
-                         Min="0" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Sex" 
-                      @bind-Value="_egoModel.EgoSex" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Gender" 
-                      @bind-Value="_egoModel.EgoGender" 
-                      Variant="Variant.Outlined" />
-    </MudItem>
+    <MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
+        <MudProgressCircular Color="Color.Secondary" Indeterminate="true" />
+    </MudOverlay>
+    <MudGrid Spacing="2">
+        
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Name" 
+                          @bind-Value="_egoModel.Name" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Background" 
+                          @bind-Value="_egoModel.Background" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Career" 
+                          @bind-Value="_egoModel.Career" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
 
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Motivations" 
-                      @bind-Value="MotivationsDisplay" 
-                      Variant="Variant.Outlined"
-                      HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudNumericField Label="Ego Flex" 
-                         @bind-Value="_egoModel.EgoFlex" 
-                         Variant="Variant.Outlined" 
-                         Min="0" />
-    </MudItem>
-    <MudItem xs="12" sm="4">
-        <MudTextField Label="Notes" 
-                      @bind-Value="_egoModel.Notes" 
-                      Variant="Variant.Outlined" 
-                      Lines="1" />
-    </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Interest" 
+                          @bind-Value="_egoModel.Interest" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Faction" 
+                          @bind-Value="_egoModel.Faction" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Languages" 
+                          @bind-Value="_egoModel.Languages" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
 
-</MudGrid>
-<CharacterAptitude Aptitudes="@_egoModel.Aptitudes"></CharacterAptitude>
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Age" 
+                             @bind-Value="_egoModel.EgoAge" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Sex" 
+                          @bind-Value="_egoModel.EgoSex" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Gender" 
+                          @bind-Value="_egoModel.EgoGender" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
 
-<MudTabs>
-    <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
-        <CharacterNetwork Identities="@AppData.ego.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
-    </MudTabPanel>
-    <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
-        <CharacterSkills 
-            Skills="@_skillViewModels" 
-            Aptitudes="@AppData.ego.Aptitudes"
-            OnSkillChanged="@HandleSkillUpdate" 
-            AddSkill="@AddSkill"
-            DeleteSkill="@DeleteSkill"/>
-    </MudTabPanel>
-    <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
-        <CharacterMorphs Morphs="@_egoModel.Morphs"></CharacterMorphs>
-    </MudTabPanel>
-    <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
-        <MudText>Content Disabled</MudText>
-    </MudTabPanel>
-</MudTabs>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Motivations" 
+                          @bind-Value="MotivationsDisplay" 
+                          Variant="Variant.Outlined"
+                          HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Ego Flex" 
+                             @bind-Value="_egoModel.EgoFlex" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Notes" 
+                          @bind-Value="_egoModel.Notes" 
+                          Variant="Variant.Outlined" 
+                          Lines="1" />
+        </MudItem>
+
+    </MudGrid>
+    <CharacterAptitude Aptitudes="@_egoModel.Aptitudes"></CharacterAptitude>
+
+    <MudTabs>
+        <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
+            <CharacterNetwork Identities="@AppData.ego.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
+        </MudTabPanel>
+        <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
+            <CharacterSkills />
+        </MudTabPanel>
+        <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
+            <CharacterMorphs Morphs="@_egoModel.Morphs"></CharacterMorphs>
+        </MudTabPanel>
+        <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
+            <MudText>Content Disabled</MudText>
+        </MudTabPanel>
+    </MudTabs>
+
+</CascadingValue>
 
 @code {
     private bool _loading = true; // Start as true
@@ -156,7 +156,7 @@
                 Rank = x.Rank,
                 Specialization = x.Specialization,
                 Type = x.SkillType,
-                TotalValue = AppData.ego.SkillTotal(x.Id)
+                TotalValue = AppData.ego.SkillTotal(x)
             })
             .ToList();
         return models;
@@ -197,20 +197,6 @@
         });
     }
     
-    private void UpdateSkillViewModels(Guid skillId)
-    {
-        var viewModelToUpdate = _skillViewModels.Find(s => s.Id == skillId);
-        var skill = AppData.ego.Skills.Find(x => x.Id == skillId);
-        
-        if (viewModelToUpdate == null || skill == null) return;
-        
-        viewModelToUpdate.Aptitude = skill.Aptitude;
-        viewModelToUpdate.Rank = skill.Rank;
-        viewModelToUpdate.Specialization = skill.Specialization;
-        viewModelToUpdate.TotalValue = AppData.ego.SkillTotal(skillId);
-        Console.WriteLine($"Total Skills: {AppData.ego.Skills.Count}");
-    }
-    
     private void HandleSkillUpdate((Guid, string, int, string) data)
     {
         // 1. Deconstruct the tuple for clarity
@@ -231,6 +217,5 @@
             skillToUpdate.Rank = newSkillRank;
             skillToUpdate.Specialization = newSkillSpecialization;
         }
-        UpdateSkillViewModels(skillId);
     }
 }

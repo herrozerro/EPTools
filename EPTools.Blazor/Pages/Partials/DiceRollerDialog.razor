@@ -1,0 +1,205 @@
+@using System.Security.Cryptography
+@using EPTools.Core.Models.Ego
+<MudDialog>
+    <DialogContent>
+        <MudContainer Class="d-flex flex-column align-center justify-center pa-2" Style="max-width: 400px;">
+            
+            <MudText Typo="Typo.h5" Align="Align.Center">@SkillName</MudText>
+            <div class="d-flex gap-2 align-center mb-4">
+                <MudText Typo="Typo.body2" Class="mud-text-secondary">Base: @TargetNumber</MudText>
+                <MudIcon Icon="@Icons.Material.Filled.ArrowForward" Size="Size.Small" Color="Color.Default"/>
+                <MudText Typo="Typo.h6" Color="@(EffectiveTargetNumber != TargetNumber ? Color.Info : Color.Default)">
+                    Target: @EffectiveTargetNumber
+                </MudText>
+            </div>
+
+            <MudPaper Elevation="4" Class="d-flex align-center justify-center mb-4 rounded-circle" 
+                      Style="@($"width: 100px; height: 100px; background-color: {GetColorString(_resultColor)}; color: white;")">
+                <MudText Typo="Typo.h3">@_currentDisplayValue.ToString("D2")</MudText>
+            </MudPaper>
+
+            @if (_hasRolled)
+            {
+                <MudAlert Severity="@_resultSeverity" Variant="Variant.Filled" Class="my-2 w-100" Dense="true">
+                    @_resultMessage
+                </MudAlert>
+            }
+
+            <MudPaper Class="w-100 pa-2 mt-2" Outlined="true" Style="max-height: 200px; overflow-y: auto; background-color: var(--mud-palette-background-grey);">
+                <MudText Typo="Typo.caption" Class="mb-1">Active Modifiers</MudText>
+                
+                @foreach (var mod in Modifiers)
+                {
+                    <div class="d-flex justify-space-between align-center">
+                        <MudCheckBox T="bool" @bind-Value="mod.IsActive" Dense="true" Label="@mod.Name" Color="Color.Primary" Size="Size.Small" />
+                        <MudText Typo="Typo.body2" Color="@(mod.Value >= 0 ? Color.Success : Color.Error)">
+                            @(mod.Value >= 0 ? "+" : "")@mod.Value
+                        </MudText>
+                    </div>
+                }
+
+                <MudDivider Class="my-1"/>
+                <div class="d-flex gap-2 align-center mt-1">
+                    <MudTextField @bind-Value="_newModName" Placeholder="Custom..." Margin="Margin.Dense" Variant="Variant.Text" Class="mt-0"/>
+                    <MudNumericField @bind-Value="_newModValue" Placeholder="+/-" Margin="Margin.Dense" Variant="Variant.Text" HideSpinButtons="true" Style="width: 40px;" Class="mt-0"/>
+                    <MudIconButton Icon="@Icons.Material.Filled.Add" Size="Size.Small" Color="Color.Success" OnClick="AddCustomModifier"/>
+                </div>
+            </MudPaper>
+
+        </MudContainer>
+    </DialogContent>
+    
+    <DialogActions>
+        @if (_hasRolled && _currentDisplayValue != GetFlippedValue(_currentDisplayValue))
+        {
+            <MudTooltip Text="Cost: 1 Moxie">
+                <MudButton OnClick="FlipDice" Variant="Variant.Outlined" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.SwapVert">
+                    Flip (@GetFlippedValue(_currentDisplayValue))
+                </MudButton>
+            </MudTooltip>
+        }
+        <MudSpacer />
+        <MudButton OnClick="Cancel">Close</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="RollDice" Disabled="@_isRolling">
+            @(_hasRolled ? "Re-Roll" : "Roll")
+        </MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] public IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public string SkillName { get; set; } = "Check";
+    [Parameter] public int TargetNumber { get; set; } = 50;
+    
+    // The list of predefined modifiers (Gear, Wounds, etc.) passed from parent
+    [Parameter] public List<RollModifier> Modifiers { get; set; } = new();
+
+    // Calculated property: Base + All Active Modifiers
+    private int EffectiveTargetNumber => TargetNumber + Modifiers.Where(m => m.IsActive).Sum(m => m.Value);
+
+    // New Mod Inputs
+    private string _newModName = "";
+    private int _newModValue;
+
+    // ... (Existing variables for dice logic: _currentDisplayValue, _hasRolled, etc) ...
+    private int _currentDisplayValue;
+    private bool _isRolling;
+    private bool _hasRolled;
+    private string _resultMessage = "";
+    private Severity _resultSeverity = Severity.Info;
+    private Color _resultColor = Color.Surface;
+
+    private void AddCustomModifier()
+    {
+        if (string.IsNullOrWhiteSpace(_newModName) || _newModValue == 0) return;
+
+        Modifiers.Add(new RollModifier 
+        { 
+            Name = _newModName, 
+            Value = _newModValue, 
+            IsActive = true 
+        });
+
+        _newModName = "";
+        _newModValue = 0;
+    }
+
+    private async Task RollDice()
+    {
+        _isRolling = true;
+        _hasRolled = false;
+        _resultColor = Color.Info;
+
+        // Shuffle Animation
+        for (int i = 0; i < 10; i++)
+        {
+            _currentDisplayValue = RandomNumberGenerator.GetInt32(0, 100);
+            StateHasChanged();
+            await Task.Delay(50);
+        }
+
+        // Final Roll
+        int finalRoll = RandomNumberGenerator.GetInt32(0, 100);
+        _currentDisplayValue = finalRoll;
+        
+        // CRITICAL CHANGE: Calculate against EFFECTIVE Target Number
+        CalculateResult(finalRoll);
+
+        _isRolling = false;
+        _hasRolled = true;
+    }
+
+    private void CalculateResult(int roll)
+    {
+        // Use the calculated property here!
+        int actualTarget = EffectiveTargetNumber;
+
+        // ... Paste your existing CalculateResult logic here ...
+        // BUT make sure to change "TargetNumber" to "actualTarget" inside the logic!
+        
+        bool isSuccess = roll <= actualTarget;
+        // ... rest of logic
+        
+        // Recalculate result message/color based on new isSuccess
+        UpdateResultUI(roll, isSuccess, actualTarget); 
+    }
+
+    // (Helper method to keep code clean, contains your logic from previous turn)
+    private void UpdateResultUI(int roll, bool isSuccess, int target)
+    {
+         bool isCritical = (roll % 11 == 0);
+         
+         if (roll == 99) { SetResult("CRITICAL FAILURE", Severity.Error, Color.Error); return; }
+         if (roll == 00) { SetResult("CRITICAL SUCCESS", Severity.Success, Color.Success); return; }
+
+         if (isSuccess)
+         {
+            if (isCritical) SetResult("CRITICAL SUCCESS", Severity.Success, Color.Warning);
+            else if (roll >= 33) 
+            {
+                var tag = roll >= 66 ? "(2)" : "(1)";
+                SetResult($"SUPERIOR SUCCESS {tag}", Severity.Success, Color.Success);
+            }
+            else SetResult("SUCCESS", Severity.Success, Color.Success);
+         }
+         else
+         {
+             if (isCritical) SetResult("CRITICAL FAILURE", Severity.Error, Color.Error);
+             else SetResult("FAILURE", Severity.Warning, Color.Surface);
+         }
+    }
+
+    private void SetResult(string msg, Severity sev, Color col)
+    {
+        _resultMessage = msg;
+        _resultSeverity = sev;
+        _resultColor = col;
+    }
+    
+    private void Cancel() => MudDialog.Cancel();
+    
+    private int GetFlippedValue(int original)
+    {
+        int ones = original % 10;
+        int tens = original / 10;
+        // 69 -> ones(9) * 10 + tens(6) -> 96
+        return (ones * 10) + tens;
+    }
+    
+    private void FlipDice()
+    {
+        _currentDisplayValue = GetFlippedValue(_currentDisplayValue);
+        CalculateResult(_currentDisplayValue); // Recalculate success based on new number
+    }
+    
+    private string GetColorString(Color color) => color switch
+    {
+        Color.Success => "#00c853",
+        Color.Error => "#d32f2f",
+        Color.Warning => "#ff9800",
+        Color.Info => "#2196f3",
+        Color.Surface => "#424242",
+        _ => "#333333"
+    };
+}
