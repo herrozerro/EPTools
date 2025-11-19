@@ -5,7 +5,7 @@ using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Services
 {
-    public class LifepathService(EPDataService ePDataService)
+    public class LifepathService(EPDataService ePDataService, EgoService egoService)
     {
         private Ego NewEgo { get; set; } = new()
         {
@@ -14,19 +14,7 @@ namespace EPTools.Core.Services
 
         public async Task<Ego> GenerateEgo()
         {
-            NewEgo = new Ego();
-            
-            var skills = await ePDataService.GetSkills();
-            foreach (var skill in skills)
-            {
-                SkillType skilltype = skill.Name switch
-                {
-                    { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
-                    { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
-                    _ => SkillType.EgoSkill
-                };
-                NewEgo.Skills.Add(new EgoSkill { Name = skill.Name, Rank = 0, Specialization = "", Aptitude = skill.Aptitude, SkillType = skilltype });
-            }
+            NewEgo = await egoService.GetDefaults();
 
             var charGenSteps = await ePDataService.GetCharacterGenTable("LifePathSteps");
 
@@ -185,7 +173,7 @@ namespace EPTools.Core.Services
         {
             for (var i = 0; i < option.Value; i++)
             {
-                ego.Slights.Add(new Slight { Name = "Random or chosen" });
+                ego.Psi.Slights.Add(new Slight { Name = "Random or chosen" });
             }
         }
 

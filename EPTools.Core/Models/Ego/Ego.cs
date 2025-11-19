@@ -6,11 +6,6 @@ namespace EPTools.Core.Models.Ego
 {
     public class Ego
     {
-        public Ego()
-        {
-            Identities.Add(new Identity{ Alias = "Default Alias"});
-        }
-        
         public Guid Id { get; set; } = Guid.NewGuid();
         
         //General Information
@@ -35,6 +30,8 @@ namespace EPTools.Core.Models.Ego
         [JsonPropertyOrder(10)]
         public List<string> Motivations { get; set; } = [];
         
+        public int RezEarned { get; set; }
+        public int RezSpent { get; set; }
         
         
         //Aptitudes
@@ -58,13 +55,7 @@ namespace EPTools.Core.Models.Ego
 
         //PSI
         [JsonPropertyOrder(27)]
-        public string Substrain { get; set; } = string.Empty;
-        [JsonPropertyOrder(28)]
-        public int InfectionRating { get; set; }
-        [JsonPropertyOrder(29)]
-        public List<string> InfectionEvents { get; set; } = [];
-        [JsonPropertyOrder(30)]
-        public List<Slight> Slights { get; set; } = [];
+        public EgoPsi Psi { get; set; } = new();
 
         //Morph
         [JsonPropertyOrder(31)]

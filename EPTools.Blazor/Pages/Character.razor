@@ -1,11 +1,15 @@
-@page "/Character"
+@page "/"
 @using EPTools.Blazor.Pages.Partials
 @using EPTools.Blazor.Services
 @using EPTools.Blazor.ViewModels
 @using EPTools.Core.Models.Ego
 @inject AppDataService AppData
 @inject LifepathService LifepathService
+@inject EgoService EgoService
+@inject IJSRuntime JsRuntime
 
+<MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter" >Generate Random Character</MudButton>
+<MudButton Color="Color.Secondary" @onclick="DownloadText">Export Character</MudButton>
 <CascadingValue Value="_egoModel" Name="EgoModel">
 
     <MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
@@ -108,12 +112,26 @@
     
     protected override async Task OnInitializedAsync()
     {
-        AppData.ego = await LifepathService.GenerateEgo();
-        AppData.ego.Morphs.Add(new Core.Models.Ego.Morph() { Name = "Default Morph" });
+        AppData.ego = await EgoService.GetDefaults();
         _egoModel = AppData.ego;
-        _skillViewModels = BuildSkillViewModels();
-        StateHasChanged();
         _loading = false;
+    }
+
+    private async Task GenerateRandomCharacter()
+    {
+        _loading = true;
+        var newEgo = await LifepathService.GenerateEgo();
+        AppData.ego = newEgo;
+        _egoModel = newEgo;
+        _loading = false;
+    }
+
+    async Task DownloadText()
+    {
+        // Generate a text file
+        var s = System.Text.Json.JsonSerializer.Serialize(_egoModel);
+        byte[] file = System.Text.Encoding.UTF8.GetBytes(s);
+        await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "Character.json", "text/plain", file);
     }
     
     private void HandleIdentityAdded(Identity newIdentity)

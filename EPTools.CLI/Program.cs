@@ -13,7 +13,8 @@ Console.WriteLine("Hello, World!");
 
 FileFetchService fileFetchService = new FileFetchService();
 EPDataService epDataService = new EPDataService(fileFetchService);
-LifepathService lifepathService = new LifepathService(epDataService);
+EgoService egoService = new EgoService(epDataService);
+LifepathService lifepathService = new LifepathService(epDataService, egoService);
 
 var t = await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
 
