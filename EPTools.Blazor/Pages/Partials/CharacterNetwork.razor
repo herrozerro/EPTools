@@ -79,10 +79,33 @@
 
     protected override void OnParametersSet()
     {
-        if (_selectedIdentity == null && Identities.Any())
+        // 1. Safety Check: If the new list is null or empty, clear selection.
+        if (!Identities.Any())
         {
-            _selectedIdentity = Identities.First();
+            _selectedIdentity = null;
+            return;
         }
+
+        // 2. If we currently have an identity selected...
+        if (_selectedIdentity != null)
+        {
+            // Check if an identity with the same ID exists in the NEW list.
+            // (We match by ID because the object reference might be different after a reload)
+            var matchInNewList = Identities.FirstOrDefault(x => x.Id == _selectedIdentity.Id);
+
+            if (matchInNewList != null)
+            {
+                // CRITICAL: Swap to the new object reference!
+                // If we don't do this, the form will be bound to the OLD (stale) object,
+                // and changes won't appear in your main list.
+                _selectedIdentity = matchInNewList;
+                return;
+            }
+        }
+
+        // 3. Fallback: If selection was null, or the old selection isn't in the new list,
+        // pick the first one available.
+        _selectedIdentity = Identities.First();
     }
     
     

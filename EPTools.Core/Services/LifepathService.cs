@@ -107,13 +107,13 @@ namespace EPTools.Core.Services
                     {
                         if (list.Sum(x => x.Weight) > 0)
                         {
-                            NewEgo.CharacterGenerationNodes.Push(list.GetWeightedItem());
+                            ego.CharacterGenerationNodes.Push(list.GetWeightedItem());
                         }
                         else
                         {
                             foreach (var item in list)
                             {
-                                NewEgo.CharacterGenerationNodes.Push(item);
+                                ego.CharacterGenerationNodes.Push(item);
                             }
                         }
                     }

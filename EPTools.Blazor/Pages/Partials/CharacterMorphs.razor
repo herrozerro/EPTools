@@ -133,8 +133,10 @@
 
     protected override void OnParametersSet()
     {
-        // 1. If we have a selection already, keep it.
-        if (_selectedMorph != null) return;
+        if (!Morphs.Any())
+        {
+            _selectedMorph = null;
+        }
 
         // 2. Otherwise, try to select the ACTIVE morph first.
         var active = Morphs.FirstOrDefault(m => m.ActiveMorph);
