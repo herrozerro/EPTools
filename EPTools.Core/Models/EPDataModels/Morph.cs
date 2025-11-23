@@ -22,7 +22,7 @@ namespace EPTools.Core.Models.EPDataModels
         string Description,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
 
     public record MorphPools(
         int Insight,
@@ -36,6 +36,6 @@ namespace EPTools.Core.Models.EPDataModels
         int Full);
 
     public record MorphTrait(
-        [property: JsonPropertyName("name")] string Name,
-        [property: JsonPropertyName("level")] int Level);
+        string Name,
+        int Level);
 }

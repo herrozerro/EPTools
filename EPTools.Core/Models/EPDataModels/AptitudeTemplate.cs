@@ -8,7 +8,7 @@ namespace EPTools.Core.Models.EPDataModels
         AptitudeTemplateAptitudes Aptitudes,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
     
     public record AptitudeTemplateAptitudes(
         int Cognition,

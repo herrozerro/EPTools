@@ -7,7 +7,7 @@ namespace EPTools.Core.Models.EPDataModels
         CharGenGuidance Guidance,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
 
     public record CharGenGuidance(
         string Heading,

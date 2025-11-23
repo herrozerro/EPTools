@@ -8,5 +8,5 @@ namespace EPTools.Core.Models.EPDataModels
         bool Biological,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
 }

@@ -20,5 +20,5 @@ namespace EPTools.Core.Models.EPDataModels
         List<string> Specializations,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
 }

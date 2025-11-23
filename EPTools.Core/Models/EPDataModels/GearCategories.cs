@@ -6,7 +6,7 @@ namespace EPTools.Core.Models.EPDataModels
         string Name,
         string Text,
         GearSubcategories Subcategories,
-        string Id,
+        List<AdditionalRules> AdditionalRules,
         string Reference,
         string Resource);
 

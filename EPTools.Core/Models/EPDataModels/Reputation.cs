@@ -7,5 +7,5 @@ namespace EPTools.Core.Models.EPDataModels
         string Description,
         string Resource,
         string Reference,
-        string Id);
+        List<AdditionalRules> AdditionalRules);
 }

@@ -8,7 +8,7 @@ namespace EPTools.Core.Models.EPDataModels
         List<InterestSkill> Skills,
         string Resource,
         string Reference,
-        string Id
+        List<AdditionalRules> AdditionalRules
         );
 
     public record InterestSkill(

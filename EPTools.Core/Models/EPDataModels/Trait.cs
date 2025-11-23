@@ -14,6 +14,6 @@ namespace EPTools.Core.Models.EPDataModels
         bool Noted,
         string Resource,
         string Reference,
-        string Id
+        List<AdditionalRules> AdditionalRules
         );
 }
