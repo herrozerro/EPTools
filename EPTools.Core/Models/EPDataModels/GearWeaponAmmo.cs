@@ -3,8 +3,8 @@
 namespace EPTools.Core.Models.EPDataModels
 {
     public record GearWeaponAmmo(
-        [property: JsonPropertyName("damage")] string Damage,
-        [property: JsonPropertyName("notes")] string Notes,
+        string Damage,
+        string Notes,
         string Category,
         string Subcategory,
         string Name,
@@ -13,6 +13,6 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 }

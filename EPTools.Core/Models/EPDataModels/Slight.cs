@@ -3,13 +3,13 @@
 namespace EPTools.Core.Models.EPDataModels
 {
     public record Slight(
-        [property: JsonPropertyName("name")] string Name,
-        [property: JsonPropertyName("level")] string Level,
-        [property: JsonPropertyName("duration")] string Duration,
-        [property: JsonPropertyName("action")] string Action,
-        [property: JsonPropertyName("summary")] string Summary,
-        [property: JsonPropertyName("description")] string Description,
-        [property: JsonPropertyName("resource")] string Resource,
-        [property: JsonPropertyName("reference")] string Reference,
-        [property: JsonPropertyName("id")] string Id);
+        string Name,
+        string Level,
+        string Duration,
+        string Action,
+        string Summary,
+        string Description,
+        string Resource,
+        string Reference,
+        string Id);
 }

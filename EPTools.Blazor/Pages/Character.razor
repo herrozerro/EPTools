@@ -90,7 +90,7 @@
 
     <MudTabs>
         <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
-            <CharacterNetwork Identities="@AppData.ego.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
+            <CharacterNetwork Identities="@AppData.Ego.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
         </MudTabPanel>
         <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
             <CharacterSkills />
@@ -112,8 +112,12 @@
     
     protected override async Task OnInitializedAsync()
     {
-        AppData.ego = await EgoService.GetDefaults();
-        _egoModel = AppData.ego;
+        if (AppData.Ego == null)
+        {
+            AppData.Ego = await EgoService.GetDefaults();
+            _egoModel = AppData.Ego;
+        }
+        
         _loading = false;
     }
 
@@ -121,7 +125,7 @@
     {
         _loading = true;
         var newEgo = await LifepathService.GenerateEgo();
-        AppData.ego = newEgo;
+        AppData.Ego = newEgo;
         _egoModel = newEgo;
         _loading = false;
     }
@@ -165,7 +169,7 @@
     
     private List<SkillViewModel> BuildSkillViewModels()
     {
-        var models = AppData.ego.Skills.Select(x =>
+        var models = AppData.Ego.Skills.Select(x =>
             new SkillViewModel()
             {
                 Id = x.Id,
@@ -174,7 +178,7 @@
                 Rank = x.Rank,
                 Specialization = x.Specialization,
                 Type = x.SkillType,
-                TotalValue = AppData.ego.SkillTotal(x)
+                TotalValue = AppData.Ego.SkillTotal(x)
             })
             .ToList();
         return models;
@@ -182,8 +186,8 @@
 
     private void DeleteSkill(Guid skillId)
     {
-        var skillToRemove = AppData.ego.Skills.First(x => x.Id == skillId);
-        AppData.ego.Skills.Remove(skillToRemove);
+        var skillToRemove = AppData.Ego.Skills.First(x => x.Id == skillId);
+        AppData.Ego.Skills.Remove(skillToRemove);
         var skillViewModelToRemove = _skillViewModels.First(x => x.Id == skillId);
         _skillViewModels.Remove(skillViewModelToRemove);
     }
@@ -202,7 +206,7 @@
             SkillType = skillType,
             Id = id
         };
-        AppData.ego.Skills.Add(skill);
+        AppData.Ego.Skills.Add(skill);
         _skillViewModels.Add(new SkillViewModel()
         {
             Aptitude = skill.Aptitude,
@@ -226,7 +230,7 @@
         Console.WriteLine("Updating Skill {0}, rank {1}, aptitude {2}", skillId, newSkillRank, newAttributeName);
         
         // 2. Find the "real" skill in your source of truth
-        var skillToUpdate = AppData.ego.Skills.Find(s => s.Id == skillId);
+        var skillToUpdate = AppData.Ego.Skills.Find(s => s.Id == skillId);
         
         if (skillToUpdate != null)
         {

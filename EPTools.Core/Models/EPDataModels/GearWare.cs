@@ -3,11 +3,11 @@
 namespace EPTools.Core.Models.EPDataModels
 {
     public record GearWare(
-        [property: JsonPropertyName("bioware")]bool Bioware,
-        [property: JsonPropertyName("cyberware")]bool Cyberware,
-        [property: JsonPropertyName("hardware")]bool Hardware,
-        [property: JsonPropertyName("meshware")]bool Meshware,
-        [property: JsonPropertyName("nanoware")]bool Nanoware,
+        bool Bioware,
+        bool Cyberware,
+        bool Hardware,
+        bool Meshware,
+        bool Nanoware,
         string Category,
         string Subcategory,
         string Name,
@@ -16,6 +16,6 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 }

@@ -3,9 +3,9 @@ using EPTools.Core.Models.Ego;
 namespace EPTools.Core.Services;
 
 
-public class EgoService(EPDataService dataService)
+public class EgoService(EpDataService dataService)
 {
-    private EPDataService DataService { get; set; } = dataService;
+    private EpDataService DataService { get; set; } = dataService;
 
     public async Task<Ego> GetDefaults()
     {

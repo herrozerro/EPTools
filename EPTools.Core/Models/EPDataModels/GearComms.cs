@@ -11,7 +11,7 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 
 }

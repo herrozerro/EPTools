@@ -5,12 +5,9 @@ using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Services
 {
-    public class LifepathService(EPDataService ePDataService, EgoService egoService)
+    public class LifepathService(EpDataService ePDataService, EgoService egoService)
     {
-        private Ego NewEgo { get; set; } = new()
-        {
-            Identities = [new Identity()]
-        };
+        private Ego? NewEgo { get; set; }
 
         public async Task<Ego> GenerateEgo()
         {

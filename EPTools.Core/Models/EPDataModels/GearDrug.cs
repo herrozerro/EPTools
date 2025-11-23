@@ -3,10 +3,10 @@
 namespace EPTools.Core.Models.EPDataModels
 {
     public record GearDrug(
-        [property: JsonPropertyName("type")] string Type,
-        [property: JsonPropertyName("application")] string Application,
-        [property: JsonPropertyName("duration")] string Duration,
-        [property: JsonPropertyName("addiction")] string Addiction,
+        string Type,
+        string Application,
+        string Duration,
+        string Addiction,
         string Category,
         string Subcategory,
         string Name,
@@ -15,5 +15,6 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 }

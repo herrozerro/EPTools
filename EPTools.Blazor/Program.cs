@@ -14,7 +14,7 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 
 builder.Services.AddScoped<IFetchService, HttpFetchService>();
 builder.Services.AddScoped<StatBlockTemplateService>();
-builder.Services.AddScoped<EPDataService>();
+builder.Services.AddScoped<EpDataService>();
 builder.Services.AddScoped<EgoService>();
 builder.Services.AddScoped<DiscordWebhookService>();
 builder.Services.AddScoped<LifepathService>();

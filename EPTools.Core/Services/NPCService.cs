@@ -2,9 +2,9 @@
 
 namespace EPTools.Core.Services
 {
-    public class NpcService(EPDataService dataService)
+    public class NpcService(EpDataService dataService)
     {
-        private readonly EPDataService _epData = dataService;
+        private readonly EpDataService _epData = dataService;
 
 
         public Npc GenerateNpc()

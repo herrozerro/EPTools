@@ -3,13 +3,13 @@
 namespace EPTools.Core.Models.EPDataModels
 {
     public record GearWeaponRanged(
-        [property: JsonPropertyName("waretype")] string WareType,
-        [property: JsonPropertyName("damage")] string Damage,
-        [property: JsonPropertyName("damage_avg")] string DamageAvg,
-        [property: JsonPropertyName("firemodes")] string FireModes,
-        [property: JsonPropertyName("ammo")] int Ammo,
-        [property: JsonPropertyName("range")] int Range,
-        [property: JsonPropertyName("notes")] string Notes,
+        string WareType,
+        string Damage,
+        string DamageAvg,
+        string FireModes,
+        int Ammo,
+        int Range,
+        string Notes,
         string Category,
         string Subcategory,
         string Name,
@@ -18,7 +18,6 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id
-    ) :
-        Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 }

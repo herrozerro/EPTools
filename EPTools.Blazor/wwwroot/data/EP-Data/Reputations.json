@@ -1,0 +1,51 @@
+[
+  {
+    "Name": "@-rep",
+    "Description": "The Circle-A List, for autonomists, anarchists, Titanians, scum, and Extropians.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "c-rep",
+    "Description": "CivicNet, used by the Planetary Consortium, Morningstar Constellation, Lunar-Lagrange Alliance, Jovian Republic, and other hypercorps and capitalists.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "f-rep",
+    "Description": "Fame, the media network used by metacelebrities, journalists, socialites, artists, and glitterati.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "g-rep",
+    "Description": "Guanxi, the network for triads, cartels, gangs, and other criminal groups.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "i-rep",
+    "Description": "The Eye, Firewall’s secret internal network.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "r-rep",
+    "Description": "Research Network Affiliates, used by Argonauts, scientists, technologists, and researchers of all stripes.",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "x-rep",
+    "Description": "ExploreNet, the social network for gatecrashers and exoplanet colonists",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

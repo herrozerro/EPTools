@@ -4,17 +4,17 @@ using EPTools.Core.Models.LifePathGen;
 namespace EPTools.Core.Models.EPDataModels
 {
     public record GearBot(
-        [property: JsonPropertyName("vigor")]int Vigor,
-        [property: JsonPropertyName("vigor2")]int Vigor2,
-        [property: JsonPropertyName("flex")]int Flex,
-        [property: JsonPropertyName("armor_energy")]int ArmorEnergy,
-        [property: JsonPropertyName("armor_kinetic")]int ArmorKinetic,
-        [property: JsonPropertyName("wound_threshold")]int WoundThreshold,
-        [property: JsonPropertyName("durability")]int Durability,
-        [property: JsonPropertyName("death_rating")]int DeathRating,
-        [property: JsonPropertyName("movement_rate")]MorphMovementRates MovementRate,
-        [property: JsonPropertyName("size")]string Size,
-        [property: JsonPropertyName("ware")]List<string> Ware,
+        int Vigor,
+        int Vigor2,
+        int Flex,
+        int ArmorEnergy,
+        int ArmorKinetic,
+        int WoundThreshold,
+        int Durability,
+        int DeathRating,
+        MorphMovementRates MovementRate,
+        string Size,
+        List<string> Ware,
         string Category,
         string Subcategory,
         string Name,
@@ -23,6 +23,6 @@ namespace EPTools.Core.Models.EPDataModels
         string Summary,
         string Resource,
         string Reference,
-        string Id
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, Id);
+        List<AdditionalRules> AdditionalRules
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
 }

@@ -4,5 +4,5 @@ namespace EPTools.Blazor.Services;
 
 public class AppDataService
 {
-    public Ego ego = new();
+    public Ego? Ego {get;set;}
 }

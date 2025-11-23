@@ -17,73 +17,67 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Update="wwwroot\data\EP-Data\aptitudes.json">
+      <Content Update="wwwroot\data\EP-Data\Aptitudes.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\aptitude_templates.json">
+      <Content Update="wwwroot\data\EP-Data\AptitudeTemplates.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\backgrounds.json">
+      <Content Update="wwwroot\data\EP-Data\Backgrounds.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\backgroundstep.json">
+      <Content Update="wwwroot\data\EP-Data\Careers.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\careers.json">
+      <Content Update="wwwroot\data\EP-Data\CharGen.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\charactergencareer.json">
+      <Content Update="wwwroot\data\EP-Data\Factions.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\chargen.json">
+      <Content Update="wwwroot\data\EP-Data\GearArmor.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\factions.json">
+      <Content Update="wwwroot\data\EP-Data\GearBots.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_armor.json">
+      <Content Update="wwwroot\data\EP-Data\GearCategories.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_bots.json">
+      <Content Update="wwwroot\data\EP-Data\GearComms.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_categories.json">
+      <Content Update="wwwroot\data\EP-Data\GearCreatures.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_comms.json">
+      <Content Update="wwwroot\data\EP-Data\GearDrugs.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_creatures.json">
+      <Content Update="wwwroot\data\EP-Data\GearItems.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_drugs.json">
+      <Content Update="wwwroot\data\EP-Data\GearMission.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_items.json">
+      <Content Update="wwwroot\data\EP-Data\GearNano.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_mission.json">
+      <Content Update="wwwroot\data\EP-Data\GearPacks.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_nano.json">
+      <Content Update="wwwroot\data\EP-Data\GearSecurity.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_packs.json">
+      <Content Update="wwwroot\data\EP-Data\GearSoftware.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_security.json">
+      <Content Update="wwwroot\data\EP-Data\GearSwarms.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_software.json">
+      <Content Update="wwwroot\data\EP-Data\GearVehicles.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_swarms.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_vehicles.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Update="wwwroot\data\EP-Data\gear_ware.json">
+      <Content Update="wwwroot\data\EP-Data\GearWare.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Update="wwwroot\data\EP-Data\interests.json">
@@ -212,40 +206,37 @@
       <Content Update="wwwroot\data\EP-Data\LifePathTableUpliftBiomorphs.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\morphs.json">
+      <Content Update="wwwroot\data\EP-Data\Morphs.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\morph_types.json">
+      <Content Update="wwwroot\data\EP-Data\MorphTypes.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\oldmorphs.json">
+      <Content Update="wwwroot\data\EP-Data\Pools.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\pools.json">
+      <Content Update="wwwroot\data\EP-Data\Reputations.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\reputations.json">
+      <Content Update="wwwroot\data\EP-Data\Services.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\services.json">
+      <Content Update="wwwroot\data\EP-Data\Skills.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\skills.json">
+      <Content Update="wwwroot\data\EP-Data\Sleights.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\sleights.json">
+      <Content Update="wwwroot\data\EP-Data\Traits.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\traits.json">
+      <Content Update="wwwroot\data\EP-Data\GearWeaponAmmo.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\weapons_ammo.json">
+      <Content Update="wwwroot\data\EP-Data\GearWeaponMelee.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\weapons_melee.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
-      <Content Update="wwwroot\data\EP-Data\weapons_ranged.json">
+      <Content Update="wwwroot\data\EP-Data\GearWeaponRanged.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Update="wwwroot\data\statblocktemplates.json">

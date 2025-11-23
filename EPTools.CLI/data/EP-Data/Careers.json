@@ -1,0 +1,638 @@
+[
+  {
+    "Name": "Academic",
+    "Description": "You devote your efforts to the pursuit of knowledge.",
+    "Skills": [
+      {
+        "Name": "interface",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "research",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Any"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 40,
+        "Options": [
+          "Any"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Administration",
+          "Instruction",
+          "Lab Ops"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Covert Operative",
+    "Description": "You are a spy, infiltrator, thief, or undercover agent, skilled at accessing places you don’t belong.",
+    "Skills": [
+      {
+        "Name": "deceive",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "infiltrate",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "infosec",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Security Ops",
+          "Smuggling",
+          "Spycraft"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Black Markets",
+          "Current Events",
+          "Politics"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Enforcer",
+    "Description": "You’re a thug, whether you’re wielding force for a hypercorp, cartel, habitat overseer, or autonomist militia.",
+    "Skills": [
+      {
+        "Name": "fray",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "guns",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "melee",
+        "Rating": 50,
+        "Options": []
+      },
+      {
+        "Name": "provoke",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Bodyguarding",
+          "Racketeering",
+          "Security Ops"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Cartel Politics",
+          "Gambling",
+          "Night Clubs"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Explorer",
+    "Description": "You’ve walked on alien worlds and seen things with your own eyes that others wouldn’t believe.",
+    "Skills": [
+      {
+        "Name": "athletics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "medicine",
+        "Rating": 20,
+        "Options": [
+          "Paramedic"
+        ]
+      },
+      {
+        "Name": "pilot",
+        "Rating": 20,
+        "Options": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ]
+      },
+      {
+        "Name": "survival",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "First-Contact Ops",
+          "Gatecrashing",
+          "Surveying"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Astrobiology",
+          "Geology",
+          "Xenoarcheology"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Face",
+    "Description": "You excel at convincing others, even when it’s not in their best interest.",
+    "Skills": [
+      {
+        "Name": "deceive",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "persuade",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Fencing",
+          "Police Ops",
+          "Smuggling"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Black Markets",
+          "Drugs",
+          "Underground XP"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Genehacker",
+    "Description": "DNA is your artistic medium, proteins your weapon of choice.",
+    "Skills": [
+      {
+        "Name": "medicine",
+        "Rating": 60,
+        "Options": [
+          "Biotech"
+        ]
+      },
+      {
+        "Name": "medicine",
+        "Rating": 40,
+        "Options": [
+          "Pharmacology"
+        ]
+      },
+      {
+        "Name": "program",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Biology",
+          "Genetics",
+          "Physiology"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Lab Ops",
+          "Medical Services",
+          "Morph Design"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hacker",
+    "Description": "Software heeds your beck and call, whether you seek to exploit systems or protect them.",
+    "Skills": [
+      {
+        "Name": "infosec",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "interface",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "program",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Computer Science",
+          "Cryptography",
+          "Mathematics"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Data Processing",
+          "Network Engineering",
+          "System Administration"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Investigator",
+    "Description": "Few details escape your scrutiny, whether you are a journalist, private investigator, detective, or insurance claims investigator.",
+    "Skills": [
+      {
+        "Name": "kinesics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "perceive",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "research",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Ego Hunting",
+          "Investigation",
+          "Journalism"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Black Markets",
+          "Current Events",
+          "Cartels"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Medic",
+    "Description": "You have a background in medicine and experience as a physician, surgeon, paramedic, body bank tech, or other type of medical specialist.",
+    "Skills": [
+      {
+        "Name": "kinesics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "medicine",
+        "Rating": 60,
+        "Options": [
+          "Paramedic"
+        ]
+      },
+      {
+        "Name": "medicine",
+        "Rating": 40,
+        "Options": [
+          "Biotech"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Biology",
+          "Genetics",
+          "Psychology"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Body Bank Ops",
+          "Emergency Services",
+          "Surgical Ops"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mindhacker",
+    "Description": "You meld and shape minds and memories. You might be a therapist, memeticist, or psychosurgeon pushing the bounds of cognition.",
+    "Skills": [
+      {
+        "Name": "infosec",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "medicine",
+        "Rating": 40,
+        "Options": [
+          "Pharmacology"
+        ]
+      },
+      {
+        "Name": "medicine",
+        "Rating": 60,
+        "Options": [
+          "Psychosurgery"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Cognitive Science",
+          "Memetics",
+          "Psychology"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Body Bank Ops",
+          "Medical Services",
+          "Social Services"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Scavenger",
+    "Description": "You scrounge through wrecks and ruins of the Fall, seeking value in the destruction.",
+    "Skills": [
+      {
+        "Name": "hardware",
+        "Rating": 60,
+        "Options": [
+          "Electronics",
+          "Industrial",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "hardware",
+        "Rating": 40,
+        "Options": [
+          "Demolitions"
+        ]
+      },
+      {
+        "Name": "pilot",
+        "Rating": 30,
+        "Options": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Flight Crew Ops",
+          "Scavenging",
+          "Smuggling"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Black Markets",
+          "Spacecraft",
+          "TITAN Machines"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Scientist",
+    "Description": "You seek to understand how the universe works — or at least certain elements of it.",
+    "Skills": [
+      {
+        "Name": "hardware",
+        "Rating": 40,
+        "Options": [
+          "Electronics",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "program",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "research",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Astrobiology",
+          "Memetics",
+          "Physics"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Field Science",
+          "Investigation",
+          "Lab Ops"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Soldier",
+    "Description": "You serve a habitat polity, hypercorp, or mercenary outfit.",
+    "Skills": [
+      {
+        "Name": "fray",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "guns",
+        "Rating": 60,
+        "Options": []
+      },
+      {
+        "Name": "melee",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Bodyguarding",
+          "Military Ops",
+          "Security Ops"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Conflict Zones",
+          "Gambling",
+          "Mercenary Groups"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Techie",
+    "Description": "You make and fix things. You might be a roboticist, habitat tech, or artifex nano-engineer.",
+    "Skills": [
+      {
+        "Name": "hardware",
+        "Rating": 60,
+        "Options": [
+          "Electronics",
+          "Industrial",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "infosec",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "program",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Construction",
+          "Habitat Ops",
+          "Mining",
+          "Nanofacturing"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Computer Science",
+          "Engineering",
+          "Nanotechnology"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

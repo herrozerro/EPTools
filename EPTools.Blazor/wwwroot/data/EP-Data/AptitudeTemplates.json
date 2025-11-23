@@ -1,0 +1,107 @@
+[
+  {
+    "Name": "Actioneer",
+    "Description": "You are more comfortable with physicality than talking or thinking.",
+    "Aptitudes": {
+      "Cognition": 10,
+      "Intuition": 15,
+      "Reflexes": 20,
+      "Savvy": 10,
+      "Somatics": 20,
+      "Willpower": 15
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Extrovert",
+    "Description": "You can talk your way through most situations.",
+    "Aptitudes": {
+      "Cognition": 10,
+      "Intuition": 20,
+      "Reflexes": 15,
+      "Savvy": 20,
+      "Somatics": 15,
+      "Willpower": 10
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Facilitator",
+    "Description": "You’re good with people, planning, and seeing things through.",
+    "Aptitudes": {
+      "Cognition": 15,
+      "Intuition": 15,
+      "Reflexes": 10,
+      "Savvy": 20,
+      "Somatics": 10,
+      "Willpower": 20
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Factotum",
+    "Description": "You’ve never quite stood out, but you exhibit broad competence.",
+    "Aptitudes": {
+      "Cognition": 15,
+      "Intuition": 15,
+      "Reflexes": 15,
+      "Savvy": 15,
+      "Somatics": 15,
+      "Willpower": 15
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Inquirer",
+    "Description": "Your creative mind is good at figuring things out.",
+    "Aptitudes": {
+      "Cognition": 20,
+      "Intuition": 20,
+      "Reflexes": 10,
+      "Savvy": 15,
+      "Somatics": 10,
+      "Willpower": 15
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Survivor",
+    "Description": "You have the will and stamina to scrape by in tough situations.",
+    "Aptitudes": {
+      "Cognition": 15,
+      "Intuition": 10,
+      "Reflexes": 15,
+      "Savvy": 10,
+      "Somatics": 20,
+      "Willpower": 20
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Thrill Seeker",
+    "Description": "You’ve never said no to a dare, but your fast reaction time and quick thinking compensate for your lack of foresight.",
+    "Aptitudes": {
+      "Cognition": 20,
+      "Intuition": 10,
+      "Reflexes": 20,
+      "Savvy": 15,
+      "Somatics": 15,
+      "Willpower": 10
+    },
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

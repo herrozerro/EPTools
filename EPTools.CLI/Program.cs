@@ -12,7 +12,7 @@ Console.WriteLine("Hello, World!");
 //modifyText();
 
 FileFetchService fileFetchService = new FileFetchService();
-EPDataService epDataService = new EPDataService(fileFetchService);
+EpDataService epDataService = new EpDataService(fileFetchService);
 EgoService egoService = new EgoService(epDataService);
 LifepathService lifepathService = new LifepathService(epDataService, egoService);
 

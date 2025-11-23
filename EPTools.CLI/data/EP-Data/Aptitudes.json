@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Cognition",
+    "Description": "represents your intelligence, problem-solving talent, and capacity for logical analysis.",
+    "ShortName": "Cog",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Intuition",
+    "Description": "is your gut instinct and ability to evaluate on the fly.  It includes physical awareness, creativity, cleverness, and cunning.",
+    "ShortName": "Int",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Reflexes",
+    "Description": "is your coordination, manual dexterity, nimbleness, balance, and reaction speed.",
+    "ShortName": "Ref",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Savvy",
+    "Description": "represents your social awareness, adaptability, empathy, and ability to influence others.",
+    "ShortName": "Sav",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Somatics",
+    "Description": "is how well you can exploit your morph’s physical capabilities, including strength, stamina, and sustained positioning and motion.",
+    "ShortName": "Som",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Willpower",
+    "Description": "is your self-control, mental fortitude, and strength of personality.",
+    "ShortName": "Wil",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

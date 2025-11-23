@@ -1,0 +1,211 @@
+[
+  {
+    "Category": "Tech",
+    "Subcategory": "Exploration Tools",
+    "Name": "Blue Box",
+    "Complexity": "Rare/—",
+    "Summary": "Portable pandora gate interface.",
+    "Description": "<p>Named for the cobalt shade in which they were originally manufactured, blue boxes are small-sized pandora gate control devices. They must be physically attached to a gate to control it; this requires a Hardware: Electronics task action at -10 with a timeframe of 1 hour. Blue boxes have built-in self-destruct mechanisms, so that you can destroy the device in the event it might fall into alien hands.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Exploration Tools",
+    "Name": "Mapping Missile",
+    "Complexity": "Mod/2",
+    "Summary": "Maps planet from low polar orbit in 24-48 hours.",
+    "Description": "<p>This medium-sized portable rocket extends struts, aims itself, and launches into a low polar orbit on any planet with gravity below 2 g. Over a 1-2 day period, it uses a variety of sensors (radar, visual, infrared, mass, spectrographic) to map the planet and beam this information back. The maps are low resolution, showing nothing less than 100 meters across, but it will identify large masses, cities, lights on the planet’s dark side, atmospheric conditions, and data on the planet’s rotation and gravity.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Exploration Tools",
+    "Name": "Scout Missile",
+    "Complexity": "Mod/2",
+    "Summary": "Maps 5 km radius or 10 km one direction in 20 minutes, Perceive 60.",
+    "Description": "<p>These small-sized missiles are easy to set up and launch from a disposable tube. They map the area in a 5-kilometer radius from their launch point, or out to 10 kilometers in a specified direction, in 20 minutes. Carrying visual, infrared, radar, and lidar sensors, and flying at an altitude of 100 meters, they can map terrain, locate structures, identify features of interest, and search for anything you specify with a Perceive 60. They transmit their sensor and telemetry data in real-time.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Salvage Tools",
+    "Name": "Disassembly Tools",
+    "Complexity": "Mod/2",
+    "Summary": "Heavy and smart tools for taking things apart.",
+    "Description": "<p>This collection of tools is useful for salvage ops, breaking down wrecks, or dissembling anything from a habitat room to a vehicle or synthmorph. They include plasma torches, laser cutters, pneumatic jaws, and smart-material tools like spanners and wrenches that can be adapted to a wide array of connections and fittings. Together, these tools are medium sized, usually ported by robomule.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Salvage Tools",
+    "Name": "Superthermite Charge",
+    "Complexity": "Maj/R/3 (per 5 charges)",
+    "Summary": "Nanometal explosive. DV 6d10 + 10, set/shaped with Hardware: Demolitions.",
+    "Description": "<p>These powerful and highly stable demolition charges are made from a combination of nanometals and metal oxides. A single charge can be used to create an explosive blast inflicting DV 6d10 + 10 [43] when set with Hardware: Demolitions. A charge can be shaped with a successful Hardware: Demolitions Test, focusing the blast in a particular 90-degree direction (for example, to blow through a door). This triples the damage of the blast in the focused direction; in all other directions, the damage is reduced to 1/3rd. Multiple charges apply a cumulative effect.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Science Tools",
+    "Name": "Adaptive Interface",
+    "Complexity": "Maj/3",
+    "Summary": "Smart connectors for accessing/analyzing relics. Interface 60, more.",
+    "Description": "<p>If the event you must interact with ancient technology — perhaps even a still-functioning alien relic — the adaptive interface features smart-material connectors that can connect to almost any conceivable piece of technology. It is also equipped with nano-probe sensors that can analyze the device’s structure and map out its internal functions. The interface’s ALI is equipped with Know: Computer Science, Know: Electrical Engineering, Know: Xenodata, and Interface skills at 60, as well as Infosec and Program at 40. Connecting to and analyzing relics is a task action with a timeframe of 1 hour, possibly longer (GM discretion). This interface severs mesh connections when analyzing unknown devices, so as not to unwittingly spread infections. It is not compatible with biological technology or nanotech more advanced than transhumanity’s.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Science Tools",
+    "Name": "Fractal Gloves",
+    "Complexity": "Mod/2",
+    "Summary": "Function as fractal digits and nanoscopic vision.",
+    "Description": "<p>These gloves mimic the function of fractal digits ▶324. The digits include micro-cameras that provide the function of nanoscopic vision ▶318.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Science Tools",
+    "Name": "Pocket Lab",
+    "Complexity": "Mod/2",
+    "Summary": "Analyze gases, liquids, materials, Know: Chemistry 60.",
+    "Description": "<p>This small handheld device contains numerous sensors for analyzing both organic and inorganic compounds in liquid, gaseous, and solid form. It performs material analysis using different methods of spectrometry, chromatography, and biochemical testing, comparing results to a built-in database. Using a pocket lab you could test soil fertility, identify clean water, detect hazardous emissions, discover traces of life, pinpoint contaminants, determine the presence of explosives or firearms, identify strange substances, and so on. It operates with Know: Chemistry 60.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Science Tools",
+    "Name": "Portable SolArchive",
+    "Complexity": "Min/1",
+    "Summary": "Enable Research Tests related to one Know skill while isolated from mesh.",
+    "Description": "<p>These very small data storage units contain impressive archives related to a particular subject (equivalent to one Know skill). They allow you to make Research Tests on that subject even when isolated from the mesh.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Science Tools",
+    "Name": "Specimen Container",
+    "Complexity": "Min/1",
+    "Summary": "Holds samples in stasis conditions.",
+    "Description": "<p>This capsule container is designed to hold samples of any sort (chemical, biological, etc.) in near stasis. It can be programmed to reproduce whatever conditions the user specifies, from cryogenic freezing to extreme heat, or even vacuum or high-pressure atmosphere. The containers are also encased in a superconductive wire mesh that acts as a faraday cage and blocks mesh and radio signals and similar electromagnetic radiation.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Electrogravitics Net",
+    "Complexity": "Min/1",
+    "Summary": "Slows falls w/electric fields. Reduce distance by 50 m.",
+    "Description": "<p>Also called a safety net, this failsafe system uses electric fields to counter gravity when falling. While the system is not able to actually levitate heavy objects, it will slow down a fall enough that the user can land safely if the gravitational force is not too high (less than 50 meters in 1 g). Reduce the distance of longer falls by 50 meters when calculating damage. Generating these electric fields consumes a lot of energy, so the net is only good for one use before it must be recharged, taking 4 hours.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Electronic Rope",
+    "Complexity": "Min/1",
+    "Summary": "Controllable rope.",
+    "Description": "<p>This rope's fibers can be controlled electronically: making it move in a snakelike fashion, stiffen up, and wrap around objects. It comes in a 50-meter length capable of supporting 250 kg. An e-rope can be cut by inflicting 20 points of damage.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Emergency Bubble",
+    "Complexity": "Maj/3",
+    "Summary": "Inflatable pressurized bubble/dome.",
+    "Description": "<p>Used as a last-resort life raft on spaceships, an emergency bubble is made of advanced smart materials and comes in a large but portable package that can be quickly inflated around you in 1 action turn, usually inside an airlock. The bubble has a 5-meter diameter and can comfortably accommodate 4 people for 1 week. It maintains 1 atmosphere of pressure in a vacuum, protects the inhabitants from temperatures ranging from -175 to 140 C, and provides light and breathable air. A built-in autocook ▶343 provides food and liquids. It features a simple airlock, carries an emergency distress beacon, and can be transparent, opaque, or polarized. It is powered by a nuclear battery and includes comfortable inflatable furniture. This bubble can also be partially inflated as a dome and staked down to a surface to serve as an emergency shelter on asteroids or other surfaced environments.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Pressure Tent",
+    "Complexity": "Mod/2",
+    "Summary": "Self-erecting shelter for 4, built-in breather.",
+    "Description": "<p>This pack self-unfolds in 3 action turns into a pressurized shelter for up to 4 medium-sized people plus gear. A built-in breather will convert carbon dioxide from the atmosphere (if any) indefinitely. It also packs itself.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Smart Anchors",
+    "Complexity": "Min/1",
+    "Summary": "Harness deploys cables to prevent accidents.",
+    "Description": "<p>When activated, this worn harness fires out up to 6 anchoring cables with a length of 10 meters. These cables spike into ice, dirt, or rock, or use grip pads to adhere to an appropriate surface. This prevents you from drifting into space, accidentally kicking off with terminal velocity, or falling off a cliff face. The device’s ALI targets and deploys anchors, and can be instructed to do so under certain conditions.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Spindle",
+    "Complexity": "Mod/2",
+    "Summary": "Fullerene cable fabber, supports 5,000 kg.",
+    "Description": "<p>Spindles are wound lengths of thin (0.2 millimeters) but super-strong fullerene cable. It can extend 250 meters of cable capable of supporting 5,000 kilograms of weight at 1 g. The spindle also contains a specialized fabber that can manufacture more cable and extend it indefinitely, at a rate of 1 meter per minute, as long as it is fed with raw materials. The spindle can cut the cables it produces at any length. If fixed in place with built-in grip pads, it can also retract the cable at a rate of 50 meters per action turn, or re-absorb cables at the rate of 5 meters per minute. Spindle cables can be cut by inflicting 30 points of damage.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Survival Tools",
+    "Name": "Spindle Climber",
+    "Complexity": "Min/1",
+    "Summary": "Launcher and powered ascender, Movement 12.",
+    "Description": "<p>This device attaches to a spindle and transforms it into a highly effective climbing device. The spindle climber has two functions. First, it attaches hardened tips to the spindle’s cable and fires it at high speed, up to 50 meters, with sufficient force to imbed the tip into almost any sufficiently durable surface (if used as a weapon, it inflicts DV 2d10). Second, the spindle climber can pull itself and up to 250 kg up the cable at a speed of 12 meters per turn.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Vacsuits",
+    "Name": "Light Vacsuit",
+    "Complexity": "Mod/2",
+    "Summary": "As smart clothes, protects from vacuum, 8 hours air, AV 5/2.",
+    "Description": "<p>Both smart-fabric and legacy light vacsuit models are ideal for less harsh environments such as Mars, the Venusian clouds, or exoplanets with moderate but unbreathable atmospheres. Their rebreathers provide 8 hours of air. All models include a headlight, an ecto, and atmospheric sensors. They protect you from temperatures from -75 to 100 C. These vacuum suits also provide an Armor Value of 5/2 and instantly self-seal breaches unless more than 20 points of damage are inflicted at once.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Tech",
+    "Subcategory": "Vacsuits",
+    "Name": "Standard Vacsuit",
+    "Complexity": "Maj/3",
+    "Summary": "As smart clothes, protects from vacuum, 48 hours air, AV 8/6.",
+    "Description": "<p>Made from thicker and more durable materials, standard vacsuits provide 48 hours of air and incorporate an autocook capable of recycling all wastes and producing food and water indefinitely. Each suit is equipped with an ecto, a radio booster, specs, and atmospheric sensors. These suits have an Armor Value of 8/6 and protect you from temperatures from -175 to 140 C. They instantly seal any hole unless more than 30 points of damage are inflicted at once.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

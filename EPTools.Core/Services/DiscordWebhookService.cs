@@ -1,4 +1,7 @@
 ﻿using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using EPTools.Core.Models;
 
 namespace EPTools.Core.Services
 {
@@ -6,22 +9,12 @@ namespace EPTools.Core.Services
     {
         private HttpClient HttpClient { get; set; } = httpClient;
 
-        public async Task SendWebhook()
+        public async Task SendWebhook(DiscordWebHookMessage message)
         {
             var url = "";
 
-            var payload = new StringContent(
-                            @"{""content"": ""TEST"", 
-	                            ""username"": ""Praxia2"",
-	                            ""embeds"":[
-		                            {
-			                            ""title"":""Rolled Result 5"",
-                                        ""description"":""Rolled a thing"",
-                                        ""author"": { ""name"": ""Rolled Freefall""},
-                                        ""footer"": { ""text"":""Something""}
-		                            }
-                                ]
-                            }", Encoding.UTF8, "application/json"); 
+            var payload = new StringContent(JsonSerializer.Serialize(message),
+                             Encoding.UTF8, "application/json"); 
             await HttpClient.PostAsync(url, payload);
         }
     }
