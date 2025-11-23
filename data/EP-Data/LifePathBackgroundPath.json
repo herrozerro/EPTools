@@ -4028,7 +4028,7 @@
                 "Name": "CRep",
                 "Type": "Reputation",
                 "Description": null,
-                "Value": 1,
+                "Value": 10,
                 "Weight": 0,
                 "OptionLists": []
               },
@@ -4187,7 +4187,7 @@
                 "Name": "CRep",
                 "Type": "Reputation",
                 "Description": null,
-                "Value": 1,
+                "Value": 10,
                 "Weight": 0,
                 "OptionLists": []
               },
