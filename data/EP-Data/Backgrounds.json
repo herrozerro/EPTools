@@ -1,0 +1,567 @@
+[
+  {
+    "Name": "Colonist",
+    "Description": "You were an original settler of Earth orbit, Luna, Mars, or a smaller outpost elsewhere, before the Fall.",
+    "Skills": [
+      {
+        "Name": "free fall",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "hardware",
+        "Rating": 40,
+        "Options": [
+          "Aerospace",
+          "Electronics",
+          "Industrial"
+        ]
+      },
+      {
+        "Name": "interface",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "pilot",
+        "Rating": 30,
+        "Options": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ]
+      },
+      {
+        "Name": "survival",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Administration",
+          "Flight Crew Ops",
+          "Habitat Ops"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Botany",
+          "Chemistry",
+          "Engineering",
+          "Physics"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Enclaver",
+    "Description": "On Earth, you lived a life of precarious but protected stability in a defended enclave.",
+    "Skills": [
+      {
+        "Name": "athletics",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "interface",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "persuade",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "pilot",
+        "Rating": 20,
+        "Options": [
+          "Ground"
+        ]
+      },
+      {
+        "Name": "program",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Celebrity Gossip",
+          "Pop Culture",
+          "Sports"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Economics",
+          "Education",
+          "Psychology"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Freelancer",
+    "Description": "You were a cog in the wheels of hypercapitalism, taking whatever gigs came your way.",
+    "Skills": [
+      {
+        "Name": "interface",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "persuade",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "program",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "research",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Accounting",
+          "Data Processing",
+          "Freelancing"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Craft Beers",
+          "Martian Techno",
+          "Sports"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hyperelite",
+    "Description": "You lived in the top percent, with abundant wealth and resources.",
+    "Skills": [
+      {
+        "Name": "athletics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "deceive",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 50,
+        "Options": []
+      },
+      {
+        "Name": "persuade",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "provoke",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Fine Art",
+          "Hypercorp Politics",
+          "Stock Market"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Economics",
+          "Law",
+          "Political Science"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Indenture",
+    "Description": "With nothing to lose, you sold yourself into a work contract for the off-world hypercorps.",
+    "Skills": [
+      {
+        "Name": "fray or melee",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "free fall",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "hardware",
+        "Rating": 50,
+        "Options": [
+          "Groundcraft",
+          "Industrial",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "interface",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "perceive",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Asteroid Mining",
+          "Habitat Ops",
+          "Terraforming"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Black Markets",
+          "Gambling",
+          "XP Dealers"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Infolife",
+    "Description": "You are an AGI, a digital consciousness born of software code.",
+    "Skills": [
+      {
+        "Name": "infosec",
+        "Rating": 50,
+        "Options": []
+      },
+      {
+        "Name": "interface",
+        "Rating": 50,
+        "Options": []
+      },
+      {
+        "Name": "program",
+        "Rating": 50,
+        "Options": [
+          "Groundcraft",
+          "Industrial",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "research",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Accounting",
+          "Administration",
+          "System Administration"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Computer Science",
+          "Cryptography",
+          "Psychometrics"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Isolate",
+    "Description": "You eked out a self-exiled existence in a remote habitat or ship on the fringes of occupied space.",
+    "Skills": [
+      {
+        "Name": "free fall",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "guns",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "hardware",
+        "Rating": 40,
+        "Options": [
+          "Aerospace",
+          "Electronics",
+          "Robotics"
+        ]
+      },
+      {
+        "Name": "medicine",
+        "Rating": 20,
+        "Options": [
+          "Paramedic"
+        ]
+      },
+      {
+        "Name": "pilot",
+        "Rating": 30,
+        "Options": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ]
+      },
+      {
+        "Name": "survival",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Flight Crew Ops",
+          "Gas Mining",
+          "Habitat Ops"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Bioconservativism",
+          "Conspiracies",
+          "Religion"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Lost",
+    "Description": "You are a legacy of the doomed Lost Generation, undergoing an accelerated-growth childhood that left most others sociopathic or insane. You must purchase the Psi trait in Step 10.",
+    "Skills": [
+      {
+        "Name": "deceive",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "infiltrate",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "perceive",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "psi",
+        "Rating": 50,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Biology",
+          "Psychology",
+          "Sociology"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Privacy",
+          "Serial Killers",
+          "Mind Hacks"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Underclass",
+    "Description": "You are a veteran of the slums, favelas, ghettoes, and flooded cities of Earth. You used whatever means necessary to get by.",
+    "Skills": [
+      {
+        "Name": "deceive",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "fray",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "guns or melee",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "perceive",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "persuade",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Black Markets",
+          "Drugs",
+          "Triads"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Con Artistry",
+          "Police Ops",
+          "Smuggling"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Uplift",
+    "Description": "You are an uplift: the latest generation of bonobo, cetacean, chimpanzee, corvid, gorilla, neanderthal, octopus, orangutan, or parrot raised to human levels of intelligence.",
+    "Skills": [
+      {
+        "Name": "athletics",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "fray",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "kinesics",
+        "Rating": 30,
+        "Options": []
+      },
+      {
+        "Name": "perceive",
+        "Rating": 40,
+        "Options": []
+      },
+      {
+        "Name": "provoke",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "survival",
+        "Rating": 20,
+        "Options": []
+      },
+      {
+        "Name": "know",
+        "Rating": 60,
+        "Options": [
+          "Uplift Culture",
+          "Uplife Rights"
+        ]
+      },
+      {
+        "Name": "know",
+        "Rating": 30,
+        "Options": [
+          "Genetics",
+          "Sociology",
+          "Zoology"
+        ]
+      }
+    ],
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

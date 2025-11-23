@@ -1,0 +1,853 @@
+[
+  {
+    "Category": "Creatures",
+    "Subcategory": "GMOs",
+    "Name": "Dino Pet",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 10,
+      "IntuitionCheck": 20,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 10,
+      "SavvyCheck": 30,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 5,
+      "Tp": 0,
+      "ArmorEnergy": 4,
+      "ArmorKinetic": 5,
+      "WoundThreshold": 3,
+      "Durability": 15,
+      "DeathRating": 23,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 12
+      },
+      {
+        "MovementType": "Winged",
+        "Base": 8,
+        "Full": 32
+      }
+    ],
+    "Ware": [
+      "Dermal Armor",
+      "Enhanced Smell",
+      "Enhanced Vision",
+      "some have Poison Glands"
+    ],
+    "Skills": [
+      "Athletics 40",
+      "Fray 30",
+      "Infiltrate 30",
+      "Melee 40",
+      "Perceive 30",
+      "Provoke 30 (Intimidate 40)"
+    ],
+    "Traits": [],
+    "Notes": "Bite/Horn/Tail DV 1d6, Small size, Walker OR Winged",
+    "Description": "<p>Genehackers have resurrected a number of extinct dinosaur species as small, colorful, and lovable pets. Varieties include pterosaurs, stegosauruses, ankylosauruses, triceratops, and many others.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "GMOs",
+    "Name": "Fur Coat",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 1,
+      "CognitionCheck": 3,
+      "Intuition": 1,
+      "IntuitionCheck": 3,
+      "Reflexes": 5,
+      "ReflexesCheck": 15,
+      "Savvy": 1,
+      "SavvyCheck": 3,
+      "Somatics": 1,
+      "SomaticsCheck": 3,
+      "Willpower": 1,
+      "WillpowerCheck": 3,
+      "Initiative": 1,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 3,
+      "Durability": 15,
+      "DeathRating": 23,
+      "TraumaThreshold": 0,
+      "Lucidity": 0,
+      "InsanityRating": 0
+    },
+    "MovementRate": [
+      {
+        "MovementType": "None",
+        "Base": 0,
+        "Full": 0
+      }
+    ],
+    "Ware": [],
+    "Skills": [],
+    "Traits": [],
+    "Notes": "",
+    "Description": "<p>A so-called “fur coat” is outerwear made from a living primitive organism. The creature’s skin, fur, or scales are real. The organism is cultivated from transgenic stocks and grown around molds into clothing shapes, often with actual usefulness: polar bear parkas, seal diving suits, porcupine coats, etc. Fur coats are modified with wireless controls and haptic systems, so they can be made to move, shiver, massage, or prickle up on command.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "GMOs",
+    "Name": "Gardener Swarm",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 1,
+      "CognitionCheck": 3,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 20,
+      "ReflexesCheck": 60,
+      "Savvy": 0,
+      "SavvyCheck": 0,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 15,
+      "WillpowerCheck": 45,
+      "Initiative": 7,
+      "Tp": 1,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 0,
+      "Durability": 20,
+      "DeathRating": 75,
+      "TraumaThreshold": 6,
+      "Lucidity": 30,
+      "InsanityRating": 60
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Winged",
+        "Base": 8,
+        "Full": 32
+      }
+    ],
+    "Ware": [
+      "Enhanced Smell",
+      "Enhanced Vision",
+      "some have Poison Glands"
+    ],
+    "Skills": [
+      "Athletics 60",
+      "Fray 50",
+      "Infiltrate 50",
+      "Melee 40",
+      "Perceive 30"
+    ],
+    "Traits": [],
+    "Notes": "Swarm sting DV 1d10 (ignores non-sealed armor)",
+    "Description": "<p>Interbred and gene-modified bee and wasp variations pollinate habitat gardens. They also produce honey, hunt other insects, trim leaves, and collect debris. Though non-aggressive, some have been modified for use as assassin or guardians. They follow swarm rules ▶344.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "GMOs",
+    "Name": "Space Roach",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 1,
+      "CognitionCheck": 3,
+      "Intuition": 10,
+      "IntuitionCheck": 30,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 5,
+      "WillpowerCheck": 15,
+      "Initiative": 5,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 1,
+      "Durability": 5,
+      "DeathRating": 8,
+      "TraumaThreshold": 2,
+      "Lucidity": 10,
+      "InsanityRating": 20
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 12
+      }
+    ],
+    "Ware": [
+      "Grip Pads"
+    ],
+    "Skills": [
+      "Athletics 30",
+      "Fray 30",
+      "Free Fall 30",
+      "Infiltrate 50",
+      "Perceive 20"
+    ],
+    "Traits": [],
+    "Notes": "Small size",
+    "Description": "<p>Grown to the size of a small dog, these insects are often biosculpted for bright colors and patterns. They are favored as pets and useful for minor janitorial duties.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "GMOs",
+    "Name": "Squidling",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 1,
+      "CognitionCheck": 3,
+      "Intuition": 10,
+      "IntuitionCheck": 30,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 1,
+      "SavvyCheck": 3,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 5,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 1,
+      "Durability": 5,
+      "DeathRating": 8,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Thrust Vector",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Enhanced Smell"
+    ],
+    "Skills": [
+      "Athletics 30",
+      "Fray 40",
+      "Free Fall 30",
+      "Infiltrate 30",
+      "Melee 30",
+      "Perceive 20"
+    ],
+    "Traits": [],
+    "Notes": "Bite DV 1d6, Small size",
+    "Description": "<p>These small-sized squid are adapted for air breathing and maneuvering in micrograv with natural air jets. They are favored as pets and snacks by neo-octopi.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Guard Dog",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 20,
+      "ReflexesCheck": 70,
+      "Savvy": 10,
+      "SavvyCheck": 30,
+      "Somatics": 20,
+      "SomaticsCheck": 70,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 10,
+      "Tp": 1,
+      "ArmorEnergy": 4,
+      "ArmorKinetic": 5,
+      "WoundThreshold": 6,
+      "Durability": 30,
+      "DeathRating": 45,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Claws",
+      "Cybercortex",
+      "Dermal Armor",
+      "Enhanced Hearing",
+      "Enhanced Smell",
+      "Enhanced Vision",
+      "Mesh Inserts",
+      "Muscle Augmentation",
+      "Puppet Sock",
+      "Reflex Boosters"
+    ],
+    "Skills": [
+      "Athletics 30",
+      "Fray 40",
+      "Melee 50",
+      "Perceive 40",
+      "Provoke 30 (Intimidate 40)"
+    ],
+    "Traits": [],
+    "Notes": "",
+    "Description": "<p>These smart dogs are trained for security and policing purposes and sometimes enhanced with combative bioware or cybernetics.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Police Baboon",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 5,
+      "WillpowerCheck": 15,
+      "Initiative": 6,
+      "Tp": 2,
+      "ArmorEnergy": 2,
+      "ArmorKinetic": 3,
+      "WoundThreshold": 6,
+      "Durability": 30,
+      "DeathRating": 45,
+      "TraumaThreshold": 2,
+      "Lucidity": 10,
+      "InsanityRating": 20
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Bioweave",
+      "Cold Tolerance",
+      "Enhanced Respiration",
+      "Enhanced Vision",
+      "Novacardium",
+      "Toxin Filters"
+    ],
+    "Skills": [
+      "Athletics 50",
+      "Fray 40",
+      "Melee 50",
+      "Perceive 40",
+      "Provoke 40 (Intimidate 50)"
+    ],
+    "Traits": [
+      "Modified Behavior: Obedient (Level 2)"
+    ],
+    "Notes": "",
+    "Description": "<p>Favored for police work on Mars, these partially uplifted Cape baboons can be vicious, especially when in a pack.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Rust Hound",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 10,
+      "SavvyCheck": 30,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 15,
+      "WillpowerCheck": 45,
+      "Initiative": 6,
+      "Tp": 1,
+      "ArmorEnergy": 2,
+      "ArmorKinetic": 3,
+      "WoundThreshold": 6,
+      "Durability": 30,
+      "DeathRating": 45,
+      "TraumaThreshold": 6,
+      "Lucidity": 30,
+      "InsanityRating": 60
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Bioweave",
+      "Cold Tolerance",
+      "Enhanced Hearing",
+      "Enhanced Respiration",
+      "Enhanced Smell",
+      "Toxin Filters"
+    ],
+    "Skills": [
+      "Athletics 30",
+      "Fray 40",
+      "Melee 40",
+      "Perceive 50",
+      "Provoke 30 (Intimidate 40)"
+    ],
+    "Traits": [],
+    "Notes": "",
+    "Description": "<p>These medium-sized transgenic hounds are modified to breathe the Martian atmosphere and handle its cold environment. They make excellent trackers.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Smart Hawk",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 15,
+      "WillpowerCheck": 45,
+      "Initiative": 6,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 3,
+      "Durability": 15,
+      "DeathRating": 23,
+      "TraumaThreshold": 6,
+      "Lucidity": 30,
+      "InsanityRating": 60
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Winged",
+        "Base": 8,
+        "Full": 32
+      }
+    ],
+    "Ware": [
+      "Claws",
+      "Enhanced Hearing",
+      "Enhanced Vision"
+    ],
+    "Skills": [
+      "Athletics 60",
+      "Fray 50",
+      "Infiltrate 30",
+      "Melee 40",
+      "Perceive 50"
+    ],
+    "Traits": [],
+    "Notes": "Beak/claws DV 1d6, Small size",
+    "Description": "<p>Enhanced versions of peregrine falcons and other predatory birds are common in large, open habitats. The art of falconry has made a comeback, with birds trained for surveillance and tracking.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Smart Monkey",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 15,
+      "SavvyCheck": 45,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 6,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "amorr_kinetic": 0,
+      "WoundThreshold": 3,
+      "Durability": 15,
+      "DeathRating": 23,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 12
+      }
+    ],
+    "Ware": [
+      "Grip Pads",
+      "Prehensile Feet",
+      "Prehensile Tail"
+    ],
+    "Skills": [
+      "Athletics 60",
+      "Exotic Skill: Sleight of Hand 50",
+      "Fray 40",
+      "Infiltrate 40",
+      "Melee 30",
+      "Perceive 40"
+    ],
+    "Traits": [],
+    "Notes": "Bite DV 1d6, Small size",
+    "Description": "<p>Employed by criminal groups for minor larceny such as pickpocketing, smart monkeys are useful intelligent aides.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Smart Raccoon",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 10,
+      "ReflexesCheck": 30,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 10,
+      "SomaticsCheck": 30,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 5,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 3,
+      "Durability": 15,
+      "DeathRating": 23,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 12
+      }
+    ],
+    "Ware": [
+      "Enhanced Hearing",
+      "Enhanced Smell",
+      "Grip Pads"
+    ],
+    "Skills": [
+      "Athletics 40",
+      "Fray 40",
+      "Infiltrate 50",
+      "Melee 30",
+      "Perceive 40"
+    ],
+    "Traits": [],
+    "Notes": "Bite DV 1d6, Small size",
+    "Description": "<p>Similar to monkeys, smart raccoons are favored as personal aides.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Smart Rat",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 10,
+      "WillpowerCheck": 30,
+      "Initiative": 6,
+      "Tp": 0,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 1,
+      "Durability": 5,
+      "DeathRating": 8,
+      "TraumaThreshold": 4,
+      "Lucidity": 20,
+      "InsanityRating": 40
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 12
+      }
+    ],
+    "Ware": [
+      "Enhanced Smell",
+      "Grip Pads",
+      "Prehensile Tail"
+    ],
+    "Skills": [
+      "Athletics 50",
+      "Fray 40",
+      "Infiltrate 60",
+      "Perceive 40"
+    ],
+    "Traits": [],
+    "Notes": "Very Small size",
+    "Description": "<p>These upgrades of the common Norwegian rat are clever and dexterous, and they easily fit into a pocket or hood.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Smart Animals",
+    "Name": "Swarm Cat",
+    "Complexity": "Min/1",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 15,
+      "ReflexesCheck": 45,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 15,
+      "WillpowerCheck": 45,
+      "Initiative": 6,
+      "Tp": 1,
+      "ArmorEnergy": 4,
+      "ArmorKinetic": 5,
+      "WoundThreshold": 6,
+      "Durability": 30,
+      "DeathRating": 45,
+      "TraumaThreshold": 6,
+      "Lucidity": 30,
+      "InsanityRating": 60
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Biomods",
+      "Claws",
+      "Cybercortex",
+      "Dermal Armor",
+      "Enhanced Smell",
+      "Enhanced Vision",
+      "Grip Pads",
+      "Mesh Inserts",
+      "Prehensile Tail",
+      "more."
+    ],
+    "Skills": [
+      "Athletics 50",
+      "Fray 40",
+      "Free Fall 30",
+      "Infiltrate 60",
+      "Melee 50",
+      "Perceive 40"
+    ],
+    "Traits": [],
+    "Notes": "Some are small size",
+    "Description": "<p>Bred on scum swarms for companionship, competitions, and weirdness, swarm cats are heavily modified with transgenic traits. No two are alike, with some incorporating traits from other animals in the suborder Feliformia, including mongooses, civets, and even hyenas. One swarm cat may look like a Siamese with purple bioluminescent fur and six legs, the next may look more like a snow leopard with four eyes, cybernetic scales, and wings.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Xenofauna",
+    "Name": "Clown Sprite",
+    "Complexity": "Rare/—",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 20,
+      "ReflexesCheck": 60,
+      "Savvy": 15,
+      "SavvyCheck": 45,
+      "Somatics": 5,
+      "SomaticsCheck": 15,
+      "Willpower": 5,
+      "WillpowerCheck": 15,
+      "Initiative": 7,
+      "Tp": 1,
+      "ArmorEnergy": 0,
+      "ArmorKinetic": 0,
+      "WoundThreshold": 4,
+      "Durability": 20,
+      "DeathRating": 30,
+      "TraumaThreshold": 2,
+      "Lucidity": 10,
+      "InsanityRating": 20
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Winged",
+        "Base": 8,
+        "Full": 32
+      },
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Chameleon Skin",
+      "Enhanced Hearing",
+      "Enhanced Smell",
+      "Grip Pads",
+      "Prehensile Feet",
+      "Prehensile Tail"
+    ],
+    "Skills": [
+      "Athletics 50",
+      "Fray 40",
+      "Infiltrate 60",
+      "Melee 30",
+      "Perceive 40"
+    ],
+    "Traits": [],
+    "Notes": "Bite DV 1d6, Small size, Immune to land anemone venom",
+    "Description": "<p>Found in the Echo system, these colorful, omnivorous, winged avian-primates normally live in a symbiotic relationship with carnivorous land anemones. These mischievous creatures have bonded with some transhumans. They are clever, playful, and prone to pranks.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Category": "Creatures",
+    "Subcategory": "Xenofauna",
+    "Name": "Hexanewt",
+    "Complexity": "Rare/—",
+    "Attributes": {
+      "Cognition": 5,
+      "CognitionCheck": 15,
+      "Intuition": 15,
+      "IntuitionCheck": 45,
+      "Reflexes": 10,
+      "ReflexesCheck": 30,
+      "Savvy": 5,
+      "SavvyCheck": 15,
+      "Somatics": 15,
+      "SomaticsCheck": 45,
+      "Willpower": 15,
+      "WillpowerCheck": 45,
+      "Initiative": 5,
+      "Tp": 1,
+      "ArmorEnergy": 2,
+      "ArmorKinetic": 3,
+      "WoundThreshold": 6,
+      "Durability": 30,
+      "DeathRating": 45,
+      "TraumaThreshold": 6,
+      "Lucidity": 30,
+      "InsanityRating": 60
+    },
+    "MovementRate": [
+      {
+        "MovementType": "Walker",
+        "Base": 4,
+        "Full": 20
+      }
+    ],
+    "Ware": [
+      "Bioweave",
+      "Chameleon Skin",
+      "Cryogenic Protection",
+      "Gills"
+    ],
+    "Skills": [
+      "Athletics 50",
+      "Fray 30",
+      "Infiltrate 30",
+      "Melee 30",
+      "Perceive 60"
+    ],
+    "Traits": [],
+    "Notes": "Bite DV 1d10",
+    "Description": "<p>It is suspected that these six-limbed amphibians were partially uplifted by now extinct aliens on the exoplanet Droplet. They sometimes walk erect on 2 limbs, sometimes crawl on all 6. They are quite perceptive and have learned to mimic transhuman behaviors and tool use.</p>",
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]
