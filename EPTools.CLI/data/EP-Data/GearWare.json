@@ -877,7 +877,14 @@
     "Description": "<p>Your morph is equipped with a 1.5-meter long tail, extending out from your tailbone/backside. This tail is prehensile and you can use it to grab, hold, and manipulate objects. You can control your tail’s movements with concentration, but otherwise it tends to move on its own. Your tail also improves balance; apply a +10 modifier to Athletics or other tests where balance is a factor.</p>",
     "Resource": "Eclipse Phase Second Edition",
     "Reference": "",
-    "AdditionalRules": []
+    "AdditionalRules": [
+      {
+        "Name": "Athletics",
+        "Description": "+10 Balanced-Based Athletics Tests.",
+        "Type": "SkillBonus",
+        "Value": 10
+      }
+    ]
   },
   {
     "Category": "Ware",

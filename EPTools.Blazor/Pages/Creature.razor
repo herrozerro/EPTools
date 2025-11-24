@@ -7,7 +7,7 @@
 <div>
     @foreach (var item in Templates)
     {
-        <button @onclick="() => ResetTemplate(item.TemplateName)">@(item.TemplateName)</button>
+        <MudButton Color="Color.Primary" Size="Size.Small" OnClick="@(() => ResetTemplate(item))">@(item.TemplateName)</MudButton>
     }
 </div>
 
@@ -38,9 +38,9 @@
 
     private List<StatBlockTemplate> Templates { get; set; } = new();
 
-    private void ResetTemplate(string name)
+    private void ResetTemplate(StatBlockTemplate template)
     {
-        MyText = Templates.First(x => x.TemplateName == name).Template;
+        MyText = template.Template;
     }
 
     protected override async Task OnInitializedAsync()

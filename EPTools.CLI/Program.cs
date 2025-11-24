@@ -23,6 +23,8 @@ var e = await lifepathService.GenerateEgo();
 while (true)
 {
     e = await lifepathService.GenerateEgo();
+    var ware = await epDataService.GetGearWare();
+    Console.WriteLine(e.Name);
 }
 
 var s = System.Text.Json.JsonSerializer.Serialize(e);
