@@ -1,0 +1,77 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+@inject EpDataService DataService;
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Class="pa-0" Style="max-height: 500px; overflow-y: scroll;">
+            
+            <MudTextField @bind-Value="_searchString" 
+                          Placeholder="Search gear, software, ware..." 
+                          Adornment="Adornment.Start" 
+                          AdornmentIcon="@Icons.Material.Filled.Search" 
+                          IconSize="Size.Medium" 
+                          Class="mb-3" 
+                          Immediate="true"
+                          DebounceInterval="300"
+                          Variant="Variant.Outlined" 
+                          Margin="Margin.Dense" 
+                          AutoFocus="true" />
+
+            <MudTable T="Gear" Items="@GearList" Hover="true" Dense="true" Filter="new Func<Gear,bool>(FilterGear)" OnRowClick="RowClickEvent" Elevation="0">
+                <HeaderContent>
+                    <MudTh>Name</MudTh>
+                    <MudTh>Category</MudTh>
+                    <MudTh>Cost</MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd DataLabel="Name">
+                        <MudText Typo="Typo.body2" Style="font-weight: bold;">@context.Name</MudText>
+                        <MudText Typo="Typo.caption" Class="mud-text-secondary">@context.Summary</MudText>
+                    </MudTd>
+                    <MudTd DataLabel="Category">
+                        <div class="d-flex flex-column">
+                            <MudText Typo="Typo.caption">@context.Category</MudText>
+                            <MudText Typo="Typo.caption" Class="mud-text-secondary">@context.Subcategory</MudText>
+                        </div>
+                    </MudTd>
+                    <MudTd DataLabel="Cost">
+                        <MudChip T="string" Size="Size.Small" Variant="Variant.Outlined">@context.Complexity</MudChip>
+                    </MudTd>
+                </RowTemplate>
+                <NoRecordsContent>
+                    <MudText Align="Align.Center" Class="pa-4">No gear found matching "<b>@_searchString</b>"</MudText>
+                </NoRecordsContent>
+            </MudTable>
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public List<Gear> GearList { get; set; } = [];
+
+    private string _searchString = "";
+
+    // 1. Handle Selection
+    private void RowClickEvent(TableRowClickEventArgs<Gear> args)
+    {
+        // Return the selected item to the parent
+        MudDialog.Close(DialogResult.Ok(args.Item));
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+
+    // 2. Filter Logic
+    private bool FilterGear(Gear item)
+    {
+        if (string.IsNullOrWhiteSpace(_searchString)) return true;
+
+        return item.Name.Contains(_searchString, StringComparison.OrdinalIgnoreCase) || item.Category.Contains(_searchString, StringComparison.OrdinalIgnoreCase) || item.Subcategory.Contains(_searchString, StringComparison.OrdinalIgnoreCase);
+    }
+}

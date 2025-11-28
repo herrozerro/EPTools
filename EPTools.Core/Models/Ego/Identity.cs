@@ -13,6 +13,7 @@ namespace EPTools.Core.Models.Ego
         public RepNetwork CRep { get; set; } = new();
         public RepNetwork FRep { get; set; } = new();
         public RepNetwork GRep { get; set; } = new();
+        // ReSharper disable once InconsistentNaming
         public RepNetwork IRep { get; set; } = new();
         public RepNetwork RRep { get; set; } = new();
         public RepNetwork XRep { get; set; } = new();

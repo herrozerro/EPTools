@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using EPTools.Core.Models.LifePathGen;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearArmor(
         string WareType,
@@ -17,5 +14,22 @@ namespace EPTools.Core.Models.EPDataModels
         string Resource,
         string Reference,
         List<AdditionalRules> AdditionalRules
-        ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules)
+    {
+        public GearArmor() : this(
+            WareType: "",         // Default specific prop
+            Energy: 0,            // Default specific prop
+            Kinetic: 0,           // Default specific prop
+            Stackable: false,     // Default specific prop
+            Category: "Armor",    // Force Category
+            Subcategory: "",
+            Name: "New Armor",
+            Complexity: "Minor",
+            Description: "Custom Armor",
+            Summary: "",
+            Resource: "",
+            Reference: "",
+            AdditionalRules: []
+        ) { }
+    }
 }

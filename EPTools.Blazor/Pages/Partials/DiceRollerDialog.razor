@@ -4,7 +4,7 @@
     <DialogContent>
         <MudContainer Class="d-flex flex-column align-center justify-center pa-2" Style="max-width: 400px;">
             
-            <MudText Typo="Typo.h5" Align="Align.Center">@SkillName</MudText>
+            <MudText Typo="Typo.h5" Align="Align.Center">@RollName</MudText>
             <div class="d-flex gap-2 align-center mb-4">
                 <MudText Typo="Typo.body2" Class="mud-text-secondary">Base: @TargetNumber</MudText>
                 <MudIcon Icon="@Icons.Material.Filled.ArrowForward" Size="Size.Small" Color="Color.Default"/>
@@ -67,9 +67,9 @@
 </MudDialog>
 
 @code {
-    [CascadingParameter] public IMudDialogInstance MudDialog { get; set; }
+    [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
 
-    [Parameter] public string SkillName { get; set; } = "Check";
+    [Parameter] public string RollName { get; set; } = "Check";
     [Parameter] public int TargetNumber { get; set; } = 50;
     
     // The list of predefined modifiers (Gear, Wounds, etc.) passed from parent
@@ -142,11 +142,11 @@
         // ... rest of logic
         
         // Recalculate result message/color based on new isSuccess
-        UpdateResultUI(roll, isSuccess, actualTarget); 
+        UpdateResultUi(roll, isSuccess); 
     }
 
     // (Helper method to keep code clean, contains your logic from previous turn)
-    private void UpdateResultUI(int roll, bool isSuccess, int target)
+    private void UpdateResultUi(int roll, bool isSuccess)
     {
          bool isCritical = (roll % 11 == 0);
          

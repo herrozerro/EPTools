@@ -1,0 +1,307 @@
+@using EPTools.Blazor.Pages.Dialogs
+@using EPTools.Core.Models.Ego
+@using EPTools.Core.Models.EPDataModels
+@inject IDialogService DialogService
+@inject EpDataService EpDataService
+@inject ISnackbar Snackbar
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
+    <MudGrid Spacing="4">
+        <MudItem xs="12" md="6">
+            <MudPaper Class="pa-4 h-100" Outlined="true">
+                <MudTable Items="@CurrentEgo.Inventory" 
+                          Dense="true" 
+                          Hover="true" 
+                          GroupBy="@_groupDefinition"
+                          GroupHeaderStyle="background-color:var(--mud-palette-background-grey)"
+                          Height="600px" FixedHeader="true" Elevation="0">
+                    
+                    <ToolBarContent>
+                        <MudText Typo="Typo.h6">Local Inventory</MudText>
+                        <MudSpacer />
+                        <MudMenu StartIcon="@Icons.Material.Filled.Add" Label="Add Gear" Color="Color.Primary" Variant="Variant.Filled">
+                            <MudMenuItem OnClick="@(() => OpenGearPicker(null))">From Catalog...</MudMenuItem>
+                            <MudMenuItem OnClick="@(() => AddCustomItem(null, new GearArmor()))">Custom Armor</MudMenuItem>
+                            <MudMenuItem OnClick="@(() => AddCustomItem(null, new GearBot()))">Custom Bot</MudMenuItem>
+                        </MudMenu>
+                    </ToolBarContent>
+        
+                    <HeaderContent>
+                        <MudTh>Item</MudTh>
+                        <MudTh>Qty</MudTh>
+                        <MudTh Style="text-align:center">Equip</MudTh>
+                        <MudTh Style="text-align:center">Active</MudTh>
+                        <MudTh></MudTh>
+                    </HeaderContent>
+        
+                    <GroupHeaderTemplate>
+                        <MudTh Class="mud-table-cell-custom-group" colspan="5">
+                            <div class="d-flex align-center">
+                                <MudIcon Icon="@Icons.Material.Filled.Category" Size="Size.Small" Class="mr-2"/>
+                                <MudText Typo="Typo.subtitle1">@context.Key</MudText>
+                                <MudChip T="string" Size="Size.Small" Class="ml-2">@context.Items.Sum(i => i.Quantity)</MudChip>
+                            </div>
+                        </MudTh>
+                    </GroupHeaderTemplate>
+        
+                    <RowTemplate>
+                        <MudTd DataLabel="Item">
+                            <div class="d-flex flex-column">
+
+                                <MudText Typo="Typo.body2" Style="font-weight:bold">@context.BaseGear.Name</MudText>
+
+
+                                <MudText Typo="Typo.caption" Class="mud-text-secondary">
+                                    @context.BaseGear.Subcategory • @context.BaseGear.Complexity
+                                </MudText>
+        
+                                @if(context.BaseGear is GearWare ware)
+                                {
+                                    <div class="d-flex gap-1 mt-1">
+                                        @if(ware.Bioware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Success">Bio</MudChip> }
+                                        @if(ware.Cyberware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Info">Cyber</MudChip> }
+                                        @if(ware.Meshware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Warning">Mesh</MudChip> }
+                                    </div>
+                                }
+                            </div>
+                        </MudTd>
+                        
+                        <MudTd DataLabel="Qty">
+                            <MudNumericField @bind-Value="@context.Quantity" Margin="Margin.Dense" HideSpinButtons="true" Style="width:40px;" />
+                        </MudTd>
+                        
+                        <MudTd DataLabel="Equipped" Style="text-align:center">
+                            <MudCheckBox @bind-Value="@context.Equipped" Dense="true" Color="Color.Primary" />
+                        </MudTd>
+                        
+                        <MudTd DataLabel="Active" Style="text-align:center">
+                            <MudCheckBox @bind-Value="@context.Active" Dense="true" Color="Color.Secondary" />
+                        </MudTd>
+                        
+                        <MudTd Style="text-align:right">
+                             <MudMenu Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Info" Size="Size.Small" Dense="true">
+                                <ActivatorContent>
+                                    <MudTooltip Text="Move to Cache">
+                                        <MudIconButton Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Info" Size="Size.Small" />
+                                    </MudTooltip>
+                                </ActivatorContent>
+                                <ChildContent>
+                                    @if (CurrentEgo.Caches.Any())
+                                    {
+                                        <MudText Typo="Typo.caption" Class="pa-2 mud-text-secondary">Destination:</MudText>
+                                        @foreach (var cache in CurrentEgo.Caches)
+                                        {
+                                            var target = cache; 
+                                            <MudMenuItem OnClick="@(() => MoveToCache(context, target))">@target.Location</MudMenuItem>
+                                        }
+                                    }
+                                    else { <MudMenuItem Disabled="true">No Caches</MudMenuItem> }
+                                </ChildContent>
+                            </MudMenu>
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => CurrentEgo.Inventory.Remove(context))" />
+                        </MudTd>
+                    </RowTemplate>
+                </MudTable>
+            </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12" md="6">
+            <MudPaper Class="pa-4 h-100" Outlined="true" Style="background-color: var(--mud-palette-background-grey);">
+                <div class="d-flex justify-space-between align-center mb-4">
+                    <MudText Typo="Typo.h6">Gear Caches</MudText>
+                    <MudButton StartIcon="@Icons.Material.Filled.AddLocation" Color="Color.Secondary" Variant="Variant.Filled" OnClick="AddCache">New Cache</MudButton>
+                </div>
+
+                <MudExpansionPanels MultiExpansion="true">
+                    @foreach (var cache in CurrentEgo.Caches)
+                    {
+                        <MudExpansionPanel>
+                            <TitleContent>
+                                <div class="d-flex align-center gap-2">
+                                    <MudIcon Icon="@Icons.Material.Filled.Inventory2" Color="Color.Default" />
+                                    <MudText>@(string.IsNullOrWhiteSpace(cache.Location) ? "Unnamed Cache" : cache.Location)</MudText>
+                                    <MudText Typo="Typo.caption" Class="mud-text-secondary">(@cache.Inventory.Count items)</MudText>
+                                </div>
+                            </TitleContent>
+                            <ChildContent>
+                                <MudTextField @bind-Value="cache.Location" Label="Location / Name" Variant="Variant.Outlined" Margin="Margin.Dense" Class="mb-2" />
+                                
+                                <MudTable Items="@cache.Inventory" Dense="true" Hover="true" Elevation="0" Class="mb-3">
+                                    <HeaderContent>
+                                        <MudTh>Item</MudTh>
+                                        <MudTh>Qty</MudTh>
+                                        <MudTh></MudTh>
+                                    </HeaderContent>
+                                    <RowTemplate Context="item">
+                                        <MudTd>
+
+                                            <MudText Typo="Typo.body2">@item.BaseGear.Name</MudText>
+
+                                            <MudText Typo="Typo.caption" Class="mud-text-secondary">@item.BaseGear.Category</MudText>
+                                        </MudTd>
+                                        <MudTd>
+                                            <MudNumericField @bind-Value="@item.Quantity" Margin="Margin.Dense" HideSpinButtons="true" Style="width:40px;" />
+                                        </MudTd>
+                                        <MudTd Style="text-align:right;">
+                                             <MudTooltip Text="Move to Local Inventory">
+                                                <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Color="Color.Success" OnClick="@(() => MoveToLocal(cache, item))" />
+                                            </MudTooltip>
+                                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Default" OnClick="@(() => cache.Inventory.Remove(item))" />
+                                        </MudTd>
+                                    </RowTemplate>
+                                </MudTable>
+                                
+                                @if(cache.Morphs.Any())
+                                {
+                                    <MudText Typo="Typo.subtitle2" Class="mt-2">Stored Morphs</MudText>
+                                    <MudList Dense="true" T="string">
+                                        @foreach(var morph in cache.Morphs)
+                                        {
+                                            <MudListItem Icon="@Icons.Material.Filled.Person">@morph.Name (@morph.MorphType)</MudListItem>
+                                        }
+                                    </MudList>
+                                }
+
+                                <div class="d-flex justify-end gap-2 mt-2">
+                                     <MudMenu StartIcon="@Icons.Material.Filled.Add" Label="Add Gear" Size="Size.Small" Color="Color.Primary" Variant="Variant.Outlined">
+                                        <MudMenuItem OnClick="@(() => OpenGearPicker(cache))">From Catalog...</MudMenuItem>
+                                        <MudMenuItem OnClick="@(() => AddCustomItem(cache, new GearArmor()))">Custom Armor</MudMenuItem>
+                                        <MudMenuItem OnClick="@(() => AddCustomItem(cache, new GearBot()))">Custom Bot</MudMenuItem>
+                                    </MudMenu>
+                                    
+                                    <MudButton Size="Size.Small" StartIcon="@Icons.Material.Filled.DeleteForever" Color="Color.Error" OnClick="@(() => DeleteCache(cache))">Delete Cache</MudButton>
+                                </div>
+                            </ChildContent>
+                        </MudExpansionPanel>
+                    }
+                </MudExpansionPanels>
+            </MudPaper>
+        </MudItem>
+
+    </MudGrid>
+</MudContainer>
+
+@code {
+    [CascadingParameter(Name = "EgoModel")] 
+    public required Ego CurrentEgo { get; set; }
+
+    private readonly TableGroupDefinition<InventoryItem> _groupDefinition = new()
+    {
+        GroupName = "Category",
+        Indentation = false,
+        Expandable = true,
+        IsInitiallyExpanded = true,
+        // Group by the Category string on the inner BaseGear object
+        Selector = (e) => e.BaseGear.Category 
+    };
+    
+    
+    // --- Actions ---
+    
+    private async Task AddCustomItem(InventoryCache? targetCache, Gear gearType)
+    {
+
+        // 2. Wrap it
+        var newItem = new InventoryItem 
+        { 
+            BaseGear = gearType, 
+            Quantity = 1, 
+            Equipped = false, 
+            Active = false // Default inactive
+        };
+
+        // 3. Add to the correct location
+        if (targetCache != null)
+        {
+            targetCache.Inventory.Add(newItem);
+            Snackbar.Add($"Added new item to {targetCache.Location}", Severity.Success);
+        }
+        else
+        {
+            CurrentEgo.Inventory.Add(newItem);
+            Snackbar.Add($"Added new item to inventory", Severity.Success);
+        }
+    }
+    
+    private void AddCache()
+    {
+        CurrentEgo.Caches.Add(new InventoryCache { Location = "New Cache Location" });
+    }
+
+    private void DeleteCache(InventoryCache cache)
+    {
+        CurrentEgo.Caches.Remove(cache);
+    }
+
+    // A handy utility for RPG players!
+    private void MoveToLocal(InventoryCache sourceCache, InventoryItem item)
+    {
+        // 1. Remove from cache
+        sourceCache.Inventory.Remove(item);
+        
+        // 2. Add to local
+        item.Equipped = false; // Reset state when moving
+        item.Active = false;
+        CurrentEgo.Inventory.Add(item);
+        
+        // 3. Notify UI (Optional, but often needed for cross-list moves)
+        StateHasChanged(); 
+    }
+    
+    private void MoveToCache(InventoryItem item, InventoryCache targetCache)
+    {
+        // 1. Remove from Local
+        CurrentEgo.Inventory.Remove(item);
+
+        // 2. Logic Reset (You can't "Equip" something that is sitting in a box 50 miles away)
+        item.Equipped = false;
+        item.Active = false;
+
+        // 3. Add to the specific target cache
+        targetCache.Inventory.Add(item);
+
+        // 4. Feedback
+        // Optional: Snackbar.Add($"Moved {item.Name} to {targetCache.Location}", Severity.Success);
+    }
+
+    private async Task OpenGearPicker(InventoryCache? targetCache = null)
+    {
+        // 1. Open the existing dialog (reusing your code)
+        var parameters = new DialogParameters<GearPickerDialog>
+        {
+            { x => x.GearList, await EpDataService.GetAllGear() } // Your master list
+        };
+
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<GearPickerDialog>("Select Gear", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is not null && !result.Canceled)
+        {
+            var selectedGear = (Gear)result.Data!;
+
+            // 2. Create the wrapper
+            var newItem = new InventoryItem
+            {
+                BaseGear = selectedGear,
+                Quantity = 1,
+                Equipped = false,
+                Active = false // Default to inactive when just added
+            };
+
+            // 3. DECIDE WHERE TO PUT IT
+            if (targetCache != null)
+            {
+                // A. Add to the specific Cache (Right Column)
+                targetCache.Inventory.Add(newItem);
+                Snackbar.Add($"Added {selectedGear.Name} to {targetCache.Location}", Severity.Success);
+            }
+            else
+            {
+                // B. Add to Local Inventory (Left Column)
+                CurrentEgo.Inventory.Add(newItem);
+                Snackbar.Add($"Added {selectedGear.Name} to Inventory", Severity.Success);
+            }
+        }
+    }
+}

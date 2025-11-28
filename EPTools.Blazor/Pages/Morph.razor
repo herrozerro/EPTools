@@ -2,7 +2,6 @@
 @using EPTools.Blazor.MyExtensions
 @using EPTools.Core.Models.Templates
 @inject StatBlockTemplateService TemplatesService
-@inject EpDataService DataService
 
 <h3>Morph</h3>
 
@@ -54,8 +53,6 @@
         Templates = Templates.Where(x => x.TemplateType == "Morph").ToList();
 
         MyText = Templates.First().Template;
-
-        var morphs = DataService.GetMorphs();
     }
 
     private string ParseInput(string? str)

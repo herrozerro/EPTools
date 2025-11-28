@@ -1,6 +1,4 @@
-﻿using EPTools.Core.Models.LifePathGen;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearComms(
         string Category,

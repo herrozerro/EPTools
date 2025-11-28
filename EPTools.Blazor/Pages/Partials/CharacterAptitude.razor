@@ -1,4 +1,5 @@
 @using EPTools.Core.Models.Ego
+@inject IDialogService DialogService
 
 <MudPaper Class="pa-2 rounded-lg elevation-2">
     <MudText Typo="Typo.h6" Align="Align.Center" Class="mb-2">Aptitudes</MudText>
@@ -6,15 +7,34 @@
         @foreach (var aptitude in Aptitudes)
         {
             <MudItem xs="2" Class="d-flex flex-column align-center justify-center">
-                <MudText Typo="Typo.caption" Class="mud-text-secondary text-center">@aptitude.ShortName</MudText>
+                
+                <MudText Typo="Typo.caption" Class="mud-text-secondary text-center mb-1">
+                    @aptitude.ShortName
+                </MudText>
+                
                 <MudNumericField 
                     @bind-Value="aptitude.AptitudeValue" 
                     Variant="Variant.Outlined" 
                     Adornment="Adornment.None"
                     HideSpinButtons="true"
                     Margin="Margin.Dense"
-                    Class="text-center"
-                    Style="width: 50px;" /> @* Compact width for the numeric input *@
+                    Class="text-center centered-input"
+                    Style="width: 50px; font-weight: bold;" />
+
+                <MudPaper Class="d-flex justify-center align-center mt-1 mud-theme-dark mud-ripple" 
+                          Elevation="0" 
+                          @onclick="@(() => OpenAptitudeCheck(aptitude.Name, aptitude.CheckRating))"
+                          Style="width: 50px; height: 20px; border-radius: 4px; cursor: pointer;">
+                    
+                    <MudText Typo="Typo.caption" Style="font-weight: bold; color: white;">
+                        @aptitude.CheckRating
+                    </MudText>
+                </MudPaper>
+                
+                <MudText Typo="Typo.overline" Style="font-size: 0.6rem; line-height: 1;" Class="mud-text-secondary mt-1">
+                    CHECK
+                </MudText>
+
             </MudItem>
         }
     </MudGrid>
@@ -22,4 +42,27 @@
 
 @code {
     [Parameter] public List<EgoAptitude> Aptitudes { get; set; } = new();
+    
+    private async Task OpenAptitudeCheck(string aptitudeName, int baseScore)
+    {
+        // 1. Prepare the list of modifiers
+        var mods = new List<RollModifier>();
+
+        
+        var parameters = new DialogParameters<DiceRollerDialog>
+        {
+            { x => x.RollName, aptitudeName },
+            { x => x.TargetNumber, baseScore },
+            { x => x.Modifiers, mods } // Pass the list here
+        };
+
+        var options = new DialogOptions { MaxWidth = MaxWidth.Small, FullWidth = true };
+        await DialogService.ShowAsync<DiceRollerDialog>("Roll Aptitude", parameters, options);
+    }
 }
+
+<style>
+    .centered-input input {
+        text-align: center;
+    }
+</style>

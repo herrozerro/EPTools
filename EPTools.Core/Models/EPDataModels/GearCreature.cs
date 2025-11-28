@@ -1,13 +1,11 @@
-﻿using System.Text.Json.Serialization;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearCreature(
         Attributes Attributes,
-        MorphMovementRates MovementRate,
+        List<MorphMovementRates> MovementRate,
         List<string> Ware,
         List<string> Skills,
-        MorphTrait Traits,
+        List<MorphTrait> Traits,
         string Category,
         string Subcategory,
         string Name,

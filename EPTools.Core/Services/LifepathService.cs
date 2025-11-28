@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using EPTools.Core.Extensions;
+﻿using EPTools.Core.Extensions;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 
@@ -8,7 +7,58 @@ namespace EPTools.Core.Services
     public class LifepathService(EpDataService ePDataService, EgoService egoService)
     {
         private Ego? NewEgo { get; set; }
+        
+        private readonly Dictionary<string, Func<Ego, LifePathNode, Task>> _applyNodeMethods = new();
 
+        private void InitializeApplyMethods()
+        {
+            // Async methods can be added directly
+            _applyNodeMethods["Morph"] = ApplyMorph;
+            _applyNodeMethods["Skill"] = ApplySkill;
+            _applyNodeMethods["Trait"] = ApplyTrait;
+            _applyNodeMethods["Aptitude"] = ApplyAptitude;
+            _applyNodeMethods["ForcedInterest"] = ApplyForcedInterest;
+
+            // Sync methods refactored to return Task for consistency
+            _applyNodeMethods["Language"] = ApplyLanguage;
+            _applyNodeMethods["Pool"] = ApplyPool;
+            _applyNodeMethods["Reputation"] = ApplyReputation;
+            _applyNodeMethods["Slight"] = ApplySlight;
+            _applyNodeMethods["Faction"] = ApplyFaction;
+            _applyNodeMethods["Age"] = ApplyAge;
+            _applyNodeMethods["Motivation"] = ApplyMotivation;
+            _applyNodeMethods["Skip"] = ApplySkip;
+            _applyNodeMethods["PlayerChoice"] = ApplyPlayerChoice;
+            
+            // Logic extracted from inline lambdas to methods
+            _applyNodeMethods["Interest"] = ApplyInterest;
+            _applyNodeMethods["Career"] = ApplyCareer;
+            _applyNodeMethods["BackgroundOption"] = ApplyBackground;
+            _applyNodeMethods["CharacterGenStep"] = ApplyCharacterGenStep;
+            _applyNodeMethods["Table"] = ApplyTable;
+            _applyNodeMethods["LifePathStoryEvent"] = ApplyLifePathStoryEvent;
+            _applyNodeMethods["Attribute"] = ApplyAttribute;
+        }
+                
+        private void ProcessOptionLists(Ego ego, LifePathNode option)
+        {
+            if (option.OptionLists.Count == 0) return;
+            
+            foreach (var list in option.OptionLists)
+            {
+                if (list.Sum(x => x.Weight) > 0)
+                {
+                    ego.CharacterGenerationNodes.Push(list.GetWeightedItem());
+                    return;
+                }
+
+                foreach (var item in list)
+                {
+                    ego.CharacterGenerationNodes.Push(item);
+                }
+            }
+        }
+        
         public async Task<Ego> GenerateEgo()
         {
             NewEgo = await egoService.GetDefaults();
@@ -29,121 +79,48 @@ namespace EPTools.Core.Services
             return NewEgo;
         }
 
+        // This method (ApplyBackgroundOption) is the main dispatcher
         private async Task ApplyBackgroundOption(Ego ego, LifePathNode option)
         {
+            if (_applyNodeMethods.Count == 0) InitializeApplyMethods();
+
             ego.CharacterGenerationOutput.Add($"{option.Name} {option.Description}".Trim());
-            switch (option.Type)
+
+            if (_applyNodeMethods.TryGetValue(option.Type, out var applyMethod))
             {
-                case "Morph":
-                    await ApplyMorph(ego, option);
-                    break;
-                case "Skill":
-                    await ApplySkill(ego, option);
-                    break;
-                case "Trait":
-                    await ApplyTrait(ego, option);
-                    break;
-                case "Language":
-                    ApplyLanguage(ego, option);
-                    break;
-                case "Pool":
-                    ApplyPool(ego, option);
-                    break;
-                case "Reputation":
-                    ApplyReputation(ego, option);
-                    break;
-                case "Aptitude":
-                    await ApplyAptitude(ego, option);
-                    break;
-                case "Slight":
-                    ApplySlight(ego, option);
-                    break;
-                case "Faction":
-                    ApplyFaction(ego, option);
-                    break;
-                case "Interest":
-                    ApplyInterest(ego, option);
-                    goto default;
-                case "ForcedInterest":
-                    await ApplyForcedInterest(ego, option);
-                    break;
-                case "Career":
-                    ego.Career = option.Name;
-                    goto default;
-                case "Age":
-                    ApplyAge(ego, option);
-                    break;
-                case "Motivation":
-                    ApplyMotivation(ego, option);
-                    break;
-                case "Skip":
-                    ApplySkip(ego, option);
-                    break;
-                case "CharacterGenStep":
-                    if (NewEgo.SkipSections.Contains(option.Value))
-                    {
-                        break;
-                    }
-                    goto default;
-                case "BackgroundOption":
-                    ApplyBackground(ego, option);
-                    goto default;
-                case "Table":
-                    var nodes = await ProcessTableRequest(option.Name, option.Value, ego);
-                    nodes.ForEach(x=>ego.CharacterGenerationNodes.Push(x));
-                    break;
-                case "LifePathStoryEvent":
-                    ego.Notes += option.Name + Environment.NewLine;
-                    break;
-                case "Attribute":
-                    //TODO: implement the ability to start with stress
-                    //throw new NotImplementedException();
-                    break;
-                case "PlayerChoice":
-                    ApplyPlayerChoice(ego, option);
-                    break;
-                default:
-                    foreach (var list in option.OptionLists)
-                    {
-                        if (list.Sum(x => x.Weight) > 0)
-                        {
-                            ego.CharacterGenerationNodes.Push(list.GetWeightedItem());
-                        }
-                        else
-                        {
-                            foreach (var item in list)
-                            {
-                                ego.CharacterGenerationNodes.Push(item);
-                            }
-                        }
-                    }
-                    break;
+                await applyMethod(ego, option);
+                ProcessOptionLists(ego, option);
             }
         }
 
-        private void ApplyPlayerChoice(Ego ego, LifePathNode option)
+        private Task ApplyPlayerChoice(Ego ego, LifePathNode option)
         {
             ego.PlayerChoices.Add(option.Name);
+            return Task.CompletedTask;
         }
 
-        private void ApplyBackground(Ego ego, LifePathNode option)
+        private Task ApplyBackground(Ego ego, LifePathNode option)
         {
             ego.Background = option.Name;
+            return Task.CompletedTask;
         }
 
-        private void ApplySkip(Ego ego, LifePathNode option)
+        private Task ApplySkip(Ego ego, LifePathNode option)
         {
             ego.SkipSections.Add(option.Value);
+            return Task.CompletedTask;
         }
 
-        private void ApplyMotivation(Ego ego, LifePathNode option)
+        private Task ApplyMotivation(Ego ego, LifePathNode option)
         {
             ego.Motivations.Add(option.Name);
+            return Task.CompletedTask;
         }
 
-        private void ApplyAge(Ego ego, LifePathNode option)
+        private Task ApplyAge(Ego ego, LifePathNode option)
         {
             ego.EgoAge = option.Value;
+            return Task.CompletedTask;
         }
 
         private async Task ApplyForcedInterest(Ego ego, LifePathNode option)
@@ -156,22 +133,25 @@ namespace EPTools.Core.Services
             ego.CharacterGenerationOutput.Add($"{option.Name} {option.Description} did not load properly".Trim());
         }
 
-        private void ApplyInterest(Ego ego, LifePathNode option)
+        private Task ApplyInterest(Ego ego, LifePathNode option)
         {
             ego.Interest = option.Name;
+            return Task.CompletedTask;
         }
 
-        private void ApplyFaction(Ego ego, LifePathNode option)
+        private Task ApplyFaction(Ego ego, LifePathNode option)
         {
             ego.Faction = option.Name;
+            return Task.CompletedTask;
         }
 
-        private void ApplySlight(Ego ego, LifePathNode option)
+        private Task ApplySlight(Ego ego, LifePathNode option)
         {
             for (var i = 0; i < option.Value; i++)
             {
                 ego.Psi.Slights.Add(new Slight { Name = "Random or chosen" });
             }
+            return Task.CompletedTask;
         }
 
         private async Task ApplyTrait(Ego ego, LifePathNode option)
@@ -191,10 +171,9 @@ namespace EPTools.Core.Services
                 existingAptitude.AptitudeValue += option.Value;
             else
                 ego.Aptitudes.Add(new EgoAptitude { Name = aptitudeToChange, ShortName = option.Name, AptitudeValue = option.Value, CheckMod = 0 });
-            
         }
 
-        private void ApplyReputation(Ego ego, LifePathNode option)
+        private Task ApplyReputation(Ego ego, LifePathNode option)
         {
             var repToChange = option.Name switch
             {
@@ -206,11 +185,14 @@ namespace EPTools.Core.Services
                 "RRep" => ego.Identities[0].RRep,
                 _ => null
             };
-            if (repToChange == null) return;
-            repToChange.Score += option.Value;
+            if (repToChange != null)
+            {
+                repToChange.Score += option.Value;
+            }
+            return Task.CompletedTask;
         }
 
-        private void ApplyPool(Ego ego, LifePathNode option)
+        private Task ApplyPool(Ego ego, LifePathNode option)
         {
             switch (option.Name)
             {
@@ -218,9 +200,10 @@ namespace EPTools.Core.Services
                     ego.EgoFlex += option.Value;
                     break;
             }
+            return Task.CompletedTask;
         }
 
-        private void ApplyLanguage(Ego ego, LifePathNode option)
+        private Task ApplyLanguage(Ego ego, LifePathNode option)
         {
             if (string.IsNullOrEmpty(ego.Languages))
             {
@@ -230,13 +213,13 @@ namespace EPTools.Core.Services
             {
                 ego.Languages += ", " + option.Name;
             }
+            return Task.CompletedTask;
         }
 
         private async Task ApplySkill(Ego ego, LifePathNode option)
         {
             var skills = await ePDataService.GetSkills();
             var skillName = option.Name.Split("-")[0];
-            var skill = skills.FirstOrDefault(x => x.Name == option.Name.Split("-")[0]);
             SkillType skillType = skillName switch
             {
                 { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
@@ -244,11 +227,11 @@ namespace EPTools.Core.Services
                 _ => SkillType.EgoSkill
             };
 
-            if (NewEgo.Skills.Any(x => x.Name == skillName))
+            if (ego.Skills.Any(x => x.Name == skillName))
             {
-                NewEgo.Skills.First(x=>x.Name == skillName).Rank += option.Value;
+                ego.Skills.First(x=>x.Name == skillName).Rank += option.Value;
                 var specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "";
-                NewEgo.Skills.First(x=>x.Name == skillName).Specialization += specialization;
+                ego.Skills.First(x=>x.Name == skillName).Specialization += specialization;
             }
             else
             {
@@ -283,6 +266,44 @@ namespace EPTools.Core.Services
                     Wares = selectedMorph.Ware.Select(x=> new Ware { Name = x}).ToList()
                 });
             }
+        }
+
+        // New extracted methods for logic previously inside lambdas
+        
+        private Task ApplyCareer(Ego ego, LifePathNode option)
+        {
+            ego.Career = option.Name;
+            return Task.CompletedTask;
+        }
+
+        private Task ApplyCharacterGenStep(Ego ego, LifePathNode option)
+        {
+            if (ego.SkipSections.Contains(option.Value))
+                option.OptionLists.Clear();
+            return Task.CompletedTask;
+        }
+
+        private async Task ApplyTable(Ego ego, LifePathNode option)
+        {
+            var nodes = await ProcessTableRequest(option.Name, option.Value, ego);
+            nodes.ForEach(x => ego.CharacterGenerationNodes.Push(x));
+        }
+
+        private Task ApplyLifePathStoryEvent(Ego ego, LifePathNode option)
+        {
+            ego.Notes += option.Name + Environment.NewLine;
+            return Task.CompletedTask;
+        }
+
+        private Task ApplyAttribute(Ego ego, LifePathNode option)
+        {
+            switch (option.Name)
+            {
+                case "Stress":
+                    ego.Stress += option.Value;
+                    break;
+            }
+            return Task.CompletedTask;
         }
 
         private async Task<List<LifePathNode>> ProcessTableRequest(string tableName, int tableModifier, Ego ego)

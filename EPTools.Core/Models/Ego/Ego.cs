@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using EPTools.Core.Models.EPDataModels;
 using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.Ego
@@ -30,10 +29,29 @@ namespace EPTools.Core.Models.Ego
         [JsonPropertyOrder(10)]
         public List<string> Motivations { get; set; } = [];
         
+        
+        
         public int RezEarned { get; set; }
         public int RezSpent { get; set; }
         
+        //Mental Health
+        public int Stress { get; set; }
+        public int Lucidity { get; set; }
+        public int TraumaThresholdModifiers { get; set; }
         
+        
+        private List<(string, int)> InsanityRatingModifiers { get; } = [];
+        
+        public int InsanityRating
+        {
+            get
+            {
+                var willpower = Aptitudes.Find(x => x.Name == "Willpower")?.AptitudeValue ?? 0;
+                return (willpower * 2) + InsanityRatingModifiers.Sum(x => x.Item2);
+            }
+        }
+
+
         //Aptitudes
         [JsonPropertyOrder(22)]
         public List<EgoAptitude> Aptitudes { get; set; } = [];
@@ -89,19 +107,8 @@ namespace EPTools.Core.Models.Ego
 
         public int SkillTotal(EgoSkill skill)
         {
-            var skillAttribute = Aptitudes.Find(x => x.Name == skill.Aptitude);
-            if (skillAttribute == null) return skill.Rank;
-            return skill.Rank + skillAttribute.AptitudeValue;
+            var skillAttributeValue = Aptitudes.Find(x => x.Name == skill.Aptitude)?.AptitudeValue ?? 0;
+            return skill.Rank + skillAttributeValue;
         }
-    }
-
-    public class EgoAptitude
-    {
-        public string Name { get; set; } = string.Empty;
-        public string ShortName { get; set; } = string.Empty;
-        public int AptitudeValue { get; set; }
-        public int CheckMod { get; set; }
-        
-        public int CheckRating => AptitudeValue * 3 + CheckMod;
     }
 }

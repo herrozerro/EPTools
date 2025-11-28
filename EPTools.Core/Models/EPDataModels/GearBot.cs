@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.EPDataModels
 {
@@ -12,7 +11,7 @@ namespace EPTools.Core.Models.EPDataModels
         int WoundThreshold,
         int Durability,
         int DeathRating,
-        MorphMovementRates MovementRate,
+        List<MorphMovementRates> MovementRate,
         string Size,
         List<string> Ware,
         string Category,
@@ -24,5 +23,31 @@ namespace EPTools.Core.Models.EPDataModels
         string Resource,
         string Reference,
         List<AdditionalRules> AdditionalRules
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules)
+    {
+        public GearBot() : this(
+            Vigor: 0,
+            Vigor2: 0,
+            Flex: 0,
+            ArmorEnergy: 0,
+            ArmorKinetic: 0,
+            WoundThreshold: 0,
+            Durability: 0,
+            DeathRating: 0,
+            MovementRate: [],
+            Size: "Medium",       // Default size
+            Ware: new List<string>(),
+            
+            // Base Gear Properties
+            Category: "Bot",
+            Subcategory: "Custom",
+            Name: "New Bot",
+            Complexity: "Major",
+            Description: "Custom Bot Shell",
+            Summary: "",
+            Resource: "",
+            Reference: "",
+            AdditionalRules: []
+        ) { }
+    }
 }

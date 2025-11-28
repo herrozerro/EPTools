@@ -96,6 +96,29 @@ namespace EPTools.Core.Services
             return _factions;
         }
 
+        public async Task<List<Gear>> GetAllGear()
+        {
+            List<Gear> allGear = [];
+            allGear.AddRange(await GetGearArmors());
+            allGear.AddRange(await GetGearBots());
+            allGear.AddRange(await GetGearComms());
+            allGear.AddRange(await GetGearCreatures());
+            allGear.AddRange(await GetGearDrugs());
+            allGear.AddRange(await GetGearItems());
+            allGear.AddRange(await GetGearMission());
+            allGear.AddRange(await GetGearNano());
+            allGear.AddRange(await GetGearSecurity());
+            allGear.AddRange(await GetGearSoftware());
+            allGear.AddRange(await GetGearSwarms());
+            allGear.AddRange(await GetGearVehicles());
+            allGear.AddRange(await GetGearWare());
+            allGear.AddRange(await GetGearWeaponAmmo());
+            allGear.AddRange(await GetGearWeaponMelee());
+            allGear.AddRange(await GetGearWeaponRanged());
+
+            return allGear;
+        }
+        
         public async Task<List<GearArmor>> GetGearArmors()
         {
             if (_gearArmors.Count == 0)

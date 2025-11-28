@@ -2,8 +2,6 @@
 
 using System.Text.Json;
 using System.Text.Json.Nodes;
-using System.Text.Json.Serialization;
-using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 using EPTools.Core.Services;
 
@@ -16,18 +14,20 @@ EpDataService epDataService = new EpDataService(fileFetchService);
 EgoService egoService = new EgoService(epDataService);
 LifepathService lifepathService = new LifepathService(epDataService, egoService);
 
-var t = await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
+await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
 
 var e = await lifepathService.GenerateEgo();
+
+var gear = await epDataService.GetAllGear();
 
 while (true)
 {
     e = await lifepathService.GenerateEgo();
-    var ware = await epDataService.GetGearWare();
+    await epDataService.GetGearWare();
     Console.WriteLine(e.Name);
 }
 
-var s = System.Text.Json.JsonSerializer.Serialize(e);
+System.Text.Json.JsonSerializer.Serialize(e);
 
 e.ToString();
 

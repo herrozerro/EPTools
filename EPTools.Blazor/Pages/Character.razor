@@ -1,15 +1,19 @@
 @page "/"
+@using Blazored.LocalStorage
 @using EPTools.Blazor.Pages.Partials
 @using EPTools.Blazor.Services
-@using EPTools.Blazor.ViewModels
 @using EPTools.Core.Models.Ego
 @inject AppDataService AppData
 @inject LifepathService LifepathService
 @inject EgoService EgoService
 @inject IJSRuntime JsRuntime
+@inject ILocalStorageService LocalStorage
+@inject ISnackbar Snackbar
 
-<MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter" >Generate Random Character</MudButton>
-<MudButton Color="Color.Secondary" @onclick="DownloadText">Export Character</MudButton>
+<MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter">Generate Lifepath</MudButton>
+<MudButton Color="Color.Secondary" @onclick="DownloadText">Export</MudButton>
+<MudButton Color="Color.Success" @onclick="SaveCharacter">Save</MudButton>
+<MudButton Color="Color.Dark" @onclick="ResetCharacter">Reset</MudButton>
 <CascadingValue Value="_egoModel" Name="EgoModel">
 
     <MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
@@ -99,7 +103,7 @@
             <CharacterMorphs Morphs="@_egoModel.Morphs"></CharacterMorphs>
         </MudTabPanel>
         <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
-            <MudText>Content Disabled</MudText>
+            <CharacterGear></CharacterGear>
         </MudTabPanel>
     </MudTabs>
 
@@ -108,20 +112,41 @@
 @code {
     private bool _loading = true; // Start as true
     private Ego _egoModel = new Ego();
-    
+    private const string StorageKey = "EP_CurrentCharacter";
+
     protected override async Task OnInitializedAsync()
     {
-        if (AppData.Ego == null)
+        // 1. Try to load from Browser Storage first
+        var storedEgo = await LocalStorage.GetItemAsync<Ego>(StorageKey);
+
+        if (storedEgo != null)
         {
-            AppData.Ego = await EgoService.GetDefaults();
-            _egoModel = AppData.Ego;
+            _egoModel = storedEgo;
+            Snackbar.Add("Character loaded from storage.", Severity.Success);
         }
         else
         {
-            _egoModel = AppData.Ego;
+            // 2. If nothing in storage, create a new blank one (or load default)
+            _egoModel = await EgoService.GetDefaults();
         }
-        
+
         _loading = false;
+    }
+    
+    private async Task ResetCharacter()
+    {
+        await LocalStorage.RemoveItemAsync(StorageKey);
+        _egoModel = await EgoService.GetDefaults();
+        Snackbar.Add("Character reset.", Severity.Info);
+    }
+    
+    // Call this method whenever you want to persist the data
+    private async Task SaveCharacter()
+    {
+        // This serializes the Ego object to JSON and saves it to LocalStorage
+        await LocalStorage.SetItemAsync(StorageKey, _egoModel);
+        
+        Snackbar.Add("Character saved!", Severity.Success);
     }
 
     private async Task GenerateRandomCharacter()

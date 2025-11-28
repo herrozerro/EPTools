@@ -1,6 +1,4 @@
 ﻿@page "/randomcharacter"
-@inject DiscordWebhookService Dsw
-@inject EpDataService Epd
 @inject LifepathService Lps
 @inject IJSRuntime JsRuntime
 
@@ -9,14 +7,6 @@
 <button @onclick="DownloadText">Download text file</button>
 
 @code {
-    async Task DownloadBinary()
-    {
-        // Generate a file
-        byte[] file = Enumerable.Range(0, 100).Select(value => (byte)value).ToArray();
-
-        // Send the data to JS to actually download the file
-        await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "file.bin", "application/octet-stream", file);
-    }
 
     async Task DownloadText()
     {

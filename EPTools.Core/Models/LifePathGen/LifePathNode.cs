@@ -1,5 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using EPTools.Core.Interfaces;
+﻿using EPTools.Core.Interfaces;
 
 namespace EPTools.Core.Models.LifePathGen
 {

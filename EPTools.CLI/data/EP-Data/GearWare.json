@@ -13,7 +13,20 @@
     "Description": "<p>This gland enhancement supercharges your adrenal response to situations that invoke stress, pain, or strong emotions (fear, anger, lust, hate). When activated (mentally or by stress/emotions), the concentrated burst of norepinephrine accelerates heart rate and blood flow and burns carbohydrates. You receive +1 Vigor pool and ignore the modifiers from 1 wound. Extensive use of this mod without a break can lead to adrenal fatigue (-20 impairment modifier to all actions; GM discretion).</p>",
     "Resource": "Eclipse Phase Second Edition",
     "Reference": "",
-    "AdditionalRules": []
+    "AdditionalRules": [
+      {
+        "Name": "Vigor",
+        "Description": "+1 Vigor Pool",
+        "AdditionalRuleType": "Pool",
+        "Value": 1
+      },
+      {
+        "Name": "Wounds",
+        "Description": "Ignore 1 Wound",
+        "AdditionalRuleType": "WoundIgnore",
+        "Value": 1
+      }
+    ]
   },
   {
     "Category": "Ware",
@@ -45,7 +58,14 @@
     "Description": "<p>The bioware version of this ware boosts your metabolism. The hardware version optimizes your shell’s energy usage. The meshware version optimizes code. This gives you 1 extra short recharge per day.</p>",
     "Resource": "Eclipse Phase Second Edition",
     "Reference": "",
-    "AdditionalRules": []
+    "AdditionalRules": [
+      {
+        "Name": "Short",
+        "Description": "One extra short recharge per day.",
+        "AdditionalRuleType": "Recharge",
+        "Value": 1
+      }
+    ]
   },
   {
     "Category": "Ware",
@@ -882,7 +902,7 @@
         "Name": "Athletics",
         "Description": "+10 Balanced-Based Athletics Tests.",
         "Type": "SkillBonus",
-        "Value": 10
+        "Value": 10 
       }
     ]
   },

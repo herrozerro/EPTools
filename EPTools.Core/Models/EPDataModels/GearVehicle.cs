@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearVehicle(
         int Passengers,
@@ -11,7 +9,7 @@ namespace EPTools.Core.Models.EPDataModels
         int WoundThreshold,
         int Durability,
         int DeathRating,
-        MorphMovementRates MovementRate,
+        List<MorphMovementRates> MovementRate,
         string Size,
         List<string> Ware,
         string Category,

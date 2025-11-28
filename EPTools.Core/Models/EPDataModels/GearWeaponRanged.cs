@@ -1,14 +1,12 @@
-﻿using System.Text.Json.Serialization;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearWeaponRanged(
         string WareType,
         string Damage,
         string DamageAvg,
         string FireModes,
-        int Ammo,
-        int Range,
+        string Ammo,
+        string Range,
         string Notes,
         string Category,
         string Subcategory,

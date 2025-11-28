@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels
 {
     public record GearWeaponMelee(
         string WareType,
