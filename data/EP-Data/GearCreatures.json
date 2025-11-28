@@ -382,7 +382,10 @@
       "Provoke 40 (Intimidate 50)"
     ],
     "Traits": [
-      "Modified Behavior: Obedient (Level 2)"
+      {
+        "Name": "Modified Behavior: Obedient",
+        "Level": 2
+      }
     ],
     "Notes": "",
     "Description": "<p>Favored for police work on Mars, these partially uplifted Cape baboons can be vicious, especially when in a pack.</p>",
