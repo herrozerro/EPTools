@@ -33,12 +33,14 @@ namespace EPTools.Core.Models.EPDataModels
         public List<AdditionalRules> AdditionalRules { get; set; } = [];
     }
 
-    public class AdditionalRules(
-        string Name,
-        string Description,
-        AdditionalRuleType Type,
-        int Value);
-    
+    public class AdditionalRules
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public AdditionalRuleType Type { get; set; }
+        public int Value { get; set; }
+    }
+
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum AdditionalRuleType {
         SkillBonus,
