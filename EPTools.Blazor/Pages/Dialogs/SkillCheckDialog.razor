@@ -157,8 +157,8 @@
 
 @code {
     [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
-    [CascadingParameter(Name = "EgoModel")] public required Ego Ego { get; set; }
     
+    [Parameter] public required Ego Ego { get; set; }
     [Parameter] public string SkillName { get; set; } = "Check";
     [Parameter] public string LinkedAptitude { get; set; } = "COG";
     [Parameter] public int BaseAptitudeValue { get; set; } = 15;
