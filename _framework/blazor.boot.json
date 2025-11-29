@@ -1,11 +1,11 @@
 {
   "mainAssemblyName": "EPTools.Blazor",
   "resources": {
-    "hash": "sha256-TvNB1TjZZVmMgjVGv97iohGBrU2emY1/iIEOBBf7XYw=",
+    "hash": "sha256-AeDUMHApums9biY4hjfgxebf4TdjYR88AITC82exTjs=",
     "fingerprinting": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "Blazored.LocalStorage.wasm",
-      "EPTools.Blazor.yg4kf4ced3.wasm": "EPTools.Blazor.wasm",
-      "EPTools.Core.wqwe0p7jly.wasm": "EPTools.Core.wasm",
+      "EPTools.Blazor.fm2mhgpkla.wasm": "EPTools.Blazor.wasm",
+      "EPTools.Core.lygncy0vw7.wasm": "EPTools.Core.wasm",
       "Microsoft.AspNetCore.Components.Forms.3qh9t4or2h.wasm": "Microsoft.AspNetCore.Components.Forms.wasm",
       "Microsoft.AspNetCore.Components.Web.xxzncl2btm.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.nvr1tj7rwf.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -79,8 +79,8 @@
     },
     "assembly": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
-      "EPTools.Blazor.yg4kf4ced3.wasm": "sha256-Xm2hwW/OolTUN0vx3QUE4H9N3K6GTtHaxUDG5Hd9ZFk=",
-      "EPTools.Core.wqwe0p7jly.wasm": "sha256-uC4Gf6XE2HXBnsQonvJziAAjv3PGst+KFNrI555SeRI=",
+      "EPTools.Blazor.fm2mhgpkla.wasm": "sha256-OcjfrIk7gB/mP80QJojGujxW0IEZOuCMNeTZHmjX3BA=",
+      "EPTools.Core.lygncy0vw7.wasm": "sha256-Yzbcehe97eaB6oDk22pZAg4XZ7Z/8M01y4sRbH31Hn0=",
       "Microsoft.AspNetCore.Components.Forms.3qh9t4or2h.wasm": "sha256-BTHXkhy/9X3p+MX0/sm31OTLsBa/eASz8VZ7QmpdYzQ=",
       "Microsoft.AspNetCore.Components.Web.xxzncl2btm.wasm": "sha256-SwoMPlHS05yT2/LjqTYV4nO5fDMfNfd6qGFDDIKUa9U=",
       "Microsoft.AspNetCore.Components.WebAssembly.nvr1tj7rwf.wasm": "sha256-Y9y4a637WBoDa08GX7Qxx63oDFsCVE/4v8oZCvLkKTo=",
