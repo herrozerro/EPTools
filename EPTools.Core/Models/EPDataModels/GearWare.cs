@@ -1,19 +1,11 @@
 ﻿namespace EPTools.Core.Models.EPDataModels
 {
-    public record GearWare(
-        bool Bioware,
-        bool Cyberware,
-        bool Hardware,
-        bool Meshware,
-        bool Nanoware,
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+    public class GearWare : Gear
+    {
+        public bool Bioware { get; set; }
+        public bool Cyberware { get; set; }
+        public bool Hardware { get; set; }
+        public bool Meshware { get; set; }
+        public bool Nanoware { get; set; }
+    }
 }

@@ -228,7 +228,7 @@
       <Content Update="wwwroot\data\EP-Data\Reputations.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
-      <Content Update="wwwroot\data\EP-Data\Services.json">
+      <Content Update="wwwroot\data\EP-Data\GearServices.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
       <Content Update="wwwroot\data\EP-Data\Skills.json">

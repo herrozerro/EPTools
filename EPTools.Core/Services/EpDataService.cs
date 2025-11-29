@@ -23,6 +23,7 @@ namespace EPTools.Core.Services
         private List<GearNano> _gearNano = [];
         private List<GearPack> _gearPacks = [];
         private List<GearSecurity> _gearSecurity = [];
+        private List<GearService> _gearServices = [];
         private List<GearSoftware> _gearSoftware = [];
         private List<GearSwarm> _gearSwarms = [];
         private List<GearVehicle> _gearVehicles = [];
@@ -115,7 +116,7 @@ namespace EPTools.Core.Services
             allGear.AddRange(await GetGearWeaponAmmo());
             allGear.AddRange(await GetGearWeaponMelee());
             allGear.AddRange(await GetGearWeaponRanged());
-
+            allGear.AddRange(await GetGearServices());
             return allGear;
         }
         
@@ -216,6 +217,15 @@ namespace EPTools.Core.Services
                 _gearSecurity = await fetchService.GetTFromEpFileAsync<List<GearSecurity>>("GearSecurity");
             }
             return _gearSecurity;
+        }
+        
+        public async Task<List<GearService>> GetGearServices()
+        {
+            if (_gearServices.Count == 0)
+            {
+                _gearServices = await fetchService.GetTFromEpFileAsync<List<GearService>>("GearServices");
+            }
+            return _gearServices;
         }
 
         public async Task<List<GearSoftware>> GetGearSoftware()

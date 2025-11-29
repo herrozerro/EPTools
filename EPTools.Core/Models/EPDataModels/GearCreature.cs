@@ -1,43 +1,38 @@
-﻿namespace EPTools.Core.Models.EPDataModels
-{
-    public record GearCreature(
-        Attributes Attributes,
-        List<MorphMovementRates> MovementRate,
-        List<string> Ware,
-        List<string> Skills,
-        List<MorphTrait> Traits,
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules
-        ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+﻿using System.Runtime.CompilerServices;
 
-    public record Attributes(
-        int Cognition,
-        int CognitionCheck,
-        int Intuition,
-        int IntuitionCheck,
-        int Reflexes,
-        int ReflexesCheck,
-        int Savvy,
-        int SavvyCheck,
-        int Somatics,
-        int SomaticsCheck,
-        int Willpower,
-        int WillpowerCheck,
-        int Initiative,
-        int Tp,
-        int ArmorEnergy,
-        int ArmorKinetic,
-        int WoundThreshold,
-        int Durability,
-        int DeathRating,
-        int TraumaThreshold,
-        int Lucidity,
-        int InsanityRating);
+namespace EPTools.Core.Models.EPDataModels
+{
+    public class GearCreature : Gear
+    {
+        public Attributes Attributes { get; set; } = new();
+        public List<MorphMovementRates> MovementRate { get; set; } = [];
+        public List<string> Ware { get; set; } = [];
+        public List<string> Skills { get; set; } = [];
+        public List<MorphTrait> Traits { get; set; } = [];
+    }
+    public class Attributes()
+    {
+        public int Cognition { get; set; }
+        public int CognitionCheck { get; set; }
+        public int Intuition { get; set; }
+        public int IntuitionCheck { get; set; }
+        public int Reflexes { get; set; }
+        public int ReflexesCheck { get; set; }
+        public int Savvy { get; set; }
+        public int SavvyCheck { get; set; }
+        public int Somatics { get; set; }
+        public int SomaticsCheck { get; set; }
+        public int Willpower { get; set; }
+        public int WillpowerCheck { get; set; }
+        public int Initiative { get; set; }
+        public int Tp { get; set; }
+        public int ArmorEnergy { get; set; }
+        public int ArmorKinetic { get; set; }
+        public int WoundThreshold { get; set; }
+        public int Durability { get; set; }
+        public int DeathRating { get; set; }
+        public int TraumaThreshold { get; set; }
+        public int Lucidity { get; set; }
+        public int InsanityRating { get; set; }
+    }
 }

@@ -232,8 +232,7 @@
     {
         CurrentEgo.Caches.Remove(cache);
     }
-
-    // A handy utility for RPG players!
+    
     private void MoveToLocal(InventoryCache sourceCache, InventoryItem item)
     {
         // 1. Remove from cache
@@ -261,7 +260,7 @@
         targetCache.Inventory.Add(item);
 
         // 4. Feedback
-        // Optional: Snackbar.Add($"Moved {item.Name} to {targetCache.Location}", Severity.Success);
+        Snackbar.Add($"Moved {item.Name} to {targetCache.Location}", Severity.Success);
     }
 
     private async Task OpenGearPicker(InventoryCache? targetCache = null)

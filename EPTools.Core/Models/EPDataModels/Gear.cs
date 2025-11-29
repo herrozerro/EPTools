@@ -13,24 +13,27 @@ namespace EPTools.Core.Models.EPDataModels
     [JsonDerivedType(typeof(GearMission), typeDiscriminator: "mission")]
     [JsonDerivedType(typeof(GearNano), typeDiscriminator: "nano")]
     [JsonDerivedType(typeof(GearSecurity), typeDiscriminator: "security")]
+    [JsonDerivedType(typeof(GearService), typeDiscriminator: "service")]
     [JsonDerivedType(typeof(GearSoftware), typeDiscriminator: "software")]
     [JsonDerivedType(typeof(GearSwarm), typeDiscriminator: "swarm")]
     [JsonDerivedType(typeof(GearVehicle), typeDiscriminator: "vehicle")]
     [JsonDerivedType(typeof(GearWeaponAmmo), typeDiscriminator: "ammo")]
     [JsonDerivedType(typeof(GearWeaponMelee), typeDiscriminator: "melee")]
     [JsonDerivedType(typeof(GearWeaponRanged), typeDiscriminator: "ranged")]
-    public abstract record Gear(
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules);
+    public abstract class Gear
+    {
+        public string Category { get; set; } = string.Empty;
+        public string Subcategory { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public string Complexity { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Summary { get; set; } = string.Empty;
+        public string Resource { get; set; } = string.Empty;
+        public string Reference { get; set; } = string.Empty;
+        public List<AdditionalRules> AdditionalRules { get; set; } = [];
+    }
 
-    public record AdditionalRules(
+    public class AdditionalRules(
         string Name,
         string Description,
         AdditionalRuleType Type,

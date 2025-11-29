@@ -2,52 +2,18 @@
 
 namespace EPTools.Core.Models.EPDataModels
 {
-    public record GearBot(
-        int Vigor,
-        int Vigor2,
-        int Flex,
-        int ArmorEnergy,
-        int ArmorKinetic,
-        int WoundThreshold,
-        int Durability,
-        int DeathRating,
-        List<MorphMovementRates> MovementRate,
-        string Size,
-        List<string> Ware,
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules)
+    public class GearBot : Gear
     {
-        public GearBot() : this(
-            Vigor: 0,
-            Vigor2: 0,
-            Flex: 0,
-            ArmorEnergy: 0,
-            ArmorKinetic: 0,
-            WoundThreshold: 0,
-            Durability: 0,
-            DeathRating: 0,
-            MovementRate: [],
-            Size: "Medium",       // Default size
-            Ware: new List<string>(),
-            
-            // Base Gear Properties
-            Category: "Bot",
-            Subcategory: "Custom",
-            Name: "New Bot",
-            Complexity: "Major",
-            Description: "Custom Bot Shell",
-            Summary: "",
-            Resource: "",
-            Reference: "",
-            AdditionalRules: []
-        ) { }
+        public int Vigor { get; init; }
+        public int Vigor2 { get; init; }
+        public int Flex { get; init; }
+        public int ArmorEnergy { get; init; }
+        public int ArmorKinetic { get; init; }
+        public int WoundThreshold { get; init; }
+        public int Durability { get; init; }
+        public int DeathRating { get; init; }
+        public List<MorphMovementRates> MovementRate { get; init; } = [];
+        public string Size { get; init; }= string.Empty;
+        public List<string> Ware { get; init; } = [];
     }
 }

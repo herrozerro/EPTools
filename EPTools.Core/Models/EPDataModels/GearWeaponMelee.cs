@@ -1,18 +1,10 @@
 ﻿namespace EPTools.Core.Models.EPDataModels
 {
-    public record GearWeaponMelee(
-        string WareType,
-        string Damage,
-        string DamageAvg,
-        string Notes,
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+    public class GearWeaponMelee : Gear
+    {
+        public string WareType { get; set; } = string.Empty;
+        public string Damage { get; set; } = string.Empty;
+        public string DamageAvg { get; set; } = string.Empty;
+        public string Notes { get; set; } = string.Empty;
+    }
 }

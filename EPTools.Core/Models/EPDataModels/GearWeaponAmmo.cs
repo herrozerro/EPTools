@@ -1,16 +1,8 @@
 ﻿namespace EPTools.Core.Models.EPDataModels
 {
-    public record GearWeaponAmmo(
-        string Damage,
-        string Notes,
-        string Category,
-        string Subcategory,
-        string Name,
-        string Complexity,
-        string Description,
-        string Summary,
-        string Resource,
-        string Reference,
-        List<AdditionalRules> AdditionalRules
-    ) : Gear(Category, Subcategory, Name, Complexity, Description, Summary, Resource, Reference, AdditionalRules);
+    public class GearWeaponAmmo : Gear
+    {
+        public string Damage { get; init; } = string.Empty;
+        public string Notes { get; init; } = string.Empty;
+    }
 }
