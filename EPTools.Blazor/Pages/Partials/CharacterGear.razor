@@ -2,7 +2,6 @@
 @using EPTools.Core.Models.Ego
 @using EPTools.Core.Models.EPDataModels
 @inject IDialogService DialogService
-@inject EpDataService EpDataService
 @inject ISnackbar Snackbar
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
@@ -198,7 +197,7 @@
     
     // --- Actions ---
     
-    private async Task AddCustomItem(InventoryCache? targetCache, Gear gearType)
+    private Task AddCustomItem(InventoryCache? targetCache, Gear gearType)
     {
 
         // 2. Wrap it
@@ -221,6 +220,8 @@
             CurrentEgo.Inventory.Add(newItem);
             Snackbar.Add($"Added new item to inventory", Severity.Success);
         }
+
+        return Task.CompletedTask;
     }
     
     private void AddCache()
@@ -265,14 +266,8 @@
 
     private async Task OpenGearPicker(InventoryCache? targetCache = null)
     {
-        // 1. Open the existing dialog (reusing your code)
-        var parameters = new DialogParameters<GearPickerDialog>
-        {
-            { x => x.GearList, await EpDataService.GetAllGear() } // Your master list
-        };
-
         var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        var dialog = await DialogService.ShowAsync<GearPickerDialog>("Select Gear", parameters, options);
+        var dialog = await DialogService.ShowAsync<GearPickerDialog>("Select Gear", options);
         var result = await dialog.Result;
 
         if (result is not null && !result.Canceled)

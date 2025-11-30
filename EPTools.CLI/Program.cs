@@ -2,6 +2,7 @@
 
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 using EPTools.Core.Services;
 
@@ -9,14 +10,14 @@ Console.WriteLine("Hello, World!");
 
 //modifyText();
 
-FileFetchService fileFetchService = new FileFetchService();
-EpDataService epDataService = new EpDataService(fileFetchService);
-EgoService egoService = new EgoService(epDataService);
-LifepathService lifepathService = new LifepathService(epDataService, egoService);
+var fileFetchService = new FileFetchService();
+var epDataService = new EpDataService(fileFetchService);
+var egoService = new EgoService(epDataService);
+var lifepathService = new LifepathService(epDataService, egoService);
 
 await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
 
-var e = await lifepathService.GenerateEgo();
+Ego e;
 
 var gear = await epDataService.GetAllGear();
 
@@ -33,20 +34,20 @@ e.ToString();
 
 void modifyText()
 {
-    string filePath = "data/EP-Data/morphs.json";
-    string jsonData = File.ReadAllText(filePath);
-    JsonArray jsonArray = JsonNode.Parse(jsonData).AsArray();
+    var filePath = "data/EP-Data/morphs.json";
+    var jsonData = File.ReadAllText(filePath);
+    var jsonArray = JsonNode.Parse(jsonData).AsArray();
 
     foreach (JsonObject obj in jsonArray)
     {
         if (obj.ContainsKey("morph_traits"))
         {
-            JsonArray morphTraits = obj["morph_traits"].AsArray();
-            JsonArray formattedTraits = new JsonArray();
+            var morphTraits = obj["morph_traits"].AsArray();
+            var formattedTraits = new JsonArray();
 
-            foreach (JsonNode trait in morphTraits)
+            foreach (var trait in morphTraits)
             {
-                JsonObject formattedTrait = new JsonObject
+                var formattedTrait = new JsonObject
                 {
                     ["level"] = trait.ToString().Contains("Level 2") ? 2 : trait.ToString().Contains("Level 3") ? 3 : 1, 
                     ["name"] = trait.ToString().Split('(')[0].Trim()
@@ -58,6 +59,6 @@ void modifyText()
         }
     }
 
-    string modifiedJsonData = jsonArray.ToJsonString(new JsonSerializerOptions { WriteIndented = true });
+    var modifiedJsonData = jsonArray.ToJsonString(new JsonSerializerOptions { WriteIndented = true });
     File.WriteAllText(filePath, modifiedJsonData);
 }
