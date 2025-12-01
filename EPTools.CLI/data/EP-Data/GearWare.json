@@ -62,7 +62,7 @@
       {
         "Name": "Short",
         "Description": "One extra short recharge per day.",
-        "RuleType": "Recharge",
+        "AdditionalRuleType": "Recharge",
         "Value": 1
       }
     ]

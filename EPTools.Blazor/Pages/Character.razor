@@ -92,9 +92,14 @@
                           Variant="Variant.Outlined" 
                           Lines="1" />
         </MudItem>
-
+        <MudItem xs="12" sm="4">
+            <MudButton Color="Color.Default" @onclick="ShowPlayerChoice">Player Choices</MudButton>
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudButton Color="Color.Default" @onclick="ShowLifepathHistory">Lifepath History</MudButton>
+        </MudItem>
     </MudGrid>
-    <CharacterAptitude Aptitudes="@_egoModel.Aptitudes"></CharacterAptitude>
+    <CharacterAptitude Aptitudes="@_egoModel.Aptitudes"/>
 
     <MudTabs>
         <MudTabPanel Text="Network" icon="@Icons.Material.Filled.Groups">
@@ -159,6 +164,33 @@
         Snackbar.Add("Character saved!", Severity.Success);
     }
 
+    private async Task ShowPlayerChoice()
+    {
+        var parameters = new DialogParameters<TextAreaDialog> {
+            { x => x.PromptText, "Player Choices"},
+            { x => x.Value, string.Join(Environment.NewLine, _egoModel.PlayerChoices) }, 
+            { x => x.Lines, 10 } 
+        };
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<TextAreaDialog>("Player Choices", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is {Canceled: false, Data: string playerChoices })
+        {
+            _egoModel.PlayerChoices = playerChoices.Split(Environment.NewLine).ToList();
+        }
+    }
+
+    private async Task ShowLifepathHistory()
+    {
+        var parameters = new DialogParameters<ListStringMessageBox> {
+            { x => x.Message, _egoModel.CharacterGenerationOutput }, 
+
+        };
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        await DialogService.ShowAsync<ListStringMessageBox>("Lifepath History", parameters, options);
+    }
+
     private async Task GenerateRandomCharacter()
     {
         _loading = true;
@@ -172,7 +204,7 @@
     async Task DownloadText()
     {
         // Generate a text file
-        var s = System.Text.Json.JsonSerializer.Serialize(_egoModel);
+        var s = JsonSerializer.Serialize(_egoModel);
         byte[] file = System.Text.Encoding.UTF8.GetBytes(s);
         await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "Character.json", "text/plain", file);
     }

@@ -44,9 +44,9 @@
         },
         {
           "Name": "Async",
-          "Type": "Interest",
+          "Type": "ForcedInterest",
           "Description": null,
-          "Value": 10,
+          "Value": 0,
           "Weight": 0,
           "OptionLists": []
         }
@@ -251,7 +251,7 @@
       },
       {
         "Name": "Async",
-        "Type": "Interest",
+        "Type": "ForcedInterest",
         "Description": null,
         "Value": 10,
         "Weight": 0,
@@ -1130,7 +1130,7 @@
         },
         {
           "Name": "Async",
-          "Type": "Interest",
+          "Type": "forcedInterest",
           "Description": null,
           "Value": 10,
           "Weight": 0,

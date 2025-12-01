@@ -1,8 +1,8 @@
 [
   {
-    "Name": "Gain \u002B1 ego Flex and roll on the Story Event table (p. XX).",
+    "Name": "Gain 1 ego Flex and roll on the Story Event table.",
     "Type": "BackgroundYouthEvent",
-    "Description": "Gain \u002B1 ego Flex and roll on the Story Event table (p. XX).",
+    "Description": "Gain 1 ego Flex and roll on the Story Event table.",
     "Value": 0,
     "Weight": 20,
     "OptionLists": [
