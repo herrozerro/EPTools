@@ -117,9 +117,12 @@
         <MudTabPanel Text="Traits" Icon="@Icons.Material.Filled.Portrait">
             <CharacterTraits EgoTraits="@_egoModel.EgoTraits" />
         </MudTabPanel>
-        <MudTabPanel Text="PSI" Icon="@Icons.Material.Filled.Coronavirus">
-            <CharacterPsi PsiModel="@_egoModel.Psi"/>
-        </MudTabPanel>
+        @if(_egoModel.EgoTraits.Any(x=>x.Name.Contains("Psi", StringComparison.OrdinalIgnoreCase)))
+        {
+            <MudTabPanel Text="PSI" Icon="@Icons.Material.Filled.Coronavirus">
+                <CharacterPsi PsiModel="@_egoModel.Psi"/>
+            </MudTabPanel>
+        }
     </MudTabs>
 
 </CascadingValue>

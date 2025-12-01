@@ -121,7 +121,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
 
     private Task ApplyAge(Ego ego, LifePathNode option)
     {
-        ego.EgoAge = option.Value;
+        ego.EgoAge = option.Value + Random.Shared.Next(0, 9);
         return Task.CompletedTask;
     }
 
@@ -172,6 +172,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
             Description = trait?.Description ?? "", 
             Level = option.Value, 
             CostTiers = string.Join(",",trait?.Cost ?? []),
+            Cost = trait?.Cost[option.Value-1] ?? 0,
             Type = trait?.Type ?? "", 
             Summary = trait?.Summary ?? "", 
             AdditionalRules = trait?.AdditionalRules ?? []
