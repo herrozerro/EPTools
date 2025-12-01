@@ -87,11 +87,9 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
 
         ego.CharacterGenerationOutput.Add($"{option.Name} {option.Description}".Trim());
 
-        if (_applyNodeMethods.TryGetValue(option.Type, out var applyMethod))
-        {
+        if (_applyNodeMethods.TryGetValue(option.Type, out var applyMethod)) 
             await applyMethod(ego, option);
-            ProcessOptionLists(ego, option);
-        }
+        ProcessOptionLists(ego, option);
     }
 
     private Task ApplyPlayerChoice(Ego ego, LifePathNode option)
@@ -130,6 +128,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
         if (selectedInterest != null)
         {
             ego.CharacterGenerationNodes.Push(selectedInterest);
+            return;
         }
         ego.CharacterGenerationOutput.Add($"{option.Name} {option.Description} did not load properly".Trim());
     }

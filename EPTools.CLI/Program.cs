@@ -24,7 +24,6 @@ var gear = await epDataService.GetAllGearAsync();
 while (true)
 {
     e = await lifepathService.GenerateEgo();
-    await epDataService.GetGearWareAsync();
     Console.WriteLine(e.Name);
 }
 
