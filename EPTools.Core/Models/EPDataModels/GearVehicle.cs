@@ -10,7 +10,7 @@ public class GearVehicle : Gear
     public int WoundThreshold { get; set; }
     public int Durability { get; set; }
     public int DeathRating { get; set; }
-    public List<MorphMovementRates> MovementRate { get; set; } = [];
+    public List<MovementRates> MovementRate { get; set; } = [];
     public string Size { get; set; } = string.Empty;
     public List<string> Ware { get; set; } = [];
 }

@@ -1,0 +1,16 @@
+@using EPTools.Core.Models.EPDataModels
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-2">Ware Details</MudText>
+<MudGrid>
+    <MudItem xs="12" Class="d-flex gap-4">
+        <MudCheckBox @bind-Value="Model.Bioware" Label="Bioware" Color="Color.Success" />
+        <MudCheckBox @bind-Value="Model.Cyberware" Label="Cyberware" Color="Color.Info" />
+        <MudCheckBox @bind-Value="Model.Hardware" Label="Hardware" Color="Color.Info" />
+        <MudCheckBox @bind-Value="Model.Meshware" Label="Meshware" Color="Color.Warning" />
+        <MudCheckBox @bind-Value="Model.Nanoware" Label="Nanoware" Color="Color.Info" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter] public required GearWare Model { get; set; }
+}

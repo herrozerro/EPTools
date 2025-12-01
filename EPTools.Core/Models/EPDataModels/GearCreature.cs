@@ -5,7 +5,7 @@ namespace EPTools.Core.Models.EPDataModels;
 public class GearCreature : Gear
 {
     public Attributes Attributes { get; set; } = new();
-    public List<MorphMovementRates> MovementRate { get; set; } = [];
+    public List<MovementRates> MovementRate { get; set; } = [];
     public List<string> Ware { get; set; } = [];
     public List<string> Skills { get; set; } = [];
     public List<MorphTrait> Traits { get; set; } = [];

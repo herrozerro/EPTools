@@ -1,4 +1,4 @@
-@using EPTools.Blazor.Pages.Dialogs
+@using EPTools.Blazor.Components.Dialogs
 @using EPTools.Core.Models.Ego
 @using EPTools.Core.Models.EPDataModels
 @inject IDialogService DialogService
@@ -9,11 +9,14 @@
         <MudItem xs="12" md="6">
             <MudPaper Class="pa-4 h-100" Outlined="true">
                 <MudTable Items="@CurrentEgo.Inventory" 
+                          T="InventoryItem"
                           Dense="true" 
                           Hover="true" 
                           GroupBy="@_groupDefinition"
                           GroupHeaderStyle="background-color:var(--mud-palette-background-grey)"
-                          Height="600px" FixedHeader="true" Elevation="0">
+                          Height="600px" FixedHeader="true" Elevation="0"
+                          OnRowClick="GearRowClick"
+                          RowClass="cursor-pointer">
                     
                     <ToolBarContent>
                         <MudText Typo="Typo.h6">Local Inventory</MudText>
@@ -53,13 +56,22 @@
                                 <MudText Typo="Typo.caption" Class="mud-text-secondary">
                                     @context.BaseGear.Subcategory • @context.BaseGear.Complexity
                                 </MudText>
-        
+                                
+                                @if(context.BaseGear is GearArmor armorWare)
+                                {
+                                    <div class="d-flex gap-1 mt-1">
+                                        @if(armorWare.WareType == "B") { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Success">Bio</MudChip> }
+                                        @if(armorWare.WareType == "H") { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Info">Hard</MudChip> }
+                                    </div>
+                                }
                                 @if(context.BaseGear is GearWare ware)
                                 {
                                     <div class="d-flex gap-1 mt-1">
                                         @if(ware.Bioware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Success">Bio</MudChip> }
                                         @if(ware.Cyberware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Info">Cyber</MudChip> }
+                                        @if(ware.Hardware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Info">Hard</MudChip> }
                                         @if(ware.Meshware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Warning">Mesh</MudChip> }
+                                        @if(ware.Nanoware) { <MudChip T="string" Variant="Variant.Outlined" Size="Size.Small" Color="Color.Warning">Nano</MudChip> }
                                     </div>
                                 }
                             </div>
@@ -125,7 +137,14 @@
                             <ChildContent>
                                 <MudTextField @bind-Value="cache.Location" Label="Location / Name" Variant="Variant.Outlined" Margin="Margin.Dense" Class="mb-2" />
                                 
-                                <MudTable Items="@cache.Inventory" Dense="true" Hover="true" Elevation="0" Class="mb-3">
+                                <MudTable Items="@cache.Inventory" 
+                                        T="InventoryItem"
+                                        Dense="true" 
+                                        Hover="true" 
+                                        Elevation="0" 
+                                        Class="mb-3"
+                                        OnRowClick="GearRowClick"
+                                        RowClass="cursor-pointer">
                                     <HeaderContent>
                                         <MudTh>Item</MudTh>
                                         <MudTh>Qty</MudTh>
@@ -194,6 +213,11 @@
         Selector = (e) => e.BaseGear.Category 
     };
     
+    private async Task GearRowClick(TableRowClickEventArgs<InventoryItem> args)
+    {
+        // args.Item contains the Trait object of the row clicked
+        if (args.Item != null) await OpenGearDetail(args.Item);
+    }
     
     // --- Actions ---
     
@@ -296,6 +320,23 @@
                 CurrentEgo.Inventory.Add(newItem);
                 Snackbar.Add($"Added {selectedGear.Name} to Inventory", Severity.Success);
             }
+        }
+    }
+
+    private async Task OpenGearDetail(InventoryItem item)
+    {
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var parameters = new DialogParameters<GearDetailDialog>
+        {
+            { x => x.OriginalGear, item.BaseGear }
+        };
+        var dialog = await DialogService.ShowAsync<GearDetailDialog>("Gear Detail", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is {Canceled: false, Data: Gear updatedGear})
+        {
+            item.BaseGear = updatedGear;
+            Snackbar.Add($"Inventory Item: {item.Name}, Updated", Severity.Success);
         }
     }
 }

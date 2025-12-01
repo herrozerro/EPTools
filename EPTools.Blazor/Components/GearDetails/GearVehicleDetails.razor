@@ -1,0 +1,62 @@
+@using EPTools.Core.Models.EPDataModels
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Vehicle Specs</MudText>
+
+<MudGrid>
+    <MudItem xs="4" sm="3">
+        <MudNumericField @bind-Value="Model.Durability" Label="Durability" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4" sm="3">
+        <MudNumericField @bind-Value="Model.WoundThreshold" Label="Wound Thresh" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4" sm="3">
+        <MudNumericField @bind-Value="Model.DeathRating" Label="Death Rating" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    
+    <MudItem xs="6" sm="3">
+        <MudNumericField @bind-Value="Model.Passengers" Label="Passengers" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Person" />
+    </MudItem>
+    
+    <MudItem xs="6" sm="12">
+        <MudTextField @bind-Value="Model.Size" Label="Size Category" HelperText="e.g. Medium, Large, Huge" Variant="Variant.Text" Margin="Margin.Dense" />
+    </MudItem>
+</MudGrid>
+
+<MudDivider Class="my-3"/>
+
+<MudText Typo="Typo.subtitle2" Class="mb-2">Handling & Protection</MudText>
+<MudGrid>
+    <MudItem xs="6" sm="3">
+        <MudNumericField @bind-Value="Model.Vigor" Label="Vigor" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <MudNumericField @bind-Value="Model.Flex" Label="Flex" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="6" sm="3">
+        <MudNumericField @bind-Value="Model.ArmorEnergy" Label="Energy Armor" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Shield" />
+    </MudItem>
+    <MudItem xs="6" sm="3">
+        <MudNumericField @bind-Value="Model.ArmorKinetic" Label="Kinetic Armor" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Shield" />
+    </MudItem>
+</MudGrid>
+
+<MudDivider Class="my-3"/>
+
+<MudTextField T="string" Label="Vehicle Systems / Ware" 
+              Value="@string.Join(", ", Model.Ware)" 
+              ValueChanged="@(s => Model.Ware = s.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).ToList())"
+              Variant="Variant.Outlined" 
+              Lines="2"
+              HelperText="Standard upgrades (e.g. Lidar, Headlights)" />
+
+<div class="d-flex justify-space-between align-center mt-3 mb-2">
+    <MudText Typo="Typo.subtitle2">Movement Rates</MudText>
+    <MudIconButton Icon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="@(() => Model.MovementRate.Add(new MovementRates { MovementType = "Ground", Base = 8, Full = 32 }))" />
+</div>
+
+<MovementRatesList MovementRates="@Model.MovementRate" />
+
+@code {
+    [Parameter] public required GearVehicle Model { get; set; }
+}

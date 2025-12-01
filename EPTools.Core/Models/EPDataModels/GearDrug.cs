@@ -2,8 +2,8 @@
 
 public class GearDrug : Gear
 {
-    public string Type { get; init; } = string.Empty;
-    public string Application { get; init; } = string.Empty;
-    public string Duration { get; init; } = string.Empty;
-    public string Addiction { get; init; } = string.Empty;
+    public string Type { get; set; } = string.Empty;
+    public string Application { get; set; } = string.Empty;
+    public string Duration { get; set; } = string.Empty;
+    public string Addiction { get; set; } = string.Empty;
 }

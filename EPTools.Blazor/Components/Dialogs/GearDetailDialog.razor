@@ -1,0 +1,79 @@
+@using EPTools.Core.Models.EPDataModels
+@using System.Text.Json
+@using EPTools.Blazor.Components.GearDetails
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Style="max-height: 600px; overflow-y: auto;">
+            @if (_workingGear is null) return;
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingGear.Name" Label="Name" Variant="Variant.Outlined" />
+                </MudItem>
+                <MudItem xs="6">
+                    <MudTextField @bind-Value="_workingGear.Category" Label="Category" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+                </MudItem>
+                <MudItem xs="6">
+                    <MudTextField @bind-Value="_workingGear.Subcategory" Label="Subcategory" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+                </MudItem>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingGear.Description" Label="Description" Variant="Variant.Outlined" Lines="3" />
+                </MudItem>
+            </MudGrid>
+
+            <MudDivider Class="my-4" />
+
+            @switch (_workingGear)
+            {
+                case GearBot bot:
+                    <GearBotDetails Model="@bot" />
+                    break;
+                case GearArmor armor:
+                    <GearArmorDetails Model="@armor" />
+                    break;
+                case GearWare ware:
+                    <GearWareDetails Model="@ware" />
+                    break;
+                case GearCreature creature:
+                    <GearCreatureDetails Model="@creature" />
+                    break;
+                case GearDrug drug:
+                    <GearDrugDetails Model="@drug"/>
+                    break;
+                case GearVehicle vehicle:
+                    <GearVehicleDetails Model="@vehicle"/>
+                    break;
+                case GearWeaponAmmo ammo:
+                    <GearWeaponAmmoDetails Model="@ammo"/>
+                    break;
+                case GearWeaponMelee melee:
+                    <GearWeaponMeleeDetails Model="@melee"/>
+                    break;
+                case GearWeaponRanged ranged:
+                    <GearWeaponRangedDetails Model="@ranged"/>
+                    break;
+            }
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">Save Changes</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
+    [Parameter] public required Gear OriginalGear { get; set; }
+    private Gear? _workingGear;
+
+    protected override void OnInitialized()
+    {
+        // Deep clone logic (Serialize/Deserialize) remains here
+        var json = JsonSerializer.Serialize(OriginalGear);
+        _workingGear = JsonSerializer.Deserialize<Gear>(json);
+    }
+
+    private void Submit() => MudDialog.Close(DialogResult.Ok(_workingGear));
+    private void Cancel() => MudDialog.Cancel();
+}

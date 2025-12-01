@@ -10,7 +10,7 @@ public class EgoSkill
     public int Modifier { get; set; }
     public int SkillTotal { get; set; }
         
-    public SkillType SkillType { get; init; }
+    public SkillType SkillType { get; set; }
 }
 
 public enum SkillType

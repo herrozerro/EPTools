@@ -1,38 +1,46 @@
 ﻿namespace EPTools.Core.Models.EPDataModels;
 
-public record Morph(
-    string Book,
-    string Name,
-    string Type,
-    int Cost,
-    int Availability,
-    int WoundThreshold,
-    int Durability,
-    int DeathRating,
-    MorphPools Pools,
-    List<MorphMovementRates> MovementRate,
-    List<string> Ware,
-    List<MorphTrait> MorphTraits,
-    List<string> CommonExtras,
-    List<string> Notes,
-    List<string> CommonShapeAdjustments,
-    string Image,
-    string Description,
-    string Resource,
-    string Reference,
-    List<AdditionalRules> AdditionalRules);
+public class Morph
+{
+    public string Book { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public string Type { get; set; } = string.Empty;
+    public int Cost { get; set; }
+    public int Availability { get; set; } 
+    public int WoundThreshold { get; set; } 
+    public int Durability { get; set; } 
+    public int DeathRating { get; set; }
+    public MorphPools Pools { get; set; }
+    public List<MovementRates> MovementRate { get; set; } = [];
+    public List<string> Ware { get; set; } = [];
+    public List<MorphTrait> MorphTraits { get; set; } = [];
+    public List<string> CommonExtras { get; set; } = [];
+    public List<string> Notes { get; set; } = [];
+    public List<string> CommonShapeAdjustments { get; set; } = [];
+    public string Image { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public string Resource { get; set; } = string.Empty;
+    public string Reference { get; set; } = string.Empty;
+    public List<AdditionalRules> AdditionalRules { get; set; } = [];
+}
 
-public record MorphPools(
-    int Insight,
-    int Moxie,
-    int Vigor,
-    int Flex);
+public class MorphPools
+{
+    public int Insight { get; set; }
+    public int Moxie { get; set; }
+    public int Vigor { get; set; }
+    public int Flex { get; set; }
+}
 
-public record MorphMovementRates(
-    string MovementType,
-    int Base,
-    int Full);
+public class MovementRates
+{
+    public string MovementType { get; set; }  = string.Empty;
+    public int Base { get; set; }
+    public int Full { get; set; }
+}
 
-public record MorphTrait(
-    string Name,
-    int Level);
+public class MorphTrait
+{
+    public string Name { get; set; } = string.Empty;
+    public int Level { get; set; }
+}

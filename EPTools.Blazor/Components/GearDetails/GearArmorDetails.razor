@@ -1,0 +1,21 @@
+@using EPTools.Core.Models.EPDataModels
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-2">Armor Stats</MudText>
+<MudGrid>
+    <MudItem xs="6">
+        <MudNumericField @bind-Value="Model.Energy" Label="Energy Armor" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudNumericField @bind-Value="Model.Kinetic" Label="Kinetic Armor" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+    </MudItem>
+    <MudItem xs="12">
+        <MudCheckBox @bind-Value="Model.Stackable" Label="Stackable with other armor?" Color="Color.Primary"/>
+    </MudItem>
+    <MudItem xs="12">
+        <MudTextField @bind-Value="Model.WareType" Label="Ware Type" HelperText="B, C, H" Variant="Variant.Text"/>
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter] public GearArmor Model { get; set; }
+}

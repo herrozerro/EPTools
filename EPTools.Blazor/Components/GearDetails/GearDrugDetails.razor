@@ -1,0 +1,44 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Pharmacology</MudText>
+
+<MudGrid>
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Application" 
+                      Label="Application" 
+                      Placeholder="e.g. Dermal, Inhaled, Injection" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Duration" 
+                      Label="Duration" 
+                      Placeholder="e.g. 4 Hours, Instant" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Type" 
+                      Label="Drug Class" 
+                      Placeholder="e.g. Toxin, Nootropic, Narco" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Addiction" 
+                      Label="Addiction Potential" 
+                      Placeholder="e.g. Physical (10), Mental (20)" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" 
+                      Adornment="Adornment.End" 
+                      AdornmentIcon="@Icons.Material.Filled.WarningAmber" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter] public GearDrug Model { get; set; }
+}

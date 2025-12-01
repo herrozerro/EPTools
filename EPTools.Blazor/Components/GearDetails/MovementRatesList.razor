@@ -1,0 +1,51 @@
+@using EPTools.Core.Models.EPDataModels
+
+<div class="d-flex justify-space-between align-center mb-2 mt-2">
+    <MudText Typo="Typo.subtitle2">Movement Rates</MudText>
+    <MudIconButton Icon="@Icons.Material.Filled.Add" 
+                   Size="Size.Small" 
+                   Color="Color.Primary" 
+                   OnClick="AddRate" 
+                   Title="Add Movement Mode"/>
+</div>
+
+@if (!Rates.Any())
+{
+    <MudText Typo="Typo.caption" Class="mud-text-secondary">No movement modes defined.</MudText>
+}
+else
+{
+    <div class="d-flex flex-column gap-2">
+        @foreach (var rate in Rates)
+        {
+            <div @key="@rate" class="d-flex gap-2 align-center mb-2">
+                <MudTextField @bind-Value="rate.MovementType" Label="Mode" Variant="Variant.Text" Margin="Margin.Dense" Style="width: 40%;"/>
+                <MudNumericField @bind-Value="rate.Base" Label="Base" Variant="Variant.Text" Margin="Margin.Dense" Style="width: 25%;"/>
+                <MudNumericField @bind-Value="rate.Full" Label="Full" Variant="Variant.Text" Margin="Margin.Dense" Style="width: 25%;"/>
+    
+                <MudIconButton Icon="@Icons.Material.Filled.Close" 
+                               Size="Size.Small" 
+                               Color="Color.Error" 
+                               OnClick="@(() => RemoveRate(rate))" />
+            </div>
+        }
+    </div>
+}
+
+@code {
+    // 1. Accept the Reference to the List
+    [Parameter] public List<MovementRates> Rates { get; set; } = new();
+
+    // 2. Internal Add Logic
+    private void AddRate()
+    {
+        // Add a default entry
+        Rates.Add(new MovementRates { MovementType = "Walker", Base = 4, Full = 20 });
+    }
+
+    // 3. Internal Remove Logic
+    private void RemoveRate(MovementRates item)
+    {
+        Rates.Remove(item);
+    }
+}

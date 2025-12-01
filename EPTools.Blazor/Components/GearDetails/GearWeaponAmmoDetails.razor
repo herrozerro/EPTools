@@ -1,0 +1,30 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Ammo Specs</MudText>
+
+<MudGrid>
+    <MudItem xs="12" sm="6">
+        <MudTextField @bind-Value="Model.Damage" 
+                      Label="Damage Modifier" 
+                      Placeholder="e.g. +2d10, Uniform" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense"
+                      Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Bolt" />
+    </MudItem>
+
+    <MudItem xs="12" sm="6">
+        <MudTextField @bind-Value="Model.Notes" 
+                      Label="Ammo Traits" 
+                      Placeholder="e.g. AP -2, Shock" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" 
+                      Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Label" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter] public GearWeaponAmmo Model { get; set; }
+}

@@ -1,0 +1,57 @@
+@using EPTools.Core.Models.EPDataModels
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Bot Chassis Specs</MudText>
+
+<MudGrid>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.Durability" Label="Durability" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.WoundThreshold" Label="Wound Threshold" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.DeathRating" Label="Death Rating" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Size" Label="Size Category" Variant="Variant.Text" Margin="Margin.Dense" />
+    </MudItem>
+</MudGrid>
+
+<MudDivider Class="my-3"/>
+<MudText Typo="Typo.subtitle2" Class="mb-2">Pools & Armor</MudText>
+
+<MudGrid>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.Vigor" Label="Vigor" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.Flex" Label="Flex" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="4">
+        <MudNumericField @bind-Value="Model.Vigor2" Label="Vigor 2" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+    </MudItem>
+    <MudItem xs="6">
+        <MudNumericField @bind-Value="Model.ArmorEnergy" Label="Energy Armor" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+    <MudItem xs="6">
+        <MudNumericField @bind-Value="Model.ArmorKinetic" Label="Kinetic Armor" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </MudItem>
+</MudGrid>
+
+<MudDivider Class="my-3"/>
+
+<MudTextField T="string" Label="Installed Ware" 
+              Value="@string.Join(", ", Model.Ware)" 
+              ValueChanged="@(s => Model.Ware = s.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).ToList())"
+              Variant="Variant.Outlined" Lines="2" />
+
+<div class="d-flex justify-space-between align-center mt-3 mb-2">
+    <MudText Typo="Typo.subtitle2">Movement Rates</MudText>
+    <MudIconButton Icon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="@(() => Model.MovementRate.Add(new MovementRates { MovementType = "Walker", Base = 4, Full = 20 }))" />
+</div>
+
+<MovementRatesList Model="@Model.MovementRate"/>
+
+@code {
+    [Parameter] public required GearBot Model { get; set; }
+}

@@ -1,6 +1,7 @@
 ﻿using EPTools.Core.Extensions;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
+using EPTools.Core.Constants;
 using Morph = EPTools.Core.Models.Ego.Morph;
 
 namespace EPTools.Core.Services;
@@ -177,17 +178,25 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
         });
     }
 
-    private async Task ApplyAptitude(Ego ego, LifePathNode option)
+    private Task ApplyAptitude(Ego ego, LifePathNode option)
     {
-        string aptitudeToChange = (await ePDataService.GetAptitudesAsync()).FirstOrDefault(x => string.Equals(x.ShortName, option.Name, StringComparison.CurrentCultureIgnoreCase))?.Name ?? "";
-        aptitudeToChange = char.ToUpper(aptitudeToChange[0]) + aptitudeToChange[1..];
+        var aptitudeToChange = option.Name.ToUpper() switch
+        {
+            AptitudeCodes.Cognition => AptitudeNames.Cognition,
+            AptitudeCodes.Intuition => AptitudeNames.Intuition,
+            AptitudeCodes.Reflexes => AptitudeNames.Reflexes,
+            AptitudeCodes.Savvy => AptitudeNames.Savvy,
+            AptitudeCodes.Somatics => AptitudeNames.Somatics,
+            AptitudeCodes.Willpower => AptitudeNames.Willpower,
+            _ => string.Empty
+        };
             
         //check if aptitude already exists and add value to it
         var existingAptitude = ego.Aptitudes.FirstOrDefault(x => x.Name == aptitudeToChange);
         if (existingAptitude != null)
             existingAptitude.AptitudeValue += option.Value;
-        else
-            ego.Aptitudes.Add(new EgoAptitude { Name = aptitudeToChange, ShortName = option.Name, AptitudeValue = option.Value, CheckMod = 0 });
+        
+        return Task.CompletedTask;
     }
 
     private Task ApplyReputation(Ego ego, LifePathNode option)
@@ -222,14 +231,8 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
 
     private Task ApplyLanguage(Ego ego, LifePathNode option)
     {
-        if (string.IsNullOrEmpty(ego.Languages))
-        {
-            ego.Languages = option.Name;
-        }
-        else
-        {
-            ego.Languages += ", " + option.Name;
-        }
+        // add language to languages
+        ego.Languages += option.Name + ", ";
         return Task.CompletedTask;
     }
 
@@ -237,7 +240,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
     {
         var skills = await ePDataService.GetSkillsAsync();
         var skillName = option.Name.Split("-")[0];
-        SkillType skillType = skillName switch
+        var skillType = skillName switch
         {
             { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
             { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
@@ -269,6 +272,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
         var selectedMorph = (await ePDataService.GetMorphsAsync()).FirstOrDefault(x => x.Name == option.Name);
         if (selectedMorph != null)
         {
+            ego.Morphs.Clear();
             ego.Morphs.Add(new Morph
             {
                 Name = option.Name,

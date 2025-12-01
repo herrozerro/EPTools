@@ -246,4 +246,66 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\EgoTraitDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\GearArmorDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\GearBotDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\GearDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\GearPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\GearWareDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\ListStringMessageBox.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\SkillCheckDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\SleightDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\SleightPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\TextAreaDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Dialogs\TraitPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterAptitude.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterGear.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterMorphs.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterNetwork.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterPanel.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterPsi.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterSkills.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\CharacterTraits.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\EgoTraitDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\GearArmorDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\GearBotDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\GearDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\GearPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\GearWareDetails.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\ListStringMessageBox.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\SkillCheckDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\SleightDetailDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\SleightPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\TextAreaDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\Dialogs\TraitPickerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\DiceRollerDialog.razor" />
+      <_ContentIncludedByDefault Remove="Pages\Components\RepWidget.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Components\CharacterAptitude.razor" />
+      <AdditionalFiles Include="Components\CharacterGear.razor" />
+      <AdditionalFiles Include="Components\CharacterMorphs.razor" />
+      <AdditionalFiles Include="Components\CharacterNetwork.razor" />
+      <AdditionalFiles Include="Components\CharacterPanel.razor" />
+      <AdditionalFiles Include="Components\CharacterPsi.razor" />
+      <AdditionalFiles Include="Components\CharacterSkills.razor" />
+      <AdditionalFiles Include="Components\CharacterTraits.razor" />
+      <AdditionalFiles Include="Components\Dialogs\EgoTraitDetailDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\GearArmorDetails.razor" />
+      <AdditionalFiles Include="Components\Dialogs\GearBotDetails.razor" />
+      <AdditionalFiles Include="Components\Dialogs\GearDetailDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\GearPickerDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\GearWareDetails.razor" />
+      <AdditionalFiles Include="Components\Dialogs\ListStringMessageBox.razor" />
+      <AdditionalFiles Include="Components\Dialogs\SkillCheckDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\SleightDetailDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\SleightPickerDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\TextAreaDialog.razor" />
+      <AdditionalFiles Include="Components\Dialogs\TraitPickerDialog.razor" />
+      <AdditionalFiles Include="Components\DiceRollerDialog.razor" />
+      <AdditionalFiles Include="Components\RepWidget.razor" />
+    </ItemGroup>
+
 </Project>

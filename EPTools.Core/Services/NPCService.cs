@@ -1,4 +1,5 @@
-﻿using EPTools.Core.Models.EPDataModels;
+﻿using EPTools.Core.Constants;
+using EPTools.Core.Models.EPDataModels;
 
 namespace EPTools.Core.Services;
 
@@ -42,7 +43,7 @@ public class CharacterAptitude
 {
 	public string? Name { get; set; }
 	public string? Abbreviation { get; set; }
-	private int Score { get; init; }
+	private int Score { get; set; }
 	public int CheckRating => Score * 3;
 
 	public static List<CharacterAptitude> GetAptitudes()
@@ -54,12 +55,12 @@ public class CharacterAptitude
 	{
 		var ls = new List<CharacterAptitude>();
 
-		ls.Add(new CharacterAptitude { Name = "Cognition", Abbreviation = "COG", Score = cog });
-		ls.Add(new CharacterAptitude { Name = "Intuition", Abbreviation = "INT", Score = intu });
-		ls.Add(new CharacterAptitude { Name = "Reflexes", Abbreviation = "REF", Score = refl });
-		ls.Add(new CharacterAptitude { Name = "Savvy", Abbreviation = "SAV", Score = sav });
-		ls.Add(new CharacterAptitude { Name = "Somatics", Abbreviation = "SOM", Score = som });
-		ls.Add(new CharacterAptitude { Name = "Willpower", Abbreviation = "WIL", Score = wil });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Cognition, Abbreviation = AptitudeCodes.Cognition, Score = cog });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Intuition, Abbreviation = AptitudeCodes.Intuition, Score = intu });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Reflexes, Abbreviation = AptitudeCodes.Reflexes, Score = refl });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Savvy, Abbreviation = AptitudeCodes.Savvy, Score = sav });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Somatics, Abbreviation = AptitudeCodes.Somatics, Score = som });
+		ls.Add(new CharacterAptitude { Name = AptitudeNames.Willpower, Abbreviation = AptitudeCodes.Willpower, Score = wil });
 
 		return ls;
 	}

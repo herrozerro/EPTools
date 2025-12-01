@@ -1,0 +1,79 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Creature Stats</MudText>
+
+<MudPaper Class="pa-3 mb-4" Outlined="true">
+    <MudText Typo="Typo.subtitle2" Class="mb-2">Base Attributes</MudText>
+    <MudGrid>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Cognition" Label="COG" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Intuition" Label="INT" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Savvy" Label="SAV" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Reflexes" Label="REF" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Somatics" Label="SOM" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4" sm="2"><MudNumericField @bind-Value="Model.Attributes.Willpower" Label="WIL" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+    </MudGrid>
+</MudPaper>
+
+<MudPaper Class="pa-3 mb-4" Outlined="true">
+    <MudText Typo="Typo.subtitle2" Class="mb-2">Survival Stats</MudText>
+    <MudGrid>
+        <MudItem xs="6" sm="3"><MudNumericField @bind-Value="Model.Attributes.Durability" Label="Durability" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="6" sm="3"><MudNumericField @bind-Value="Model.Attributes.WoundThreshold" Label="Wound Thresh" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="6" sm="3"><MudNumericField @bind-Value="Model.Attributes.Lucidity" Label="Lucidity" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="6" sm="3"><MudNumericField @bind-Value="Model.Attributes.TraumaThreshold" Label="Trauma Thresh" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        
+        <MudItem xs="6"><MudNumericField @bind-Value="Model.Attributes.ArmorEnergy" Label="Energy Armor" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Shield" /></MudItem>
+        <MudItem xs="6"><MudNumericField @bind-Value="Model.Attributes.ArmorKinetic" Label="Kinetic Armor" Variant="Variant.Outlined" Margin="Margin.Dense" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Shield" /></MudItem>
+        
+        <MudItem xs="4"><MudNumericField @bind-Value="Model.Attributes.Initiative" Label="Initiative" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4"><MudNumericField @bind-Value="Model.Attributes.Tp" Label="Threat (TP)" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+        <MudItem xs="4"><MudNumericField @bind-Value="Model.Attributes.DeathRating" Label="Death Rating" Variant="Variant.Outlined" Margin="Margin.Dense" /></MudItem>
+    </MudGrid>
+</MudPaper>
+
+<MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-4">
+    
+    <MudTabPanel Text="Movement">
+        <div class="d-flex justify-end mb-2">
+            <MudButton StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" Color="Color.Primary" 
+                       OnClick="@(() => Model.MovementRate.Add(new MovementRates { MovementType = "Walker", Base = 4, Full = 20 }))">Add Mode</MudButton>
+        </div>
+        <MovementRatesList Rates="@Model.MovementRate"/>
+    </MudTabPanel>
+
+    <MudTabPanel Text="Ware">
+        <MudTextField T="string" Label="Installed Ware" 
+                      Value="@string.Join(", ", Model.Ware)" 
+                      ValueChanged="@(s => Model.Ware = s.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).ToList())"
+                      Variant="Variant.Outlined" Lines="4" 
+                      HelperText="Comma separated list" />
+    </MudTabPanel>
+
+    <MudTabPanel Text="Skills">
+        <MudTextField T="string" Label="Skills" 
+                      Value="@string.Join(", ", Model.Skills)" 
+                      ValueChanged="@(s => Model.Skills = s.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).ToList())"
+                      Variant="Variant.Outlined" Lines="4" 
+                      HelperText="Comma separated (e.g. Fray 40, Kinetic Weapons 50)" />
+    </MudTabPanel>
+
+    <MudTabPanel Text="Traits">
+        <div class="d-flex justify-end mb-2">
+            <MudButton StartIcon="@Icons.Material.Filled.Add" Size="Size.Small" Color="Color.Primary" 
+                       OnClick="@(() => Model.Traits.Add(new MorphTrait { Name = "New Trait" }))">Add Trait</MudButton>
+        </div>
+        @foreach (var trait in Model.Traits)
+        {
+            <div class="d-flex gap-2 align-center mb-2">
+                <MudTextField @bind-Value="trait.Name" Label="Trait Name" Variant="Variant.Text" Margin="Margin.Dense" FullWidth="true"/>
+                <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Error" OnClick="@(() => Model.Traits.Remove(trait))" />
+            </div>
+        }
+    </MudTabPanel>
+
+</MudTabs>
+
+@code {
+    [Parameter] public required GearCreature Model { get; set; }
+}

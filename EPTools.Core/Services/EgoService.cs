@@ -20,7 +20,7 @@ public class EgoService(EpDataService dataService)
             {
                 AptitudeValue = 0,
                 Name = aptitude.Name,
-                ShortName = aptitude.ShortName
+                ShortName = aptitude.ShortName.ToUpper()
             });
         }
 

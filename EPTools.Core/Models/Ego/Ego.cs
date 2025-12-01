@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using EPTools.Core.Constants;
 using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.Ego;
@@ -28,26 +29,45 @@ public class Ego
     public string Languages { get; set; } = string.Empty;
     [JsonPropertyOrder(10)]
     public List<string> Motivations { get; set; } = [];
-        
-        
-        
+    
+    public List<RollModifier> RerollModifiers { get; set; } = [];
+    
     public int RezEarned { get; set; }
     public int RezSpent { get; set; }
-        
+    
+    //Derived Stats
+    public int Initiative
+    {
+        get
+        {
+            var reflexes = Aptitudes.Find(x => x.Name == AptitudeNames.Reflexes)?.AptitudeValue ?? 0;
+            var intuition = Aptitudes.Find(x => x.Name == AptitudeNames.Intuition)?.AptitudeValue ?? 0;
+            return (reflexes + intuition)/5 + RerollModifiers.Where(x=>x.Type == RollModifierType.Initiative).Sum(x => x.Value);
+        }
+    }
+
     //Mental Health
     public int Stress { get; set; }
-    public int Lucidity { get; set; }
-    public int TraumaThresholdModifiers { get; set; }
-        
-        
-    private List<(string, int)> InsanityRatingModifiers { get; } = [];
-        
+    public int Lucidity
+    {
+        get
+        {
+            var willpower = Aptitudes.Find(x => x.Name == AptitudeNames.Willpower)?.AptitudeValue ?? 0;
+            return (willpower * 2) + RerollModifiers.Where(x=>x.Type == RollModifierType.Lucidity).Sum(x => x.Value);
+        }
+    }
+    public int TraumaThreshold
+    {
+        get
+        {
+            return (Lucidity / 5) + RerollModifiers.Where(x=> x.Type == RollModifierType.TraumaThreshold).Sum(x => x.Value);
+        }
+    }
     public int InsanityRating
     {
         get
         {
-            var willpower = Aptitudes.Find(x => x.Name == "Willpower")?.AptitudeValue ?? 0;
-            return (willpower * 2) + InsanityRatingModifiers.Sum(x => x.Item2);
+            return (Lucidity * 2) + RerollModifiers.Where(x=> x.Type == RollModifierType.InsanityRating).Sum(x => x.Value);
         }
     }
 

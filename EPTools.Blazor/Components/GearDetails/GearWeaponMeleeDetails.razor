@@ -1,0 +1,44 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudText Typo="Typo.h6" Color="Color.Primary" Class="mt-4 mb-2">Melee Specs</MudText>
+
+<MudGrid>
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.Damage" 
+                      Label="Damage Formula" 
+                      Placeholder="e.g. 1d10 + 2" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense"
+                      Adornment="Adornment.Start" 
+                      AdornmentIcon="@Icons.Material.Filled.Bolt" />
+    </MudItem>
+    
+    <MudItem xs="6">
+        <MudTextField @bind-Value="Model.DamageAvg" 
+                      Label="Average Dmg" 
+                      HelperText="Useful for quick resolution" 
+                      Variant="Variant.Outlined" 
+                      Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="12">
+        <MudTextField @bind-Value="Model.WareType" 
+                      Label="Ware Integration" 
+                      HelperText="If built-in (e.g. Cyberlimb, Bioware)" 
+                      Variant="Variant.Text" 
+                      Margin="Margin.Dense" />
+    </MudItem>
+
+    <MudItem xs="12">
+        <MudTextField @bind-Value="Model.Notes" 
+                      Label="Weapon Traits / Notes" 
+                      Placeholder="e.g. Armor Piercing, Reach, Touch-Only" 
+                      Variant="Variant.Outlined" 
+                      Lines="2" />
+    </MudItem>
+</MudGrid>
+
+@code {
+    [Parameter] public required GearWeaponMelee Model { get; set; }
+}
