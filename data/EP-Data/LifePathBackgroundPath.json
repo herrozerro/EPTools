@@ -4484,7 +4484,7 @@
                 "Name": "Emotive Blindness",
                 "Type": "Trait",
                 "Description": null,
-                "Value": 2,
+                "Value": 1,
                 "Weight": 0,
                 "OptionLists": []
               },
@@ -4786,7 +4786,7 @@
                 "Name": "Emotive Blindness",
                 "Type": "Trait",
                 "Description": null,
-                "Value": 2,
+                "Value": 1,
                 "Weight": 0,
                 "OptionLists": []
               },
