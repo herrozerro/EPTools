@@ -1,0 +1,88 @@
+@using EPTools.Core.Models.Ego
+@using System.Text.Json
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Style="max-height: 600px; overflow-y: auto;">
+            
+            <MudGrid>
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingSleight.Name" 
+                                  Label="Sleight Name" 
+                                  Variant="Variant.Outlined" 
+                                  AutoFocus="true" />
+                </MudItem>
+
+                <MudItem xs="12" sm="4">
+                    <MudSelect T="string" Label="Level" @bind-Value="_workingSleight.Level" Variant="Variant.Outlined" Margin="Margin.Dense" AnchorOrigin="Origin.BottomCenter">
+                        <MudSelectItem Value="@("Chi")">Chi (Passive)</MudSelectItem>
+                        <MudSelectItem Value="@("Gamma")">Gamma (Active)</MudSelectItem>
+                        <MudSelectItem Value="@("Epsilon")">Epsilon (Exsurgent)</MudSelectItem>
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="4">
+                    <MudSelect T="string" Label="Action" @bind-Value="_workingSleight.Action" Variant="Variant.Outlined" Margin="Margin.Dense" AnchorOrigin="Origin.BottomCenter">
+                        <MudSelectItem Value="@("Automatic")" />
+                        <MudSelectItem Value="@("Quick")" />
+                        <MudSelectItem Value="@("Complex")" />
+                        <MudSelectItem Value="@("Task")" />
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12" sm="4">
+                    <MudSelect T="string" Label="Duration" @bind-Value="_workingSleight.Duration" Variant="Variant.Outlined" Margin="Margin.Dense" AnchorOrigin="Origin.BottomCenter">
+                        <MudSelectItem Value="@("Instant")" />
+                        <MudSelectItem Value="@("Sustained")" />
+                        <MudSelectItem Value="@("Temporary")" />
+                        <MudSelectItem Value="@("Permanent")" />
+                        <MudSelectItem Value="@("Special")" />
+                    </MudSelect>
+                </MudItem>
+
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingSleight.Summary" 
+                                  Label="Short Summary" 
+                                  HelperText="Appears in the list view"
+                                  Variant="Variant.Outlined" 
+                                  Margin="Margin.Dense" />
+                </MudItem>
+
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingSleight.Description" 
+                                  Label="Full Description / Rules" 
+                                  Variant="Variant.Outlined" 
+                                  Lines="8" />
+                </MudItem>
+            </MudGrid>
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">Save Changes</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public required EgoSleight OriginalSleight { get; set; }
+
+    private EgoSleight _workingSleight = new();
+
+    protected override void OnInitialized()
+    {
+        // Deep clone to allow cancelling edits
+        var json = JsonSerializer.Serialize(OriginalSleight);
+        _workingSleight = JsonSerializer.Deserialize<EgoSleight>(json) ?? new EgoSleight();
+    }
+
+    private void Submit()
+    {
+        MudDialog.Close(DialogResult.Ok(_workingSleight));
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+}

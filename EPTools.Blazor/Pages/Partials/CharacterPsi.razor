@@ -70,7 +70,14 @@
 
         <MudItem xs="12" md="8">
             <MudPaper Class="pa-4 h-100" Outlined="true">
-                <MudTable Items="@PsiModel.Sleights" Dense="true" Hover="true" Striped="true" Elevation="0">
+                <MudTable 
+                    T="EgoSleight"
+                    Items="@PsiModel.Sleights" 
+                    Dense="true" Hover="true" 
+                    Striped="true" 
+                    Elevation="0"
+                    OnRowClick="SleightRowClick"
+                    RowClass="cursor-pointer">
                     <ToolBarContent>
                         <MudText Typo="Typo.h6">Active Sleights</MudText>
                         <MudSpacer />
@@ -105,7 +112,6 @@
                             <MudText Typo="Typo.caption">@context.Duration</MudText>
                         </MudTd>
                         <MudTd Style="text-align:right">
-                            <MudIconButton Icon="@Icons.Material.Filled.Info" Size="Size.Small" OnClick="@(() => ShowSlightDetails(context))"/>
                             <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => PsiModel.Sleights.Remove(context))"/>
                         </MudTd>
                     </RowTemplate>
@@ -128,6 +134,13 @@
         if (PsiModel.InfectionRating < 33) return Color.Success;
         if (PsiModel.InfectionRating < 66) return Color.Warning;
         return Color.Error;
+    }
+    
+    // --- ROW CLICK HANDLER ---
+    private async Task SleightRowClick(TableRowClickEventArgs<EgoSleight> args)
+    {
+        // args.Item contains the Trait object of the row clicked
+        if (args.Item != null) await ShowSlightDetails(args.Item);
     }
 
     private void AdjustInfection(int amount)
@@ -203,26 +216,27 @@
         }
     }
 
-    private async Task ShowSlightDetails(EgoSleight sleight)
+    private async Task ShowSlightDetails(EgoSleight slight)
     {
-        var parameters = new DialogParameters<TextAreaDialog>
+        var parameters = new DialogParameters<SleightDetailDialog>
         {
-            { x => x.PromptText, $"Details for {sleight.Name}" },
-            { x => x.Value, sleight.Description }, // Pre-fill with existing text
-            { x => x.Lines, 10 } // Make it a large box since descriptions are long
+            { x => x.OriginalSleight, slight }
         };
 
         var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-
-        // 1. Open the PromptDialog we just created
-        var dialog = await DialogService.ShowAsync<TextAreaDialog>(sleight.Name, parameters, options);
+        
+        var dialog = await DialogService.ShowAsync<SleightDetailDialog>("Edit Sleight", parameters, options);
         var result = await dialog.Result;
 
-        // 2. Handle Save
-        if (result is { Canceled: false, Data: string newDescription })
+        if (!result.Canceled && result.Data is EgoSleight updatedSleight)
         {
-            sleight.Description = newDescription;
-            Snackbar.Add("Description updated.", Severity.Success);
+            // Find and Replace logic
+            var index = PsiModel.Sleights.IndexOf(slight);
+            if (index != -1)
+            {
+                PsiModel.Sleights[index] = updatedSleight;
+                Snackbar.Add("Sleight updated.", Severity.Success);
+            }
         }
     }
 }

@@ -151,7 +151,15 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
     {
         for (var i = 0; i < option.Value; i++)
         {
-            ego.Psi.Sleights.Add(new EgoSleight { Name = "Random or chosen" });
+            ego.Psi.Sleights.Add(new EgoSleight
+            {
+                Name = "Random or chosen",
+                Description = string.Empty,
+                Level = string.Empty,
+                Duration = string.Empty,
+                Action = string.Empty,
+                Summary = string.Empty
+            });
         }
         return Task.CompletedTask;
     }
