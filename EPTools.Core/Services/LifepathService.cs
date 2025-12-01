@@ -1,6 +1,5 @@
 ﻿using EPTools.Core.Extensions;
 using EPTools.Core.Models.Ego;
-using EPTools.Core.Models.EPDataModels;
 using EPTools.Core.Models.LifePathGen;
 using Morph = EPTools.Core.Models.Ego.Morph;
 
@@ -172,7 +171,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
             Description = trait?.Description ?? "", 
             Level = option.Value, 
             CostTiers = string.Join(",",trait?.Cost ?? []),
-            Cost = trait?.Cost[option.Value-1] ?? 0,
+            Cost = trait?.Cost[Math.Max(option.Value-1,0)] ?? 0,
             Type = trait?.Type ?? "", 
             Summary = trait?.Summary ?? "", 
             AdditionalRules = trait?.AdditionalRules ?? []
