@@ -1,0 +1,140 @@
+@using EPTools.Core.Models.Ego
+@using EPTools.Core.Models.EPDataModels
+@using System.Text.Json
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Style="max-height: 600px; overflow-y: auto;">
+            
+            <MudGrid>
+                <MudItem xs="12" sm="8">
+                    <MudTextField @bind-Value="_workingTrait.Name" Label="Trait Name" Variant="Variant.Outlined" Margin="Margin.Dense" AutoFocus="true"/>
+                </MudItem>
+                <MudItem xs="6" sm="4">
+                    <MudSelect T="string" Label="Type" @bind-Value="_workingTrait.Type" Variant="Variant.Outlined" Margin="Margin.Dense" AnchorOrigin="Origin.BottomCenter">
+                        <MudSelectItem Value="@("Positive")" />
+                        <MudSelectItem Value="@("Negative")" />
+                        <MudSelectItem Value="@("Neutral")" />
+                    </MudSelect>
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingTrait.Summary" Label="Summary" Variant="Variant.Outlined" Margin="Margin.Dense" />
+                </MudItem>
+                
+                <MudItem xs="12">
+                    <MudTextField @bind-Value="_workingTrait.Description" Label="Full Description" Variant="Variant.Outlined" Lines="3" />
+                </MudItem>
+
+                <MudItem xs="4">
+                    <MudNumericField @bind-Value="_workingTrait.Level" Label="Level" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true"/>
+                </MudItem>
+                
+                <MudItem xs="4">
+                    <MudNumericField @bind-Value="_workingTrait.Cost" Label="Cost" Variant="Variant.Outlined" Margin="Margin.Dense" HideSpinButtons="true"/>
+                </MudItem>
+                
+                <MudItem xs="4">
+                    <MudTextField @bind-Value="_workingTrait.CostTiers" Label="Cost Tiers" Variant="Variant.Outlined" Margin="Margin.Dense"/>
+                </MudItem>
+            </MudGrid>
+
+            <MudDivider Class="my-4"/>
+
+            <div class="d-flex justify-space-between align-center mb-2">
+                <MudText Typo="Typo.h6" Color="Color.Primary">Additional Rules</MudText>
+                <MudButton StartIcon="@Icons.Material.Filled.Add" Variant="Variant.Outlined" Color="Color.Secondary" Size="Size.Small" OnClick="AddRule">
+                    Add Rule
+                </MudButton>
+            </div>
+
+            @if (_workingTrait.AdditionalRules.Any())
+            {
+                <div class="d-flex flex-column gap-2">
+                    @foreach (var rule in _workingTrait.AdditionalRules)
+                    {
+                        <MudPaper Class="pa-3 mud-theme-dark" Outlined="true" Elevation="0">
+                            <MudGrid>
+                                <MudItem xs="12" Class="d-flex justify-end pa-0 mb-n2">
+                                    <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Error" OnClick="@(() => RemoveRule(rule))" />
+                                </MudItem>
+
+                                <MudItem xs="6">
+                                    <MudTextField @bind-Value="rule.Name" Label="Rule Name" Variant="Variant.Text" Margin="Margin.Dense" />
+                                </MudItem>
+                                <MudItem xs="6">
+                                    <MudSelect T="AdditionalRuleType" Label="Rule Type" @bind-Value="rule.RuleType" Variant="Variant.Text" Margin="Margin.Dense" Dense="true">
+                                        @foreach (AdditionalRuleType type in Enum.GetValues(typeof(AdditionalRuleType)))
+                                        {
+                                            <MudSelectItem Value="@type">@type</MudSelectItem>
+                                        }
+                                    </MudSelect>
+                                </MudItem>
+                                
+                                <MudItem xs="9">
+                                    <MudTextField @bind-Value="rule.Description" Label="Effect Description" Variant="Variant.Text" Margin="Margin.Dense" />
+                                </MudItem>
+                                <MudItem xs="3">
+                                    <MudNumericField @bind-Value="rule.Value" Label="Value" Variant="Variant.Text" Margin="Margin.Dense" HideSpinButtons="true" />
+                                </MudItem>
+                            </MudGrid>
+                        </MudPaper>
+                    }
+                </div>
+            }
+            else
+            {
+                <MudAlert Severity="Severity.Info" Dense="true" Class="my-2">No automation rules configured.</MudAlert>
+            }
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">Save Changes</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public required EgoTrait OriginalTrait { get; set; }
+
+    private EgoTrait _workingTrait;
+
+    protected override void OnInitialized()
+    {
+        // 1. Deep Clone the Trait
+        // This ensures that if we add a Rule but click Cancel, the rule isn't added to the real character sheet.
+        var json = JsonSerializer.Serialize(OriginalTrait);
+        _workingTrait = JsonSerializer.Deserialize<EgoTrait>(json) ?? new EgoTrait();
+
+        // Safety check for null lists (just in case JSON came back weird)
+        if (_workingTrait is { AdditionalRules: null }) 
+            _workingTrait.AdditionalRules = [];
+    }
+
+    private void AddRule()
+    {
+        _workingTrait?.AdditionalRules.Add(new AdditionalRules 
+        { 
+            Name = "New Rule", 
+            RuleType = AdditionalRuleType.SkillBonus, 
+            Value = 10 
+        });
+    }
+
+    private void RemoveRule(AdditionalRules rule)
+    {
+        _workingTrait?.AdditionalRules.Remove(rule);
+    }
+
+    private void Submit()
+    {
+        // Return the modified clone
+        MudDialog.Close(DialogResult.Ok(_workingTrait));
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+}

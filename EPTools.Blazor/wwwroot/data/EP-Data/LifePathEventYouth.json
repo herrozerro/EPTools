@@ -371,17 +371,17 @@
     ]
   },
   {
-    "Name": "You are extremely sheltered. Gain the Real World Na\u00EFvet\u00E9 trait (p. 80, EP2) and skip Step 7 (XX).",
+    "Name": "You are extremely sheltered. Gain the Real World Naiveté trait (p. 80, EP2) and skip Step 7 (XX).",
     "Type": "BackgroundYouthEvent",
-    "Description": "You are extremely sheltered. Gain the Real World Na\u00EFvet\u00E9 trait (p. 80, EP2) and skip Step 7 (XX).",
+    "Description": "You are extremely sheltered. Gain the Real World Naiveté trait (p. 80, EP2) and skip Step 7 (XX).",
     "Value": 0,
     "Weight": 1,
     "OptionLists": [
       [
         {
-          "Name": "Real World Na\u00EFvet\u00E9",
+          "Name": "Real World Naiveté",
           "Type": "Trait",
-          "Description": "Real World Na\u00EFvet\u00E9",
+          "Description": "Real World Naiveté",
           "Value": 1,
           "Weight": 0,
           "OptionLists": []
@@ -952,17 +952,17 @@
     ]
   },
   {
-    "Name": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Na\u00EFvet\u00E9 trait (p. XX).",
+    "Name": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Naiveté trait (p. XX).",
     "Type": "BackgroundYouthEvent",
-    "Description": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Na\u00EFvet\u00E9 trait (p. XX).",
+    "Description": "Your mesh access is restricted or unavailable, and you never pick up the skills. Gain the Mesh Naiveté trait (p. XX).",
     "Value": 0,
     "Weight": 1,
     "OptionLists": [
       [
         {
-          "Name": "Mesh Na\u00EFvet\u00E9",
+          "Name": "Mesh Naiveté",
           "Type": "Trait",
-          "Description": "Mesh Na\u00EFvet\u00E9",
+          "Description": "Mesh Naiveté",
           "Value": 1,
           "Weight": 0,
           "OptionLists": []

@@ -1,0 +1,100 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Class="pa-0" Style="max-height: 500px; overflow-y: scroll;">
+            
+            <MudTextField @bind-Value="_searchString" 
+                          Placeholder="Search traits (name, type, summary)..." 
+                          Adornment="Adornment.Start" 
+                          AdornmentIcon="@Icons.Material.Filled.Search" 
+                          IconSize="Size.Medium" 
+                          Class="mb-3" 
+                          Immediate="true"
+                          DebounceInterval="300"
+                          Variant="Variant.Outlined" 
+                          Margin="Margin.Dense" 
+                          AutoFocus="true" />
+
+            <MudTable T="Trait" 
+                      Items="@TraitList" 
+                      Virtualize="true"
+                      Height="400px" 
+                      FixedHeader="true"
+                      Hover="true" 
+                      Dense="true" 
+                      Filter="new Func<Trait,bool>(FilterTraits)" 
+                      OnRowClick="RowClickEvent" 
+                      Elevation="0">
+                
+                <HeaderContent>
+                    <MudTh>Name</MudTh>
+                    <MudTh>Type</MudTh>
+                    <MudTh>Cost (CP)</MudTh>
+                </HeaderContent>
+                
+                <RowTemplate>
+                    <MudTd DataLabel="Name">
+                        <MudText Typo="Typo.body2" Style="font-weight: bold;">@context.Name</MudText>
+                        <MudText Typo="Typo.caption" Class="mud-text-secondary">@context.Summary</MudText>
+                    </MudTd>
+                    <MudTd DataLabel="Type">
+                         <MudChip T="string" Size="Size.Small" Color="@GetTypeColor(context.Type)" Variant="Variant.Outlined">@context.Type</MudChip>
+                    </MudTd>
+                    <MudTd DataLabel="Cost">
+                        <MudText Typo="Typo.caption" Style="font-weight:bold;">
+                            @string.Join(" / ", context.Cost)
+                        </MudText>
+                    </MudTd>
+                </RowTemplate>
+                
+                <NoRecordsContent>
+                    <MudText Align="Align.Center" Class="pa-4">No traits found matching "<b>@_searchString</b>"</MudText>
+                </NoRecordsContent>
+            </MudTable>
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] public required IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public List<Trait> TraitList { get; set; } = new();
+
+    private string _searchString = "";
+
+    // 1. Handle Selection
+    private void RowClickEvent(TableRowClickEventArgs<Trait> args)
+    {
+        // Return the selected record to the parent
+        MudDialog.Close(DialogResult.Ok(args.Item));
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+
+    // 2. Filter Logic
+    private bool FilterTraits(Trait item)
+    {
+        if (string.IsNullOrWhiteSpace(_searchString)) return true;
+
+        if (item.Name.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        if (item.Type.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        if (item.Summary.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        
+        return false;
+    }
+
+    // 3. Visual Helper
+    private Color GetTypeColor(string type) => type?.ToLower() switch
+    {
+        "positive" => Color.Success,
+        "negative" => Color.Error,
+        "neutral" => Color.Info,
+        _ => Color.Default
+    };
+}

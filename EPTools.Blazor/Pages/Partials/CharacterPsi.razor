@@ -1,0 +1,228 @@
+@using EPTools.Blazor.Pages.Dialogs
+@using EPTools.Core.Models.Ego
+@using EPTools.Core.Models.EPDataModels
+@inject IDialogService DialogService
+@inject ISnackbar Snackbar
+@inject EpDataService EpDataService
+
+<MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
+    <MudGrid Spacing="4">
+        
+        <MudItem xs="12" md="4">
+            <MudPaper Class="pa-4 h-100" Outlined="true" Style="border-top: 4px solid var(--mud-palette-error);">
+                <div class="d-flex align-center gap-2 mb-4">
+                    <MudIcon Icon="@Icons.Material.Filled.Sick" Color="Color.Error" Size="Size.Large"/>
+                    <div>
+                        <MudText Typo="Typo.h6">Watts-MacLeod</MudText>
+                        <MudText Typo="Typo.caption">Infection Status</MudText>
+                    </div>
+                </div>
+
+                <MudTextField @bind-Value="PsiModel.Substrain" 
+                              Label="Substrain" 
+                              Variant="Variant.Outlined" 
+                              Margin="Margin.Dense" 
+                              Class="mb-4"
+                              Adornment="Adornment.End"
+                              AdornmentIcon="@Icons.Material.Filled.Science" />
+
+                <MudText Typo="Typo.body2" Class="mb-1">Infection Rating: <b>@PsiModel.InfectionRating</b></MudText>
+                <MudProgressLinear Color="@GetInfectionColor()" 
+                                   Value="@PsiModel.InfectionRating" 
+                                   Max="100" 
+                                   Size="Size.Large" 
+                                   Class="rounded-lg mb-4" 
+                                   Striped="true">
+                    <MudText Typo="Typo.subtitle2" Color="Color.Dark">@PsiModel.InfectionRating / 100</MudText>
+                </MudProgressLinear>
+                
+                <div class="d-flex justify-space-between mb-4">
+                    <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Success" OnClick="@(() => AdjustInfection(-1))">-1</MudButton>
+                    <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Error" OnClick="@(() => AdjustInfection(5))">+5</MudButton>
+                    <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Error" OnClick="@(() => AdjustInfection(10))">+10</MudButton>
+                </div>
+
+                <MudDivider Class="my-3"/>
+
+                <div class="d-flex justify-space-between align-center mb-2">
+                    <MudText Typo="Typo.subtitle2">Trauma / Events</MudText>
+                    <MudIconButton Icon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="AddInfectionEvent"/>
+                </div>
+                
+                <MudList T="string" Dense="true" Style="max-height: 200px; overflow-y: auto; background-color: var(--mud-palette-background-grey);" Class="rounded">
+                    @foreach (var evt in PsiModel.InfectionEvents)
+                    {
+                        <MudListItem>
+                            <div class="d-flex justify-space-between">
+                                <MudText Typo="Typo.caption">@evt</MudText>
+                                <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" OnClick="@(() => PsiModel.InfectionEvents.Remove(evt))"/>
+                            </div>
+                        </MudListItem>
+                    }
+                    @if (!PsiModel.InfectionEvents.Any())
+                    {
+                        <MudText Typo="Typo.caption" Class="pa-2 mud-text-secondary">No infection events recorded.</MudText>
+                    }
+                </MudList>
+
+            </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12" md="8">
+            <MudPaper Class="pa-4 h-100" Outlined="true">
+                <MudTable Items="@PsiModel.Sleights" Dense="true" Hover="true" Striped="true" Elevation="0">
+                    <ToolBarContent>
+                        <MudText Typo="Typo.h6">Active Sleights</MudText>
+                        <MudSpacer />
+                        
+                        <MudMenu StartIcon="@Icons.Material.Filled.Add" Label="Add Slight" Color="Color.Primary" Variant="Variant.Filled">
+                            <MudMenuItem OnClick="OpenSlightPicker">From Catalog...</MudMenuItem>
+                            <MudMenuItem OnClick="AddSlight">Custom Slight</MudMenuItem>
+                        </MudMenu>
+                    </ToolBarContent>
+
+                    <HeaderContent>
+                        <MudTh>Name</MudTh>
+                        <MudTh>Level</MudTh>
+                        <MudTh>Action</MudTh>
+                        <MudTh>Duration</MudTh>
+                        <MudTh></MudTh>
+                    </HeaderContent>
+                    
+                    <RowTemplate>
+                        <MudTd DataLabel="Name">
+                            <MudTooltip Text="@context.Summary">
+                                <MudText Typo="Typo.body2" Style="font-weight:bold; cursor:help;">@context.Name</MudText>
+                            </MudTooltip>
+                        </MudTd>
+                        <MudTd DataLabel="Level">
+                            <MudChip T="string" Size="Size.Small" Color="@GetLevelColor(context.Level)" Variant="Variant.Text">@context.Level</MudChip>
+                        </MudTd>
+                        <MudTd DataLabel="Action">
+                            <MudText Typo="Typo.caption">@context.Action</MudText>
+                        </MudTd>
+                        <MudTd DataLabel="Duration">
+                            <MudText Typo="Typo.caption">@context.Duration</MudText>
+                        </MudTd>
+                        <MudTd Style="text-align:right">
+                            <MudIconButton Icon="@Icons.Material.Filled.Info" Size="Size.Small" OnClick="@(() => ShowSlightDetails(context))"/>
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => PsiModel.Sleights.Remove(context))"/>
+                        </MudTd>
+                    </RowTemplate>
+                    <NoRecordsContent>
+                         <MudText Typo="Typo.caption" Class="pa-4">No slights known.</MudText>
+                    </NoRecordsContent>
+                </MudTable>
+            </MudPaper>
+        </MudItem>
+
+    </MudGrid>
+</MudContainer>
+
+@code {
+    [Parameter] public EgoPsi PsiModel { get; set; } = new(); 
+
+    // --- LOGIC: Infection Color Coding ---
+    private Color GetInfectionColor()
+    {
+        if (PsiModel.InfectionRating < 33) return Color.Success;
+        if (PsiModel.InfectionRating < 66) return Color.Warning;
+        return Color.Error;
+    }
+
+    private void AdjustInfection(int amount)
+    {
+        PsiModel.InfectionRating += amount;
+        if (PsiModel.InfectionRating < 0) PsiModel.InfectionRating = 0;
+        if (PsiModel.InfectionRating > 100) PsiModel.InfectionRating = 100;
+    }
+
+    // --- LOGIC: Visuals ---
+    private Color GetLevelColor(string level) => level.ToLower() switch
+    {
+        "chi" => Color.Info,
+        "gamma" => Color.Success,
+        "epsilon" => Color.Warning,
+        "omega" => Color.Error,
+        _ => Color.Default
+    };
+
+    // --- ACTIONS ---
+    private Task AddInfectionEvent()
+    {
+        const string newEvent = "New Trauma Event"; 
+        PsiModel.InfectionEvents.Add(newEvent);
+        return Task.CompletedTask;
+    }
+
+    private void AddSlight()
+    {
+        // Add a blank template
+        PsiModel.Sleights.Add(new EgoSleight 
+        { 
+            Name = "New Slight", 
+            Level = "Chi", 
+            Action = "Quick", 
+            Duration = "Instant",
+            Summary = "Description of effect..."
+        });
+    }
+    
+    private async Task OpenSlightPicker()
+    {
+        // 1. Get the list (Make sure your DataService has a GetAllSlights method)
+        var allSlights = await EpDataService.GetSleightsAsync();
+
+        var parameters = new DialogParameters<SleightPickerDialog>
+        {
+            { x => x.SlightList, allSlights }
+        };
+
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        
+        var dialog = await DialogService.ShowAsync<SleightPickerDialog>("Select Slight", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is { Canceled: false, Data: not null })
+        {
+            var selectedSlight = (Sleight)result.Data;
+
+            var newSlight = new EgoSleight()
+            {
+                Action = selectedSlight.Action,
+                Description = selectedSlight.Description,
+                Duration = selectedSlight.Duration,
+                Level = selectedSlight.Level,
+                Name = selectedSlight.Name,
+                Summary = selectedSlight.Summary
+            };
+
+            PsiModel.Sleights.Add(newSlight); 
+            
+            Snackbar.Add($"Learned {selectedSlight.Name}", Severity.Success);
+        }
+    }
+
+    private async Task ShowSlightDetails(EgoSleight sleight)
+    {
+        var parameters = new DialogParameters<TextAreaDialog>
+        {
+            { x => x.PromptText, $"Details for {sleight.Name}" },
+            { x => x.Value, sleight.Description }, // Pre-fill with existing text
+            { x => x.Lines, 10 } // Make it a large box since descriptions are long
+        };
+
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+
+        // 1. Open the PromptDialog we just created
+        var dialog = await DialogService.ShowAsync<TextAreaDialog>(sleight.Name, parameters, options);
+        var result = await dialog.Result;
+
+        // 2. Handle Save
+        if (result is { Canceled: false, Data: string newDescription })
+        {
+            sleight.Description = newDescription;
+            Snackbar.Add("Description updated.", Severity.Success);
+        }
+    }
+}

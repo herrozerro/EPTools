@@ -1,11 +1,10 @@
-﻿namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels;
+
+public class GearSwarm : Gear
 {
-    public class GearSwarm : Gear
+    public GearSwarm()
     {
-        public GearSwarm()
-        {
-            Category = "Tech";
-            Subcategory = "Swarm";
-        }
+        Category = "Tech";
+        Subcategory = "Swarm";
     }
 }

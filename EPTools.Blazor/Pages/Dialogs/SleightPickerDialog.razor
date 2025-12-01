@@ -1,0 +1,101 @@
+@using EPTools.Core.Models.EPDataModels
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudContainer Class="pa-0" Style="max-height: 500px; overflow-y: scroll;">
+            
+            <MudTextField @bind-Value="_searchString" 
+                          Placeholder="Search sleights (name, level, summary)..." 
+                          Adornment="Adornment.Start" 
+                          AdornmentIcon="@Icons.Material.Filled.Search" 
+                          IconSize="Size.Medium" 
+                          Class="mb-3" 
+                          Immediate="true"
+                          DebounceInterval="300"
+                          Variant="Variant.Outlined" 
+                          Margin="Margin.Dense" 
+                          AutoFocus="true" />
+
+            <MudTable T="Sleight" 
+                      Items="@SlightList" 
+                      Virtualize="true"
+                      Height="400px" 
+                      FixedHeader="true"
+                      Hover="true" 
+                      Dense="true" 
+                      Filter="new Func<Sleight,bool>(FilterSlights)" 
+                      OnRowClick="RowClickEvent" 
+                      Elevation="0">
+                
+                <HeaderContent>
+                    <MudTh>Name</MudTh>
+                    <MudTh>Level</MudTh>
+                    <MudTh>Action</MudTh>
+                </HeaderContent>
+                
+                <RowTemplate>
+                    <MudTd DataLabel="Name">
+                        <MudText Typo="Typo.body2" Style="font-weight: bold;">@context.Name</MudText>
+                        <MudText Typo="Typo.caption" Class="mud-text-secondary">@context.Summary</MudText>
+                    </MudTd>
+                    <MudTd DataLabel="Level">
+                        <MudChip T="string" Size="Size.Small" Color="@GetLevelColor(context.Level)" Variant="Variant.Outlined">@context.Level</MudChip>
+                    </MudTd>
+                    <MudTd DataLabel="Action">
+                        <MudText Typo="Typo.caption">@context.Action</MudText>
+                        <MudText Typo="Typo.caption" Class="mud-text-secondary d-block">@context.Duration</MudText>
+                    </MudTd>
+                </RowTemplate>
+                
+                <NoRecordsContent>
+                    <MudText Align="Align.Center" Class="pa-4">No slights found matching "<b>@_searchString</b>"</MudText>
+                </NoRecordsContent>
+            </MudTable>
+
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]public required IMudDialogInstance MudDialog { get; set; }
+
+    // Pass the list in (Caching strategy)
+    [Parameter] public List<Sleight> SlightList { get; set; } = new();
+
+    private string _searchString = "";
+
+    // 1. Handle Selection
+    private void RowClickEvent(TableRowClickEventArgs<Sleight> args)
+    {
+        // Return the selected record
+        MudDialog.Close(DialogResult.Ok(args.Item));
+    }
+
+    private void Cancel() => MudDialog.Cancel();
+
+    // 2. Filter Logic
+    private bool FilterSlights(Sleight item)
+    {
+        if (string.IsNullOrWhiteSpace(_searchString)) return true;
+
+        if (item.Name.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        if (item.Level.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        if (item.Summary.Contains(_searchString, StringComparison.OrdinalIgnoreCase)) return true;
+        
+        return false;
+    }
+
+    // 3. Visual Helper
+    private Color GetLevelColor(string level) => level?.ToLower() switch
+    {
+        "chi" => Color.Info,
+        "gamma" => Color.Success,
+        "epsilon" => Color.Warning,
+        "omega" => Color.Error,
+        _ => Color.Default
+    };
+}

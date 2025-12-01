@@ -1,5 +1,7 @@
 @page "/"
+@using System.Text.Json
 @using Blazored.LocalStorage
+@using EPTools.Blazor.Pages.Dialogs
 @using EPTools.Blazor.Pages.Partials
 @using EPTools.Blazor.Services
 @using EPTools.Core.Models.Ego
@@ -9,9 +11,11 @@
 @inject IJSRuntime JsRuntime
 @inject ILocalStorageService LocalStorage
 @inject ISnackbar Snackbar
+@inject IDialogService DialogService
 
 <MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter">Generate Lifepath</MudButton>
 <MudButton Color="Color.Secondary" @onclick="DownloadText">Export</MudButton>
+<MudButton Color="Color.Secondary" @onclick="ImportText">Import</MudButton>
 <MudButton Color="Color.Success" @onclick="SaveCharacter">Save</MudButton>
 <MudButton Color="Color.Dark" @onclick="ResetCharacter">Reset</MudButton>
 <CascadingValue Value="_egoModel" Name="EgoModel">
@@ -93,17 +97,23 @@
     <CharacterAptitude Aptitudes="@_egoModel.Aptitudes"></CharacterAptitude>
 
     <MudTabs>
-        <MudTabPanel Text="Network" icon="@Icons.Material.Filled.NetworkWifi">
+        <MudTabPanel Text="Network" icon="@Icons.Material.Filled.Groups">
             <CharacterNetwork Identities="@_egoModel.Identities" OnIdentityAdded="HandleIdentityAdded"></CharacterNetwork>
         </MudTabPanel>
-        <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Casino">
+        <MudTabPanel Text="Skills" icon="@Icons.Material.Filled.Psychology">
             <CharacterSkills />
         </MudTabPanel>
-        <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Accessibility">
+        <MudTabPanel Text="Morph" icon="@Icons.Material.Filled.Person">
             <CharacterMorphs Morphs="@_egoModel.Morphs"></CharacterMorphs>
         </MudTabPanel>
-        <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.AllInbox">
+        <MudTabPanel Text="Gear" icon="@Icons.Material.Filled.Hardware">
             <CharacterGear></CharacterGear>
+        </MudTabPanel>
+        <MudTabPanel Text="Traits" Icon="@Icons.Material.Filled.Portrait">
+            <CharacterTraits EgoTraits="@_egoModel.EgoTraits" />
+        </MudTabPanel>
+        <MudTabPanel Text="PSI" Icon="@Icons.Material.Filled.Coronavirus">
+            <CharacterPsi PsiModel="@_egoModel.Psi"/>
         </MudTabPanel>
     </MudTabs>
 
@@ -165,6 +175,47 @@
         var s = System.Text.Json.JsonSerializer.Serialize(_egoModel);
         byte[] file = System.Text.Encoding.UTF8.GetBytes(s);
         await JsRuntime.InvokeVoidAsync("BlazorDownloadFile", "Character.json", "text/plain", file);
+    }
+
+    async Task ImportText()
+    {
+        var parameters = new DialogParameters<TextAreaDialog> {
+            { x => x.PromptText, "Import Character"},
+            { x => x.Value, string.Empty }, 
+            { x => x.Lines, 10 } 
+        };
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        
+        var dialog = await DialogService.ShowAsync<TextAreaDialog>("Import Character", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is {Canceled: false, Data: string importedEgo})
+        {
+            try
+            {
+                var importedEgoObject = JsonSerializer.Deserialize<Ego>(importedEgo);
+                if (importedEgoObject is not null)
+                {
+                    _egoModel = importedEgoObject;
+                    await SaveCharacter();
+                    Snackbar.Add("Character Imported", Severity.Success);
+                    StateHasChanged();
+                }
+                else
+                {
+                    Snackbar.Add("Error in import process", Severity.Error);
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Snackbar.Add("Error in import process", Severity.Error);
+            }
+            
+        }
+
+        
     }
     
     private void HandleIdentityAdded(Identity newIdentity)

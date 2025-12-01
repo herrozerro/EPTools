@@ -1,10 +1,9 @@
-﻿namespace EPTools.Core.Models.EPDataModels
-{
-    public record Background(
-            string Name,
-            string Description,
-            List<InterestSkill> Skills,
-            string Resource,
-            string Reference,
-            List<AdditionalRules> AdditionalRules);
-}
+﻿namespace EPTools.Core.Models.EPDataModels;
+
+public record Background(
+    string Name,
+    string Description,
+    List<InterestSkill> Skills,
+    string Resource,
+    string Reference,
+    List<AdditionalRules> AdditionalRules);

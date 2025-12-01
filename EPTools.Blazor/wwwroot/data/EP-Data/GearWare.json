@@ -17,13 +17,13 @@
       {
         "Name": "Vigor",
         "Description": "+1 Vigor Pool",
-        "AdditionalRuleType": "Pool",
+        "RuleType": "Pool",
         "Value": 1
       },
       {
         "Name": "Wounds",
         "Description": "Ignore 1 Wound",
-        "AdditionalRuleType": "WoundIgnore",
+        "RuleType": "IgnoreWound",
         "Value": 1
       }
     ]

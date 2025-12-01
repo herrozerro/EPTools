@@ -2,19 +2,18 @@
 using System.Text.Json;
 using EPTools.Core.Models;
 
-namespace EPTools.Core.Services
+namespace EPTools.Core.Services;
+
+public class DiscordWebhookService(HttpClient httpClient)
 {
-    public class DiscordWebhookService(HttpClient httpClient)
+    private HttpClient HttpClient { get; set; } = httpClient;
+
+    public async Task SendWebhook(DiscordWebHookMessage message)
     {
-        private HttpClient HttpClient { get; set; } = httpClient;
+        var url = "";
 
-        public async Task SendWebhook(DiscordWebHookMessage message)
-        {
-            var url = "";
-
-            var payload = new StringContent(JsonSerializer.Serialize(message),
-                             Encoding.UTF8, "application/json"); 
-            await HttpClient.PostAsync(url, payload);
-        }
+        var payload = new StringContent(JsonSerializer.Serialize(message),
+            Encoding.UTF8, "application/json"); 
+        await HttpClient.PostAsync(url, payload);
     }
 }

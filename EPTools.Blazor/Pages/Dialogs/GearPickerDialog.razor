@@ -1,5 +1,4 @@
 @using EPTools.Core.Models.EPDataModels
-@using MudBlazor
 @inject EpDataService DataService;
 
 <MudDialog>
@@ -76,7 +75,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        GearList = await DataService.GetAllGear();
+        GearList = await DataService.GetAllGearAsync();
     }
 
     // 1. Handle Selection

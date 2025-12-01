@@ -1,6 +1,5 @@
-﻿namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels;
+
+public class GearItem : Gear
 {
-    public class GearItem : Gear
-    {
-    }
 }

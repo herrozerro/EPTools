@@ -19,12 +19,12 @@ await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSyn
 
 Ego e;
 
-var gear = await epDataService.GetAllGear();
+var gear = await epDataService.GetAllGearAsync();
 
 while (true)
 {
     e = await lifepathService.GenerateEgo();
-    await epDataService.GetGearWare();
+    await epDataService.GetGearWareAsync();
     Console.WriteLine(e.Name);
 }
 

@@ -11,8 +11,8 @@ public class EgoService(EpDataService dataService)
     {
         Ego newEgo = new();
 
-        var aptitudes = await DataService.GetAptitudes();
-        var skills = await DataService.GetSkills();
+        var aptitudes = await DataService.GetAptitudesAsync();
+        var skills = await DataService.GetSkillsAsync();
         
         foreach (var aptitude in aptitudes)
         {

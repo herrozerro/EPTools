@@ -1,0 +1,36 @@
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        <MudText Typo="Typo.body1" Class="mb-3">@PromptText</MudText>
+        <MudTextField @bind-Value="Value" 
+                      Variant="Variant.Outlined" 
+                      Lines="@Lines"
+                      AutoFocus="true"
+                      OnKeyDown="HandleKeyDown" />
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="Submit">Save</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]public required IMudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public required string PromptText { get; set; }
+    [Parameter] public required string Value { get; set; }
+    [Parameter] public int Lines { get; set; } = 1;
+
+    private void Submit() => MudDialog.Close(DialogResult.Ok(Value));
+    private void Cancel() => MudDialog.Cancel();
+
+    // Helper: Allow pressing "Enter" to save (only if single line)
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter" && Lines == 1)
+        {
+            Submit();
+        }
+    }
+}

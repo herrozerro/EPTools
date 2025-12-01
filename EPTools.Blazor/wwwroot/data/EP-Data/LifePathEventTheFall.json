@@ -9,7 +9,7 @@
       [
         {
           "Name": "Flex",
-          "Type": "Trait",
+          "Type": "Pool",
           "Description": null,
           "Value": 1,
           "Weight": 0,

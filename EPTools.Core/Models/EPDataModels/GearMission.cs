@@ -1,7 +1,6 @@
-﻿namespace EPTools.Core.Models.EPDataModels
+﻿namespace EPTools.Core.Models.EPDataModels;
+
+public class GearMission : Gear
 {
-    public class GearMission : Gear
-    {
         
-    }
 }

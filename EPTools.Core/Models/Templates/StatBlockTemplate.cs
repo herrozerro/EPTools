@@ -1,8 +1,7 @@
 ﻿
-namespace EPTools.Core.Models.Templates
-{
-    public record StatBlockTemplate(
-        string TemplateName,
-        string TemplateType,
-        string? Template);
-}
+namespace EPTools.Core.Models.Templates;
+
+public record StatBlockTemplate(
+    string TemplateName,
+    string TemplateType,
+    string? Template);

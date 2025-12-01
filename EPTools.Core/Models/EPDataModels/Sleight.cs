@@ -1,9 +1,12 @@
 ﻿namespace EPTools.Core.Models.EPDataModels;
 
-public record Career(
+public record Sleight(
     string Name,
+    string Level,
+    string Duration,
+    string Action,
+    string Summary,
     string Description,
-    List<InterestSkill> Skills,
     string Resource,
     string Reference,
     List<AdditionalRules> AdditionalRules);
