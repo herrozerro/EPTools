@@ -1423,5 +1423,1282 @@
     "Resource": "Eclipse Phase Second Edition",
     "Reference": "",
     "AdditionalRules": []
+  },
+  {
+    "Name": "Adversarial Hacker",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Insight to flip-flop system defender's dice roll.",
+    "Description": "<p>You have a gift for tripping up security countermeasures. You may spend a point of Insight pool to flip-flop the system defender’s dice roll (for example, turning a 38 into an 83). This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "AGI Affinity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier to social skills when interacting with AGIs.",
+    "Description": "<p>You spend a significant amount of time socializing with AGIs and have an intuitive sense for their mannerisms, quirks, and idiosyncracies. You gain a +10 modifier to social skills when interacting with AGIs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Artful Dodger",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Vigor to flip-flop attacker's dice roll when using Fray.",
+    "Description": "<p>You excel at getting out of the way. When using Fray to avoid an attack, you may spend a point of Vigor to flip-flop the attacker’s dice roll (for example, turning a 38 into an 83). This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Async Familiarity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Make a Kinesics Test at -30 to identify an async based on behavior.",
+    "Description": "<p>You have developed a keen sense for the subtle behavioral clues and micro-expressions that many asyncs unconsciously adopt after their infection. After at least an hour of observation, you may make a Kinesics Test at −30 (opposed by Deceive) to identify an async based on their behavior alone. This trait is most common among asyncs, but it may also apply to characters that have studied asyncs or spent significant time in their presence. At the GM’s discretion, this talent may also be applied to secret exsurgents with the Psi trait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Brain Worm",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Targets are unaware of sleights unless you score a superior failure.",
+    "Description": "<p>This trait is only available to asyncs. Your sleights subtly insinuate themselves into targets’ minds. Even if they succeed on their WIL Check (Target Awareness, EP2), they are only aware they were targeted if you score a superior failure on your Psi Test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Controlled Infection",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Spend Moxie to choose infection influence effect.",
+    "Description": "<p>This trait is only available to asyncs. You have achieved a modicum of control over your infection. When an Infection Test succeeds, you can spend a point of Moxie to choose which influence effect you take instead of rolling randomly.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Danger Instinct",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Increase Initiative by 2. Must make WIL Check if surprised.",
+    "Description": "<p>This trait is only available to uplifts. You retain your species’ pre-uplift threat-response instincts, reflexively acting without thinking in response to dangerous and hectic situations. Increase your Initiative by 2. You are jumpy, however; make a WIL Check to control your actions if you are surprised or faced with a sudden threat; on a failure, the GM determines your response (usually flee, hide, or attack).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Data Control",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 modifier per level to Research and Rep Tests to track you.",
+    "Description": "<p>You have a knack for diligence and caution in your daily life when it comes to keeping a lid on your personal information, social media presence, and general online footprint. Apply a −10 modifier per level to Research and Rep Tests to track you or dig up information about you online.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Digital Ghost",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Insight to negate system defender's attempt to locate you.",
+    "Description": "<p>You have an exceptional knack for keeping your computer intrusions out of the spotlight. You may spend a point of Insight pool to automatically negate a system defender’s attempt to locate and zero in on you as an intruder (Zeroing In, EP2 and Locate Intruder, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Drone Whisperer",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, use a Flex point on a drone's autonomous test.",
+    "Description": "<p>Your ability to control drones and push them to their limits is unchallenged. Once per session, you may use a point of your Flex pool on a test made by a drone that is following your orders or programming in autonomous mode (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dual Strains",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Switch between two different sub-strains on failed Infection Tests.",
+    "Description": "<p>This trait is only available to asyncs. You are infected with two sub-strains of Watts-MacLeod that vie for dominance. Only one strain is in control at a time. You have the negative trait and free sleight associated with that sub-strain and you use that sub-strain’s table for influence effects. When the other sub-strain takes over, you switch out that trait, sleight, and table for the new one. Randomly choose one sub-strain to start with. Any time an Infection Test fails, the other sub-strain becomes dominant. Note that influence effects remain ongoing even if the other sub-strain becomes dominant.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Edge Runner",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore the -10 active alert modifier when hacking.",
+    "Description": "<p>You excel under pressure. When hacking, you do not suffer the −10 modifier applied when a system is on active alert.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Ego Plasticity",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No SV from psychosurgery unless critical failure.",
+    "Description": "<p>Mind edits can be difficult and stressful, but your ego is malleable in a psychosurgeon’s hands. You do not take SV from psychosurgery unless a critical failure is rolled; treat one or more critical failures as a regular failure when determining SV. At 1 CP this applies to one psychosurgery technique of your choice (i.e., merging or personality edits); at 4 CP it applies to all.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Exceptional Muse",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Your muse has either 1 Insight pool or 1 Flex pool.",
+    "Description": "<p>Your muse is either better quality or has somehow improved on its own. It has either 1 Insight pool or 1 Flex pool, your choice. These pool points may only be spent on actions and tests made by your muse. They follow all of the normal rules for pools (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Gold Star",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 per level to Rep and Social Tests with a specific faction.",
+    "Description": "<p>You did something to earn the ongoing respect of one particular faction. You receive a +10 modifier per level to Rep Tests and social skill tests with NPCs of that particular faction. When picking a faction, use the faction list from EP2, but break the criminal and hypercorp factions into smaller grouping (i.e., triads or Venusian hypercorps). This trait is incompatible with the Blocklisted Rep or Black Mark traits (EP2) with the same faction.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Habitat Tranquility",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 on INT Checks to heal stress and halved healing timeframe in a specific habitat.",
+    "Description": "<p>Something about a particular habitat feels like home and puts you at ease. While in this habitat, you receive a +10 bonus on INT Checks to healing stress and the timeframe for healing stress, traumas, and disorders is halved. This reduced timeframe is not cumulative with that of the Resilient Mind trait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hard Knocks",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Regain 1 spent pool point on critical failures (Max 3/recharge).",
+    "Description": "<p>You screw up a lot, but you learn from your mistakes. Any time you roll a critical failure and you did not spend pool on that test, you regain 1 spent pool point. You may not regain more than 3 pool points this way between long recharges.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Home Turf",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "1 point of Flex used only for tests involving a specific habitat.",
+    "Description": "<p>You know a particular habitat (or local area) like the back of your hand, paw, or tentacle. You either grew up there or spent enough time to become intimately familiar. You receive 1 point of ego Flex that may only be used for tests or narrative purposes involving that habitat, such as skipjacking past sensors, bypassing an airlock, or knowing the right local NPC to talk to.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Improved Beta",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Beta forks gain specific bonuses (unlimited skills, no aptitude penalty, Flex, or Psi).",
+    "Description": "<p>Your beta forks (EP2) take to the neural pruning process better than most. Choose one of the following benefits for your beta forks (this trait may be taken more than once for separate bonuses): Active skills are not limited to a maximum value; Your beta forks do not suffer the −10 modifier for aptitude checks; Your beta fork gets your full ego Flex pool; Your beta forks retain your Psi trait, but lose half of your sleights (random determination).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Inspiring Moves",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ally regains 1 spent pool point when you roll critical success (Max 3/recharge).",
+    "Description": "<p>You don’t always succeed, but when you get a win, you do it in a way that’s inspiring to others. Any time you roll a critical success, choose one ally that witnessed the test. That ally regains 1 spent pool point. You may inspire no more than 3 spent pool points to be regained between each long recharge you take.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Intrusion Speed",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Halve the timeframe for subtle intrusions.",
+    "Description": "<p>You are quick at finding vulnerabilities and leveraging the right exploit tools for the job. Reduce the timeframe for subtle intrusions (EP2) by half (in most cases, this reduces it to 30 minutes; superior successes may reduce this further).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Manipulative Streak",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Moxie to flip-flop NPC's roll vs Deceive, Persuade, or Provoke.",
+    "Description": "<p>Your skills of social manipulation are unparalleled. You may spend a point of Moxie pool to flip-flop an NPC’s dice roll (for example, turning a 38 into an 83) when making a Deceive, Persuade, or Provoke Test against them. This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Melee Mastery",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Vigor to flip-flop melee opponent's dice roll.",
+    "Description": "<p>This trait is only available to characters with Melee skill of 60 or higher. You have refined your ability to predict and counteract your opponents’ moves. You may spend a point of Vigor pool to flip-flop the dice roll (for example, turning a 38 into an 83) of an NPC with whom you are engaged in melee, whether you are attacking or defending. This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the NPC’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Meme Fame",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to social/Rep tests when interacting with NPC aware of your fame.",
+    "Description": "<p>At some point in the past, you were the main character in a funny viral meme that made its way around the Solar System (and still sometimes pops up in new forms). To this day, strangers who access your public profile may connect you to that meme (unless you hide it). Though this recognition can be tedious, most people remember it fondly. You receive a +10 modifier to social skills and Rep Tests the first time you interact with an NPC who is aware of your connection to that meme.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mental Fortitude",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immunity to acute stress responses; make WIL Check for disorientation instead.",
+    "Description": "<p>Your mind’s foundation is solid, even in especially traumatic situations. You never suffer from acute stress responses (EP2). Instead, simply make a WIL Check for disorientation.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Merging Mastery",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No memory loss when merging forks unless critical failure.",
+    "Description": "<p>Your mind easily reintegrates forks. You never suffer memory loss when merging forks (EP2) back into your ego unless you roll a critical failure, which is treated as minor memory loss.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mind Flayer",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore the -30 modifier when mindware hacking.",
+    "Description": "<p>This trait is only available to characters with Infosec skill of 60 or higher. You are an expert at cracking cyberbrains and digital mind states. You do not suffer the −30 modifier applied when mindware hacking (Encoded Security, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Minion/Partner",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have a loyal NPC ally.",
+    "Description": "<p>You have an NPC on hand to help you out. This could be a personal secretary, lab assistant, intern, bodyguard, indenture, child, socialite entourage, or other form of retainer. The relationship does not need to be hierarchical; it could be a partner or other collaborator. Work with the GM to draw up the NPC’s stats, background, and motivations. The minion/partner NPC can be played by you as a secondary character. Your relationship with your minion/partner must be maintained, else they will part ways with you.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Attunement",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to specific physical skill when sleeved in a specific morph type.",
+    "Description": "<p>You sync perfectly with a specific morph type (i.e., bouncers, flexbots, furies, etc.). While sleeved in that type of morph, you receive a +10 modifier to one of the following skills of your choice: Athletics, Fray, Free Fall, Infiltrate, or Pilot. You may take this trait multiple times for different morph/skill combinations.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Mastery",
+    "Type": "Positive",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No Integration Tests needed for a specific morph category.",
+    "Description": "<p>You are familiar with for one of the following categories of morphs: Biomorphs, Infomorphs/core morphs, or Synthmorphs/axles. You do not need to make Integration Tests when sleeving this category of morph. You may take this trait more than once for different categories of morphs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Networking Talent",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Moxie to use a Social Skill instead of Rep score for Rep Tests.",
+    "Description": "<p>You can rally support to your cause even with a single-digit rep score. Once per session, you may spend a point of Moxie to use Deceive, Persuade, or Provoke instead of your rep score when making a Rep Test. Note that this may work against you if you curry favor under misleading pretenses or fail to live up to expectations, possibly leading to rep dings in the aftermath.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Online Obsession",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "1 point of Flex used only for tests involving info on the mesh/online communities.",
+    "Description": "<p>You spend a significant chunk of your life chatting on social media, doomscrolling feeds, and interacting online. You receive 1 point of ego Flex that may only be used for tests or narrative purposes involving information on the mesh and online communities, such as Research Tests, Rep Tests, knowing the latest memes, knowing someone who knows someone online, and so on. This Flex point may not be used for Interface, Infosec, Program or similar technical rolls.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Pack Security",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. +10 modifier to Stress Tests/INT Checks to heal stress when near group.",
+    "Description": "<p>This trait is primarily found among (non-octopus) uplifts. You rely heavily on tightly bonded social groups for your mental health. Whenever you are in the presence of family or close friends/teammates, you feel a strong sense of security and purpose that provides a +10 modifier to Stress Tests and INT Checks to heal stress.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Predatory Instinct",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. +10 Infiltrate when stalking, +10 bonus on first attack against surprised target.",
+    "Description": "<p>This trait is primarily found among uplifts and is most common with octopus or orca genestock. You retain the thrill of the hunt from your predatory ancestry. You receive a +10 modifier on Infiltrate Tests when stalking a target and a +10 bonus on the first attack against a surprised opponent.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Resilient Mind",
+    "Type": "Positive",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Halve timeframes for healing stress/trauma. Heal 2d6 stress on motivational goals.",
+    "Description": "<p>You bounce back and recover from stress and trauma at an exceptional rate. Reduce all timeframes for healing stress, traumas, and disorders by half. Additionally, when you reach a motivational goal, you heal 2d6 stress instead of 1d6 (Motivational Recovery, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Scrounging Talent",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+1 GP or +1 MP per mission. Increase Availability of morphs by +10.",
+    "Description": "<p>When it comes to scraping together the gear or morphs you need, you’re a master. You receive either +1 GP or +1 MP at the start of each mission. Additionally, increase the Availability of any morph you seek by +10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Sharpshooter",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Guns 60+ only. Ignore called shot modifier, reduce indirect fire penalty to -10.",
+    "Description": "<p>This trait is only available to characters with Guns skill of 60 or higher. You have trained to become an expert marksman. You do not suffer the −10 modifier for called shots (EP2) and your modifier for indirect attacks (EP2) is only −10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Spacecraft",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You own or operate a spacecraft.",
+    "Description": "<p>This trait requires GM approval. Buying a personal spacecraft is far beyond the means of most characters. This trait, however, puts a spacecraft in your hands, with certain conditions. This works best for campaigns where space travel is a major element. Somehow, you have become responsible for a GEV, bulk carrier, courier, corvette, fighter, scum ship, shuttle, or transport. Work out the details of how and why this occurred — and what strings are attached — with your GM.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stress Immunity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immune to Stress Tests/stress from one specific source category.",
+    "Description": "<p>Thanks to a traumatic past or a quirk of your psyche, you are emotionally inured to a particular source of stress and trauma, such as extensive isolation, asphyxiation, or Pandora gates. You are immune to Stress Tests and taking stress from that specific source. Use the entries on the Stressful Experiences table (EP2) for guidelines. GMs should not allow sources that are overly broad (i.e., “killing” is not acceptable, but “killing in self-defense” is). This trait may be taken more than once for separate sources, but no more than 3 times for sources in each category of stressful experience; for anything beyond that, use the Hardening trait (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Synth Kinesics",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore -30 modifier to Kinesics Tests vs synths, bots, or infomorphs.",
+    "Description": "<p>You have a fine grasp of subtext and nuance even when dealing with others who lack emotive capabilities or visual clues. You do not suffer the −30 modifier to Kinesics Tests when interacting with synthmorphs, bots, infomorphs, or similar context-barren situations (Kinesics, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Temptation Immunity",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immune to mental Addiction Tests.",
+    "Description": "<p>You do not get addicted to things. You never have to make a mental Addiction Test (EP2). Your morph, however, is still susceptible to physical addictions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Untarnished Rep",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 to attacks on a specific rep score; rep loss is halved.",
+    "Description": "<p>Through fame, a lifetime of achievement, or some lucky quirk, your reputation in one particular social network is very difficult to assail. Choose one rep score. Any test to attack your reputation in that network suffers a −30 modifier, and any rep losses in that network are automatically halved. This does not apply if you burn your own rep. This trait is incompatible with the Blocklisted Rep trait (EP2) with the same rep score.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Uplift Affinity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier to social skills when interacting with uplifts.",
+    "Description": "<p>You regularly interact with uplifts and have an instinctive grasp on their mannerisms, quirks, and idiosyncracies. You gain a +10 modifier to social skills when interacting with uplifts.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Vicious Mind",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Inflict extra 1d6 DV or SV with psi attacks.",
+    "Description": "<p>This trait is only available to asyncs. Your mental attacks are incredibly invasive. You inflict an extra 1d6 DV or 1d6 SV respectively with psi attacks that inflict damage or stress.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Addictive Personality",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 modifier per level on Addiction Tests.",
+    "Description": "<p>You have a poor ability to self-regulate and are predisposed to addictive behaviors. You have a −10 modifier per level on Addiction Tests (EP2) and any tests to resist similar cravings.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Anomalous Mind",
+    "Type": "Negative",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Backups/Forking/Psychosurgery require -30 Medicine Test; failure inflicts damage/corruption.",
+    "Description": "<p>Your mental patterns are dramatically outside transhumanity’s norms. This trait is found among people with brain damage, subjects of highly experimental pyschosurgical procedures, and AGIs and uplifts derived from non-human mind states. The uniqueness of your mental map makes normally routine affairs such as backups, resleeving, egocasting, forking, and psychosurgery a tricky and potentially dangerous affair. Any attempts to conduct these processes require active oversight and a Medicine: Psychosurgery Test at −30 with a timeframe of 1 hour (in addition to the procedure’s normal tests and timeframe). On a failure, treat the copied/ modified ego as a beta fork (EP2) of the original (failed beta forks become gamma forks) and inflict SV 1d6. On a superior/critical failure, the procedure fails outright.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Beta",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are a Beta fork. Max 1 Flex, Active Skills capped at 70.",
+    "Description": "<p>You are a beta fork of your original self, which for some reason is no longer alive (most likely lost during the Fall). You were created some time ago (a year or more), so you have grown and overcome some of your original beta limitations. You may not have more than 1 ego Flex point nor any Active skills higher than 70. If you possess the Psi trait, it’s because you were infected as a beta. You only have a limited portion of your original self’s memories — much of your previous life is lost. You automatically receive the Edited Memories trait (EP2) without gaining the bonus CP.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Botched Merge",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "INT Check required to recall long-term memory; critical failure recalls false memory.",
+    "Description": "<p>In the past, you suffered a serious complication while re-integrating a fork that caused irreparable damage to your ego map and left you with a tenuous grip on your own memories. Any time you rely on your long-term memory, such as recalling your team’s infiltration plans or remembering how you met someone, make an INT Check. On a failure, you do not believe your memories to be real. On a superior or critical failure, you confuse the memory with a different one and recall something completely incorrect.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Brittle Psyche",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Infection influence and pushing sleights inflict SV instead of DV.",
+    "Description": "<p>This trait is only available to asyncs. Your infection does not punish you physically, but it stresses you out. The first result of your influence effects table inflicts 1d6 SV instead of DV. Additionally, when you push a sleight, you take 1d6 SV instead of DV.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Curbed Intelligence",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. COG capped at 10. Skill learning time doubled.",
+    "Description": "<p>This trait is only available to AGIs and uplifts. Fearful of AGIs that might develop into seed AIs like the TITANs or of uplifts that might supercede transhumans in intelligence, some developers and uplift engineers limit the cognitive capabilities and growth potential of their codelines and uplift genestock. Your COG may not be raised above 10 and your timeframe for increasing know, mental, or technical skills or learning new ones is doubled.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Data Footprint",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier per level to Research/Rep Tests to track you online.",
+    "Description": "<p>You are sloppy about your social media presence and keeping your personal information contained. Apply a +10 modifier per level to Research and Rep Tests to track you or dig up information about you online.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Debt",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You owe a significant debt; weekly obligation of Moderate favor or GP/MP.",
+    "Description": "<p>You are in debt to a powerful person or organization. The debt is far beyond your means to pay. You are expected to contribute towards the payment of this debt on a consistent weekly basis. In most circumstances, this can be handled as the expenditure of a Moderate rep favor each week. If you fail to meet these obligations, the creditor will retaliate. If you completely renege on your debt, you gain the Black Mark (Level 2) and Enemy traits (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Deferred Indenture",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have a pending short-term indenture contract.",
+    "Description": "<p>Due to a prior contract or criminal sentence, you have a pending short-term indenture contract that has yet to be fulfilled. You are legally obligated to perform whatever work is asked of you to repay this debt. Consider the indenture to be equivalent to a major favor or several weeks of work.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dependent",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You must care for a child, family member, or pet.",
+    "Description": "<p>You have a dependent — a child, a disabled family member, or even a much-loved but needy smart animal pet — that relies on your care and attention. Though you can sometimes leave your ward’s care in the hands of a fork, bots, or others, you must occasionally attend to their needs and may sometimes be forced to bring the dependent with you.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Divergent Personality",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Forks diverge quickly. Treat time apart as one step lower on Merging table.",
+    "Description": "<p>Your forks diverge from your core personality more quickly than usual. When merging a fork, treat the fork’s time apart as if it were one step lower on the Merging table (EP2). For example, a fork that is absent under 48 hours is treated as if it were away from 48 hours to 1 week.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Domineering Impulses",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Must make WIL Check to not use Provoke or respond to intimidation with violence.",
+    "Description": "<p>This trait is only available to uplifts and is most common among neo-hominids. You retain pre-sapient neurological urges to gain social status via dominance. You must make a WIL Check to use Deceive or Persuade skill instead of intimidating with Provoke. Additionally, you must make a WIL Check to avoid responding to acts of intimidation (including verbal) with your own threat displays or violence. You may not start with a rep score higher than 40 in any rep network other than g-rep and may not start with @-rep over 10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Emotion Susceptibility",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI only. -20 to resist emotional manipulation/stress. Stunned on WIL fail.",
+    "Description": "<p>This trait is only available to AGIs. You have a particularly difficult time adjusting to hormonal urges and emotions when sleeved in biomorphs. You suffer a −20 modifier when resisting any form of emotional manipulation, including Provoke Tests, fear effects, and certain sleights and drugs. Additionally, you suffer a −20 modifier to Stress Tests involving emotions, fear, or pain. At the GM’s discretion, certain intense emotions or rushes may temporarily overwhelm you; if you fail a WIL Check, you acquire the stunned condition (EP2) for one action turn (plus one per superior failure).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Emotive Blindness",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. Kinesics capped at 40. Cannot spend pool on Kinesics.",
+    "Description": "<p>Common among AGIs and uplifts who struggle with reading humans. You have difficulty with the finer points of social cues, body language, expressions, and emoting. You may not raise Kinesics skill over 40 and may not spend pool points on Kinesics Tests.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Errant Fork",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "An alpha fork of you exists as an NPC and is a rival or threat.",
+    "Description": "<p>Deliberately or not, you are not the only you out there. An alpha fork of yourself exists outside of your influence/control. While many people have forks of themselves, this fork in particular represents a potential threat or complication. The alpha fork is a complete and relatively recent (within 2 years) copy of your ego that possesses sensitive knowledge about all aspects of your life.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Identifiable Quirk",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 Deceive to impersonate/hide identity due to behavioral quirk.",
+    "Description": "<p>You have a unique behavioral quirk that makes identification easy, no matter what morph you are sleeved in. Apply a −30 modifier to your Deceive Test when you are attempting to impersonate someone else or when someone who knows you is attempting to identify you in a new morph using Kinesics. Your quirk could be a nervous twitch of the lips, distinct accent, noticeable laugh, or unusual gait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Impaired Linguistics",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Double CP cost for new languages. Stress Tests require COG Check or lose speech.",
+    "Description": "<p>This trait is only available to uplifts. Your particular brain structure has difficulty processing language, particularly under stress. The CP/RP cost for additional languages beyond those you get for free during character creation is doubled. Additionally, any time you make a Stress Test, you must make an additional COG Check. If you fail the COG Check, you lose the ability to speak or comprehend language for 1d10 minutes.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Implicit Bias",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, the GM may provide misinformation on a Know/Research result.",
+    "Description": "<p>Your well of knowledge is tainted with misinformation. You think you know more than you really do, and your views are heavily slanted with falsehoods and misconceptions. Once per session, the GM may intentionally mislead you when providing the results of a Know or Research Test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mesh Naiveté",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Infosec/Interface/Program/Research capped at 40. Cannot use pool on these skills.",
+    "Description": "<p>You are bad with computers. You don’t really understand the mesh, AR interfaces confuse you, you’re constantly messing up the controls in VR, and sometimes simply dictating a mental text message is a challenge. You rely on your muse for basic mesh interactions. You may not have Infosec, Interface, Program, or Research skills above 40, and you may not use pools on any tests with those skills.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Messy Mind",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Psychosurgery inflicts extra +1d6/+2 SV.",
+    "Description": "<p>Something about your mind makes psychosurgical modifications a tricky affair. Any psychosurgery procedures that have a chance of inflicting stress inflict an extra +1d6/+2 SV.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Micrograv Disorientation",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 INT/Survival to navigate in microgravity. -1 Insight (or Flex).",
+    "Description": "<p>You have a particularly challenging time with proper orientation in micrograv habitats. Apply a −30 modifier to INT Checks or Survival Tests to navigate in these situations. Due to the cognitive burden you face, your Insight pool is reduced by 1 in these conditions; if your Insight pool is already 0, reduce Flex pool by 1 instead.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Aversion",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10/level on Integration/Resleeving tests for a specific morph category.",
+    "Description": "<p>You have a particular dislike for one of the following morph categories: Biomorphs, Core morphs/infomorphs, or Axels/synthmorphs. You suffer a −10 modifier per level on Integration Tests and Resleeving Stress Tests when sleeving morphs of that category.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Need for Solitude",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 cumulative penalty to social skills after 2 hours interaction; WIL check after 6 hours.",
+    "Description": "<p>You prefer solitude and minimal social interactions. You can only tolerate 2 hours of direct interaction (physical or virtual) with others before you need a break and some alone time. If forced into a situation where you must interact or exist in close proximity to others for more than 2 hours, you suffer a cumulative −10 modifier to Deceive, Persuade, and Provoke Tests (except for hostile provocations), up to a maximum of −30. After 6 hours, you must a WIL Check to keep your composure.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "On the Run",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are wanted and hunted by a specific faction.",
+    "Description": "<p>You are wanted and actively hunted by the authorities of a particular habitat or faction. Any use of your identity (either real or a compromised fake ID that you possess) within their jurisdiction draws their immediate attention.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Poor Socialization",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. -10 on social tests during first meetings.",
+    "Description": "<p>This trait is most common among AGIs and uplifts. Your early life experience left you unprepared for interacting with the general public. You suffer a −10 modifier on Deceive, Persuade, and Provoke Tests whenever you interact with another character for the first time.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Slow Reaction Time",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Reduce Initiative by 1 per level.",
+    "Description": "<p>Your response times are lacking. Reduce your Initiative by 1 per level.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Social Ineptitude",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, GM can trigger a critical failure on a social interaction.",
+    "Description": "<p>You are a walking social disaster. Once per game session, the GM can treat one of your social interactions (preferably involving a social skill test or rep interaction) as a critical failure. Moxie pool may not be used to negate this failure.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stolen Identity",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Someone stole your identity; you suffer collateral complications.",
+    "Description": "<p>At some point in the recent past, someone stole your identity. This was more than a financial crime, they took advantage of your name, reputation, and background in real-life affairs. You are still dealing with collateral difficulties from the incident, such as criminal charges, ego hunters, or angry mobs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stress Vulnerability",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Double Stress (SV) from one specific source category.",
+    "Description": "<p>Thanks to your upbringing or a flaw in your psyche, you are emotionally vulnerable to a particular source of stress and trauma, such as extensive isolation, asphyxiation, or Pandora gates. You suffer double the SV from that specific source.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Submissiveness",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. -10 modifier per level to resist Persuade/Provoke from superiors.",
+    "Description": "<p>This trait is more common among uplifts who inherit mannerisms from their pre-sapient forebears. You retain a tendency to submit to displays of dominance. You suffer a −10 modifier per level to resist Persuade and Provoke Tests from NPCs with superior capabilities or higher perceived social status.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Subverted Mind",
+    "Type": "Negative",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are a sleeper agent with conditioned behavior or a hidden personality.",
+    "Description": "<p>You are unaware that your mind has been conditioned with awareness block, hidden knowledge, and/or personality editing psychosurgery (EP2). Under certain triggered conditions, you acquire new knowledge and/or your personality changes. Under separate trigger conditions, you revert to your normal self, unaware that you were ever different.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Thorough Infection",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Heal infection slower (5 per short recharge, 20 per long).",
+    "Description": "<p>This trait is only available to asyncs with the Psi trait at Level 2. Your infection has sunk its claws into your psyche, making it more difficult to shake off. You only reduce your Infection Rating by 5 points every short recharge and 20 points for each long recharge (Easing the Infection, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Uncooperative Tendencies",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No teamwork bonuses received. -10 to aid others.",
+    "Description": "<p>You are socially awkward, self-centered, or have such low self esteem that you do not work well others. You do not benefit from teamwork bonuses (EP2) when others try to aid you, and if you attempt to aid someone else (whether voluntarily or forced), apply a −10 modifier to the test rather than aiding with a +10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Unreliability",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, GM can deny pool usage on a test.",
+    "Description": "<p>You have an unfortunate tendency to screw things up at critical moments. Once per session, when the stakes are high, the GM may rule that you cannot use pool points to affect one specific test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Unusual Aura",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Psi usage manifests obvious physical signs; targets always aware.",
+    "Description": "<p>This trait is only available to asyncs. Your psi-gamma sleights often manifest in an obvious physical way: glowing eyes, a hair-raising static crackling, an eery miasma, or headaches in your targets. This happens any time you acquire an influence effect. Additionally, your targets are always aware that they have been affected by something (Target Awareness, EP2) and that you are somehow connected.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
   }
 ]

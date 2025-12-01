@@ -4489,7 +4489,7 @@
                 "OptionLists": []
               },
               {
-                "Name": "Real World Na\u00EFvet\u00E9",
+                "Name": "Real World Naiveté",
                 "Type": "Trait",
                 "Description": null,
                 "Value": 1,
@@ -6514,7 +6514,7 @@
                 "OptionLists": []
               },
               {
-                "Name": "Real World Na\u00EFvet\u00E9",
+                "Name": "Real World Naiveté",
                 "Type": "Trait",
                 "Description": null,
                 "Value": 1,
@@ -7116,7 +7116,7 @@
                 "Name": "Situational Awareness",
                 "Type": "Trait",
                 "Description": null,
-                "Value": 10,
+                "Value": 1,
                 "Weight": 0,
                 "OptionLists": []
               },
