@@ -1,0 +1,132 @@
+@using EPTools.Blazor.Components.Dialogs
+@using EPTools.Core.Models.Ego
+@inject IDialogService DialogService
+
+<MudGrid Spacing="2">
+        
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Name" 
+                          @bind-Value="CurrentEgo.Name" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Background" 
+                          @bind-Value="CurrentEgo.Background" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Career" 
+                          @bind-Value="CurrentEgo.Career" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Interest" 
+                          @bind-Value="CurrentEgo.Interest" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Faction" 
+                          @bind-Value="CurrentEgo.Faction" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Languages" 
+                          @bind-Value="CurrentEgo.Languages" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Age" 
+                             @bind-Value="CurrentEgo.EgoAge" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Sex" 
+                          @bind-Value="CurrentEgo.EgoSex" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Gender" 
+                          @bind-Value="CurrentEgo.EgoGender" 
+                          Variant="Variant.Outlined" />
+        </MudItem>
+
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Motivations" 
+                          @bind-Value="MotivationsDisplay" 
+                          Variant="Variant.Outlined"
+                          HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudNumericField Label="Ego Flex" 
+                             @bind-Value="CurrentEgo.EgoFlex" 
+                             Variant="Variant.Outlined" 
+                             Min="0" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudTextField Label="Notes" 
+                          @bind-Value="CurrentEgo.Notes" 
+                          Variant="Variant.Outlined" 
+                          Lines="1" />
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudButton Color="Color.Default" @onclick="ShowPlayerChoice">Player Choices</MudButton>
+        </MudItem>
+        <MudItem xs="12" sm="4">
+            <MudButton Color="Color.Default" @onclick="ShowLifepathHistory">Lifepath History</MudButton>
+        </MudItem>
+    </MudGrid>
+
+@code {
+    [CascadingParameter(Name = "EgoModel")]  public required Ego CurrentEgo { get; set; }
+    
+        
+    // HELPER: Handles the conversion between List<string> and the Text Field
+    private string MotivationsDisplay
+    {
+        get => string.Join(", ", CurrentEgo.Motivations);
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                CurrentEgo.Motivations = new List<string>();
+            }
+            else
+            {
+                // Splits by comma, trims whitespace, and removes empty entries
+                CurrentEgo.Motivations = value
+                    .Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+            }
+        }
+    }
+    
+    private async Task ShowPlayerChoice()
+    {
+        var parameters = new DialogParameters<TextAreaDialog> {
+            { x => x.PromptText, "Player Choices"},
+            { x => x.Value, string.Join(Environment.NewLine, CurrentEgo.PlayerChoices) }, 
+            { x => x.Lines, 10 } 
+        };
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        var dialog = await DialogService.ShowAsync<TextAreaDialog>("Player Choices", parameters, options);
+        var result = await dialog.Result;
+
+        if (result is {Canceled: false, Data: string playerChoices })
+        {
+            CurrentEgo.PlayerChoices = playerChoices.Split(Environment.NewLine).ToList();
+        }
+    }
+
+    private async Task ShowLifepathHistory()
+    {
+        var parameters = new DialogParameters<ListStringMessageBox> {
+            { x => x.Message, CurrentEgo.CharacterGenerationOutput }, 
+
+        };
+        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
+        await DialogService.ShowAsync<ListStringMessageBox>("Lifepath History", parameters, options);
+    }
+}

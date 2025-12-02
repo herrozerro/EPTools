@@ -23,82 +23,7 @@
     <MudOverlay Visible="_loading" DarkBackground="true" Absolute="true" ZIndex="9999">
         <MudProgressCircular Color="Color.Secondary" Indeterminate="true" />
     </MudOverlay>
-    <MudGrid Spacing="2">
-        
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Name" 
-                          @bind-Value="_egoModel.Name" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Background" 
-                          @bind-Value="_egoModel.Background" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Career" 
-                          @bind-Value="_egoModel.Career" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Interest" 
-                          @bind-Value="_egoModel.Interest" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Faction" 
-                          @bind-Value="_egoModel.Faction" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Languages" 
-                          @bind-Value="_egoModel.Languages" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-
-        <MudItem xs="12" sm="4">
-            <MudNumericField Label="Age" 
-                             @bind-Value="_egoModel.EgoAge" 
-                             Variant="Variant.Outlined" 
-                             Min="0" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Sex" 
-                          @bind-Value="_egoModel.EgoSex" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Gender" 
-                          @bind-Value="_egoModel.EgoGender" 
-                          Variant="Variant.Outlined" />
-        </MudItem>
-
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Motivations" 
-                          @bind-Value="MotivationsDisplay" 
-                          Variant="Variant.Outlined"
-                          HelperText="Comma separated (e.g. +Survival, -Hypercorps)" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudNumericField Label="Ego Flex" 
-                             @bind-Value="_egoModel.EgoFlex" 
-                             Variant="Variant.Outlined" 
-                             Min="0" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudTextField Label="Notes" 
-                          @bind-Value="_egoModel.Notes" 
-                          Variant="Variant.Outlined" 
-                          Lines="1" />
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudButton Color="Color.Default" @onclick="ShowPlayerChoice">Player Choices</MudButton>
-        </MudItem>
-        <MudItem xs="12" sm="4">
-            <MudButton Color="Color.Default" @onclick="ShowLifepathHistory">Lifepath History</MudButton>
-        </MudItem>
-    </MudGrid>
+    <CharacterBioInfo/>
     <CharacterAptitude Aptitudes="@_egoModel.Aptitudes"/>
 
     <MudTabs>
@@ -167,32 +92,7 @@
         Snackbar.Add("Character saved!", Severity.Success);
     }
 
-    private async Task ShowPlayerChoice()
-    {
-        var parameters = new DialogParameters<TextAreaDialog> {
-            { x => x.PromptText, "Player Choices"},
-            { x => x.Value, string.Join(Environment.NewLine, _egoModel.PlayerChoices) }, 
-            { x => x.Lines, 10 } 
-        };
-        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        var dialog = await DialogService.ShowAsync<TextAreaDialog>("Player Choices", parameters, options);
-        var result = await dialog.Result;
-
-        if (result is {Canceled: false, Data: string playerChoices })
-        {
-            _egoModel.PlayerChoices = playerChoices.Split(Environment.NewLine).ToList();
-        }
-    }
-
-    private async Task ShowLifepathHistory()
-    {
-        var parameters = new DialogParameters<ListStringMessageBox> {
-            { x => x.Message, _egoModel.CharacterGenerationOutput }, 
-
-        };
-        var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        await DialogService.ShowAsync<ListStringMessageBox>("Lifepath History", parameters, options);
-    }
+    
 
     private async Task GenerateRandomCharacter()
     {
@@ -261,24 +161,5 @@
         // Force UI refresh (Blazor usually does this automatically for EventCallbacks)
         StateHasChanged(); 
     }
-    
-    // HELPER: Handles the conversion between List<string> and the Text Field
-    private string MotivationsDisplay
-    {
-        get => string.Join(", ", _egoModel.Motivations);
-        set
-        {
-            if (string.IsNullOrWhiteSpace(value))
-            {
-                _egoModel.Motivations = new List<string>();
-            }
-            else
-            {
-                // Splits by comma, trims whitespace, and removes empty entries
-                _egoModel.Motivations = value
-                    .Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
-                    .ToList();
-            }
-        }
-    }
+
 }
