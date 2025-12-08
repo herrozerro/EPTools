@@ -1,10 +1,11 @@
 ﻿using EPTools.Core.Interfaces;
+using EPTools.Core.Models;
 using EPTools.Core.Models.EPDataModels;
 using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Services;
 
-public class EpDataService(IFetchService fetchService)
+public class EpDataService(IFetchService fetchService, IUserDataStore userStore)
 {
     private List<Aptitude> _aptitudes = [];
     private List<AptitudeTemplate> _aptitudeTemplates = [];
@@ -42,6 +43,10 @@ public class EpDataService(IFetchService fetchService)
     private List<LifePathNode> _lifepathYouthEvents  = [];
     private List<LifePathNode> _lifepathAges = [];
     private List<LifePathNode> _lifepathAdvancedAges = [];
+    
+    private readonly Dictionary<Type, object> _customDataCache = new();
+    private bool _userGearLoaded = false;
+    private string GetStorageKey<T>() => $"EP_Custom_{typeof(T).Name}";
 
     public async Task<List<Aptitude>> GetAptitudesAsync()
     {
@@ -99,25 +104,54 @@ public class EpDataService(IFetchService fetchService)
 
     public async Task<List<Gear>> GetAllGearAsync()
     {
-        List<Gear> allGear = [];
-        allGear.AddRange(await GetGearArmorsAsync());
-        allGear.AddRange(await GetGearBotsAsync());
-        allGear.AddRange(await GetGearCommsAsync());
-        allGear.AddRange(await GetGearCreaturesAsync());
-        allGear.AddRange(await GetGearDrugsAsync());
-        allGear.AddRange(await GetGearItemsAsync());
-        allGear.AddRange(await GetGearMissionAsync());
-        allGear.AddRange(await GetGearNanoAsync());
-        allGear.AddRange(await GetGearSecurityAsync());
-        allGear.AddRange(await GetGearSoftwareAsync());
-        allGear.AddRange(await GetGearSwarmsAsync());
-        allGear.AddRange(await GetGearVehiclesAsync());
-        allGear.AddRange(await GetGearWareAsync());
-        allGear.AddRange(await GetGearWeaponAmmoAsync());
-        allGear.AddRange(await GetGearWeaponMeleeAsync());
-        allGear.AddRange(await GetGearWeaponRangedAsync());
-        allGear.AddRange(await GetGearServicesAsync());
-        return allGear;
+        var officialGear = new List<Gear>();
+        officialGear.AddRange(await GetGearArmorsAsync());
+        officialGear.AddRange(await GetGearBotsAsync());
+        officialGear.AddRange(await GetGearCommsAsync());
+        officialGear.AddRange(await GetGearCreaturesAsync());
+        officialGear.AddRange(await GetGearDrugsAsync());
+        officialGear.AddRange(await GetGearItemsAsync());
+        officialGear.AddRange(await GetGearMissionAsync());
+        officialGear.AddRange(await GetGearNanoAsync());
+        officialGear.AddRange(await GetGearSecurityAsync());
+        officialGear.AddRange(await GetGearSoftwareAsync());
+        officialGear.AddRange(await GetGearSwarmsAsync());
+        officialGear.AddRange(await GetGearVehiclesAsync());
+        officialGear.AddRange(await GetGearWareAsync());
+        officialGear.AddRange(await GetGearWeaponAmmoAsync());
+        officialGear.AddRange(await GetGearWeaponMeleeAsync());
+        officialGear.AddRange(await GetGearWeaponRangedAsync());
+        officialGear.AddRange(await GetGearServicesAsync());
+
+        var customGear = await GetCustomListInternalAsync<Gear>();
+        
+        return customGear.Concat(officialGear).ToList();
+    }
+    
+    public async Task<List<Trait>> GetAllTraitsAsync()
+    {
+        // 1. Official
+        var official = await GetTraitsAsync();
+
+        // 2. Custom
+        var custom = await GetCustomListInternalAsync<Trait>();
+
+        // 3. Merge
+        return custom.Concat(official).ToList();
+    }
+
+    public async Task<List<Morph>> GetAllMorphsAsync()
+    {
+        var official = await GetMorphsAsync();
+        var custom = await GetCustomListInternalAsync<Morph>();
+        return custom.Concat(official).ToList();
+    }
+
+    public async Task<List<Sleight>> GetAllSleightsAsync()
+    {
+        var official = await GetSleightsAsync();
+        var custom = await GetCustomListInternalAsync<Sleight>();
+        return custom.Concat(official).ToList();
     }
         
     public async Task<List<GearArmor>> GetGearArmorsAsync()
@@ -375,5 +409,54 @@ public class EpDataService(IFetchService fetchService)
             _gearWeaponMelees = await fetchService.GetTFromEpFileAsync<List<GearWeaponMelee>>("GearWeaponMelee");
         }
         return _gearWeaponMelees;
+    }
+    
+    private async Task<List<T>> GetCustomListInternalAsync<T>()
+    {
+        var type = typeof(T);
+
+        // A. Check Cache
+        if (_customDataCache.TryGetValue(type, out var value))
+        {
+            return (List<T>)value;
+        }
+
+        // B. Load from Store
+        var key = GetStorageKey<T>();
+        var stored = await userStore.GetItemAsync<List<T>>(key);
+        
+        // Initialize if null (First time user)
+        var list = stored ?? [];
+
+        // C. Save to Cache
+        _customDataCache[type] = list;
+        return list;
+    }
+    
+    public async Task AddCustomTemplateAsync<T>(T item) where T : EpModel
+    {
+        // 1. Get the list
+        var list = await GetCustomListInternalAsync<T>();
+
+        // 2. Add
+        list.Add(item);
+
+        // 3. Save (Key is based on Type Name)
+        // e.g. "EP_Custom_Gear", "EP_Custom_Trait"
+        await userStore.SaveItemAsync(GetStorageKey<T>(), list);
+    }
+
+    public async Task RemoveCustomTemplateAsync<T>(T item) where T : EpModel
+    {
+        var list = await GetCustomListInternalAsync<T>();
+
+        list.Remove(item);
+        await userStore.SaveItemAsync(GetStorageKey<T>(), list);
+    }
+    
+    // Optional: Public getter if you just want the custom stuff
+    public async Task<List<T>> GetCustomTemplatesAsync<T>()
+    {
+        return await GetCustomListInternalAsync<T>();
     }
 }

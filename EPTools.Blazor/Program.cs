@@ -15,14 +15,14 @@ builder.Services.AddHttpClient("EPClient", client =>
 {
     client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
 });
-builder.Services.AddSingleton<IFetchService, HttpFetchService>();
-builder.Services.AddSingleton<EpDataService>();
+builder.Services.AddScoped<IFetchService, HttpFetchService>();
+builder.Services.AddScoped<IUserDataStore, BlazorUserDataStore>();
+builder.Services.AddScoped<EpDataService>();
 
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<StatBlockTemplateService>();
 builder.Services.AddScoped<EgoService>();
 builder.Services.AddScoped<DiscordWebhookService>();
 builder.Services.AddScoped<LifepathService>();
-builder.Services.AddSingleton<AppDataService>();
 builder.Services.AddMudServices();
 await builder.Build().RunAsync();

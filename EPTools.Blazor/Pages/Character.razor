@@ -5,7 +5,6 @@
 @using EPTools.Blazor.Components
 @using EPTools.Blazor.Services
 @using EPTools.Core.Models.Ego
-@inject AppDataService AppData
 @inject LifepathService LifepathService
 @inject EgoService EgoService
 @inject IJSRuntime JsRuntime
@@ -98,7 +97,6 @@
     {
         _loading = true;
         var newEgo = await LifepathService.GenerateEgo();
-        AppData.Ego = newEgo;
         _egoModel = newEgo;
         StateHasChanged();
         _loading = false;

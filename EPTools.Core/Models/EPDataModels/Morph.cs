@@ -1,9 +1,7 @@
 ﻿namespace EPTools.Core.Models.EPDataModels;
 
-public class Morph
+public class Morph : EpModel
 {
-    public string Book { get; set; } = string.Empty;
-    public string Name { get; set; } = string.Empty;
     public string Type { get; set; } = string.Empty;
     public int Cost { get; set; }
     public int Availability { get; set; } 
@@ -17,11 +15,6 @@ public class Morph
     public List<string> CommonExtras { get; set; } = [];
     public List<string> Notes { get; set; } = [];
     public List<string> CommonShapeAdjustments { get; set; } = [];
-    public string Image { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public string Resource { get; set; } = string.Empty;
-    public string Reference { get; set; } = string.Empty;
-    public List<AdditionalRules> AdditionalRules { get; set; } = [];
 }
 
 public class MorphPools

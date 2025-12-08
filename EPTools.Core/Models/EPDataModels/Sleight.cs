@@ -1,12 +1,8 @@
 ﻿namespace EPTools.Core.Models.EPDataModels;
 
-public record Sleight(
-    string Name,
-    string Level,
-    string Duration,
-    string Action,
-    string Summary,
-    string Description,
-    string Resource,
-    string Reference,
-    List<AdditionalRules> AdditionalRules);
+public class Sleight : EpModel
+{
+    public string Level { get; init; } = string.Empty;
+    public string Duration { get; init; } = string.Empty;
+    public string Action { get; init; } = string.Empty;
+}

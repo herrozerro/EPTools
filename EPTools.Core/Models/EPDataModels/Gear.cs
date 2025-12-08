@@ -20,44 +20,9 @@ namespace EPTools.Core.Models.EPDataModels;
 [JsonDerivedType(typeof(GearWeaponAmmo), typeDiscriminator: "ammo")]
 [JsonDerivedType(typeof(GearWeaponMelee), typeDiscriminator: "melee")]
 [JsonDerivedType(typeof(GearWeaponRanged), typeDiscriminator: "ranged")]
-public abstract class Gear
+public abstract class Gear : EpModel
 {
     public string Category { get; set; } = string.Empty;
     public string Subcategory { get; set; } = string.Empty;
-    public string Name { get; set; } = string.Empty;
     public string Complexity { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public string Summary { get; set; } = string.Empty;
-    public string Resource { get; set; } = string.Empty;
-    public string Reference { get; set; } = string.Empty;
-    public List<AdditionalRules> AdditionalRules { get; set; } = [];
-}
-
-public class AdditionalRules
-{
-    public string Name { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-    public AdditionalRuleType RuleType { get; set; }
-    public int Value { get; set; }
-}
-
-[JsonConverter(typeof(JsonStringEnumConverter))]
-public enum AdditionalRuleType {
-    SkillBonus,
-    SkillAdded,
-    AptitudeCheck,
-    Pool,
-    Recharge,
-    Armor,
-    Weapon,
-    WoundThreshold,
-    Durability,
-    TraumaThreshold,
-    Lucidity,
-    InsanityRating,
-    IgnoreWound,
-    IgnoreTrauma,
-    DamageValueAdded,
-    MovementRate,
-    MovementRateFull
 }

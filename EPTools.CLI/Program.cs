@@ -11,7 +11,8 @@ Console.WriteLine("Hello, World!");
 //modifyText();
 
 var fileFetchService = new FileFetchService();
-var epDataService = new EpDataService(fileFetchService);
+var userDataStore = new FileUserDataStore();
+var epDataService = new EpDataService(fileFetchService, userDataStore);
 var egoService = new EgoService(epDataService);
 var lifepathService = new LifepathService(epDataService, egoService);
 
