@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "Apiary Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Aviary Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bard Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cleric Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Conjurer Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Crafter Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fighter Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Rogue Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  },
+  {
+    "Name": "Wizard Module (Flexbot)",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 15,
+    "OptionLists": []
+  }
+]

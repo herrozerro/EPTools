@@ -1,15 +1,21 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
+using System;
 using System.Linq;
 using Avalonia.Markup.Xaml;
 using EpTools.Desktop.ViewModels;
 using EpTools.Desktop.Views;
+using EPTools.Core.Interfaces;
+using EPTools.Core.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace EpTools.Desktop;
 
 public partial class App : Application
 {
+    public static IServiceProvider Services { get; private set; } = null!;
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -19,16 +25,34 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            // Avoid duplicate validations from both Avalonia and the CommunityToolkit. 
-            // More info: https://docs.avaloniaui.net/docs/guides/development-guides/data-validation#manage-validationplugins
+            // Avoid duplicate validations from both Avalonia and the CommunityToolkit.
             DisableAvaloniaDataAnnotationValidation();
+
+            // Set up dependency injection
+            var services = new ServiceCollection();
+            ConfigureServices(services);
+            Services = services.BuildServiceProvider();
+
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainWindowViewModel(),
+                DataContext = Services.GetRequiredService<MainWindowViewModel>(),
             };
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    private static void ConfigureServices(IServiceCollection services)
+    {
+        // Core services
+        services.AddSingleton<IFetchService, FileFetchService>();
+        services.AddSingleton<IUserDataStore, FileUserDataStore>();
+        services.AddSingleton<EpDataService>();
+        services.AddSingleton<EgoService>();
+        services.AddSingleton<LifepathService>();
+
+        // ViewModels
+        services.AddTransient<MainWindowViewModel>();
     }
 
     private void DisableAvaloniaDataAnnotationValidation()

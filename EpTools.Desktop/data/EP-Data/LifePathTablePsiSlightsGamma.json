@@ -1,0 +1,298 @@
+[
+  {
+    "Name": "Alter Effect",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Animal Control",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Aphasia",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Basilisk Stare",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Block Pain",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Block Sense",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Block Skill",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Browse Thoughts",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Burst of Adrenaline",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Burst of Clarity",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Burst of Confidence",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cloud Memory",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Deep Scan",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Déjà Vu",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Downtime",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ego Sense",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Empathic Scan",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Illusion",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Implant Memory",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Implant Skill",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Induce Error",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Infectious Mind",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Influence",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Invigorate",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mimic",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mindlink",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neural Hardening",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nightmare",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pain",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psi Shield",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psychic Stab",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sense Infection",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Short Circuit",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spam",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Static",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Subliminal",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Tranquility",
+    "Type": "Psi Ability",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  }
+]

@@ -1,0 +1,1515 @@
+[
+  {
+    "Name": "Gain +1 Flex and roll on the Story Event table.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathEventStory",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "An unseen nanoswarm infects you with the Watts-MacLeod exsurgent virus (EP2). You must take the Async path in Step 10.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "You must take the Async path in Step 10.",
+          "Type": "Skip",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Async",
+          "Type": "ForcedInterest",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You rack up a major debt to get yourself off-world. Gain the Debt trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Debt",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You assume that you died on Earth, but you don’t know for sure. Roll on the Random Morph tables and gain the Edited Memories trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You know that the TITANs killed or uploaded you, according to reports. Roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are slain, not by the TITANs, but by hostile action from a rival government, faction, or hypercorp. Roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You escape, but are forced into indentured service before you can resleeve. +10 Program skill and Roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Program",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Like many people, you leave almost everything behind. Lose 1 level of the Resources trait (if you don’t have Resources, lose 10 c-rep or g-rep).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "if you don’t have Resources, lose 10 c-rep or g-rep",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are trapped on Earth when the homeworld is interdicted and quarantined, but later rescued by reclaimers. +10 Guns and +10 Survival but gain the Mental Disorder (PTSD) trait (also on Disorders, EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Guns",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Survival",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "PTSD",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "PTSD",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are infected … but get better. You must take the Async path in Step 10. Gain one extra sleight.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [[
+      {
+        "Name": "You must take the Async path in Step 10.",
+        "Type": "Skip",
+        "Description": null,
+        "Value": 10,
+        "Weight": 0,
+        "OptionLists": []
+      },
+      {
+        "Name": "Async",
+        "Type": "ForcedInterest",
+        "Description": null,
+        "Value": 10,
+        "Weight": 0,
+        "OptionLists": []
+      },
+      {
+        "Name": "Gain one extra sleight.",
+        "Type": "PlayerChoice",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You stay to the end, fighting a rear-guard action. Your stack is recovered. Roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "LifePathTableMorphTypes",
+        "Type": "Table",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You survive a psychic attack from an exsurgent. Gain the Psi Defense (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Psi Defense",
+        "Type": "Trait",
+        "Description": null,
+        "Value": 2,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "Your experiences are a nightmare. +20 Know: TITANs but gain the Neural Damage trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Know: TITANs",
+        "Type": "Skill",
+        "Description": null,
+        "Value": 20,
+        "Weight": 0,
+        "OptionLists": []
+      },
+      {
+        "Name": "Neural Damage",
+        "Type": "Trait",
+        "Description": null,
+        "Value": 1,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You hide your body away in cold storage on Earth before farcasting off to safety. Roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [[
+      {
+        "Name": "LifePathTableMorphTypes",
+        "Type": "Table",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "Your ego escapes the devastation of Earth, only to be locked away in cold storage for years. Roll on the Random Morph tables and skip Step 12 when you get to it.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [[
+      {
+        "Name": "LifePathTableMorphTypes",
+        "Type": "Table",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      },
+      {
+        "Name": "skip Step 12 when you get to it.",
+        "Type": "Skip",
+        "Description": null,
+        "Value": 12,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "Your ego survives the Fall but is locked in simulspace for years before you are resleeved. +10 Interface skill and roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Interface",
+        "Type": "Skill",
+        "Description": null,
+        "Value": 10,
+        "Weight": 0,
+        "OptionLists": []
+      },
+      {
+        "Name": "LifePathTableMorphTypes",
+        "Type": "Table",
+        "Description": null,
+        "Value": 0,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You keep your head together even when people around lose theirs to headhunters. Gain the Composure trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Composure",
+        "Type": "Trait",
+        "Description": null,
+        "Value": 1,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You narrowly avoid death multiple times. Gain the Danger Sense trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Danger Sense",
+        "Type": "Trait",
+        "Description": null,
+        "Value": 1,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "You heroically sacrifice yourself so that others can escape. +10 c-rep and roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your heroic actions are an inspiration to other survivors. Gain the Inspiring Moves trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [[
+      {
+        "Name": "Inspiring Moves",
+        "Type": "Trait",
+        "Description": null,
+        "Value": 1,
+        "Weight": 0,
+        "OptionLists": []
+      }
+    ]]
+  },
+  {
+    "Name": "The specter of constant danger heightens your senses. Gain the Situational Awareness trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Situational Awareness",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You learn the hard way how susceptible you are to exsurgent influence. Gain the Psi Vulnerability (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi Vulnerability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You face off with multiple exsurgents and walk away. Gain the Melee Mastery trait. If you do not have Melee skill, exchange one active skill of your choice that you have of 60+ for Melee skill at the same rating.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Melee Mastery",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "If you do not have Melee skill, exchange one active skill of your choice that you have of 60+ for Melee skill at the same rating.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]]
+  },
+  {
+    "Name": "The near extinction of your species hardens your resolve. Increase WIL by 5.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 5,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You hide and survive an encounter with exsurgents where others die. Gain the Psi Camouflage (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi Camouflage",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You end up in possession of a rare Earth artifact. Work with the GM to determine its nature and value.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "You end up in possession of a rare Earth artifact. Work with the GM to determine its nature and value.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You make a bad call that gets people killed. −10 c-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "After fleeing for your life on multiple occasions, you no longer panic. Gain the Mental Fortitude trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Fortitude",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "A nanoviral infection leaves you permanently damaged. Gain the Neural Damage trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Neural Damage",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You have unfortunate memories of some … thing … eating your face off. Roll on the Random Morph tables and gain the Timidity (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Timidity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You witness unspeakable horrors during the Fall, standing idly by while others die. Gain the Combat Paralysis trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Combat Paralysis",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Several near-death experiences hone your awareness and reflexes. +10 Fray skill.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Fray",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your relatives die, but you are left as the sole heir to the family’s modest wealth that made it off-world. Gain Resources (level 1) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resources",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You will never get the image of headhunter drones at work out of your mind. Gain the Mental Disorder (PTSD) trait (also on Disorders, EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trail",
+          "Description": "PTSD",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "PTSD",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You exhibit natural leadership in a time of crisis. +10 to Persuade skill.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Persuade",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You survive. Your family and friends do not. Gain the Addictive Personality (Level 2) trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Addictive Personality",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You profit from others’ misfortune and misery. +10 g-rep, but lose 10 c-rep or @-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Lose 10 c-rep or @-rep.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You suffer horribly, but survive and adapt. Gain the Stress Immunity trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Stress Immunity",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You experience gruesome things during the Fall that would leave others a shattered mess. Gain the Hardening trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardening",
+          "Type": "Trait",
+          "Description": "Violence",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The horrors you witness leave you permanently shaken. Gain the Instability (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Instability",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Not only do you die during the Fall, your backups are lost as well. You live on as a beta fork of your original self. Gain the Beta trait and roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Beta",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your stack makes it off-world, but the memory of your death haunts you. Gain the Mental Disorder (Fugue) trait (also on Disorders, EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": "Fugue",
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Fugue",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "One of your backups makes it off-world, but it has issues. Gain the Mental Disorder (Reiterative Schizophrenia) trait (also on Disorders, EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mental Disorder",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Reiterative Schizophrenia",
+          "Type": "Disorder",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You pull a lot of strings to get yourself off-world. Gain the Networking Talent trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Networking Talent",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You battle the TITANs and survive. Gain the Sharpshooter trait. If you do not have Guns skill of 60+, exchange one skill of your choice at 60+ with Guns skill of an equivalent rating.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sharpshooter",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "If you do not have Guns skill of 60+, exchange one skill of your choice at 60+ with Guns skill of an equivalent rating.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You take risks to help discover things about the exsurgents or TITANs. +10 r-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Your habitat comes under a digital TITAN attack, which you help repel. +10 Infosec skill.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infosec",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You sell out your friends to guarantee your own safety. −10 to a rep score of your choice.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "−10 to a rep score of your choice.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are nearly killed by exsurgents, but survive by being sneaky. +10 Infiltrate skill.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Infiltrate",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You help a number of egos escape off-world to the outer rim. +10 @-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are infected with the Watts-MacLeod exsurgent virus (EP2), but grasp your abilities quickly. You must take the Async path in Step 10. +10 Psi skill.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Psi",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "You must take the Async path in Step 10.",
+          "Type": "Skip",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Async",
+          "Type": "forcedInterest",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "The near extinction of transhumanity sinks you into a depression. You eventually crawl out, but reduce one aptitude by 5. Roll d6: 1 COG, 2 INT, 3 REF, 4 SAV, 5 SOM, 6 WIL.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "COG",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "INT",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "REF",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SAV",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "SOM",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        },
+        {
+          "Name": "WIL",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": -5,
+          "Weight": 1,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You do what you can to help, but you still lose almost everyone in your life. Lose 1 ego Flex.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Flex",
+          "Type": "Pool",
+          "Description": null,
+          "Value": -1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You end up with some TITAN tech, but you destroy it rather than sell it. −10 g-rep and +10 i-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are captured by exsurgents but escape. +10 Know: Exsurgents.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Know: Exsurgents",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You inadvertently put an outer system habitat in danger. −10 @-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You allow a treasure mine of data to be lost or destroyed on Earth. −10 r-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": -10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You narrowly avoid dying in a TITAN attack. Gain the Artful Dodger trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Artful Dodger",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You join the resistance and excel at destroying TITAN machines. +10 Hardware: Demolitions and gain the motivation −TITANs.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hardware: Demolitions",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−TITANs",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are somehow linked to the groups that later go on to establish Firewall after the Fall. +10 i-rep.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "IRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You die in a TITAN attack, but your last moments make it into a popular docudrama. +10 f-rep and roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You are conscripted to care for people in a mass casualty event. +10 Medicine: Paramedic.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Medicine: Paramedic",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You die on Earth and the backup that makes it off-world is significantly outdated. −10 to a skill of your choice, gain the Edited Memories trait (EP2), and roll on the Random Morph tables.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Edited Memories",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−10 to a skill of your choice",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "LifePathTableMorphTypes",
+          "Type": "Table",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You narrowly survive, and your harrowing experience is shared with a stranger, forging a bond. Gain the Contact trait (EP2). Choose a rep network or roll randomly on the Rep Networks table.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Contact",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Choose a rep network or roll randomly on the Rep Networks table.",
+          "Type": "PlayerChoice",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You witness the deaths of millions, but you learn to cope. Gain the Resilient Mind trait.",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Resilient Mind",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 1,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "You become a puppet of the TITANs. Your backup survives. Gain the Sensitive (Level 2) trait (EP2).",
+    "Type": "FallEvent",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sensitive",
+          "Type": "Trait",
+          "Description": null,
+          "Value": 2,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

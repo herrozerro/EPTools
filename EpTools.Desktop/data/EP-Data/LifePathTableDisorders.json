@@ -1,0 +1,170 @@
+[
+  {
+    "Name": "Alien Behavior Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Anxiety",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Atavism",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Attention Deficit Hyperactivity Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Autophagy",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Autophagy",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Bipolar Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Body Dysmorphia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Conversion Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cosmic Anxiety Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Depression",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Disassociative Personality Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fugue",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Impulse Control Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Insomnia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Narcissistic Personality Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Paramnesia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Paranoia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Phobia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Post-Traumatic Stress Disorder",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Reiterative Schizophrenia",
+    "Type": "Disorder",
+    "Description": null,
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  }
+]

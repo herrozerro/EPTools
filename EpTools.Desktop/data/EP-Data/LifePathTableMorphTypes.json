@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "LifePathTableBiomorphs",
+    "Type": "Table",
+    "Description": "Biomorph",
+    "Value": 0,
+    "Weight": 40,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTableUpliftBiomorphs",
+    "Type": "Table",
+    "Description": "Uplift Biomorph",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTablePodBiomorphs",
+    "Type": "Table",
+    "Description": "Pod or Exomorph Biomorph",
+    "Value": 0,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTableSynthmorphs",
+    "Type": "Table",
+    "Description": "Synthmorph",
+    "Value": 0,
+    "Weight": 35,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTableInfoCoreMorph",
+    "Type": "Table",
+    "Description": "Infomorph or Core Morph",
+    "Value": 0,
+    "Weight": 9,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTableAxelMorph",
+    "Type": "Table",
+    "Description": "Axel",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "LifePathTablePsiChi",
+    "Type": "Table",
+    "Description": "Psi Chi Slights",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "LifePathTablePsiGamma",
+    "Type": "Table",
+    "Description": "Psi Gamma Slights",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": []
+  }
+]

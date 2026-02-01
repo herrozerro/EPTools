@@ -1,0 +1,2704 @@
+[
+  {
+    "Name": "Acumen",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to COG Checks.",
+    "Description": "<p>You have a keen intellect. Add +5 per level to your COG Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Adaptability",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Easier resleeving. +10 per level to Integration and Resleeving Stress Tests.",
+    "Description": "<p>You adjust to new morphs quickly. Apply a +10 modifier per level for Integration and Resleeving Stress Tests ▶288.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Allies",
+    "Type": "Positive",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "A group supports you. Free moderate favor per session.",
+    "Description": "<p>You are either part of or have a relationship with a group that has your back. This could be your old gatecrashing crew, former research lab co-workers, a criminal gang, a mercenary squad, an elite social clique, or something similar. The group itself should be small — 5 to 20 members is best, and certainly no more than 50 — though it may be part of a larger organization (such as a cartel or hypercorp). It should also not be overly influential or powerful (no Ozma leaders, hypercorp boards, or secret league of oligarchs). Work with your GM to establish your history and relationship with this group and why you can call on them for aid.</p><p>Once per session, you may rely on this group for support. Treat this as analogous to an automatically successful moderate rep favor ▶308. Your connection with this group is a two-way street — you will be expected to perform duties for the group on occasion as well. GMs should take care that allies are not overused or abused and can use them as a source of plot hooks and side missions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Animal Empathy",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to Exotic Skill: Animal Handling and similar tests.",
+    "Description": "<p>You have an instinctive feel for handling and working with non-sapient animals. Apply a +10 modifier to Exotic Skill: Animal Handling and other skill tests to influence or interact with animals.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Common Sense",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, may ask GM for best advice.",
+    "Description": "<p>Your innate sense of judgment cuts through distractions and other factors that might cloud a decision. Once per game session, you may ask the GM what choice to make or course of action to take; the GM will give you solid advice based on what your character knows. Alternatively, if you are about to make a disastrous decision, the GM can use your free hint to warn you that you are making a grave mistake.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Composure",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+5 LUC, +1 Trauma Threshold, +10 Insanity Rating.",
+    "Description": "<p>Your mental equilibrium is well tuned. You receive a +5 bonus to your Lucidity. This also affects derived stats based on Lucidity; increase your Trauma Threshold by 1 and your Insanity Rating by 10.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Contact",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to Rep Tests with one network when using contact. May be taken multiple times.",
+    "Description": "<p>You have a personal connection that you can rely on. This contact gives you a +10 modifier to tests with one particular rep network. You should work with your GM to establish the nature of this contact and why they help you. The GM ensures that a contact is not overused or abused and may have a contact occasionally call uponyou for assistance as well. You may take this trait multiple times.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Danger Sense",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to Perceive Tests to avoid surprise.",
+    "Description": "<p>You possess an intuitive sixth sense that warns of imminent threats. It provides a +10 modifier to Perceive Tests to avoid surprise ▶227.</p>",
+    "Auto": false,
+    "Noted": true,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Direction Sense",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Always know north/up/spinward/etc. +10 to tests involving navigation.",
+    "Description": "<p>You always know which way is up, north, spinward, etc., even when blinded. You receive a +10 modifier to navigation-based Survival Tests and other skills for figuring out complex directions, reading maps, remembering routes, and retracing paths you’ve taken.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dominant Strain",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Asyncs only. +10 vs. exsurgent virus, higher dependent upon Infection Rating.",
+    "Description": "<p>This trait is only available to characters with the Psi trait. The Watts-MacLeod strain is possessive and aggressively resists infection attempts from other exsurgent strains. You receive a +10 modifier to resist exsurgent virus infection. Increase this to +20 if your Infection Rating is 33 or more, +30 if it is 66 or more.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Drone Affinity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No Integration Tests when jamming drones.",
+    "Description": "<p>You have an innate knack for jamming drones. You do not need to make Integration Tests when remotely operating a drone.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Empathy",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to SAV Checks.",
+    "Description": "<p>You instinctively relate to others. Apply a +5 modifier per level to SAV Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Expert Training",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "May start with one skill over 80, up to 90 maximum.",
+    "Description": "<p>You have received extensive training in one particular subject. You may raise one skill over 80, to a maximum of 90, during character creation. This trait does not actually increase the skill, it just raises the maximum.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Fitness",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to SOM Checks.",
+    "Description": "<p>Either your morph is in top shape or you excel at pushing it to its limits. You receive +5 per level to SOM Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Good Instinct",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to INT Checks.",
+    "Description": "<p>Your gut feelings are on target. You get +5 per level to INT Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hardening",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immune to stress from either alienation, helplessness, or violence (p. 72). -10 to WIL Checks and Persuade Tests. May be taken multiple times for different types of stress.",
+    "Description": "<p>You are accustomed to trauma, but it has scarred you. You are immune to stress from either alienation, helplessness, or violence (choose one). However, your WIL Check is reduced by 10 and you suffer a -10 modifier on Persuade Tests. This trait may be taken multiple times for different types of stress; modifiers are cumulative.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hyper Linguistics",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 per level to INT Checks to understand languages you don’t know.",
+    "Description": "<p>You have a natural gift with linguistic structures and syntax. You receive a +10 modifier to INT Checks per level to grasp the general meaning or intent of communication spoken in languages you don’t know — even alien tongues. This trait provides no bonuses to written texts or non-verbal communications (such as Factor spores).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Familiarity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No Integration Tests sleeving one chosen morph type.",
+    "Description": "<p>You are accustomed to one specific type of morph (e.g., bouncers, rusters, agents, or flexbots) and do not need to make Integration Tests when sleeving them. You may take this trait more than once for different morphs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Pain Tolerance",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "Ignore 1 wound modifier per level.",
+    "Description": "<p>You have a high threshold for pain, enabling you to shrug off the effects of pain on your abilities and concentration. You ignore the -10 modifier for 1 wound per level. This trait is compatible with other pain-resistant effects, but a maximum of 3 wound effects may be ignored.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Patron",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "An influential person backs you up. One free major favor per story arc.",
+    "Description": "<p>There is an influential person in your life who can be relied on for occasional support. This could be a wealthy hyperelite family member, a high-ranking triad boss, or an anarchist networker with an unbeatable reputation. When called upon, this patron can pull strings, supply resources, make introductions, or bail you out of trouble. Work with your GM to define this NPC, your relationship, and why they support you (familial obligation? childhood buddies? you saved their life once?).</p><p>The patron provides one free major favor ▶308 per story arc, no test necessary. GMs should be careful that this trait does not get abused. Smaller favors are beneath the patron’s concern. If the character asks for too much, too often, the patron’s support may dry up. On occasion, the patron may call upon the character for favors as well.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Psi",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "May use Psi skill and sleights. See text for additional rules.",
+    "Description": "<p>You are infected with the Watts-MacLeod strain of the exsurgent virus, which altered your brain structure and enhanced your cognitive abilities. You may learn the Psi skill ▶51 and purchase psi abilities, called sleights (▶280 and 282). At Level 1, you may only use psi-chi sleights. At Level 2, the character may use both psi-chi and psi-gamma sleights.</p><p>Psi is not without drawbacks. You must also take a negative trait according to your sub-strain ▶273 at no CP bonus. This required trait does not count towards trait CP limits.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Psi Camouflage",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-10 to detect with psi per level.",
+    "Description": "<p>You are more difficult to detect with psi sensing. Apply a -10 modifier per level to any attempts to locate or detect you via psi sleights. The morph trait may only be taken by morphs with biological brains.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Psi Defense",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+10 to resist psi per level.",
+    "Description": "<p>Your mind is inherently resistant to mental attacks and manipulations. Apply a +10 modifier per level to defense rolls against psi sleights. The morph trait is only available to morphs with biological brains.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Quickness",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to REF Checks.",
+    "Description": "<p>Either your morph is dexterous or you take full advantage of its nimbleness. Apply +5 per level to REF Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Resolve",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "+5 per level to WIL Checks.",
+    "Description": "<p>You are unwavering and firm. Receive +5 per level to WIL Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Resources",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Wealth to acquire gear. See text.",
+    "Description": "<p>You have a measure of money, assets, and/or other wealth, as used in the inner system, hypercorp, Jovian, and Extropian polities. This provides bonus Morph Points and Gear Points equal to the trait's level when acquiring morphs ▶290 and gear ▶312. It also gives you a regular amount of disposable income to purchase gear during missions.</p><p>At Level 1, you can spend up to 2 GP per week on Minorcomplexity items given the appropriate time frame.</p><p>At Level 2, you can spend up to 3 GP per week on Minor or Moderate complexity items given the appropriate time frame.</p><p>At Level 3, you can spend up to 5 GP per week on items of any complexity, given the appropriate time frame.</p><p>Level 4 is the same as Level 3, except that you also have the capability to make even Rare and Restricted items available (at the gamemaster's discretion).</p><p>In most cases, acquiring the gear is simply a matter of exploiting your Resources trait and waiting the proper amount of time, assuming the desired item is available (Acquiring Gear During Missions ▶312). At the GM’s discretion, however, using Resources may require an appropriate Persuade Test (to convince another party to part ways with the item) or perhaps a Research Test (to find a source).</p><p>Levels 3 and 4 of this trait imply an amount of resources that deems you wealthy. To reflect this, you can use 2 of your weekly GP in conjunction with a Flex point for narrative control to say that you have a Moderate gear item immediately on hand in your home/ vehicle/personal possessions. You must have access to your personal possessions and (as with all uses of Flex for narrative control) the item must be plausible.</p><p>Resources can also apply as a modifier for certain tests. For example, if you attempt to bribe a triad goon or use your credit score to arrange a meeting with a potential business partner, apply a +10 modifier for each level of Resources you possess.</p><p>While Resources is an abstract measurement, players and GMs should use it as a rough benchmark for a character’s personal assets and lifestyle. A character with Level 1 might have their own cubicle in a beehive hab or a small apartment in a Martian dome or O’Neill cylinder’s working class areas, and they get around by bike or public transit. A character with Level 2 Resources might have a private residence on a small station or a condo in a larger hab, as well as a minicar or cycle to get around. A character with Level 3 could have a large residential complex or multiple homes, plus one or more vehicles. A Level 4 character is rich and might own a small private hab and even their own shuttle.</p><p>Your Resources trait may be affected by events in game. If your home is destroyed or you come across a secret cache of riches, the GM should adjust your trait level accordingly. You must pay the extra cost in Rez Points if your trait goes up, but you receive an RP credit if your wealth goes down.</p><p>In desperate circumstances, you may also intentionally burn your Resources to refresh your weekly GP to get something you urgently need (or get it more quickly). This represents the expenditure of all or major portions of your assets with no hope of reclaiming them and no RP reimbursement. The GM should reduce your Resources trait level by an amount appropriate to the transaction.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Situational Awareness",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No distracted modifier.",
+    "Description": "<p>You maintain continuous partial awareness of the goings-on in your immediate environment. You do not suffer the Distracted modifier on Perceive Tests to notice things even when your attention is focused elsewhere or when making quick Perceive Tests during combat.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Spatial Visualization",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to Know and Technical Tests involving 3D visualization.",
+    "Description": "<p>You have a knack for conceptualizing dimensions, distances, volumes, and shapes. You receive a +10 modifier for any Know or Technical skill tests involving 3D visualization.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stalwart",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to WIL Checks vs. fear.",
+    "Description": "<p>You laugh at fear. Apply a +10 modifier per level to WIL Checks and other tests that involve resisting fear.</p>",
+    "Auto": false,
+    "Noted": true,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Superior Numeracy",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 per level to Know and Technical Tests involving math.",
+    "Description": "<p>You are quite good with numbers. Apply a +10 per level to Know and Technical Tests that directly involve math.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Zoosemiotics",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No modifier using psi on non- or partly-sapient animals.",
+    "Description": "<p>This trait is only available to characters possessing the Psi trait. You do not suffer modifiers when using psi sleights on non-sapient or partly sapient animal species.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Digital Speed",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Mesh task timeframes reduced 25%. Infomorphs only.",
+    "Description": "<p>This trait is only available to infomorphs. Unfettered by the physical, you reduce timeframes for mesh-based task actions by 25%; this is cumulative with reduced time from superior successes.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Improved Immune System",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+10 per level to resist chemicals, disease, drugs, and toxins. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. Your immune system is robust. Apply a +10 modifier per level to resist the effects of chemicals, diseases, drugs, and toxins.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Innocuous Looks",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Bland. -10 to identify/spot/remember.",
+    "Description": "<p>Thanks to mass-produced designs and sculpted media-star composite visages, your cookie-cutter looks are so mundane as to be indistinguishable. It is difficult to pick your common-place face out of the crowd, describe its appearance, or otherwise remember physical details. Apply a -10 modifier to tests made to spot, describe, or remember you; this does not apply to psi or mesh searches. This trait may not be applied to any morph with an Availability lower than 50.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Lethal",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+1d6 DV in melee.",
+    "Description": "<p>This morph inflicts more damage in melee combat. Add +1d6 DV to all melee damage rolls.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Limberness",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+10 per level to escape bonds, fit into small spaces, contort, etc.",
+    "Description": "<p>The morph is especially flexible and supple, capable of graceful contortions and interesting positions. At Level 1 , you can do the splits, smoke with your toes, and squeeze into small, cramped spaces. At Level 2, you are a double-jointed escape artist. Apply a +10 modifier per level to escape bonds, fit into small spaces, contort, or otherwise rely on flexibility.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Natural Immunity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Immunity to one specific drug, chemical, or toxin. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. The morph has a natural immunity to a specific drug, disease, or toxin. When afflicted with that specific chemical, poison, or pathogen, you are unaffected. Work with your GM to select an appropriate agent; this immunity may not be applied to nanodrugs or nanotoxins.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Rapid Healing",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Heal twice as fast. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. The morph recovers from damage more quickly. Reduce the timeframes for healing ▶221 by half.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Skill Artifact",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+10 to one GM-chosen skill per level.",
+    "Description": "<p>The morph has latent skills stored in its muscle memory or as higher-level data that somehow does not get erased or overwritten. The GM chooses or randomly selects a skill; it is recommended to pick a skill linked to the morph’s highest pool. You receive a +10 modifier per level when using that skill. This trait may be purchased multiple times for different skills.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Striking Looks",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+10 on Persuade and Provoke Tests where looks matter.",
+    "Description": "<p>Sculpted good looks are cheap and commonplace, but this morph possesses a physical look that can only be described as striking, fascinating, and unusual — even the gorgeous and chiseled glitterati take notice. Apply a +10 modifier to Persuade and Provoke tests where your allure may have an impact. Level 1 of this trait only applies to uplifts and synthmorphs; Level 2 is for humanoid biomorphs.</p>",
+    "Auto": false,
+    "Noted": true,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Toughness",
+    "Type": "Positive",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "+5 DUR, also impacts WT and DR, see text.",
+    "Description": "<p>This morph can take more physical abuse than others of its type. For each level, increase Durability by 5. This will also increase Wound Threshold (equal to DUR ÷ 5) and Death Rating (DUR × 1.5 for biomorphs, DUR × 2 for synthmorphs).</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Addiction",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-10 per level if no regular fix; see text for additional effects.",
+    "Description": "<p>You have a pathological reliance on a drug ▶330, stimulus (e.g., XP, VR), or activity (e.g., mesh use, dying) to a degree that impacts your physical or mental health. Addiction comes in two forms: mental (affecting the ego) and physical (affecting the biomorph). Work with your GM to choose an addiction that is appropriate for your game. You must indulge in your addiction at a regular frequency according to the level or go into withdrawal. Withdrawal inflicts a -10 modifier per level.</p><p>Level 1: Once per week. Your minor addiction is largely kept under control — it does not ruin your life, though it may create difficulties. You may not even recognize or admit you have a problem.</p><p>Level 2: Once per day. Your moderate addiction is in full swing and often causes you to neglect other aspects of your life.</p><p>Level 3: Once per 6 hours. You face major cravings, live for your next fix, and are on the road to ruin.</p><p>Addiction is triggered in the same way as disorders ▶224. Triggers include the presence of the addiction's focus, fear, frustration, helplessness, and violence.</p><p>Every addiction takes different forms, depending on the character and source. Long-term addiction may result in physical or mental damage (impairment modifiers or reductions to SOM Checks or WIL Checks) and may build up tolerance, requiring higher dosages. At the GM’s discretion, you may need to make WIL Checks to avoid raising the addiction level. Withdrawal may also inflict additional effects such as mood swings, compulsive behavior, or physical sickness.</p><p>You may kick the habit by staying clean for 1 week per level. Resisting the craving, however, requires a WIL Check every day, modified by the source’s addiction modifier. Once the addiction is kicked, however, there is always the possibility of a relapse. GMs may call for WIL Checks anytime you are directly tempted or undergo substantial stress or mental trauma.</p><p>If you upload, fork, or resleeve, any mental addictions persist with your ego/fork; physical addictions remain with the morph. This trait may be taken more than once for different addictions. The morph version of this trait only applies to biomorphs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Bad Luck",
+    "Type": "Negative",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "May not use pools to flip-flop dice rolls.",
+    "Description": "<p>The universe seems to punish you with startling frequency. You may not use pools to flip-flop dice rolls.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Blacklisted Rep",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Cannot have rep score in one rep net (higher value if own faction’s rep net).",
+    "Description": "<p>You are blacklisted in certain circles, whether you did something to deserve it or not. You are barred from having a Rep score higher than 0 in one particular reputation network. For rep nets outside your faction, this counts as Level 1. For the rep net central to your faction, this counts as Level 2. People within that network will refuse to help you out of fear of reprisals and ruining their own reputation. This trait may be taken more than once for different rep nets.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Black Mark",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 modifier per level to interactions with one faction.",
+    "Description": "<p>You did something in your past to earn a black mark on your reputation with one particular faction that continues to haunt your interactions. Apply a -10 modifier per level to rep net interactions and social skill tests involving that faction. This trait may be taken more than once for different factions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Combat Paralysis",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "WIL Check to act in each action turn of combat.",
+    "Description": "<p>Like a deer caught in headlights, you freeze in combat and stressful situations. Anytime violence erupts, you are caught off guard, or lives are at stake, you must make a WIL Check each action turn to act or respond in any way. If you fail, you lose your action and simply stand there, incapable of reacting to the situation.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Edited Memories",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have lost some memories, deliberately or not.",
+    "Description": "<p>At some point in your past, certain memories were strategically removed or otherwise lost to you. This may have been done to intentionally forget an unpleasant or shameful experience or to make a break with the past. Or you may have suffered lack due to an unexpected death (with no recent backup) or had the memories erased against your will. Whatever the case, the memories should be important and significant, not mundane. Either evidence of what happened or NPCs who know the full story should exist. GMs can use this as a tool to haunt you with ghosts and mysteries from your past.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Enemy",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Enemy NPC haunts you.",
+    "Description": "<p>An enemy from your past continues to haunt you. Work with your GM to establish the details of this enmity. The GM should use this enemy as an occasional threat, surprise, and hindrance.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Enhanced Behavior",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "Psychosurgically enhanced behavior/emotions. See text.",
+    "Description": "<p>Your conduct or moods are modified. This may be due to conditioning and reprogramming via time-accelerated psychosurgery ▶294, drugs, genetic tweaks, psi, or other factors. This may have been a deliberate choice or it may have been inflicted against your will. Work with your GM to define a specific emotion (e.g., happiness, contentment, love) or behavior (e.g., aggression, commitment, curiosity, orderliness, loyalty). Apply a -10 modifier per level to all actions when withheld from the behavior/emotion.</p><p>Level 1: You are encouraged to pursue the behavior and associate it with positive feelings; emotions are boosted.</p><p>Level 2: You are driven to engage in the specified behavior; emotions are exaggerated. Holding back requires a WIL Check.</p><p>Level 3: The behavior is enforced; emotions are compulsory and ongoing. If restrained from the conduct or the emotion is suppressed, suffer SV 1d6.</p><p>This trait may be taken more than once for different behaviors.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Feebleness",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to SOM Checks.",
+    "Description": "<p>Either your morph is weak or you are not adept at using its strength. Apply a -5 per level to SOM Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Identity Crisis",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Trouble adapting to new morph physiologies, -10 when applicable.",
+    "Description": "<p>Resleeving is not an easy process. You are stuck with the mental image of your original body and have trouble adapting to your new morphs’ looks and physiologies. You have difficulty identifying yourself in mirrors, photos, or sensor feeds. You also tend to move in ways inappropriate to your new forms, such as attempting to walk instead of using new limbs or propulsion systems, forgetting to duck when walking through doorways, becoming alarmed by new sensory inputs, etc. You should roleplay this trait accordingly, and may suffer a -10 modifier to applicable actions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Indifference",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to SAV Checks.",
+    "Description": "<p>Your social awareness is often lacking. You suffer -5 per level to SAV Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Instability",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-5 LUC, -1 Trauma Threshold, and -10 Insanity Rating per level.",
+    "Description": "<p>Your mental foundation has serious cracks. Reduce your Lucidity by 5 per level. This also affects derived stats based on Lucidity; reduce both your Trauma Threshold by 1 and your Insanity Rating by 10 per level.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Low Pain Tolerance",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "Additional -10 modifier per wound.",
+    "Description": "<p>Pain is your enemy. You have a very low threshold for pain tolerance; increase the modifier for each wound taken by an additional -10 (so the character suffers -20 with one wound, -40 with a second, -60 with a third, etc.).</p><p>Additionally, you suffer a -30 modifier on both SOM Checks and other tests that involve pain resistance. The morph version of this trait is only available for biomorphs.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mental Disorder",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Choose one disorder.",
+    "Description": "<p>You have a psychological disorder from a previous traumatic experience. Choose one of the disorders listed on ▶224. This trait may be taken multiple times for different disorders.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morphing Disorder",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4,
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 per level on Integration and Resleeving Stress Tests.",
+    "Description": "<p>Adapting to new morphs is particularly challenging for you. Apply a -10 modifier per level to Integration Tests ▶288 and Resleeving Stress Tests ▶288.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Neural Damage",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have some type of incurable neural damage; see text.",
+    "Description": "<p>You suffered some type of neurological damage that cannot yet be cured. The affliction is part of your ego and remains even when resleeving. This damage may have been inherited, resulted from a poorly designed morph or implant, or inflicted by a nanovirus during the Fall. Work with your GM to agree on a specific disorder appropriate to your game. The GM may inflict impairment modifiers (usually -10) as appropriate, according to the affliction. Some possibilities are:</p><p>Amusica: You have an inability to make or understand music. Automatically fail music-related skill tests.</p><p>Color Blindness: You cannot distinguish color, only variations in brightness. -10 to visual Perceive Tests.</p><p>Lack Depth Perception: You have difficulty ascertaining distance. Double range modifiers.</p><p>Lack Face Recognition: You cannot distinguish faces. -10 to visual Perceive Tests involving person identification.</p><p>Logorrhea: You use an excessive amount of words and sometimes can’t stop talking. -10 to Persuade and verbal Provoke Tests.</p><p>Mood Swings: Your emotions shift quickly and dramatically. -10 to WIL Checks against Provoke.</p><p>Partial Aphasia: You sometimes have difficulty communicating or using words. -10 to Persuade and verbal Provoke Tests.</p><p>Repetitive Behavior: You unwillingly repeat your actions. You unwillingly repeat your actions. Make a COG Check to avoid repeating your actions when under pressure.</p><p>Synaesthesia: Some types of sensory input are conflated with other perceptual phenomena.</p><p>This trait may be taken multiple times, for different afflictions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "No Backup Insurance",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Upon death, re-instantation and MP up to GM.",
+    "Description": "<p>You are either poor, bioconservative, or like to live dangerously. You do not have any sort of backup insurance or similar arrangement. If you die, your stack's retrieval and your ego's re-instantiation is entirely dependent upon the circumstances and GM. You may be brought back with significantly lower MP or be permanently dead.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Obliviousness",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Additional -10 to Perceive Tests when distracted and Surprise Tests.",
+    "Description": "<p>You are oblivious to events around you or anything other than what your attention is focused on. Suffer a -10 modifier to Perceive Tests against surprise and increase your distracted modifier to -30.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Obtuseness",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to COG Checks.",
+    "Description": "<p>Not the brightest star in the sky. Apply -5 per level to COG Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Poor Coordination",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to REF Checks.",
+    "Description": "<p>Either you or your morph are inherently clumsy. Suffer -5 per level to REF Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Poor Instinct",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to INT Checks.",
+    "Description": "<p>Your inherent judgment is off. Suffer -5 per level to INT Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Psi Vulnerability",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 per level to resist psi.",
+    "Description": "<p>Psi sleights are particularly effective against your brain structure. Apply a -10 modifier per level when resisting psi. The morph trait may only be taken by morphs with biological brains.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Real World Naiveté",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "GM may provide false info once per session.",
+    "Description": "<p>You either have very limited personal experience with the real (physical) world or have spent so much time in VR that your real-life functioning is impaired. You lack an understanding of many physical properties, social cues, and other factors that most people take for granted. This lack of common sense may lead you to misunderstand how a device works or misinterpret someone’s body language.</p><p>Once per game session, the GM may intentionally mislead you when providing a description about some thing or social interaction. This falsehood represents your misunderstanding of the situation and should be roleplayed appropriately, even when the player is aware of the character’s mistake.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Restricted Behavior",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "Psychosurgically limited behavior/emotions. See text.",
+    "Description": "<p>Your conduct or moods are modified. This may be due to conditioning and reprogramming via time-accelerated psychosurgery ▶294, drugs, genetic tweaks, psi, or other factors. This may have been a deliberate choice or it may have been inflicted against your will. Work with your GM to define a specific emotion (e.g., sadness, anxiety, anger, inhibitions) or behavior (e.g., aggression, stealing, eating, lying, using a specific drug). Apply a -10 modifier per level to all actions when the behavior/emotion is not avoided.</p><p>Level 1: You are compelled to avoid the behavior and associate it with negative feelings; emotions are limited.</p><p>Level 2: You are blocked from the specified behavior; emotions are suppressed. Pursuing it requires a WIL Check.</p><p>Level 3: You are incapable of pursuing the behavior; emotions are expunged. If forced to engage in the conduct or to experience the emotion, suffer SV 1d6.</p><p>This trait may be taken more than once for different behaviors.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Sensitive",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 per level to INT Checks to resist basilisk hacks.",
+    "Description": "<p>Your brain’s operating system is vulnerable to exploits. Apply a -10 modifier per level to INT Checks made to resist basilisk hacks.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Timidity",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": true,
+    "Summary": "-5 per level to WIL Checks.",
+    "Description": "<p>You are weak-willed and easily intimidated. Apply -5 per level to WIL Checks.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "VR Vertigo",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 modifier using XP/VR; -10 using AR. SOM Check or incapacitated.",
+    "Description": "<p>You experience intense vertigo and nausea when interfacing with any type of virtual reality or XP. Apply a -30 modifier to your actions when using VR or XP. If using VR/XP for a prolonged period (an hour+), you must make a SOM Check or be incapacitated for 10 minutes. Even augmented reality makes you dizzy; suffer a -10 modifier while interfacing with AR.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Age",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 to physical actions. Flats and splicers only.",
+    "Description": "<p>This trait may only be applied to flat and splicer morphs. The morph is physically aged and has not been rejuvenated. Old morphs are increasingly uncommon, though some people adopt them hoping to gain an air of seniority and respectability. Apply a -10 modifier on all physical actions.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dominant Limb",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-20 to tests made with non-dominant limbs.",
+    "Description": "<p>Either due to genetics or a glitch, the morph is right-handed, left-handed, or has a similar dominant limb. You receive a -20 modifier to any actions made using non-dominant limbs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Exotic Morphology",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4,
+      6
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 per level on Integration Tests.",
+    "Description": "<p>This morph is substantially physiologically (and possibly neurologically) different from the baseline humanoid forms most transhumans are accustomed to sleeving. You receive a -10 modifier per level on Integration Tests ▶288 when sleeving into this morph. This modifier does not apply to the original morph of uplift or infolife characters. This trait may not be applied to morphs that don’t come with it.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Frailty",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-5 DUR, also impacts WT and DR, see text.",
+    "Description": "<p>The morph is not as resilient as similar models. Reduce Durability by 5. This will also decrease Wound Threshold (equal to DUR ÷ 5) and Death Rating (DUR × 1.5 for biomorphs, DUR × 2 for synthmorphs).</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Genetic Defect",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Morph has minor or serious health complications. Flats only.",
+    "Description": "<p>This trait is only available for flats. The morph is not genefixed and suffers from a genetic disorder or other impairing mutation. Work with your GM to agree on a defect appropriate to your game. Some possibilities include: heart disease, diabetes, cystic fibrosis, sickle- cell disease, hypertension, hemophilia, or color blindness. Level 1 applies to genetic disorders that create minor complications and/ or occasional health problems (apply a -10 impairment modifier in certain circumstances). Level 2 is for defects that significantly impair functioning or inflict chronic health problems (an ongoing -10 impairment modifier or occasional -20). The GM determines the exact effects of the disorder on gameplay.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hypersensitivity",
+    "Type": "Negative",
+    "Cost": [
+      3
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "No implants allowed. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. This morph rejects implants that are not already part of its design. It may not be upgraded with any additional bioware, cyberware, or nanoware.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Infection Risk",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 per level to SOM Checks to resist the biological exsurgent virus.",
+    "Description": "<p>Your morph is vulnerable to exsurgent infection. Apply a -10 modifier per level to SOM Checks made to resist biological exsurgent virus infection.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Inherent Flaws",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "10% chance of acquiring a wound each time a critical failure is rolled. Synthmorphs only.",
+    "Description": "<p>This trait is only available for synthmorphs. This particular morph has some unfixable flaws and inevitably breaks down. Any time a critical failure is rolled, there is a 10% chance the morph also acquires a wound.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Memory Artifact",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Recall other ego’s memory once per session; COG Check or SV 1d6.",
+    "Description": "<p>A previous ego’s memories somehow survived the wiping process and linger on in this morph’s brain/hardware. Once per session, a memory from this past occupant resurfaces in your mind. These memories are often emotionally charged and jarring; make a COG Check or suffer SV 1d6. These memories integrate into your own, though they may be erased with psychosurgery.</p><p>Work with your GM to decide the specifics of the memories. GMs should use these recall incidents for plot purposes; they may reveal sensitive data, incriminating evidence, secrets hidden from the public, or details the previous ego does not want spread.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Non-Human Biochemistry",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 to Medicine Tests, -20 if non-mammalian. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. This morph has substantial physiological and genetic differences from human morphs. Level 1 applies to non-human morphs. Level 2 applies to non-mammalian morphs. Apply a -10 modifier per level to Medicine Tests. Certain drugs, toxin, chemicals, or medical procedures may not work or may have a different effect (GM discretion). This trait may not be applied to morphs that do not come with it.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Planned Obsolecense",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "Cumulative pool loss/wound per month without maintenance.",
+    "Description": "<p>The morph is designed in such a way that it needs periodic genetic service pack therapy or proprietary maintenance or its performance will degrade. Treat this as a Moderate Complexity service required every month. For each month this is skipped, reduce the morph’s pools by 1 (the GM chooses which pool). If pools are reduced to 0, the morph incurs 1 wound per month that may not be repaired or healed. These manifest as joint pain, neural degradation, tumors, and other malfunctions. Once 4 wounds are accumulated, the morph is incapacitated. A gene therapy or maintenance session from a licensed hypercorp service provider (or a black market pirate) will restore the morph to full functionality.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Proprietary Tech",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-20 Hardware Tests, fixers do not work. Synthmorphs only.",
+    "Description": "<p>This trait is only available to synthmorphs. This morph was built with non-standard specifications, making most modern tools and software incompatible. This is a conscious design decision to make the user dependent upon the manufacturer for repairs and updates. Fixer nanoswarms will not work on this morph and Hardware: Robotics Tests suffer a -20 modifier.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Severe Allergy",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-30 when exposed to allergen plus SOM Check or anaphylactic shock; death in 2d10 minutes without treatment. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs.The morph’s biochemistry suffers a severe allergic reaction (anaphylaxis) when it comes into contact (touched, inhaled, or ingested) with a specific allergen. At Level 1, the allergen may be uncommon (certain drugs, insect stings). At Level 2, it must be common (dust, dander, plant pollen, certain foods, nanoswarms, latex). Work with your GM to select an allergen that fits the game. If exposed to the allergen, you break into hives, have difficulty to breathing (-30 impairment modifier while exposed plus 10 minutes afterward), and must make a SOM Check or go into anaphylactic shock (incapacitation, will die of respiratory failure in 2d10 minutes unless medical care in the form of a successful Medicine: Paramedic Test is applied).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Skill Glitch",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 per level to one GM-chosen skill",
+    "Description": "<p>Some unfixable glitch in the morph’s hardware or brain structure impedes the use of one particular skill, chosen or randomly selected by the GM. Apply a -10 modifier per level to that skill’s use.</p>",
+    "Auto": true,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Unattractiveness",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 to Persuade and Provoke Tests where looks matter.",
+    "Description": "<p>Even though sculpted good looks are easily purchased, this morph is conspicuously ugly or poorly designed, inspiring distaste or even revulsion in others. Apply a -10 modifier to Persuade and Provoke Tests where your hideousness may be a factor. Level 1 of this trait only applies to uplifts and synthmorphs; Level 2 is for humanoid biomorphs.</p>",
+    "Auto": false,
+    "Noted": true,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Weak Immune System",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 per level to resist chemicals, disease, drugs, and toxins. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. The morph’s immune system is easily compromised. Apply a -10 modifier per level when resisting the effects of diseases, drugs, chemicals, and toxins.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Zero-G Nausea",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": false,
+    "Morph": true,
+    "Summary": "-10 in micrograv; SOM Check or incapacitated for first hour. Biomorphs only.",
+    "Description": "<p>This trait is only available to biomorphs. This morph suffers from space sickness and does not fare well in zero gravity. Apply a -10 impairment modifier in any microgravity climate. Additionally, the first time you must acclimate or endure excessive movement in microgravity, you must make a SOM Check or spend 1 hour incapacitated by nausea.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Eclipse Phase Second Edition",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Adversarial Hacker",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Insight to flip-flop system defender's dice roll.",
+    "Description": "<p>You have a gift for tripping up security countermeasures. You may spend a point of Insight pool to flip-flop the system defender’s dice roll (for example, turning a 38 into an 83). This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "AGI Affinity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier to social skills when interacting with AGIs.",
+    "Description": "<p>You spend a significant amount of time socializing with AGIs and have an intuitive sense for their mannerisms, quirks, and idiosyncracies. You gain a +10 modifier to social skills when interacting with AGIs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Artful Dodger",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Vigor to flip-flop attacker's dice roll when using Fray.",
+    "Description": "<p>You excel at getting out of the way. When using Fray to avoid an attack, you may spend a point of Vigor to flip-flop the attacker’s dice roll (for example, turning a 38 into an 83). This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Async Familiarity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Make a Kinesics Test at -30 to identify an async based on behavior.",
+    "Description": "<p>You have developed a keen sense for the subtle behavioral clues and micro-expressions that many asyncs unconsciously adopt after their infection. After at least an hour of observation, you may make a Kinesics Test at −30 (opposed by Deceive) to identify an async based on their behavior alone. This trait is most common among asyncs, but it may also apply to characters that have studied asyncs or spent significant time in their presence. At the GM’s discretion, this talent may also be applied to secret exsurgents with the Psi trait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Brain Worm",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Targets are unaware of sleights unless you score a superior failure.",
+    "Description": "<p>This trait is only available to asyncs. Your sleights subtly insinuate themselves into targets’ minds. Even if they succeed on their WIL Check (Target Awareness, EP2), they are only aware they were targeted if you score a superior failure on your Psi Test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Controlled Infection",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Spend Moxie to choose infection influence effect.",
+    "Description": "<p>This trait is only available to asyncs. You have achieved a modicum of control over your infection. When an Infection Test succeeds, you can spend a point of Moxie to choose which influence effect you take instead of rolling randomly.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Danger Instinct",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Increase Initiative by 2. Must make WIL Check if surprised.",
+    "Description": "<p>This trait is only available to uplifts. You retain your species’ pre-uplift threat-response instincts, reflexively acting without thinking in response to dangerous and hectic situations. Increase your Initiative by 2. You are jumpy, however; make a WIL Check to control your actions if you are surprised or faced with a sudden threat; on a failure, the GM determines your response (usually flee, hide, or attack).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Data Control",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 modifier per level to Research and Rep Tests to track you.",
+    "Description": "<p>You have a knack for diligence and caution in your daily life when it comes to keeping a lid on your personal information, social media presence, and general online footprint. Apply a −10 modifier per level to Research and Rep Tests to track you or dig up information about you online.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Digital Ghost",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Insight to negate system defender's attempt to locate you.",
+    "Description": "<p>You have an exceptional knack for keeping your computer intrusions out of the spotlight. You may spend a point of Insight pool to automatically negate a system defender’s attempt to locate and zero in on you as an intruder (Zeroing In, EP2 and Locate Intruder, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Drone Whisperer",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, use a Flex point on a drone's autonomous test.",
+    "Description": "<p>Your ability to control drones and push them to their limits is unchallenged. Once per session, you may use a point of your Flex pool on a test made by a drone that is following your orders or programming in autonomous mode (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dual Strains",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Switch between two different sub-strains on failed Infection Tests.",
+    "Description": "<p>This trait is only available to asyncs. You are infected with two sub-strains of Watts-MacLeod that vie for dominance. Only one strain is in control at a time. You have the negative trait and free sleight associated with that sub-strain and you use that sub-strain’s table for influence effects. When the other sub-strain takes over, you switch out that trait, sleight, and table for the new one. Randomly choose one sub-strain to start with. Any time an Infection Test fails, the other sub-strain becomes dominant. Note that influence effects remain ongoing even if the other sub-strain becomes dominant.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Edge Runner",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore the -10 active alert modifier when hacking.",
+    "Description": "<p>You excel under pressure. When hacking, you do not suffer the −10 modifier applied when a system is on active alert.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Ego Plasticity",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No SV from psychosurgery unless critical failure.",
+    "Description": "<p>Mind edits can be difficult and stressful, but your ego is malleable in a psychosurgeon’s hands. You do not take SV from psychosurgery unless a critical failure is rolled; treat one or more critical failures as a regular failure when determining SV. At 1 CP this applies to one psychosurgery technique of your choice (i.e., merging or personality edits); at 4 CP it applies to all.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Exceptional Muse",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Your muse has either 1 Insight pool or 1 Flex pool.",
+    "Description": "<p>Your muse is either better quality or has somehow improved on its own. It has either 1 Insight pool or 1 Flex pool, your choice. These pool points may only be spent on actions and tests made by your muse. They follow all of the normal rules for pools (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Gold Star",
+    "Type": "Positive",
+    "Cost": [
+      1,
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 per level to Rep and Social Tests with a specific faction.",
+    "Description": "<p>You did something to earn the ongoing respect of one particular faction. You receive a +10 modifier per level to Rep Tests and social skill tests with NPCs of that particular faction. When picking a faction, use the faction list from EP2, but break the criminal and hypercorp factions into smaller grouping (i.e., triads or Venusian hypercorps). This trait is incompatible with the Blocklisted Rep or Black Mark traits (EP2) with the same faction.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Habitat Tranquility",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 on INT Checks to heal stress and halved healing timeframe in a specific habitat.",
+    "Description": "<p>Something about a particular habitat feels like home and puts you at ease. While in this habitat, you receive a +10 bonus on INT Checks to healing stress and the timeframe for healing stress, traumas, and disorders is halved. This reduced timeframe is not cumulative with that of the Resilient Mind trait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Hard Knocks",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Regain 1 spent pool point on critical failures (Max 3/recharge).",
+    "Description": "<p>You screw up a lot, but you learn from your mistakes. Any time you roll a critical failure and you did not spend pool on that test, you regain 1 spent pool point. You may not regain more than 3 pool points this way between long recharges.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Home Turf",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "1 point of Flex used only for tests involving a specific habitat.",
+    "Description": "<p>You know a particular habitat (or local area) like the back of your hand, paw, or tentacle. You either grew up there or spent enough time to become intimately familiar. You receive 1 point of ego Flex that may only be used for tests or narrative purposes involving that habitat, such as skipjacking past sensors, bypassing an airlock, or knowing the right local NPC to talk to.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Improved Beta",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Beta forks gain specific bonuses (unlimited skills, no aptitude penalty, Flex, or Psi).",
+    "Description": "<p>Your beta forks (EP2) take to the neural pruning process better than most. Choose one of the following benefits for your beta forks (this trait may be taken more than once for separate bonuses): Active skills are not limited to a maximum value; Your beta forks do not suffer the −10 modifier for aptitude checks; Your beta fork gets your full ego Flex pool; Your beta forks retain your Psi trait, but lose half of your sleights (random determination).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Inspiring Moves",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ally regains 1 spent pool point when you roll critical success (Max 3/recharge).",
+    "Description": "<p>You don’t always succeed, but when you get a win, you do it in a way that’s inspiring to others. Any time you roll a critical success, choose one ally that witnessed the test. That ally regains 1 spent pool point. You may inspire no more than 3 spent pool points to be regained between each long recharge you take.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Intrusion Speed",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Halve the timeframe for subtle intrusions.",
+    "Description": "<p>You are quick at finding vulnerabilities and leveraging the right exploit tools for the job. Reduce the timeframe for subtle intrusions (EP2) by half (in most cases, this reduces it to 30 minutes; superior successes may reduce this further).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Manipulative Streak",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Moxie to flip-flop NPC's roll vs Deceive, Persuade, or Provoke.",
+    "Description": "<p>Your skills of social manipulation are unparalleled. You may spend a point of Moxie pool to flip-flop an NPC’s dice roll (for example, turning a 38 into an 83) when making a Deceive, Persuade, or Provoke Test against them. This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the defender’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Melee Mastery",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Vigor to flip-flop melee opponent's dice roll.",
+    "Description": "<p>This trait is only available to characters with Melee skill of 60 or higher. You have refined your ability to predict and counteract your opponents’ moves. You may spend a point of Vigor pool to flip-flop the dice roll (for example, turning a 38 into an 83) of an NPC with whom you are engaged in melee, whether you are attacking or defending. This only applies to dice rolls made by the GM. If the GM spends Threat pool, the pool points cancel each other out (i.e., the NPC’s dice roll is unaffected). You may not spend pool this way if you have already modified your own test with pool points.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Meme Fame",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to social/Rep tests when interacting with NPC aware of your fame.",
+    "Description": "<p>At some point in the past, you were the main character in a funny viral meme that made its way around the Solar System (and still sometimes pops up in new forms). To this day, strangers who access your public profile may connect you to that meme (unless you hide it). Though this recognition can be tedious, most people remember it fondly. You receive a +10 modifier to social skills and Rep Tests the first time you interact with an NPC who is aware of your connection to that meme.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mental Fortitude",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immunity to acute stress responses; make WIL Check for disorientation instead.",
+    "Description": "<p>Your mind’s foundation is solid, even in especially traumatic situations. You never suffer from acute stress responses (EP2). Instead, simply make a WIL Check for disorientation.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Merging Mastery",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No memory loss when merging forks unless critical failure.",
+    "Description": "<p>Your mind easily reintegrates forks. You never suffer memory loss when merging forks (EP2) back into your ego unless you roll a critical failure, which is treated as minor memory loss.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mind Flayer",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore the -30 modifier when mindware hacking.",
+    "Description": "<p>This trait is only available to characters with Infosec skill of 60 or higher. You are an expert at cracking cyberbrains and digital mind states. You do not suffer the −30 modifier applied when mindware hacking (Encoded Security, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Minion/Partner",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have a loyal NPC ally.",
+    "Description": "<p>You have an NPC on hand to help you out. This could be a personal secretary, lab assistant, intern, bodyguard, indenture, child, socialite entourage, or other form of retainer. The relationship does not need to be hierarchical; it could be a partner or other collaborator. Work with the GM to draw up the NPC’s stats, background, and motivations. The minion/partner NPC can be played by you as a secondary character. Your relationship with your minion/partner must be maintained, else they will part ways with you.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Attunement",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 to specific physical skill when sleeved in a specific morph type.",
+    "Description": "<p>You sync perfectly with a specific morph type (i.e., bouncers, flexbots, furies, etc.). While sleeved in that type of morph, you receive a +10 modifier to one of the following skills of your choice: Athletics, Fray, Free Fall, Infiltrate, or Pilot. You may take this trait multiple times for different morph/skill combinations.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Mastery",
+    "Type": "Positive",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No Integration Tests needed for a specific morph category.",
+    "Description": "<p>You are familiar with for one of the following categories of morphs: Biomorphs, Infomorphs/core morphs, or Synthmorphs/axles. You do not need to make Integration Tests when sleeving this category of morph. You may take this trait more than once for different categories of morphs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Networking Talent",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Spend Moxie to use a Social Skill instead of Rep score for Rep Tests.",
+    "Description": "<p>You can rally support to your cause even with a single-digit rep score. Once per session, you may spend a point of Moxie to use Deceive, Persuade, or Provoke instead of your rep score when making a Rep Test. Note that this may work against you if you curry favor under misleading pretenses or fail to live up to expectations, possibly leading to rep dings in the aftermath.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Online Obsession",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "1 point of Flex used only for tests involving info on the mesh/online communities.",
+    "Description": "<p>You spend a significant chunk of your life chatting on social media, doomscrolling feeds, and interacting online. You receive 1 point of ego Flex that may only be used for tests or narrative purposes involving information on the mesh and online communities, such as Research Tests, Rep Tests, knowing the latest memes, knowing someone who knows someone online, and so on. This Flex point may not be used for Interface, Infosec, Program or similar technical rolls.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Pack Security",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. +10 modifier to Stress Tests/INT Checks to heal stress when near group.",
+    "Description": "<p>This trait is primarily found among (non-octopus) uplifts. You rely heavily on tightly bonded social groups for your mental health. Whenever you are in the presence of family or close friends/teammates, you feel a strong sense of security and purpose that provides a +10 modifier to Stress Tests and INT Checks to heal stress.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Predatory Instinct",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. +10 Infiltrate when stalking, +10 bonus on first attack against surprised target.",
+    "Description": "<p>This trait is primarily found among uplifts and is most common with octopus or orca genestock. You retain the thrill of the hunt from your predatory ancestry. You receive a +10 modifier on Infiltrate Tests when stalking a target and a +10 bonus on the first attack against a surprised opponent.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Resilient Mind",
+    "Type": "Positive",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Halve timeframes for healing stress/trauma. Heal 2d6 stress on motivational goals.",
+    "Description": "<p>You bounce back and recover from stress and trauma at an exceptional rate. Reduce all timeframes for healing stress, traumas, and disorders by half. Additionally, when you reach a motivational goal, you heal 2d6 stress instead of 1d6 (Motivational Recovery, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Scrounging Talent",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+1 GP or +1 MP per mission. Increase Availability of morphs by +10.",
+    "Description": "<p>When it comes to scraping together the gear or morphs you need, you’re a master. You receive either +1 GP or +1 MP at the start of each mission. Additionally, increase the Availability of any morph you seek by +10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Sharpshooter",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Guns 60+ only. Ignore called shot modifier, reduce indirect fire penalty to -10.",
+    "Description": "<p>This trait is only available to characters with Guns skill of 60 or higher. You have trained to become an expert marksman. You do not suffer the −10 modifier for called shots (EP2) and your modifier for indirect attacks (EP2) is only −10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Spacecraft",
+    "Type": "Positive",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You own or operate a spacecraft.",
+    "Description": "<p>This trait requires GM approval. Buying a personal spacecraft is far beyond the means of most characters. This trait, however, puts a spacecraft in your hands, with certain conditions. This works best for campaigns where space travel is a major element. Somehow, you have become responsible for a GEV, bulk carrier, courier, corvette, fighter, scum ship, shuttle, or transport. Work out the details of how and why this occurred — and what strings are attached — with your GM.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stress Immunity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immune to Stress Tests/stress from one specific source category.",
+    "Description": "<p>Thanks to a traumatic past or a quirk of your psyche, you are emotionally inured to a particular source of stress and trauma, such as extensive isolation, asphyxiation, or Pandora gates. You are immune to Stress Tests and taking stress from that specific source. Use the entries on the Stressful Experiences table (EP2) for guidelines. GMs should not allow sources that are overly broad (i.e., “killing” is not acceptable, but “killing in self-defense” is). This trait may be taken more than once for separate sources, but no more than 3 times for sources in each category of stressful experience; for anything beyond that, use the Hardening trait (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Synth Kinesics",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Ignore -30 modifier to Kinesics Tests vs synths, bots, or infomorphs.",
+    "Description": "<p>You have a fine grasp of subtext and nuance even when dealing with others who lack emotive capabilities or visual clues. You do not suffer the −30 modifier to Kinesics Tests when interacting with synthmorphs, bots, infomorphs, or similar context-barren situations (Kinesics, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Temptation Immunity",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Immune to mental Addiction Tests.",
+    "Description": "<p>You do not get addicted to things. You never have to make a mental Addiction Test (EP2). Your morph, however, is still susceptible to physical addictions.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Untarnished Rep",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 to attacks on a specific rep score; rep loss is halved.",
+    "Description": "<p>Through fame, a lifetime of achievement, or some lucky quirk, your reputation in one particular social network is very difficult to assail. Choose one rep score. Any test to attack your reputation in that network suffers a −30 modifier, and any rep losses in that network are automatically halved. This does not apply if you burn your own rep. This trait is incompatible with the Blocklisted Rep trait (EP2) with the same rep score.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Uplift Affinity",
+    "Type": "Positive",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier to social skills when interacting with uplifts.",
+    "Description": "<p>You regularly interact with uplifts and have an instinctive grasp on their mannerisms, quirks, and idiosyncracies. You gain a +10 modifier to social skills when interacting with uplifts.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Vicious Mind",
+    "Type": "Positive",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Inflict extra 1d6 DV or SV with psi attacks.",
+    "Description": "<p>This trait is only available to asyncs. Your mental attacks are incredibly invasive. You inflict an extra 1d6 DV or 1d6 SV respectively with psi attacks that inflict damage or stress.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Addictive Personality",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 modifier per level on Addiction Tests.",
+    "Description": "<p>You have a poor ability to self-regulate and are predisposed to addictive behaviors. You have a −10 modifier per level on Addiction Tests (EP2) and any tests to resist similar cravings.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Anomalous Mind",
+    "Type": "Negative",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Backups/Forking/Psychosurgery require -30 Medicine Test; failure inflicts damage/corruption.",
+    "Description": "<p>Your mental patterns are dramatically outside transhumanity’s norms. This trait is found among people with brain damage, subjects of highly experimental pyschosurgical procedures, and AGIs and uplifts derived from non-human mind states. The uniqueness of your mental map makes normally routine affairs such as backups, resleeving, egocasting, forking, and psychosurgery a tricky and potentially dangerous affair. Any attempts to conduct these processes require active oversight and a Medicine: Psychosurgery Test at −30 with a timeframe of 1 hour (in addition to the procedure’s normal tests and timeframe). On a failure, treat the copied/ modified ego as a beta fork (EP2) of the original (failed beta forks become gamma forks) and inflict SV 1d6. On a superior/critical failure, the procedure fails outright.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Beta",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are a Beta fork. Max 1 Flex, Active Skills capped at 70.",
+    "Description": "<p>You are a beta fork of your original self, which for some reason is no longer alive (most likely lost during the Fall). You were created some time ago (a year or more), so you have grown and overcome some of your original beta limitations. You may not have more than 1 ego Flex point nor any Active skills higher than 70. If you possess the Psi trait, it’s because you were infected as a beta. You only have a limited portion of your original self’s memories — much of your previous life is lost. You automatically receive the Edited Memories trait (EP2) without gaining the bonus CP.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Botched Merge",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "INT Check required to recall long-term memory; critical failure recalls false memory.",
+    "Description": "<p>In the past, you suffered a serious complication while re-integrating a fork that caused irreparable damage to your ego map and left you with a tenuous grip on your own memories. Any time you rely on your long-term memory, such as recalling your team’s infiltration plans or remembering how you met someone, make an INT Check. On a failure, you do not believe your memories to be real. On a superior or critical failure, you confuse the memory with a different one and recall something completely incorrect.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Brittle Psyche",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Infection influence and pushing sleights inflict SV instead of DV.",
+    "Description": "<p>This trait is only available to asyncs. Your infection does not punish you physically, but it stresses you out. The first result of your influence effects table inflicts 1d6 SV instead of DV. Additionally, when you push a sleight, you take 1d6 SV instead of DV.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Curbed Intelligence",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. COG capped at 10. Skill learning time doubled.",
+    "Description": "<p>This trait is only available to AGIs and uplifts. Fearful of AGIs that might develop into seed AIs like the TITANs or of uplifts that might supercede transhumans in intelligence, some developers and uplift engineers limit the cognitive capabilities and growth potential of their codelines and uplift genestock. Your COG may not be raised above 10 and your timeframe for increasing know, mental, or technical skills or learning new ones is doubled.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Data Footprint",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "+10 modifier per level to Research/Rep Tests to track you online.",
+    "Description": "<p>You are sloppy about your social media presence and keeping your personal information contained. Apply a +10 modifier per level to Research and Rep Tests to track you or dig up information about you online.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Debt",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You owe a significant debt; weekly obligation of Moderate favor or GP/MP.",
+    "Description": "<p>You are in debt to a powerful person or organization. The debt is far beyond your means to pay. You are expected to contribute towards the payment of this debt on a consistent weekly basis. In most circumstances, this can be handled as the expenditure of a Moderate rep favor each week. If you fail to meet these obligations, the creditor will retaliate. If you completely renege on your debt, you gain the Black Mark (Level 2) and Enemy traits (EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Deferred Indenture",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You have a pending short-term indenture contract.",
+    "Description": "<p>Due to a prior contract or criminal sentence, you have a pending short-term indenture contract that has yet to be fulfilled. You are legally obligated to perform whatever work is asked of you to repay this debt. Consider the indenture to be equivalent to a major favor or several weeks of work.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Dependent",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You must care for a child, family member, or pet.",
+    "Description": "<p>You have a dependent — a child, a disabled family member, or even a much-loved but needy smart animal pet — that relies on your care and attention. Though you can sometimes leave your ward’s care in the hands of a fork, bots, or others, you must occasionally attend to their needs and may sometimes be forced to bring the dependent with you.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Divergent Personality",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Forks diverge quickly. Treat time apart as one step lower on Merging table.",
+    "Description": "<p>Your forks diverge from your core personality more quickly than usual. When merging a fork, treat the fork’s time apart as if it were one step lower on the Merging table (EP2). For example, a fork that is absent under 48 hours is treated as if it were away from 48 hours to 1 week.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Domineering Impulses",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Must make WIL Check to not use Provoke or respond to intimidation with violence.",
+    "Description": "<p>This trait is only available to uplifts and is most common among neo-hominids. You retain pre-sapient neurological urges to gain social status via dominance. You must make a WIL Check to use Deceive or Persuade skill instead of intimidating with Provoke. Additionally, you must make a WIL Check to avoid responding to acts of intimidation (including verbal) with your own threat displays or violence. You may not start with a rep score higher than 40 in any rep network other than g-rep and may not start with @-rep over 10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Emotion Susceptibility",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI only. -20 to resist emotional manipulation/stress. Stunned on WIL fail.",
+    "Description": "<p>This trait is only available to AGIs. You have a particularly difficult time adjusting to hormonal urges and emotions when sleeved in biomorphs. You suffer a −20 modifier when resisting any form of emotional manipulation, including Provoke Tests, fear effects, and certain sleights and drugs. Additionally, you suffer a −20 modifier to Stress Tests involving emotions, fear, or pain. At the GM’s discretion, certain intense emotions or rushes may temporarily overwhelm you; if you fail a WIL Check, you acquire the stunned condition (EP2) for one action turn (plus one per superior failure).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Emotive Blindness",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. Kinesics capped at 40. Cannot spend pool on Kinesics.",
+    "Description": "<p>Common among AGIs and uplifts who struggle with reading humans. You have difficulty with the finer points of social cues, body language, expressions, and emoting. You may not raise Kinesics skill over 40 and may not spend pool points on Kinesics Tests.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Errant Fork",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "An alpha fork of you exists as an NPC and is a rival or threat.",
+    "Description": "<p>Deliberately or not, you are not the only you out there. An alpha fork of yourself exists outside of your influence/control. While many people have forks of themselves, this fork in particular represents a potential threat or complication. The alpha fork is a complete and relatively recent (within 2 years) copy of your ego that possesses sensitive knowledge about all aspects of your life.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Identifiable Quirk",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 Deceive to impersonate/hide identity due to behavioral quirk.",
+    "Description": "<p>You have a unique behavioral quirk that makes identification easy, no matter what morph you are sleeved in. Apply a −30 modifier to your Deceive Test when you are attempting to impersonate someone else or when someone who knows you is attempting to identify you in a new morph using Kinesics. Your quirk could be a nervous twitch of the lips, distinct accent, noticeable laugh, or unusual gait.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Impaired Linguistics",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. Double CP cost for new languages. Stress Tests require COG Check or lose speech.",
+    "Description": "<p>This trait is only available to uplifts. Your particular brain structure has difficulty processing language, particularly under stress. The CP/RP cost for additional languages beyond those you get for free during character creation is doubled. Additionally, any time you make a Stress Test, you must make an additional COG Check. If you fail the COG Check, you lose the ability to speak or comprehend language for 1d10 minutes.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Implicit Bias",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, the GM may provide misinformation on a Know/Research result.",
+    "Description": "<p>Your well of knowledge is tainted with misinformation. You think you know more than you really do, and your views are heavily slanted with falsehoods and misconceptions. Once per session, the GM may intentionally mislead you when providing the results of a Know or Research Test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Mesh Naiveté",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Infosec/Interface/Program/Research capped at 40. Cannot use pool on these skills.",
+    "Description": "<p>You are bad with computers. You don’t really understand the mesh, AR interfaces confuse you, you’re constantly messing up the controls in VR, and sometimes simply dictating a mental text message is a challenge. You rely on your muse for basic mesh interactions. You may not have Infosec, Interface, Program, or Research skills above 40, and you may not use pools on any tests with those skills.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Messy Mind",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Psychosurgery inflicts extra +1d6/+2 SV.",
+    "Description": "<p>Something about your mind makes psychosurgical modifications a tricky affair. Any psychosurgery procedures that have a chance of inflicting stress inflict an extra +1d6/+2 SV.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Micrograv Disorientation",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-30 INT/Survival to navigate in microgravity. -1 Insight (or Flex).",
+    "Description": "<p>You have a particularly challenging time with proper orientation in micrograv habitats. Apply a −30 modifier to INT Checks or Survival Tests to navigate in these situations. Due to the cognitive burden you face, your Insight pool is reduced by 1 in these conditions; if your Insight pool is already 0, reduce Flex pool by 1 instead.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Morph Aversion",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10/level on Integration/Resleeving tests for a specific morph category.",
+    "Description": "<p>You have a particular dislike for one of the following morph categories: Biomorphs, Core morphs/infomorphs, or Axels/synthmorphs. You suffer a −10 modifier per level on Integration Tests and Resleeving Stress Tests when sleeving morphs of that category.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Need for Solitude",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "-10 cumulative penalty to social skills after 2 hours interaction; WIL check after 6 hours.",
+    "Description": "<p>You prefer solitude and minimal social interactions. You can only tolerate 2 hours of direct interaction (physical or virtual) with others before you need a break and some alone time. If forced into a situation where you must interact or exist in close proximity to others for more than 2 hours, you suffer a cumulative −10 modifier to Deceive, Persuade, and Provoke Tests (except for hostile provocations), up to a maximum of −30. After 6 hours, you must a WIL Check to keep your composure.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "On the Run",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are wanted and hunted by a specific faction.",
+    "Description": "<p>You are wanted and actively hunted by the authorities of a particular habitat or faction. Any use of your identity (either real or a compromised fake ID that you possess) within their jurisdiction draws their immediate attention.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Poor Socialization",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "AGI/Uplift only. -10 on social tests during first meetings.",
+    "Description": "<p>This trait is most common among AGIs and uplifts. Your early life experience left you unprepared for interacting with the general public. You suffer a −10 modifier on Deceive, Persuade, and Provoke Tests whenever you interact with another character for the first time.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Slow Reaction Time",
+    "Type": "Negative",
+    "Cost": [
+      2,
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Reduce Initiative by 1 per level.",
+    "Description": "<p>Your response times are lacking. Reduce your Initiative by 1 per level.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Social Ineptitude",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, GM can trigger a critical failure on a social interaction.",
+    "Description": "<p>You are a walking social disaster. Once per game session, the GM can treat one of your social interactions (preferably involving a social skill test or rep interaction) as a critical failure. Moxie pool may not be used to negate this failure.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stolen Identity",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Someone stole your identity; you suffer collateral complications.",
+    "Description": "<p>At some point in the recent past, someone stole your identity. This was more than a financial crime, they took advantage of your name, reputation, and background in real-life affairs. You are still dealing with collateral difficulties from the incident, such as criminal charges, ego hunters, or angry mobs.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Stress Vulnerability",
+    "Type": "Negative",
+    "Cost": [
+      1
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Double Stress (SV) from one specific source category.",
+    "Description": "<p>Thanks to your upbringing or a flaw in your psyche, you are emotionally vulnerable to a particular source of stress and trauma, such as extensive isolation, asphyxiation, or Pandora gates. You suffer double the SV from that specific source.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Submissiveness",
+    "Type": "Negative",
+    "Cost": [
+      1,
+      2,
+      3
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Uplift only. -10 modifier per level to resist Persuade/Provoke from superiors.",
+    "Description": "<p>This trait is more common among uplifts who inherit mannerisms from their pre-sapient forebears. You retain a tendency to submit to displays of dominance. You suffer a −10 modifier per level to resist Persuade and Provoke Tests from NPCs with superior capabilities or higher perceived social status.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Subverted Mind",
+    "Type": "Negative",
+    "Cost": [
+      6
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "You are a sleeper agent with conditioned behavior or a hidden personality.",
+    "Description": "<p>You are unaware that your mind has been conditioned with awareness block, hidden knowledge, and/or personality editing psychosurgery (EP2). Under certain triggered conditions, you acquire new knowledge and/or your personality changes. Under separate trigger conditions, you revert to your normal self, unaware that you were ever different.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Thorough Infection",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Heal infection slower (5 per short recharge, 20 per long).",
+    "Description": "<p>This trait is only available to asyncs with the Psi trait at Level 2. Your infection has sunk its claws into your psyche, making it more difficult to shake off. You only reduce your Infection Rating by 5 points every short recharge and 20 points for each long recharge (Easing the Infection, EP2).</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Uncooperative Tendencies",
+    "Type": "Negative",
+    "Cost": [
+      2
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "No teamwork bonuses received. -10 to aid others.",
+    "Description": "<p>You are socially awkward, self-centered, or have such low self esteem that you do not work well others. You do not benefit from teamwork bonuses (EP2) when others try to aid you, and if you attempt to aid someone else (whether voluntarily or forced), apply a −10 modifier to the test rather than aiding with a +10.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Unreliability",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Once per session, GM can deny pool usage on a test.",
+    "Description": "<p>You have an unfortunate tendency to screw things up at critical moments. Once per session, when the stakes are high, the GM may rule that you cannot use pool points to affect one specific test.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  },
+  {
+    "Name": "Unusual Aura",
+    "Type": "Negative",
+    "Cost": [
+      4
+    ],
+    "Ego": true,
+    "Morph": false,
+    "Summary": "Async only. Psi usage manifests obvious physical signs; targets always aware.",
+    "Description": "<p>This trait is only available to asyncs. Your psi-gamma sleights often manifest in an obvious physical way: glowing eyes, a hair-raising static crackling, an eery miasma, or headaches in your targets. This happens any time you acquire an influence effect. Additionally, your targets are always aware that they have been affected by something (Target Awareness, EP2) and that you are somehow connected.</p>",
+    "Auto": false,
+    "Noted": false,
+    "Resource": "Character Options",
+    "Reference": "",
+    "AdditionalRules": []
+  }
+]

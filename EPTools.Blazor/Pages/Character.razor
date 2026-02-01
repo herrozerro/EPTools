@@ -3,7 +3,6 @@
 @using Blazored.LocalStorage
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Blazor.Components
-@using EPTools.Blazor.Services
 @using EPTools.Core.Models.Ego
 @inject LifepathService LifepathService
 @inject EgoService EgoService
@@ -68,7 +67,7 @@
         }
         else
         {
-            // 2. If nothing in storage, create a new blank one (or load default)
+            // 2. If nothing is in storage, create a new blank one (or load default)
             _egoModel = await EgoService.GetDefaults();
         }
 

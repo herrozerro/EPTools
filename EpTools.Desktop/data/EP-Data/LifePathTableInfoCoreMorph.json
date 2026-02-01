@@ -1,0 +1,98 @@
+[
+  {
+    "Name": "Agent",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 11,
+    "OptionLists": []
+  },
+  {
+    "Name": "Digimorph",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Djinn",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Echo",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ikon",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 11,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 17,
+    "OptionLists": []
+  },
+  {
+    "Name": "Operator",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 11,
+    "OptionLists": []
+  },
+  {
+    "Name": "Overmind",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 20,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sage",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 13,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sexton",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 15,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Spectre",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 6,
+    "Weight": 6,
+    "OptionLists": []
+  },
+  {
+    "Name": "Warden",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 7,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]

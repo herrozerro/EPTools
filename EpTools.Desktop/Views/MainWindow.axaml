@@ -3,18 +3,157 @@
         xmlns:vm="using:EpTools.Desktop.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:views="using:EpTools.Desktop.Views"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="800"
         x:Class="EpTools.Desktop.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="EpTools.Desktop">
+        Title="EP Tools - Character Sheet"
+        Width="1200" Height="800">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="Auto,Auto,Auto,*,Auto">
+        <!-- Toolbar -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10" Spacing="5">
+            <Button Content="Generate Lifepath"
+                    Command="{Binding GenerateLifepathCommand}"
+                    Classes="accent"/>
+            <Button Content="Save" Command="{Binding SaveCommand}"/>
+            <Button Content="Reset" Command="{Binding ResetCommand}"/>
+            <Button Content="Export" Command="{Binding ExportCommand}"
+                    CommandParameter="{Binding $parent[Window].StorageProvider}"/>
+            <Button Content="Import" Command="{Binding ImportCommand}"
+                    CommandParameter="{Binding $parent[Window].StorageProvider}"/>
+        </StackPanel>
 
+        <!-- Bio Info Section -->
+        <Border Grid.Row="1" Margin="10,0,10,10" Padding="10"
+                Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                CornerRadius="8">
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+                <!-- Row 1 -->
+                <TextBox Grid.Row="0" Grid.Column="0" Margin="5"
+                         Watermark="Name"
+                         Text="{Binding CurrentEgo.Name, Mode=TwoWay}"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Margin="5"
+                         Watermark="Background"
+                         Text="{Binding CurrentEgo.Background, Mode=TwoWay}"/>
+                <TextBox Grid.Row="0" Grid.Column="2" Margin="5"
+                         Watermark="Career"
+                         Text="{Binding CurrentEgo.Career, Mode=TwoWay}"/>
+                <TextBox Grid.Row="0" Grid.Column="3" Margin="5"
+                         Watermark="Interest"
+                         Text="{Binding CurrentEgo.Interest, Mode=TwoWay}"/>
+
+                <!-- Row 2 -->
+                <TextBox Grid.Row="1" Grid.Column="0" Margin="5"
+                         Watermark="Faction"
+                         Text="{Binding CurrentEgo.Faction, Mode=TwoWay}"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Margin="5"
+                         Watermark="Languages"
+                         Text="{Binding CurrentEgo.Languages, Mode=TwoWay}"/>
+                <NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5"
+                               Watermark="Age" Minimum="0"
+                               Value="{Binding CurrentEgo.EgoAge, Mode=TwoWay}"/>
+                <NumericUpDown Grid.Row="1" Grid.Column="3" Margin="5"
+                               Watermark="Ego Flex" Minimum="0"
+                               Value="{Binding CurrentEgo.EgoFlex, Mode=TwoWay}"/>
+
+                <!-- Row 3 -->
+                <TextBox Grid.Row="2" Grid.Column="0" Margin="5"
+                         Watermark="Sex"
+                         Text="{Binding CurrentEgo.EgoSex, Mode=TwoWay}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Margin="5"
+                         Watermark="Gender"
+                         Text="{Binding CurrentEgo.EgoGender, Mode=TwoWay}"/>
+                <TextBox Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="5"
+                         Watermark="Notes"
+                         Text="{Binding CurrentEgo.Notes, Mode=TwoWay}"/>
+            </Grid>
+        </Border>
+
+        <!-- Aptitudes Section -->
+        <Border Grid.Row="2" Margin="10,0,10,10" Padding="10"
+                Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                CornerRadius="8">
+            <StackPanel>
+                <TextBlock Text="Aptitudes" FontWeight="Bold" FontSize="16"
+                           HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                <ItemsControl ItemsSource="{Binding CurrentEgo.Aptitudes}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Spacing="20"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Width="80" HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding ShortName}"
+                                           FontWeight="Bold" FontSize="14"
+                                           HorizontalAlignment="Center"/>
+                                <NumericUpDown Value="{Binding AptitudeValue, Mode=TwoWay}"
+                                               Minimum="0" Maximum="30"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                                <Border Background="{DynamicResource AccentFillColorDefaultBrush}"
+                                        CornerRadius="4" Padding="8,4" Margin="0,5,0,0"
+                                        HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding CheckRating}"
+                                               Foreground="White"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"/>
+                                </Border>
+                                <TextBlock Text="CHECK" FontSize="10"
+                                           Opacity="0.6"
+                                           HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </Border>
+
+        <!-- Tab Control -->
+        <TabControl Grid.Row="3" Margin="10,0,10,10"
+                    SelectedIndex="{Binding SelectedTabIndex}">
+            <TabItem Header="Skills">
+                <views:SkillsView DataContext="{Binding}"/>
+            </TabItem>
+            <TabItem Header="Network">
+                <TextBlock Text="Network tab - coming soon"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </TabItem>
+            <TabItem Header="Morph">
+                <TextBlock Text="Morph tab - coming soon"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </TabItem>
+            <TabItem Header="Gear">
+                <TextBlock Text="Gear tab - coming soon"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </TabItem>
+            <TabItem Header="Traits">
+                <TextBlock Text="Traits tab - coming soon"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </TabItem>
+        </TabControl>
+
+        <!-- Status Bar -->
+        <Border Grid.Row="4" Background="{DynamicResource CardBackgroundFillColorSecondaryBrush}"
+                Padding="10,5">
+            <Grid ColumnDefinitions="*,Auto">
+                <TextBlock Text="{Binding StatusMessage}" VerticalAlignment="Center"/>
+                <ProgressBar Grid.Column="1" IsIndeterminate="True" Width="100"
+                             IsVisible="{Binding IsLoading}"/>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>

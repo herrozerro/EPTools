@@ -1,0 +1,415 @@
+[
+  {
+    "Name": "Actioneer",
+    "Type": "CharacterGenAptitude",
+    "Description": "You are more comfortable with physicality than talking or thinking.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Extrovert",
+    "Type": "CharacterGenAptitude",
+    "Description": "You can talk your way through most situations.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Facilitator",
+    "Type": "CharacterGenAptitude",
+    "Description": "You\u2019re good with people, planning, and seeing things through.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Factotum",
+    "Type": "CharacterGenAptitude",
+    "Description": "You\u2019ve never quite stood out, but you exhibit broad competence.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Inquirer",
+    "Type": "CharacterGenAptitude",
+    "Description": "Your creative mind is good at figuring things out.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Survivor",
+    "Type": "CharacterGenAptitude",
+    "Description": "You have the will and stamina to scrape by in tough situations.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Thrill Seeker",
+    "Type": "CharacterGenAptitude",
+    "Description": "You\u2019ve never said no to a dare, but your fast reaction time and quick thinking compensate for your lack of foresight.",
+    "Value": 1,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Cog",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Int",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Ref",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Sav",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Som",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 15,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Wil",
+          "Type": "Aptitude",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

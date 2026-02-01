@@ -1,0 +1,1380 @@
+[
+  {
+    "Name": "Anarchist",
+    "Type": "CharacterGenFaction",
+    "Description": "You believe power is corrupt and favor voluntary, non-hierarchical organizations based on direct democracy.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Anarchist",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Anarchist Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Anarchism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Mutual Aid",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Hypercapitalism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Argonaut",
+    "Type": "CharacterGenFaction",
+    "Description": "You advocate for open-source technology and responsible scientific advancement.",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Argonaut",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Argonaut Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Open Source",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Science!",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Scientific Responsibility",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "RRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Barsoomian",
+    "Type": "CharacterGenFaction",
+    "Description": "You fight for Martian independence and resist hypercorp control.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Barsoomian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Barsoomian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Martian Liberation",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Hypercorps",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Indenture",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Brinker",
+    "Type": "CharacterGenFaction",
+    "Description": "You value isolation, independence, and spiritual beliefs away from the core worlds.",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Brinker",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Brinker Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Religion",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−X-Risks",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Criminal",
+    "Type": "CharacterGenFaction",
+    "Description": "You operate outside the law, focused on power and profit.",
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": [
+      [
+        {
+          "Name": "Criminal",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Criminal Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Expand Influence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Wealth",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Law and Order",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Extropian",
+    "Type": "CharacterGenFaction",
+    "Description": "You support a free-market, contract-based society without government oversight.",
+    "Value": 0,
+    "Weight": 5,
+    "OptionLists": [
+      [
+        {
+          "Name": "Extropian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Extropian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Extropianism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Mutualism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Hypercorp",
+    "Type": "CharacterGenFaction",
+    "Description": "You work for or with hypercorporations that drive the economy and colonization efforts.",
+    "Value": 0,
+    "Weight": 12,
+    "OptionLists": [
+      [
+        {
+          "Name": "Hypercorp",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Hypercorp Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Extrasolar Colonization",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Hypercapitalism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Security",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Jovian",
+    "Type": "CharacterGenFaction",
+    "Description": "You advocate for bioconservatism and oppose posthuman advancements.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Jovian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Jovian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Bioconservatism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Religion",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−X-Risks",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Lunar/Orbital",
+    "Type": "CharacterGenFaction",
+    "Description": "You are focused on reclaiming Earth and promoting capitalism and human superiority.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Lunar/Orbital",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Lunar/Orbital Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Biochauvinism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Capitalism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Reclaim Earth",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Mercurial",
+    "Type": "CharacterGenFaction",
+    "Description": "You support the rights and independence of uplifts and AGIs, resisting human-centric views.",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Mercurial",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Mercurial Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Autonomy",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Uplift Liberation",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Anthropocentrism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Reclaimer",
+    "Type": "CharacterGenFaction",
+    "Description": "You are dedicated to reclaiming Earth and ensuring the survival of transhumanity.",
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": [
+      [
+        {
+          "Name": "Reclaimer",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Reclaimer Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Reclaim Earth",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Survival",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−TITANs",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Scum",
+    "Type": "CharacterGenFaction",
+    "Description": "You live on the fringes of society, embracing hedonism and extreme morphological freedom.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Scum",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Scum Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Hedonism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Morphological Freedom",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Neurodiversity",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Socialite",
+    "Type": "CharacterGenFaction",
+    "Description": "You are deeply embedded in social networks, thriving on fame and creative expression.",
+    "Value": 0,
+    "Weight": 6,
+    "OptionLists": [
+      [
+        {
+          "Name": "Socialite",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Socialite Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Creative Expression",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Fame",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Hedonism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Titanian",
+    "Type": "CharacterGenFaction",
+    "Description": "You believe in technosocialism and scientific progress, opposing hypercapitalism.",
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": [
+      [
+        {
+          "Name": "Titanian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Titanian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Science!",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Technosocialism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Hypercapitalism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Venusian",
+    "Type": "CharacterGenFaction",
+    "Description": "You advocate for Venusian sovereignty, prosperity, and technoprogressivism.",
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": [
+      [
+        {
+          "Name": "Venusian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Venusian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Prosperity",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Technoprogressivism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Venusian Sovereignty",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Belter",
+    "Type": "CharacterGenFaction",
+    "Description": "You are a spacer who values independence, hypercapitalism, and Extropian ideals.",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Belter",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Belter Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Hypercapitalism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Extropianism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "GRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Europan",
+    "Type": "CharacterGenFaction",
+    "Description": "You are focused on independence and technoprogressivism, resisting bioconservatism.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Europan",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Europan Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Technoprogressivism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Bioconservatism",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "FRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Ringer",
+    "Type": "CharacterGenFaction",
+    "Description": "You thrive on autonomy, creative expression, and independence.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Ringer",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Ringer Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Autonomy",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Creative Expression",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Sapient",
+    "Type": "CharacterGenFaction",
+    "Description": "You advocate for assimilation, neurodiversity, and uplift rights.",
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sapient",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Sapient Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Assimilation",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Neurodiversity",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Uplift Rights",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Sifter",
+    "Type": "CharacterGenFaction",
+    "Description": "You prioritize survival, independence, and oppose indenture.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Sifter",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Sifter Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Survival",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "−Indenture",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 40,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Skimmer",
+    "Type": "CharacterGenFaction",
+    "Description": "You focus on autonomy, independence, and survival.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Skimmer",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Skimmer Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Autonomy",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Survival",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  },
+  {
+    "Name": "Solarian",
+    "Type": "CharacterGenFaction",
+    "Description": "You support autonomy, creative expression, and independence.",
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": [
+      [
+        {
+          "Name": "Solarian",
+          "Type": "Faction",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "Know: Solarian Interests",
+          "Type": "Skill",
+          "Description": null,
+          "Value": 20,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Autonomy",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Creative Expression",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "+Independence",
+          "Type": "Motivation",
+          "Description": null,
+          "Value": 0,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "ARep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 10,
+          "Weight": 0,
+          "OptionLists": []
+        },
+        {
+          "Name": "CRep",
+          "Type": "Reputation",
+          "Description": null,
+          "Value": 30,
+          "Weight": 0,
+          "OptionLists": []
+        }
+      ]
+    ]
+  }
+]

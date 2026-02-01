@@ -1,0 +1,178 @@
+[
+  {
+    "Name": "Athletics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Deceive",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Exotic Skill: [Field]",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 1,
+    "OptionLists": []
+  },
+  {
+    "Name": "Fray",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Free Fall",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Guns",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Hardware: [Field]",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Infiltrate",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Infosec",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Interface",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Kinesics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Know: [Field]",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 11,
+    "OptionLists": []
+  },
+  {
+    "Name": "Medicine: [Field]",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Melee",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Perceive",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Persuade",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Pilot: [Field]",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Program",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Provoke",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psi",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Research",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Survival",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 4,
+    "OptionLists": []
+  }
+]

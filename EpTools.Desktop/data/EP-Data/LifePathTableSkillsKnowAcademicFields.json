@@ -1,0 +1,322 @@
+[
+  {
+    "Name": "Anthropology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Archeology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Astrobiology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Astronomy",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Astrophysics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Astrosociology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Biology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Botany",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Chemistry",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Climatology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cognitive Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Computer Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Cryptography",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Data Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Ecology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Economics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Education",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Engineering",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Genetics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Geology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "History",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Law",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Linguistics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Mathematics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Materials Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Memetics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Microbiology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Military Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Nanotechnology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neuroscience",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Philosophy",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Physics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Political Science",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Psychology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Sociology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xeno-Archeology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xenobotany",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xenogenetics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Xenolinguistics",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  },
+  {
+    "Name": "Zoology",
+    "Type": "Skill",
+    "Description": null,
+    "Value": 0,
+    "Weight": 2,
+    "OptionLists": []
+  }
+]

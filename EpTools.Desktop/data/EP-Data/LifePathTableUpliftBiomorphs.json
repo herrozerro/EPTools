@@ -1,0 +1,98 @@
+[
+  {
+    "Name": "Neo-Avian",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 0,
+    "Weight": 20,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Beluga",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 3,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Bonobo/Neo-Chimp",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 17,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Dolphin",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Gorilla",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Neanderthal",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 2,
+    "Weight": 8,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Octopus",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 12,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Orangutan",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 3,
+    "Weight": 10,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Orca",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 4,
+    "Weight": 4,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Pig",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 7,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Porpoise",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 1,
+    "Weight": 5,
+    "OptionLists": []
+  },
+  {
+    "Name": "Neo-Whale",
+    "Type": "Morph",
+    "Description": null,
+    "Value": 5,
+    "Weight": 1,
+    "OptionLists": []
+  }
+]
