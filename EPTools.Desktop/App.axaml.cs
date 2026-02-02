@@ -4,13 +4,13 @@ using Avalonia.Data.Core.Plugins;
 using System;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using EpTools.Desktop.ViewModels;
-using EpTools.Desktop.Views;
 using EPTools.Core.Interfaces;
 using EPTools.Core.Services;
+using EPTools.Desktop.ViewModels;
+using EPTools.Desktop.Views;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace EpTools.Desktop;
+namespace EPTools.Desktop;
 
 public partial class App : Application
 {

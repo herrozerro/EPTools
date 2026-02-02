@@ -1,10 +1,10 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using EpTools.Desktop.ViewModels;
 using EPTools.Core.Models.Ego;
+using EPTools.Desktop.ViewModels;
 
-namespace EpTools.Desktop.Views;
+namespace EPTools.Desktop.Views;
 
 public partial class NetworkView : UserControl
 {

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.Json;
@@ -10,7 +11,7 @@ using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Services;
 
-namespace EpTools.Desktop.ViewModels;
+namespace EPTools.Desktop.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
@@ -37,6 +38,17 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public ObservableCollection<EgoAptitudeViewModel> Aptitudes { get; } = [];
     public ObservableCollection<IdentityViewModel> Identities { get; } = [];
+    public ObservableCollection<EgoSkillViewModel> Skills { get; } = [];
+
+    // Grouped skill collections for the UI
+    public IEnumerable<EgoSkillViewModel> ActiveSkills =>
+        Skills.Where(s => s.SkillType == SkillType.EgoSkill).OrderBy(s => s.Name);
+
+    public IEnumerable<EgoSkillViewModel> KnowledgeSkills =>
+        Skills.Where(s => s.SkillType == SkillType.KnowledgeSkill).OrderBy(s => s.Name);
+
+    public IEnumerable<EgoSkillViewModel> ExoticSkills =>
+        Skills.Where(s => s.SkillType == SkillType.ExoticSkill).OrderBy(s => s.Name);
 
     partial void OnCurrentEgoChanged(Ego value)
     {
@@ -45,6 +57,13 @@ public partial class MainWindowViewModel : ViewModelBase
         foreach (var apt in value.Aptitudes)
         {
             Aptitudes.Add(new EgoAptitudeViewModel(apt));
+        }
+
+        // Rebuild skill view models
+        Skills.Clear();
+        foreach (var skill in value.Skills)
+        {
+            Skills.Add(new EgoSkillViewModel(skill, Aptitudes));
         }
 
         // Rebuild identity view models
@@ -56,6 +75,50 @@ public partial class MainWindowViewModel : ViewModelBase
 
         // Select first identity when ego changes
         SelectedIdentity = Identities.FirstOrDefault();
+
+        // Notify grouped collections changed
+        OnPropertyChanged(nameof(ActiveSkills));
+        OnPropertyChanged(nameof(KnowledgeSkills));
+        OnPropertyChanged(nameof(ExoticSkills));
+    }
+
+    public void AddKnowledgeSkill()
+    {
+        var skill = new EgoSkill
+        {
+            Name = "New Knowledge Skill",
+            SkillType = SkillType.KnowledgeSkill,
+            Aptitude = "Intuition"
+        };
+        CurrentEgo.Skills.Add(skill);
+        Skills.Add(new EgoSkillViewModel(skill, Aptitudes));
+        OnPropertyChanged(nameof(KnowledgeSkills));
+    }
+
+    public void AddExoticSkill()
+    {
+        var skill = new EgoSkill
+        {
+            Name = "New Exotic Skill",
+            SkillType = SkillType.ExoticSkill,
+            Aptitude = "Reflexes"
+        };
+        CurrentEgo.Skills.Add(skill);
+        Skills.Add(new EgoSkillViewModel(skill, Aptitudes));
+        OnPropertyChanged(nameof(ExoticSkills));
+    }
+
+    public void DeleteSkill(EgoSkillViewModel skillVm)
+    {
+        if (skillVm.SkillType == SkillType.EgoSkill) return; // Can't delete active skills
+
+        CurrentEgo.Skills.Remove(skillVm.Model);
+        Skills.Remove(skillVm);
+
+        if (skillVm.SkillType == SkillType.KnowledgeSkill)
+            OnPropertyChanged(nameof(KnowledgeSkills));
+        else
+            OnPropertyChanged(nameof(ExoticSkills));
     }
 
     public MainWindowViewModel(

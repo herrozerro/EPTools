@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using System;
 
-namespace EpTools.Desktop;
+namespace EPTools.Desktop;
 
 sealed class Program
 {

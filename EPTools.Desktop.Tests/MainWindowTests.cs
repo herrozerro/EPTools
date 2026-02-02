@@ -6,13 +6,13 @@ using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
-using EpTools.Desktop.ViewModels;
-using EpTools.Desktop.Views;
+using EPTools.Desktop.ViewModels;
+using EPTools.Desktop.Views;
 using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Services;
 
-namespace EpTools.Desktop.Tests;
+namespace EPTools.Desktop.Tests;
 
 #region Mock Services
 

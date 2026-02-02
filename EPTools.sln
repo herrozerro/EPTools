@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPTools.Core", "EPTools.Cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPTools.Blazor", "EPTools.Blazor\EPTools.Blazor.csproj", "{CC8AFE9F-3779-4E52-B6F1-E76DB1AC5FDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpTools.Desktop", "EpTools.Desktop\EpTools.Desktop.csproj", "{3AD8C98A-3FA6-4A49-B651-DBD41B6FBFFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPTools.Desktop", "EPTools.Desktop\EPTools.Desktop.csproj", "{3AD8C98A-3FA6-4A49-B651-DBD41B6FBFFB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPTools.Desktop.Tests", "EPTools.Desktop.Tests\EPTools.Desktop.Tests.csproj", "{82D6F88F-E92A-42FD-870E-D1738E7C0E07}"
 EndProject

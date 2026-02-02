@@ -2,9 +2,9 @@ using Avalonia;
 using Avalonia.Headless;
 using Avalonia.Themes.Fluent;
 
-[assembly: AvaloniaTestApplication(typeof(EpTools.Desktop.Tests.TestAppBuilder))]
+[assembly: AvaloniaTestApplication(typeof(EPTools.Desktop.Tests.TestAppBuilder))]
 
-namespace EpTools.Desktop.Tests;
+namespace EPTools.Desktop.Tests;
 
 /// <summary>
 /// Minimal test application that doesn't require DI or data loading.

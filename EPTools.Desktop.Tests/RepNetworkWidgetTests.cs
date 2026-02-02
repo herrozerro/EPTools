@@ -7,11 +7,11 @@ using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
 using Avalonia.Input;
 using Avalonia.VisualTree;
-using EpTools.Desktop.ViewModels;
-using EpTools.Desktop.Views;
+using EPTools.Desktop.ViewModels;
+using EPTools.Desktop.Views;
 using EPTools.Core.Models.Ego;
 
-namespace EpTools.Desktop.Tests;
+namespace EPTools.Desktop.Tests;
 
 public class RepNetworkWidgetTests
 {

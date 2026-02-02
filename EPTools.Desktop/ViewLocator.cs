@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using EpTools.Desktop.ViewModels;
+using EPTools.Desktop.ViewModels;
 
-namespace EpTools.Desktop;
+namespace EPTools.Desktop;
 
 public class ViewLocator : IDataTemplate
 {

@@ -2,7 +2,7 @@ using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using EPTools.Core.Models.Ego;
 
-namespace EpTools.Desktop.ViewModels;
+namespace EPTools.Desktop.ViewModels;
 
 public partial class IdentityViewModel : ObservableObject
 {

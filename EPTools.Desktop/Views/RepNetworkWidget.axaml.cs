@@ -1,8 +1,8 @@
 using Avalonia;
 using Avalonia.Controls;
-using EpTools.Desktop.ViewModels;
+using EPTools.Desktop.ViewModels;
 
-namespace EpTools.Desktop.Views;
+namespace EPTools.Desktop.Views;
 
 public partial class RepNetworkWidget : UserControl
 {

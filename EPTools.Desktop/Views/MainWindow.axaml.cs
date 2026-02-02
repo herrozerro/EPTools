@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace EpTools.Desktop.Views;
+namespace EPTools.Desktop.Views;
 
 public partial class MainWindow : Window
 {

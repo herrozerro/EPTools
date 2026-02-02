@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\EpTools.Desktop\EpTools.Desktop.csproj" />
+      <ProjectReference Include="..\EPTools.Desktop\EPTools.Desktop.csproj" />
     </ItemGroup>
 
 </Project>
