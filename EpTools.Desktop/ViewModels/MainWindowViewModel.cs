@@ -1,4 +1,6 @@
 using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Avalonia.Platform.Storage;
@@ -29,6 +31,32 @@ public partial class MainWindowViewModel : ViewModelBase
 
     [ObservableProperty]
     private string _statusMessage = string.Empty;
+
+    [ObservableProperty]
+    private IdentityViewModel? _selectedIdentity;
+
+    public ObservableCollection<EgoAptitudeViewModel> Aptitudes { get; } = [];
+    public ObservableCollection<IdentityViewModel> Identities { get; } = [];
+
+    partial void OnCurrentEgoChanged(Ego value)
+    {
+        // Rebuild aptitude view models
+        Aptitudes.Clear();
+        foreach (var apt in value.Aptitudes)
+        {
+            Aptitudes.Add(new EgoAptitudeViewModel(apt));
+        }
+
+        // Rebuild identity view models
+        Identities.Clear();
+        foreach (var identity in value.Identities)
+        {
+            Identities.Add(new IdentityViewModel(identity));
+        }
+
+        // Select first identity when ego changes
+        SelectedIdentity = Identities.FirstOrDefault();
+    }
 
     public MainWindowViewModel(
         EgoService egoService,

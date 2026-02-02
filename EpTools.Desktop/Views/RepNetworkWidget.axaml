@@ -1,0 +1,73 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:EpTools.Desktop.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="170" d:DesignHeight="160"
+             x:Class="EpTools.Desktop.Views.RepNetworkWidget"
+             x:Name="Root">
+
+    <Border Padding="10" BorderThickness="1" CornerRadius="8"
+            BorderBrush="{DynamicResource ControlStrokeColorDefaultBrush}"
+            Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+            Width="170">
+        <StackPanel x:Name="ContentPanel" HorizontalAlignment="Center" Spacing="5"
+                    x:DataType="vm:RepNetworkViewModel">
+            <!-- Label -->
+            <TextBlock Text="{Binding Label, ElementName=Root}"
+                       FontSize="11" Opacity="0.7"
+                       HorizontalAlignment="Center"
+                       TextAlignment="Center"/>
+
+            <!-- Score -->
+            <NumericUpDown Value="{Binding Score, Mode=TwoWay}"
+                           Minimum="0" Maximum="99"
+                           Width="150"
+                           HorizontalAlignment="Center"
+                           HorizontalContentAlignment="Center"
+                           FontWeight="Bold"/>
+
+            <!-- Minor Favors (3 toggles) -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="5">
+                <ToggleButton IsChecked="{Binding Minor1Used, Mode=TwoWay}"
+                              ToolTip.Tip="Minor Favor"
+                              Width="24" Height="24" Padding="0"
+                              CornerRadius="12">
+                    <Ellipse Width="12" Height="12"
+                             Fill="{DynamicResource AccentFillColorDefaultBrush}"/>
+                </ToggleButton>
+                <ToggleButton IsChecked="{Binding Minor2Used, Mode=TwoWay}"
+                              ToolTip.Tip="Minor Favor"
+                              Width="24" Height="24" Padding="0"
+                              CornerRadius="12">
+                    <Ellipse Width="12" Height="12"
+                             Fill="{DynamicResource AccentFillColorDefaultBrush}"/>
+                </ToggleButton>
+                <ToggleButton IsChecked="{Binding Minor3Used, Mode=TwoWay}"
+                              ToolTip.Tip="Minor Favor"
+                              Width="24" Height="24" Padding="0"
+                              CornerRadius="12">
+                    <Ellipse Width="12" Height="12"
+                             Fill="{DynamicResource AccentFillColorDefaultBrush}"/>
+                </ToggleButton>
+            </StackPanel>
+
+            <!-- Moderate and Major Favors -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                <ToggleButton IsChecked="{Binding ModerateUsed, Mode=TwoWay}"
+                              ToolTip.Tip="Moderate Favor"
+                              Width="24" Height="24" Padding="0"
+                              CornerRadius="12">
+                    <Ellipse Width="12" Height="12" Fill="Orange"/>
+                </ToggleButton>
+                <TextBlock Text="|" Opacity="0.3" VerticalAlignment="Center"/>
+                <ToggleButton IsChecked="{Binding MajorUsed, Mode=TwoWay}"
+                              ToolTip.Tip="Major Favor"
+                              Width="24" Height="24" Padding="0"
+                              CornerRadius="12">
+                    <Ellipse Width="12" Height="12" Fill="Crimson"/>
+                </ToggleButton>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</UserControl>

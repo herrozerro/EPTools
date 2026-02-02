@@ -7,9 +7,9 @@ public class Identity
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Alias { get; set; }
     public string Location { get; set; }
-        
+
     // Initialize these so they aren't null
-    public RepNetwork ARep { get; set; } = new(); 
+    public RepNetwork ARep { get; set; } = new();
     public RepNetwork CRep { get; set; } = new();
     public RepNetwork FRep { get; set; } = new();
     public RepNetwork GRep { get; set; } = new();
@@ -22,7 +22,7 @@ public class Identity
 public class RepNetwork
 {
     public int Score { get; set; }
-        
+
     // Favor Tracking (True = Used/Burned, False = Available)
     public bool Minor1Used { get; set; }
     public bool Minor2Used { get; set; }

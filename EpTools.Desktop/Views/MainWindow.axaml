@@ -82,7 +82,7 @@
             <StackPanel>
                 <TextBlock Text="Aptitudes" FontWeight="Bold" FontSize="16"
                            HorizontalAlignment="Center" Margin="0,0,0,10"/>
-                <ItemsControl ItemsSource="{Binding CurrentEgo.Aptitudes}">
+                <ItemsControl ItemsSource="{Binding Aptitudes}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal"
@@ -91,15 +91,11 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate x:DataType="vm:EgoAptitudeViewModel">
                             <StackPanel Width="80" HorizontalAlignment="Center">
                                 <TextBlock Text="{Binding ShortName}"
                                            FontWeight="Bold" FontSize="14"
                                            HorizontalAlignment="Center"/>
-                                <NumericUpDown Value="{Binding AptitudeValue, Mode=TwoWay}"
-                                               Minimum="0" Maximum="30"
-                                               HorizontalAlignment="Center"
-                                               Width="70"/>
                                 <Border Background="{DynamicResource AccentFillColorDefaultBrush}"
                                         CornerRadius="4" Padding="8,4" Margin="0,5,0,0"
                                         HorizontalAlignment="Center">
@@ -108,6 +104,19 @@
                                                FontWeight="Bold"
                                                HorizontalAlignment="Center"/>
                                 </Border>
+                                <NumericUpDown Value="{Binding AptitudeValue, Mode=TwoWay}"
+                                               Minimum="0" Maximum="30"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                                <Border Background="{DynamicResource AccentFillColorDefaultBrush}"
+                                        CornerRadius="4" Padding="8,4" Margin="0,5,0,0"
+                                        HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding AptitudeValue}"
+                                               Foreground="White"
+                                               FontWeight="Bold"
+                                               HorizontalAlignment="Center"/>
+                                </Border>
+                                
                                 <TextBlock Text="CHECK" FontSize="10"
                                            Opacity="0.6"
                                            HorizontalAlignment="Center"/>
@@ -125,9 +134,7 @@
                 <views:SkillsView DataContext="{Binding}"/>
             </TabItem>
             <TabItem Header="Network">
-                <TextBlock Text="Network tab - coming soon"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                <views:NetworkView DataContext="{Binding}"/>
             </TabItem>
             <TabItem Header="Morph">
                 <TextBlock Text="Morph tab - coming soon"
