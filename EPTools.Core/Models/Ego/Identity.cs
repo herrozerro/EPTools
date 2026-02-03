@@ -1,12 +1,10 @@
-﻿#pragma warning disable CS8618
-
 namespace EPTools.Core.Models.Ego;
 
 public class Identity
 {
     public Guid Id { get; set; } = Guid.NewGuid();
-    public string Alias { get; set; }
-    public string Location { get; set; }
+    public string Alias { get; set; } = string.Empty;
+    public string Location { get; set; } = string.Empty;
 
     // Initialize these so they aren't null
     public RepNetwork ARep { get; set; } = new();

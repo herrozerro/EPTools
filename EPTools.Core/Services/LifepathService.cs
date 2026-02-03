@@ -1,4 +1,5 @@
-﻿using EPTools.Core.Extensions;
+using EPTools.Core.Extensions;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 using EPTools.Core.Constants;
@@ -6,7 +7,7 @@ using Morph = EPTools.Core.Models.Ego.Morph;
 
 namespace EPTools.Core.Services;
 
-public class LifepathService(EpDataService ePDataService, EgoService egoService)
+public class LifepathService(EpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
 {
     private Ego? NewEgo { get; set; }
         
@@ -45,12 +46,12 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
     private void ProcessOptionLists(Ego ego, LifePathNode option)
     {
         if (option.OptionLists.Count == 0) return;
-            
+
         foreach (var list in option.OptionLists)
         {
             if (list.Sum(x => x.Weight) > 0)
             {
-                ego.CharacterGenerationNodes.Push(list.GetWeightedItem());
+                ego.CharacterGenerationNodes.Push(list.GetWeightedItem(randomizer: randomizer));
                 return;
             }
 
@@ -119,7 +120,7 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
 
     private Task ApplyAge(Ego ego, LifePathNode option)
     {
-        ego.EgoAge = option.Value + Random.Shared.Next(0, 9);
+        ego.EgoAge = option.Value + randomizer.Next(0, 9);
         return Task.CompletedTask;
     }
 
@@ -331,21 +332,20 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService)
     {
         List<LifePathNode> options = new();
 
-        var table = (await ePDataService.GetCharacterGenTableAsync(tableName)).GetWeightedItem(tableModifier);
-            
-        //Console.WriteLine($"{table.Name} {table.Description}");
+        var table = (await ePDataService.GetCharacterGenTableAsync(tableName)).GetWeightedItem(tableModifier, randomizer);
+
         ego.CharacterGenerationOutput.Add($"{table.Name} {table.Description}".Trim());
 
         if (table.OptionLists.Count == 0)
         {
             return [table];
         }
-             
+
         foreach (var nodeList in table.OptionLists)
         {
-            if (nodeList.Sum(x=>x.Weight) > 0)
+            if (nodeList.Sum(x => x.Weight) > 0)
             {
-                options.Add(nodeList.GetWeightedItem());
+                options.Add(nodeList.GetWeightedItem(randomizer: randomizer));
             }
             else
             {

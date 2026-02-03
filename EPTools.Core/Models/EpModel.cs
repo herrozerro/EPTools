@@ -1,5 +1,4 @@
 using System.Text.Json.Serialization;
-using EPTools.Core.Models.EPDataModels;
 
 namespace EPTools.Core.Models;
 

@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace EPTools.Core.Models.EPDataModels;
+﻿namespace EPTools.Core.Models.EPDataModels;
 
 public class GearCreature : Gear
 {

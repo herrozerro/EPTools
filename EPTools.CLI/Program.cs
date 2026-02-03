@@ -12,9 +12,10 @@ Console.WriteLine("Hello, World!");
 
 var fileFetchService = new FileFetchService();
 var userDataStore = new FileUserDataStore();
+var randomizer = new DefaultRandomizer();
 var epDataService = new EpDataService(fileFetchService, userDataStore);
 var egoService = new EgoService(epDataService);
-var lifepathService = new LifepathService(epDataService, egoService);
+var lifepathService = new LifepathService(epDataService, egoService, randomizer);
 
 await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
 

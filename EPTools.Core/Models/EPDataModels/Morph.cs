@@ -8,7 +8,7 @@ public class Morph : EpModel
     public int WoundThreshold { get; set; } 
     public int Durability { get; set; } 
     public int DeathRating { get; set; }
-    public MorphPools Pools { get; set; }
+    public MorphPools Pools { get; set; } = new();
     public List<MovementRates> MovementRate { get; set; } = [];
     public List<string> Ware { get; set; } = [];
     public List<MorphTrait> MorphTraits { get; set; } = [];

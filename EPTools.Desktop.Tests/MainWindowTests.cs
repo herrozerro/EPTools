@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
 using Avalonia.Headless.XUnit;
 using Avalonia.VisualTree;
 using EPTools.Desktop.ViewModels;
@@ -37,6 +32,36 @@ public class MockUserDataStore : IUserDataStore
     {
         _storage.Remove(key);
         return Task.CompletedTask;
+    }
+}
+
+/// <summary>
+/// Mock randomizer for deterministic testing. Returns predictable values.
+/// </summary>
+public class MockRandomizer : IRandomizer
+{
+    private readonly Queue<int> _predefinedValues = new();
+    private int _defaultValue;
+
+    public MockRandomizer(int defaultValue = 0)
+    {
+        _defaultValue = defaultValue;
+    }
+
+    /// <summary>
+    /// Queue specific values to be returned in order.
+    /// </summary>
+    public void SetNextValues(params int[] values)
+    {
+        foreach (var value in values)
+            _predefinedValues.Enqueue(value);
+    }
+
+    public int Next(int minValue, int maxValue)
+    {
+        if (_predefinedValues.Count > 0)
+            return Math.Clamp(_predefinedValues.Dequeue(), minValue, maxValue - 1);
+        return Math.Clamp(_defaultValue, minValue, maxValue - 1);
     }
 }
 
@@ -78,13 +103,14 @@ public class MockFetchService : IFetchService
 
 public class MainWindowViewModelTests
 {
-    private MainWindowViewModel CreateViewModel()
+    private MainWindowViewModel CreateViewModel(IRandomizer? randomizer = null)
     {
         var fetchService = new MockFetchService();
         var userDataStore = new MockUserDataStore();
+        randomizer ??= new MockRandomizer();
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
-        var lifepathService = new LifepathService(dataService, egoService);
+        var lifepathService = new LifepathService(dataService, egoService, randomizer);
         var egoManager = new EgoManager();
 
         return new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);
@@ -325,13 +351,14 @@ public class MainWindowViewModelTests
 
 public class MainWindowUITests
 {
-    private (Window window, MainWindowViewModel viewModel) CreateWindowWithViewModel()
+    private (Window window, MainWindowViewModel viewModel) CreateWindowWithViewModel(IRandomizer? randomizer = null)
     {
         var fetchService = new MockFetchService();
         var userDataStore = new MockUserDataStore();
+        randomizer ??= new MockRandomizer();
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
-        var lifepathService = new LifepathService(dataService, egoService);
+        var lifepathService = new LifepathService(dataService, egoService, randomizer);
         var egoManager = new EgoManager();
 
         var viewModel = new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);

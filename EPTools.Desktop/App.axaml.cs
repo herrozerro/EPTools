@@ -47,6 +47,7 @@ public partial class App : Application
         // Core services
         services.AddSingleton<IFetchService, FileFetchService>();
         services.AddSingleton<IUserDataStore, FileUserDataStore>();
+        services.AddSingleton<IRandomizer, DefaultRandomizer>();
         services.AddSingleton<EpDataService>();
         services.AddSingleton<EgoService>();
         services.AddSingleton<LifepathService>();

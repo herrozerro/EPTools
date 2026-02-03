@@ -1,6 +1,5 @@
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Services;
-using Xunit;
 
 namespace EPTools.Desktop.Tests;
 

@@ -45,7 +45,6 @@ public class EpDataService(IFetchService fetchService, IUserDataStore userStore)
     private List<LifePathNode> _lifepathAdvancedAges = [];
     
     private readonly Dictionary<Type, object> _customDataCache = new();
-    private bool _userGearLoaded = false;
     private string GetStorageKey<T>() => $"EP_Custom_{typeof(T).Name}";
 
     public async Task<List<Aptitude>> GetAptitudesAsync()

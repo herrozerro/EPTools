@@ -1,6 +1,4 @@
-﻿using EPTools.Core.Models.EPDataModels;
-
-namespace EPTools.Core.Models.Ego;
+﻿namespace EPTools.Core.Models.Ego;
 
 public class EgoTrait
 {

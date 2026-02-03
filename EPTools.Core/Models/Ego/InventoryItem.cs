@@ -1,7 +1,5 @@
 using EPTools.Core.Models.EPDataModels;
 
-#pragma warning disable CS8618
-
 namespace EPTools.Core.Models.Ego;
 
 public class InventoryItem
@@ -17,5 +15,6 @@ public class InventoryItem
 
     // The Data Reference (Immutable)
     // This holds the actual stats, category, rules, etc.
-    public Gear BaseGear { get; set; }
+    // Nullable because items can exist without a base gear template (custom items)
+    public Gear? BaseGear { get; set; }
 }

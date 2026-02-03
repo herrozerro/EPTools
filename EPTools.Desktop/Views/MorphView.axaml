@@ -35,39 +35,39 @@
 
         <!-- Morph Details -->
         <ScrollViewer Grid.Row="1"
-                      IsVisible="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNotNull}}">
-            <StackPanel Spacing="10" Margin="5"
-                        DataContext="{Binding SelectedMorph}"
-                        x:DataType="vm:MorphViewModel">
+              IsVisible="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNotNull}}">
+    <StackPanel Spacing="10" Margin="5"
+                DataContext="{Binding SelectedMorph}">
 
-                <!-- Basic Info Section -->
-                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
-                        CornerRadius="8" Padding="10">
-                    <StackPanel>
-                        <TextBlock Text="Basic Information" FontWeight="Bold" FontSize="16"
-                                   Margin="0,0,0,10"/>
-                        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto">
-                            <TextBox Grid.Row="0" Grid.Column="0" Margin="5"
-                                     Watermark="Name"
-                                     Text="{Binding Name, Mode=TwoWay}"/>
-                            <ComboBox Grid.Row="0" Grid.Column="1" Margin="5"
-                                      ItemsSource="{x:Static vm:MorphViewModel.AvailableMorphTypes}"
-                                      SelectedItem="{Binding MorphType, Mode=TwoWay}"
-                                      PlaceholderText="Morph Type"/>
-                            <TextBox Grid.Row="0" Grid.Column="2" Margin="5"
-                                     Watermark="Sex"
-                                     Text="{Binding MorphSex, Mode=TwoWay}"/>
-                            <ComboBox Grid.Row="0" Grid.Column="3" Margin="5"
-                                      ItemsSource="{x:Static vm:MorphViewModel.AvailableSizes}"
-                                      SelectedItem="{Binding Size, Mode=TwoWay}"
-                                      PlaceholderText="Size"/>
-                        </Grid>
-                    </StackPanel>
-                </Border>
+        <StackPanel x:DataType="vm:MorphViewModel">
+            <!-- Basic Info Section -->
+            <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                    CornerRadius="8" Padding="10">
+                <StackPanel>
+                    <TextBlock Text="Basic Information" FontWeight="Bold" FontSize="16"
+                               Margin="0,0,0,10"/>
+                    <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto">
+                        <TextBox Grid.Row="0" Grid.Column="0" Margin="5"
+                                 Watermark="Name"
+                                 Text="{Binding Name, Mode=TwoWay}"/>
+                        <ComboBox Grid.Row="0" Grid.Column="1" Margin="5"
+                                  ItemsSource="{x:Static vm:MorphViewModel.AvailableMorphTypes}"
+                                  SelectedItem="{Binding MorphType, Mode=TwoWay}"
+                                  PlaceholderText="Morph Type"/>
+                        <TextBox Grid.Row="0" Grid.Column="2" Margin="5"
+                                 Watermark="Sex"
+                                 Text="{Binding MorphSex, Mode=TwoWay}"/>
+                        <ComboBox Grid.Row="0" Grid.Column="3" Margin="5"
+                                  ItemsSource="{x:Static vm:MorphViewModel.AvailableSizes}"
+                                  SelectedItem="{Binding Size, Mode=TwoWay}"
+                                  PlaceholderText="Size"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
 
-                <!-- Pools Section -->
-                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
-                        CornerRadius="8" Padding="10">
+            <!-- Pools Section -->
+            <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                    CornerRadius="8" Padding="10">
                     <StackPanel>
                         <TextBlock Text="Morph Pools" FontWeight="Bold" FontSize="16"
                                    Margin="0,0,0,10"/>
@@ -211,7 +211,8 @@
                     </StackPanel>
                 </Border>
             </StackPanel>
-        </ScrollViewer>
+        </StackPanel>
+    </ScrollViewer>
 
         <!-- No Morph Selected Message -->
         <TextBlock Grid.Row="1"

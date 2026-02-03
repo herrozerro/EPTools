@@ -1,7 +1,6 @@
 using System.Collections.ObjectModel;
 using EPTools.Desktop.ViewModels;
 using EPTools.Core.Models.Ego;
-using Xunit;
 
 namespace EPTools.Desktop.Tests;
 
