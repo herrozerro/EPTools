@@ -85,8 +85,9 @@ public class MainWindowViewModelTests
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
         var lifepathService = new LifepathService(dataService, egoService);
+        var egoManager = new EgoManager();
 
-        return new MainWindowViewModel(egoService, lifepathService, userDataStore);
+        return new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);
     }
 
     #region ViewModel Creation Tests
@@ -331,8 +332,9 @@ public class MainWindowUITests
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
         var lifepathService = new LifepathService(dataService, egoService);
+        var egoManager = new EgoManager();
 
-        var viewModel = new MainWindowViewModel(egoService, lifepathService, userDataStore);
+        var viewModel = new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);
 
         var window = new MainWindow
         {

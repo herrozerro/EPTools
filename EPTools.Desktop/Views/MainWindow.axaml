@@ -137,19 +137,13 @@
                 <views:NetworkView DataContext="{Binding}"/>
             </TabItem>
             <TabItem Header="Morph">
-                <TextBlock Text="Morph tab - coming soon"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                <views:MorphView DataContext="{Binding}"/>
             </TabItem>
             <TabItem Header="Gear">
-                <TextBlock Text="Gear tab - coming soon"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                <views:GearView DataContext="{Binding}"/>
             </TabItem>
             <TabItem Header="Traits">
-                <TextBlock Text="Traits tab - coming soon"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"/>
+                <views:TraitsView DataContext="{Binding}"/>
             </TabItem>
         </TabControl>
 

@@ -20,6 +20,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private readonly EgoService _egoService;
     private readonly LifepathService _lifepathService;
     private readonly IUserDataStore _userDataStore;
+    private readonly EgoManager _egoManager;
 
     [ObservableProperty]
     private Ego _currentEgo = new();
@@ -36,9 +37,19 @@ public partial class MainWindowViewModel : ViewModelBase
     [ObservableProperty]
     private IdentityViewModel? _selectedIdentity;
 
+    [ObservableProperty]
+    private MorphViewModel? _selectedMorph;
+
+    [ObservableProperty]
+    private InventoryCacheViewModel? _selectedCache;
+
     public ObservableCollection<EgoAptitudeViewModel> Aptitudes { get; } = [];
     public ObservableCollection<IdentityViewModel> Identities { get; } = [];
     public ObservableCollection<EgoSkillViewModel> Skills { get; } = [];
+    public ObservableCollection<MorphViewModel> Morphs { get; } = [];
+    public ObservableCollection<InventoryItemViewModel> Inventory { get; } = [];
+    public ObservableCollection<InventoryCacheViewModel> Caches { get; } = [];
+    public ObservableCollection<EgoTraitViewModel> EgoTraits { get; } = [];
 
     // Grouped skill collections for the UI
     public IEnumerable<EgoSkillViewModel> ActiveSkills =>
@@ -76,6 +87,38 @@ public partial class MainWindowViewModel : ViewModelBase
         // Select first identity when ego changes
         SelectedIdentity = Identities.FirstOrDefault();
 
+        // Rebuild morph view models
+        Morphs.Clear();
+        foreach (var morph in value.Morphs)
+        {
+            Morphs.Add(new MorphViewModel(morph));
+        }
+
+        // Select active morph or first morph
+        SelectedMorph = Morphs.FirstOrDefault(m => m.ActiveMorph) ?? Morphs.FirstOrDefault();
+
+        // Rebuild inventory view models
+        Inventory.Clear();
+        foreach (var item in value.Inventory)
+        {
+            Inventory.Add(new InventoryItemViewModel(item));
+        }
+
+        // Rebuild cache view models
+        Caches.Clear();
+        foreach (var cache in value.Caches)
+        {
+            Caches.Add(new InventoryCacheViewModel(cache));
+        }
+        SelectedCache = Caches.FirstOrDefault();
+
+        // Rebuild ego trait view models
+        EgoTraits.Clear();
+        foreach (var trait in value.EgoTraits)
+        {
+            EgoTraits.Add(new EgoTraitViewModel(trait));
+        }
+
         // Notify grouped collections changed
         OnPropertyChanged(nameof(ActiveSkills));
         OnPropertyChanged(nameof(KnowledgeSkills));
@@ -84,35 +127,23 @@ public partial class MainWindowViewModel : ViewModelBase
 
     public void AddKnowledgeSkill()
     {
-        var skill = new EgoSkill
-        {
-            Name = "New Knowledge Skill",
-            SkillType = SkillType.KnowledgeSkill,
-            Aptitude = "Intuition"
-        };
-        CurrentEgo.Skills.Add(skill);
+        var skill = _egoManager.AddKnowledgeSkill(CurrentEgo);
         Skills.Add(new EgoSkillViewModel(skill, Aptitudes));
         OnPropertyChanged(nameof(KnowledgeSkills));
     }
 
     public void AddExoticSkill()
     {
-        var skill = new EgoSkill
-        {
-            Name = "New Exotic Skill",
-            SkillType = SkillType.ExoticSkill,
-            Aptitude = "Reflexes"
-        };
-        CurrentEgo.Skills.Add(skill);
+        var skill = _egoManager.AddExoticSkill(CurrentEgo);
         Skills.Add(new EgoSkillViewModel(skill, Aptitudes));
         OnPropertyChanged(nameof(ExoticSkills));
     }
 
     public void DeleteSkill(EgoSkillViewModel skillVm)
     {
-        if (skillVm.SkillType == SkillType.EgoSkill) return; // Can't delete active skills
+        if (!_egoManager.RemoveSkill(CurrentEgo, skillVm.Model))
+            return;
 
-        CurrentEgo.Skills.Remove(skillVm.Model);
         Skills.Remove(skillVm);
 
         if (skillVm.SkillType == SkillType.KnowledgeSkill)
@@ -121,14 +152,120 @@ public partial class MainWindowViewModel : ViewModelBase
             OnPropertyChanged(nameof(ExoticSkills));
     }
 
+    public void AddMorph()
+    {
+        var morph = _egoManager.AddMorph(CurrentEgo);
+        var vm = new MorphViewModel(morph);
+        Morphs.Add(vm);
+        SelectedMorph = vm;
+    }
+
+    public void DeleteMorph(MorphViewModel morphVm)
+    {
+        if (!_egoManager.RemoveMorph(CurrentEgo, morphVm.Model))
+            return;
+
+        Morphs.Remove(morphVm);
+        SelectedMorph = Morphs.FirstOrDefault(m => m.ActiveMorph) ?? Morphs.FirstOrDefault();
+    }
+
+    public void SetActiveMorph(MorphViewModel morphVm)
+    {
+        _egoManager.SetActiveMorph(CurrentEgo, morphVm.Model);
+        // Update all ViewModel active states to match
+        foreach (var m in Morphs)
+        {
+            m.ActiveMorph = m.Model.ActiveMorph;
+        }
+    }
+
+    public void AddInventoryItem()
+    {
+        var item = _egoManager.AddInventoryItem(CurrentEgo);
+        Inventory.Add(new InventoryItemViewModel(item));
+    }
+
+    public void DeleteInventoryItem(InventoryItemViewModel itemVm)
+    {
+        if (_egoManager.RemoveInventoryItem(CurrentEgo, itemVm.Model))
+        {
+            Inventory.Remove(itemVm);
+        }
+    }
+
+    public void AddCache()
+    {
+        var cache = _egoManager.AddCache(CurrentEgo);
+        var vm = new InventoryCacheViewModel(cache);
+        Caches.Add(vm);
+        SelectedCache = vm;
+    }
+
+    public void DeleteCache(InventoryCacheViewModel cacheVm)
+    {
+        if (_egoManager.RemoveCache(CurrentEgo, cacheVm.Model))
+        {
+            Caches.Remove(cacheVm);
+            SelectedCache = Caches.FirstOrDefault();
+        }
+    }
+
+    public void AddItemToCache(InventoryCacheViewModel cacheVm)
+    {
+        var item = _egoManager.AddItemToCache(cacheVm.Model);
+        cacheVm.Items.Add(new InventoryItemViewModel(item));
+    }
+
+    public void DeleteItemFromCache(InventoryCacheViewModel cacheVm, InventoryItemViewModel itemVm)
+    {
+        if (_egoManager.RemoveItemFromCache(cacheVm.Model, itemVm.Model))
+        {
+            cacheVm.Items.Remove(itemVm);
+        }
+    }
+
+    public void MoveItemToCache(InventoryItemViewModel itemVm, InventoryCacheViewModel cacheVm)
+    {
+        if (_egoManager.MoveItemToCache(CurrentEgo, itemVm.Model, cacheVm.Model))
+        {
+            Inventory.Remove(itemVm);
+            cacheVm.Items.Add(itemVm);
+        }
+    }
+
+    public void MoveItemFromCache(InventoryItemViewModel itemVm, InventoryCacheViewModel cacheVm)
+    {
+        if (_egoManager.MoveItemFromCache(CurrentEgo, itemVm.Model, cacheVm.Model))
+        {
+            cacheVm.Items.Remove(itemVm);
+            Inventory.Add(itemVm);
+        }
+    }
+
+    public void AddEgoTrait()
+    {
+        var trait = _egoManager.AddEgoTrait(CurrentEgo);
+        EgoTraits.Add(new EgoTraitViewModel(trait));
+    }
+
+    public void DeleteEgoTrait(EgoTraitViewModel traitVm)
+    {
+        if (_egoManager.RemoveEgoTrait(CurrentEgo, traitVm.Model))
+        {
+            EgoTraits.Remove(traitVm);
+        }
+    }
+
     public MainWindowViewModel(
         EgoService egoService,
         LifepathService lifepathService,
-        IUserDataStore userDataStore)
+        IUserDataStore userDataStore,
+        EgoManager egoManager)
     {
         _egoService = egoService;
         _lifepathService = lifepathService;
         _userDataStore = userDataStore;
+        _egoManager = egoManager;
 
         // Load character on startup
         _ = LoadCharacterAsync();

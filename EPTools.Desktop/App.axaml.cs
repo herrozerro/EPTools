@@ -50,6 +50,7 @@ public partial class App : Application
         services.AddSingleton<EpDataService>();
         services.AddSingleton<EgoService>();
         services.AddSingleton<LifepathService>();
+        services.AddSingleton<EgoManager>();
 
         // ViewModels
         services.AddTransient<MainWindowViewModel>();

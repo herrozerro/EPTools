@@ -1,0 +1,223 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:EPTools.Desktop.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="EPTools.Desktop.Views.MorphView"
+             x:DataType="vm:MainWindowViewModel">
+
+    <Grid RowDefinitions="Auto,*">
+        <!-- Toolbar -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5" Spacing="5">
+            <Button Content="Add Morph" Click="AddMorph_Click"/>
+            <Button Content="Delete Morph" Click="DeleteMorph_Click"
+                    IsEnabled="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+            <Separator Width="20"/>
+            <TextBlock Text="Select Morph:" VerticalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding Morphs}"
+                      SelectedItem="{Binding SelectedMorph}"
+                      Width="200">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="vm:MorphViewModel">
+                        <StackPanel Orientation="Horizontal" Spacing="5">
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="(Active)" IsVisible="{Binding ActiveMorph}"
+                                       Foreground="{DynamicResource AccentFillColorDefaultBrush}"
+                                       FontWeight="Bold"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Set Active" Click="SetActiveMorph_Click"
+                    IsEnabled="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNotNull}}"/>
+        </StackPanel>
+
+        <!-- Morph Details -->
+        <ScrollViewer Grid.Row="1"
+                      IsVisible="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNotNull}}">
+            <StackPanel Spacing="10" Margin="5"
+                        DataContext="{Binding SelectedMorph}"
+                        x:DataType="vm:MorphViewModel">
+
+                <!-- Basic Info Section -->
+                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="Basic Information" FontWeight="Bold" FontSize="16"
+                                   Margin="0,0,0,10"/>
+                        <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto,Auto">
+                            <TextBox Grid.Row="0" Grid.Column="0" Margin="5"
+                                     Watermark="Name"
+                                     Text="{Binding Name, Mode=TwoWay}"/>
+                            <ComboBox Grid.Row="0" Grid.Column="1" Margin="5"
+                                      ItemsSource="{x:Static vm:MorphViewModel.AvailableMorphTypes}"
+                                      SelectedItem="{Binding MorphType, Mode=TwoWay}"
+                                      PlaceholderText="Morph Type"/>
+                            <TextBox Grid.Row="0" Grid.Column="2" Margin="5"
+                                     Watermark="Sex"
+                                     Text="{Binding MorphSex, Mode=TwoWay}"/>
+                            <ComboBox Grid.Row="0" Grid.Column="3" Margin="5"
+                                      ItemsSource="{x:Static vm:MorphViewModel.AvailableSizes}"
+                                      SelectedItem="{Binding Size, Mode=TwoWay}"
+                                      PlaceholderText="Size"/>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <!-- Pools Section -->
+                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8" Padding="10">
+                    <StackPanel>
+                        <TextBlock Text="Morph Pools" FontWeight="Bold" FontSize="16"
+                                   Margin="0,0,0,10"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="30">
+                            <StackPanel Width="80" HorizontalAlignment="Center">
+                                <TextBlock Text="VIGOR" FontWeight="Bold" FontSize="12"
+                                           HorizontalAlignment="Center"/>
+                                <NumericUpDown Value="{Binding Vigor, Mode=TwoWay}"
+                                               Minimum="0" Maximum="10"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                            </StackPanel>
+                            <StackPanel Width="80" HorizontalAlignment="Center">
+                                <TextBlock Text="INSIGHT" FontWeight="Bold" FontSize="12"
+                                           HorizontalAlignment="Center"/>
+                                <NumericUpDown Value="{Binding Insight, Mode=TwoWay}"
+                                               Minimum="0" Maximum="10"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                            </StackPanel>
+                            <StackPanel Width="80" HorizontalAlignment="Center">
+                                <TextBlock Text="MOXIE" FontWeight="Bold" FontSize="12"
+                                           HorizontalAlignment="Center"/>
+                                <NumericUpDown Value="{Binding Moxie, Mode=TwoWay}"
+                                               Minimum="0" Maximum="10"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                            </StackPanel>
+                            <StackPanel Width="80" HorizontalAlignment="Center">
+                                <TextBlock Text="FLEX" FontWeight="Bold" FontSize="12"
+                                           HorizontalAlignment="Center"/>
+                                <NumericUpDown Value="{Binding MorphFlex, Mode=TwoWay}"
+                                               Minimum="0" Maximum="10"
+                                               HorizontalAlignment="Center"
+                                               Width="70"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Traits Section -->
+                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8" Padding="10">
+                    <StackPanel>
+                        <Grid ColumnDefinitions="*,Auto">
+                            <TextBlock Text="Morph Traits" FontWeight="Bold" FontSize="16"/>
+                            <Button Grid.Column="1" Content="Add Trait" Click="AddTrait_Click"/>
+                        </Grid>
+                        <DataGrid ItemsSource="{Binding Traits}"
+                                  AutoGenerateColumns="False"
+                                  CanUserReorderColumns="False"
+                                  CanUserResizeColumns="True"
+                                  CanUserSortColumns="False"
+                                  GridLinesVisibility="Horizontal"
+                                  IsReadOnly="False"
+                                  MaxHeight="200"
+                                  Margin="0,10,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name"
+                                                    Binding="{Binding Name}"
+                                                    Width="*"
+                                                    IsReadOnly="False"/>
+                                <DataGridTextColumn Header="Level"
+                                                    Binding="{Binding Level}"
+                                                    Width="60"
+                                                    IsReadOnly="False"/>
+                                <DataGridTextColumn Header="Cost"
+                                                    Binding="{Binding Cost}"
+                                                    Width="60"
+                                                    IsReadOnly="False"/>
+                                <DataGridTextColumn Header="Summary"
+                                                    Binding="{Binding Summary}"
+                                                    Width="200"
+                                                    IsReadOnly="False"/>
+                                <DataGridTemplateColumn Header="" Width="40">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate x:DataType="vm:MorphTraitViewModel">
+                                            <Button Content="X"
+                                                    Click="DeleteTrait_Click"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center"
+                                                    Padding="5,2"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+
+                <!-- Ware Section -->
+                <Border Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8" Padding="10">
+                    <StackPanel>
+                        <Grid ColumnDefinitions="*,Auto">
+                            <TextBlock Text="Ware" FontWeight="Bold" FontSize="16"/>
+                            <Button Grid.Column="1" Content="Add Ware" Click="AddWare_Click"/>
+                        </Grid>
+                        <DataGrid ItemsSource="{Binding Wares}"
+                                  AutoGenerateColumns="False"
+                                  CanUserReorderColumns="False"
+                                  CanUserResizeColumns="True"
+                                  CanUserSortColumns="False"
+                                  GridLinesVisibility="Horizontal"
+                                  IsReadOnly="False"
+                                  MaxHeight="200"
+                                  Margin="0,10,0,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name"
+                                                    Binding="{Binding Name}"
+                                                    Width="*"
+                                                    IsReadOnly="False"/>
+                                <DataGridTextColumn Header="Description"
+                                                    Binding="{Binding Description}"
+                                                    Width="200"
+                                                    IsReadOnly="False"/>
+                                <DataGridCheckBoxColumn Header="Active"
+                                                        Binding="{Binding Active}"
+                                                        Width="60"/>
+                                <DataGridTextColumn Header="Cost"
+                                                    Binding="{Binding Cost}"
+                                                    Width="60"
+                                                    IsReadOnly="False"/>
+                                <DataGridTextColumn Header="Qty"
+                                                    Binding="{Binding Quantity}"
+                                                    Width="50"
+                                                    IsReadOnly="False"/>
+                                <DataGridTemplateColumn Header="" Width="40">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate x:DataType="vm:MorphWareViewModel">
+                                            <Button Content="X"
+                                                    Click="DeleteWare_Click"
+                                                    VerticalAlignment="Center"
+                                                    HorizontalAlignment="Center"
+                                                    Padding="5,2"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- No Morph Selected Message -->
+        <TextBlock Grid.Row="1"
+                   Text="No morph selected. Add a morph to get started."
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   IsVisible="{Binding SelectedMorph, Converter={x:Static ObjectConverters.IsNull}}"/>
+    </Grid>
+</UserControl>
