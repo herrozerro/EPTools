@@ -204,14 +204,18 @@ public class LifepathService(EpDataService ePDataService, EgoService egoService,
 
     private Task ApplyReputation(LifepathContext ctx, LifePathNode option)
     {
+        if (ctx.Ego.Identities.Count == 0)
+            return Task.CompletedTask;
+
+        var identity = ctx.Ego.Identities[0];
         var repToChange = option.Name switch
         {
-            "ARep" => ctx.Ego.Identities[0].ARep,
-            "CRep" => ctx.Ego.Identities[0].CRep,
-            "GRep" => ctx.Ego.Identities[0].GRep,
-            "IRep" => ctx.Ego.Identities[0].IRep,
-            "XRep" => ctx.Ego.Identities[0].XRep,
-            "RRep" => ctx.Ego.Identities[0].RRep,
+            "ARep" => identity.ARep,
+            "CRep" => identity.CRep,
+            "GRep" => identity.GRep,
+            "IRep" => identity.IRep,
+            "XRep" => identity.XRep,
+            "RRep" => identity.RRep,
             _ => null
         };
         if (repToChange != null)
