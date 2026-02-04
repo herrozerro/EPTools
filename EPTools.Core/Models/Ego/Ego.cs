@@ -29,8 +29,8 @@ public class Ego
     public string Languages { get; set; } = string.Empty;
     [JsonPropertyOrder(10)]
     public List<string> Motivations { get; set; } = [];
-    
-    public List<RollModifier> RerollModifiers { get; set; } = [];
+
+    private List<RollModifier> RollModifiers { get; set; } = [];
     
     public int RezEarned { get; set; }
     public int RezSpent { get; set; }
@@ -42,7 +42,7 @@ public class Ego
         {
             var reflexes = Aptitudes.Find(x => x.Name == AptitudeNames.Reflexes)?.AptitudeValue ?? 0;
             var intuition = Aptitudes.Find(x => x.Name == AptitudeNames.Intuition)?.AptitudeValue ?? 0;
-            return (reflexes + intuition)/5 + RerollModifiers.Where(x=>x.Type == RollModifierType.Initiative).Sum(x => x.Value);
+            return (reflexes + intuition)/5 + RollModifiers.Where(x=>x.Type == RollModifierType.Initiative).Sum(x => x.Value);
         }
     }
 
@@ -53,21 +53,21 @@ public class Ego
         get
         {
             var willpower = Aptitudes.Find(x => x.Name == AptitudeNames.Willpower)?.AptitudeValue ?? 0;
-            return (willpower * 2) + RerollModifiers.Where(x=>x.Type == RollModifierType.Lucidity).Sum(x => x.Value);
+            return (willpower * 2) + RollModifiers.Where(x=>x.Type == RollModifierType.Lucidity).Sum(x => x.Value);
         }
     }
     public int TraumaThreshold
     {
         get
         {
-            return (Lucidity / 5) + RerollModifiers.Where(x=> x.Type == RollModifierType.TraumaThreshold).Sum(x => x.Value);
+            return (Lucidity / 5) + RollModifiers.Where(x=> x.Type == RollModifierType.TraumaThreshold).Sum(x => x.Value);
         }
     }
     public int InsanityRating
     {
         get
         {
-            return (Lucidity * 2) + RerollModifiers.Where(x=> x.Type == RollModifierType.InsanityRating).Sum(x => x.Value);
+            return (Lucidity * 2) + RollModifiers.Where(x=> x.Type == RollModifierType.InsanityRating).Sum(x => x.Value);
         }
     }
 
