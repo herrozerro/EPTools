@@ -48,7 +48,7 @@ public class EpDataService(IFetchService fetchService, IUserDataStore userStore)
     public Task<List<GearWeaponAmmo>> GetGearWeaponAmmoAsync() => GetCachedAsync<GearWeaponAmmo>("GearWeaponAmmo");
     public Task<List<GearWeaponMelee>> GetGearWeaponMeleeAsync() => GetCachedAsync<GearWeaponMelee>("GearWeaponMelee");
     public Task<List<GearWeaponRanged>> GetGearWeaponRangedAsync() => GetCachedAsync<GearWeaponRanged>("GearWeaponRanged");
-    public Task<List<Morph>> GetMorphsAsync() => GetCachedAsync<Morph>("Morphs");
+    public Task<List<MorphTemplate>> GetMorphsAsync() => GetCachedAsync<MorphTemplate>("Morphs");
     public Task<List<Skill>> GetSkillsAsync() => GetCachedAsync<Skill>("Skills");
     public Task<List<Sleight>> GetSleightsAsync() => GetCachedAsync<Sleight>("Sleights");
     public Task<List<Trait>> GetTraitsAsync() => GetCachedAsync<Trait>("Traits");
@@ -99,10 +99,10 @@ public class EpDataService(IFetchService fetchService, IUserDataStore userStore)
         return custom.Concat(official).ToList();
     }
 
-    public async Task<List<Morph>> GetAllMorphsAsync()
+    public async Task<List<MorphTemplate>> GetAllMorphsAsync()
     {
         var official = await GetMorphsAsync();
-        var custom = await GetCustomListInternalAsync<Morph>();
+        var custom = await GetCustomListInternalAsync<MorphTemplate>();
         return custom.Concat(official).ToList();
     }
 

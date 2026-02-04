@@ -3,7 +3,6 @@ using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 using EPTools.Core.Constants;
-using Morph = EPTools.Core.Models.Ego.Morph;
 
 namespace EPTools.Core.Services;
 

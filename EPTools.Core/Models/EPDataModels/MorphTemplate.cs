@@ -1,6 +1,6 @@
 ﻿namespace EPTools.Core.Models.EPDataModels;
 
-public class Morph : EpModel
+public class MorphTemplate : EpModel
 {
     public string Type { get; set; } = string.Empty;
     public int Cost { get; set; }

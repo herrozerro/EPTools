@@ -3,8 +3,6 @@ using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using EPTools.Core.Models.Ego;
 
-using Morph = EPTools.Core.Models.Ego.Morph;
-
 namespace EPTools.Desktop.ViewModels;
 
 public partial class InventoryItemViewModel : ObservableObject

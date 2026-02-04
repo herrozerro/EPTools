@@ -3,7 +3,7 @@ using EPTools.Core.Services;
 
 namespace EPTools.Core.Extensions;
 
-public static class MyExtensions
+public static class WeightedItemExtensions
 {
     private static readonly IRandomizer DefaultRandomizerInstance = new DefaultRandomizer();
 
