@@ -6,7 +6,7 @@ using EPTools.Core.Constants;
 
 namespace EPTools.Core.Services;
 
-public class LifepathService(EpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
+public class LifepathService(IEpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
 {
     private readonly Dictionary<string, Func<LifepathContext, LifePathNode, Task>> _applyNodeMethods = new();
 

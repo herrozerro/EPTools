@@ -5,7 +5,7 @@ using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Services;
 
-public class EpDataService(IFetchService fetchService, IUserDataStore userStore)
+public class EpDataService(IFetchService fetchService, IUserDataStore userStore) : IEpDataService
 {
     private readonly Dictionary<string, object> _cache = new();
     private readonly Dictionary<Type, object> _customDataCache = new();

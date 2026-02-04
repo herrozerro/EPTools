@@ -18,7 +18,7 @@ builder.Services.AddHttpClient("EPClient", client =>
 builder.Services.AddScoped<IFetchService, HttpFetchService>();
 builder.Services.AddScoped<IUserDataStore, BlazorUserDataStore>();
 builder.Services.AddScoped<IRandomizer, DefaultRandomizer>();
-builder.Services.AddScoped<EpDataService>();
+builder.Services.AddScoped<IEpDataService, EpDataService>();
 
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<StatBlockTemplateService>();

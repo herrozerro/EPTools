@@ -1,11 +1,12 @@
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 
 namespace EPTools.Core.Services;
 
 
-public class EgoService(EpDataService dataService)
+public class EgoService(IEpDataService dataService)
 {
-    private EpDataService DataService { get; set; } = dataService;
+    private IEpDataService DataService { get; set; } = dataService;
 
     public async Task<Ego> GetDefaults()
     {

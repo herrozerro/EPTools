@@ -1,11 +1,12 @@
 ﻿using EPTools.Core.Constants;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.EPDataModels;
 
 namespace EPTools.Core.Services;
 
-public class NpcService(EpDataService dataService)
+public class NpcService(IEpDataService dataService)
 {
-	private readonly EpDataService _epData = dataService;
+	private readonly IEpDataService _epData = dataService;
 
 
 	public Npc GenerateNpc()
