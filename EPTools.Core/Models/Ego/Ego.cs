@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 using EPTools.Core.Constants;
-using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Models.Ego;
 
@@ -110,13 +109,6 @@ public class Ego
     //Notes
     [JsonPropertyOrder(34)]
     public string Notes { get; set; } = string.Empty;
-        
-    //lifepath Tracking Variables
-    [JsonIgnore]
-    public List<int> SkipSections { get; set; } = [];
-        
-    [JsonIgnore]
-    public Stack<LifePathNode> CharacterGenerationNodes { get; set; } = new();
         
     [JsonPropertyOrder(35)]
     public List<string> CharacterGenerationOutput { get; set; } = [];
