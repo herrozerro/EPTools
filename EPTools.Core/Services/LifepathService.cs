@@ -6,9 +6,20 @@ using EPTools.Core.Constants;
 
 namespace EPTools.Core.Services;
 
-public class LifepathService(IEpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
+public class LifepathService
 {
     private readonly Dictionary<string, Func<LifepathContext, LifePathNode, Task>> _applyNodeMethods = new();
+    private readonly IEpDataService _ePDataService;
+    private readonly EgoService _egoService;
+    private readonly IRandomizer _randomizer;
+
+    public LifepathService(IEpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
+    {
+        _ePDataService = ePDataService;
+        _egoService = egoService;
+        _randomizer = randomizer;
+        InitializeApplyMethods();
+    }
 
     private void InitializeApplyMethods()
     {
@@ -48,7 +59,7 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
         {
             if (list.Sum(x => x.Weight) > 0)
             {
-                ctx.Nodes.Push(list.GetWeightedItem(randomizer: randomizer));
+                ctx.Nodes.Push(list.GetWeightedItem(_randomizer));
                 return;
             }
 
@@ -61,10 +72,10 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
 
     public async Task<Ego> GenerateEgo()
     {
-        var ego = await egoService.GetDefaults();
+        var ego = await _egoService.GetDefaults();
         var ctx = new LifepathContext(ego);
 
-        var charGenSteps = await ePDataService.GetCharacterGenTableAsync("LifePathSteps");
+        var charGenSteps = await _ePDataService.GetCharacterGenTableAsync("LifePathSteps");
 
         charGenSteps.Reverse();
 
@@ -86,8 +97,6 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
     // This method (ApplyBackgroundOption) is the main dispatcher
     private async Task ApplyBackgroundOption(LifepathContext ctx, LifePathNode option)
     {
-        if (_applyNodeMethods.Count == 0) InitializeApplyMethods();
-
         ctx.Output.Add($"{option.Name} {option.Description}".Trim());
 
         if (_applyNodeMethods.TryGetValue(option.Type, out var applyMethod))
@@ -121,13 +130,13 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
 
     private Task ApplyAge(LifepathContext ctx, LifePathNode option)
     {
-        ctx.Ego.EgoAge = option.Value + randomizer.Next(0, 9);
+        ctx.Ego.EgoAge = option.Value + _randomizer.Next(0, 9);
         return Task.CompletedTask;
     }
 
     private async Task ApplyForcedInterest(LifepathContext ctx, LifePathNode option)
     {
-        var selectedInterest = (await ePDataService.GetCharacterGenTableAsync("LifePathInterest")).FirstOrDefault(x => x.Name == option.Name);
+        var selectedInterest = (await _ePDataService.GetCharacterGenTableAsync("LifePathInterest")).FirstOrDefault(x => x.Name == option.Name);
         if (selectedInterest != null)
         {
             ctx.Nodes.Push(selectedInterest);
@@ -167,13 +176,13 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
 
     private async Task ApplyTrait(LifepathContext ctx, LifePathNode option)
     {
-        var trait = (await ePDataService.GetTraitsAsync()).FirstOrDefault(x => x.Name == option.Name.Split("-")[0]);
+        var trait = (await _ePDataService.GetTraitsAsync()).FirstOrDefault(x => x.Name == option.Name.Split("-")[0]);
         ctx.Ego.EgoTraits.Add(new EgoTrait {
             Name = option.Name,
             Description = trait?.Description ?? "",
             Level = option.Value,
             CostTiers = string.Join(",",trait?.Cost ?? []),
-            Cost = trait?.Cost[Math.Max(option.Value-1,0)] ?? 0,
+            Cost = trait?.Cost[Math.Clamp(option.Value - 1, 0, trait.Cost.Count - 1)] ?? 0,
             Type = trait?.Type ?? "",
             Summary = trait?.Summary ?? "",
             AdditionalRules = trait?.AdditionalRules ?? []
@@ -237,14 +246,13 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
 
     private Task ApplyLanguage(LifepathContext ctx, LifePathNode option)
     {
-        // add language to languages
-        ctx.Ego.Languages += option.Name + ", ";
+        ctx.Ego.Languages.Add(option.Name);
         return Task.CompletedTask;
     }
 
     private async Task ApplySkill(LifepathContext ctx, LifePathNode option)
     {
-        var skills = await ePDataService.GetSkillsAsync();
+        var skills = await _ePDataService.GetSkillsAsync();
         var skillName = option.Name.Split("-")[0];
         var skillType = skillName switch
         {
@@ -275,14 +283,14 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
 
     private async Task ApplyMorph(LifepathContext ctx, LifePathNode option)
     {
-        var selectedMorph = (await ePDataService.GetMorphsAsync()).FirstOrDefault(x => x.Name == option.Name);
+        var selectedMorph = (await _ePDataService.GetMorphsAsync()).FirstOrDefault(x => x.Name == option.Name);
         if (selectedMorph != null)
         {
             ctx.Ego.Morphs.Clear();
             ctx.Ego.Morphs.Add(new Morph
             {
                 Name = option.Name,
-                ActiveMorph = false,
+                ActiveMorph = true,
                 Insight = selectedMorph.Pools.Insight,
                 Moxie = selectedMorph.Pools.Moxie,
                 Vigor = selectedMorph.Pools.Vigor,
@@ -337,7 +345,7 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
     {
         List<LifePathNode> options = new();
 
-        var table = (await ePDataService.GetCharacterGenTableAsync(tableName)).GetWeightedItem(tableModifier, randomizer);
+        var table = (await _ePDataService.GetCharacterGenTableAsync(tableName)).GetWeightedItem(_randomizer, tableModifier);
 
         ctx.Output.Add($"{table.Name} {table.Description}".Trim());
 
@@ -350,7 +358,7 @@ public class LifepathService(IEpDataService ePDataService, EgoService egoService
         {
             if (nodeList.Sum(x => x.Weight) > 0)
             {
-                options.Add(nodeList.GetWeightedItem(randomizer: randomizer));
+                options.Add(nodeList.GetWeightedItem(_randomizer));
             }
             else
             {

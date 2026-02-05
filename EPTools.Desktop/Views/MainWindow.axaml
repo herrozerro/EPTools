@@ -54,7 +54,7 @@
                          Text="{Binding CurrentEgo.Faction, Mode=TwoWay}"/>
                 <TextBox Grid.Row="1" Grid.Column="1" Margin="5"
                          Watermark="Languages"
-                         Text="{Binding CurrentEgo.Languages, Mode=TwoWay}"/>
+                         Text="{Binding LanguagesDisplay, Mode=TwoWay}"/>
                 <NumericUpDown Grid.Row="1" Grid.Column="2" Margin="5"
                                Watermark="Age" Minimum="0"
                                Value="{Binding CurrentEgo.EgoAge, Mode=TwoWay}"/>

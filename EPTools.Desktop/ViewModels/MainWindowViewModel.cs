@@ -119,10 +119,11 @@ public partial class MainWindowViewModel : ViewModelBase
             EgoTraits.Add(new EgoTraitViewModel(trait));
         }
 
-        // Notify grouped collections changed
+        // Notify grouped collections and computed properties changed
         OnPropertyChanged(nameof(ActiveSkills));
         OnPropertyChanged(nameof(KnowledgeSkills));
         OnPropertyChanged(nameof(ExoticSkills));
+        OnPropertyChanged(nameof(LanguagesDisplay));
     }
 
     public void AddKnowledgeSkill()
@@ -253,6 +254,18 @@ public partial class MainWindowViewModel : ViewModelBase
         if (_egoManager.RemoveEgoTrait(CurrentEgo, traitVm.Model))
         {
             EgoTraits.Remove(traitVm);
+        }
+    }
+
+    public string LanguagesDisplay
+    {
+        get => string.Join(", ", CurrentEgo.Languages);
+        set
+        {
+            CurrentEgo.Languages = string.IsNullOrWhiteSpace(value)
+                ? []
+                : value.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries).ToList();
+            OnPropertyChanged();
         }
     }
 

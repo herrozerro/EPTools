@@ -21,7 +21,7 @@ public class WeightedItemExtensionsTests
     {
         var items = new List<TestWeightedItem>();
 
-        Assert.Throws<ArgumentException>(() => items.GetWeightedItem());
+        Assert.Throws<ArgumentException>(() => items.GetWeightedItem(new MockRandomizer(0)));
     }
 
     [Fact]
@@ -32,7 +32,7 @@ public class WeightedItemExtensionsTests
             new("Only", 10)
         };
 
-        var result = items.GetWeightedItem(randomizer: new MockRandomizer(0));
+        var result = items.GetWeightedItem(new MockRandomizer(0));
 
         Assert.Equal("Only", result.Name);
     }
@@ -47,7 +47,7 @@ public class WeightedItemExtensionsTests
             new("Third", 30)
         };
 
-        var result = items.GetWeightedItem(randomizer: new MockRandomizer(5));
+        var result = items.GetWeightedItem(new MockRandomizer(5));
 
         Assert.Equal("First", result.Name);
     }
@@ -62,7 +62,7 @@ public class WeightedItemExtensionsTests
             new("Third", 30)
         };
 
-        var result = items.GetWeightedItem(randomizer: new MockRandomizer(15));
+        var result = items.GetWeightedItem(new MockRandomizer(15));
 
         Assert.Equal("Second", result.Name);
     }
@@ -77,7 +77,7 @@ public class WeightedItemExtensionsTests
             new("Third", 30)
         };
 
-        var result = items.GetWeightedItem(randomizer: new MockRandomizer(35));
+        var result = items.GetWeightedItem(new MockRandomizer(35));
 
         Assert.Equal("Third", result.Name);
     }
@@ -94,7 +94,7 @@ public class WeightedItemExtensionsTests
 
         // Random returns 0, but modifier of 25 pushes past total weight (30),
         // so it should return the last item
-        var result = items.GetWeightedItem(weightedListModifier: 25, randomizer: new MockRandomizer(0));
+        var result = items.GetWeightedItem(new MockRandomizer(0), 25);
 
         Assert.Equal("Third", result.Name);
     }
@@ -109,7 +109,7 @@ public class WeightedItemExtensionsTests
         };
 
         // Negative modifier is clamped to 0 via Math.Max
-        var result = items.GetWeightedItem(weightedListModifier: -5, randomizer: new MockRandomizer(0));
+        var result = items.GetWeightedItem(new MockRandomizer(0), -5);
 
         Assert.Equal("First", result.Name);
     }
@@ -124,7 +124,7 @@ public class WeightedItemExtensionsTests
         };
 
         // Random returns exactly at the boundary of first item's weight
-        var result = items.GetWeightedItem(randomizer: new MockRandomizer(10));
+        var result = items.GetWeightedItem(new MockRandomizer(10));
 
         Assert.Equal("Second", result.Name);
     }

@@ -25,7 +25,7 @@ public class Ego
     [JsonPropertyOrder(8)]
     public string Faction { get; set; } = string.Empty;
     [JsonPropertyOrder(9)]
-    public string Languages { get; set; } = string.Empty;
+    public List<string> Languages { get; set; } = [];
     [JsonPropertyOrder(10)]
     public List<string> Motivations { get; set; } = [];
 

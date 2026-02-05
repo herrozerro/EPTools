@@ -31,9 +31,10 @@
                           Variant="Variant.Outlined" />
         </MudItem>
         <MudItem xs="12" sm="4">
-            <MudTextField Label="Languages" 
-                          @bind-Value="CurrentEgo.Languages" 
-                          Variant="Variant.Outlined" />
+            <MudTextField Label="Languages"
+                          @bind-Value="LanguagesDisplay"
+                          Variant="Variant.Outlined"
+                          HelperText="Comma separated" />
         </MudItem>
 
         <MudItem xs="12" sm="4">
@@ -84,6 +85,24 @@
     
         
     // HELPER: Handles the conversion between List<string> and the Text Field
+    private string LanguagesDisplay
+    {
+        get => string.Join(", ", CurrentEgo.Languages);
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                CurrentEgo.Languages = new List<string>();
+            }
+            else
+            {
+                CurrentEgo.Languages = value
+                    .Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries)
+                    .ToList();
+            }
+        }
+    }
+
     private string MotivationsDisplay
     {
         get => string.Join(", ", CurrentEgo.Motivations);
