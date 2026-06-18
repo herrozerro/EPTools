@@ -1,6 +1,6 @@
 ﻿using EPTools.Core.Constants;
 using EPTools.Core.Interfaces;
-using EPTools.Core.Models.EPDataModels;
+using EPTools.Core.Models.Data;
 
 namespace EPTools.Core.Services;
 

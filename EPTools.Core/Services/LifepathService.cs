@@ -284,14 +284,17 @@ public class LifepathService
             {
                 Name = option.Name,
                 ActiveMorph = true,
+                MorphType = selectedMorph.Type,
+                MorphSex = "",
                 Insight = selectedMorph.Pools.Insight,
                 Moxie = selectedMorph.Pools.Moxie,
                 Vigor = selectedMorph.Pools.Vigor,
                 MorphFlex = selectedMorph.Pools.Flex,
-                MorphType = selectedMorph.Type,
-                MorphSex = "",
+                Durability = selectedMorph.Durability,
+                WoundThreshold = selectedMorph.WoundThreshold,
+                DeathRating = selectedMorph.DeathRating,
                 Traits = selectedMorph.MorphTraits.Select(x => new EgoTrait { Name = x.Name, Level = x.Level }).ToList(),
-                Wares = selectedMorph.Ware.Select(x=> new Ware { Name = x}).ToList()
+                Wares = selectedMorph.Ware.Select(x => new Ware { Name = x }).ToList()
             });
         }
     }

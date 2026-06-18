@@ -364,30 +364,117 @@ public class EgoManager
 
     #endregion
 
+    #region Roll Modifiers
+
+    public RollModifier AddEgoModifier(Ego ego, RollModifier modifier)
+    {
+        ego.RollModifiers.Add(modifier);
+        return modifier;
+    }
+
+    public bool RemoveEgoModifier(Ego ego, RollModifier modifier) =>
+        ego.RollModifiers.Remove(modifier);
+
+    /// <summary>
+    /// Removes all ego modifiers created by a specific source (e.g. when a trait is removed).
+    /// </summary>
+    public void RemoveEgoModifiersBySource(Ego ego, string source) =>
+        ego.RollModifiers.RemoveAll(x => x.Source == source);
+
+    public RollModifier AddMorphModifier(Morph morph, RollModifier modifier)
+    {
+        morph.RollModifiers.Add(modifier);
+        return modifier;
+    }
+
+    public bool RemoveMorphModifier(Morph morph, RollModifier modifier) =>
+        morph.RollModifiers.Remove(modifier);
+
+    /// <summary>
+    /// Removes all morph modifiers created by a specific source (e.g. when a ware is removed).
+    /// </summary>
+    public void RemoveMorphModifiersBySource(Morph morph, string source) =>
+        morph.RollModifiers.RemoveAll(x => x.Source == source);
+
+    #endregion
+
     #region Calculations
 
     /// <summary>
-    /// Calculates the total value for a skill (rank + linked aptitude).
+    /// Full skill total: rank + linked aptitude + active modifiers from both ego and morph.
+    /// Skill modifiers match by skill name; aptitude-check modifiers match by the skill's linked aptitude.
     /// </summary>
-    public int CalculateSkillTotal(Ego ego, EgoSkill skill)
+    public int GetSkillTotal(Ego ego, EgoSkill skill, Morph? activeMorph = null)
     {
-        return ego.SkillTotal(skill);
+        var baseTotal = ego.SkillTotal(skill);
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.Skill, skill.Name);
+        var morphMods = activeMorph == null ? 0
+                      : SumActive(activeMorph.RollModifiers, RollModifierType.Skill, skill.Name);
+        return baseTotal + egoMods + morphMods;
     }
 
     /// <summary>
-    /// Gets the total pools combining ego flex and active morph pools.
+    /// Aptitude check total: (aptitude * 3 + checkMod) + active AptitudeCheck modifiers from both ego and morph.
+    /// Match modifiers by full aptitude name (e.g. "Cognition") stored in RollModifier.Name.
+    /// </summary>
+    public int GetAptitudeCheckTotal(Ego ego, string aptitudeName, Morph? activeMorph = null)
+    {
+        var aptitude = ego.Aptitudes.Find(x => x.Name == aptitudeName || x.ShortName == aptitudeName);
+        if (aptitude == null) return 0;
+
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.AptitudeCheck, aptitude.Name);
+        var morphMods = activeMorph == null ? 0
+                      : SumActive(activeMorph.RollModifiers, RollModifierType.AptitudeCheck, aptitude.Name);
+        return aptitude.CheckRating + egoMods + morphMods;
+    }
+
+    /// <summary>
+    /// Initiative: (REF + INT) / 5 + active modifiers from both ego and morph.
+    /// </summary>
+    public int GetInitiative(Ego ego, Morph? activeMorph = null)
+    {
+        var reflexes  = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Reflexes)?.AptitudeValue ?? 0;
+        var intuition = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Intuition)?.AptitudeValue ?? 0;
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.Initiative);
+        var morphMods = activeMorph == null ? 0 : SumActive(activeMorph.RollModifiers, RollModifierType.Initiative);
+        return (reflexes + intuition) / 5 + egoMods + morphMods;
+    }
+
+    public int GetLucidity(Ego ego)
+    {
+        var willpower = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Willpower)?.AptitudeValue ?? 0;
+        return willpower * 2 + SumActive(ego.RollModifiers, RollModifierType.Lucidity);
+    }
+
+    public int GetTraumaThreshold(Ego ego) =>
+        GetLucidity(ego) / 5 + SumActive(ego.RollModifiers, RollModifierType.TraumaThreshold);
+
+    public int GetInsanityRating(Ego ego) =>
+        GetLucidity(ego) * 2 + SumActive(ego.RollModifiers, RollModifierType.InsanityRating);
+
+    /// <summary>
+    /// Gets the total pools combining ego flex and the active morph's modified pool values.
     /// </summary>
     public (int Insight, int Moxie, int Vigor, int Flex) GetTotalPools(Ego ego)
     {
         var activeMorph = GetActiveMorph(ego);
-
         return (
-            Insight: activeMorph?.Insight ?? 0,
-            Moxie: activeMorph?.Moxie ?? 0,
-            Vigor: activeMorph?.Vigor ?? 0,
-            Flex: ego.EgoFlex + (activeMorph?.MorphFlex ?? 0)
+            Insight: activeMorph?.TotalInsight ?? 0,
+            Moxie:   activeMorph?.TotalMoxie   ?? 0,
+            Vigor:   activeMorph?.TotalVigor   ?? 0,
+            Flex:    ego.EgoFlex + (activeMorph?.TotalFlex ?? 0)
         );
     }
+
+    /// <summary>
+    /// Kept for backwards compatibility — prefer GetSkillTotal which includes roll modifiers.
+    /// </summary>
+    public int CalculateSkillTotal(Ego ego, EgoSkill skill) =>
+        GetSkillTotal(ego, skill, GetActiveMorph(ego));
+
+    private static int SumActive(IEnumerable<RollModifier> modifiers, RollModifierType type, string? name = null) =>
+        modifiers.Where(x => x.IsActive && x.Type == type && (name == null || x.Name == name))
+                 .Sum(x => x.Value);
 
     #endregion
 }

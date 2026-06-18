@@ -1,4 +1,4 @@
-using EPTools.Core.Models.EPDataModels;
+using EPTools.Core.Models.Data;
 
 namespace EPTools.Core.Models.Ego;
 

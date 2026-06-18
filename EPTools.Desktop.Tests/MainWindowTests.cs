@@ -4,6 +4,7 @@ using Avalonia.VisualTree;
 using EPTools.Desktop.ViewModels;
 using EPTools.Desktop.Views;
 using EPTools.Core.Interfaces;
+using EPTools.Core.Models.Data;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Services;
 
@@ -75,9 +76,9 @@ public class MockFetchService : IFetchService
     public Task<T> GetTFromEpFileAsync<T>(string filename) where T : new()
     {
         // Return mock data based on filename
-        if (typeof(T) == typeof(List<EPTools.Core.Models.EPDataModels.Aptitude>))
+        if (typeof(T) == typeof(List<Aptitude>))
         {
-            var aptitudes = new List<EPTools.Core.Models.EPDataModels.Aptitude>
+            var aptitudes = new List<Aptitude>
             {
                 new("Cognition", "Intelligence", "COG", "EP2", "", []),
                 new("Intuition", "Gut instinct", "INT", "EP2", "", []),
@@ -89,9 +90,9 @@ public class MockFetchService : IFetchService
             return Task.FromResult((T)(object)aptitudes);
         }
 
-        if (typeof(T) == typeof(List<EPTools.Core.Models.EPDataModels.Skill>))
+        if (typeof(T) == typeof(List<Skill>))
         {
-            var skills = new List<EPTools.Core.Models.EPDataModels.Skill>();
+            var skills = new List<Skill>();
             return Task.FromResult((T)(object)skills);
         }
 
