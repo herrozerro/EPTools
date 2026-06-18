@@ -23,51 +23,46 @@ public class LifepathService
 
     private void InitializeApplyMethods()
     {
-        // Async methods can be added directly
         _applyNodeMethods["Morph"] = ApplyMorph;
         _applyNodeMethods["Skill"] = ApplySkill;
         _applyNodeMethods["Trait"] = ApplyTrait;
         _applyNodeMethods["Aptitude"] = ApplyAptitude;
         _applyNodeMethods["ForcedInterest"] = ApplyForcedInterest;
-
-        // Sync methods refactored to return Task for consistency
         _applyNodeMethods["Language"] = ApplyLanguage;
         _applyNodeMethods["Pool"] = ApplyPool;
         _applyNodeMethods["Reputation"] = ApplyReputation;
-        _applyNodeMethods["Slight"] = ApplySlight;
+        _applyNodeMethods["Sleight"] = ApplySleight;
         _applyNodeMethods["Faction"] = ApplyFaction;
         _applyNodeMethods["Age"] = ApplyAge;
         _applyNodeMethods["Motivation"] = ApplyMotivation;
         _applyNodeMethods["Skip"] = ApplySkip;
         _applyNodeMethods["PlayerChoice"] = ApplyPlayerChoice;
-
-        // Logic extracted from inline lambdas to methods
         _applyNodeMethods["Interest"] = ApplyInterest;
         _applyNodeMethods["Career"] = ApplyCareer;
         _applyNodeMethods["BackgroundOption"] = ApplyBackground;
-        _applyNodeMethods["CharacterGenStep"] = ApplyCharacterGenStep;
         _applyNodeMethods["Table"] = ApplyTable;
         _applyNodeMethods["LifePathStoryEvent"] = ApplyLifePathStoryEvent;
         _applyNodeMethods["Attribute"] = ApplyAttribute;
     }
 
-    private void ProcessOptionLists(LifepathContext ctx, LifePathNode option)
+    // Expands each option list independently: weighted lists pick one, unweighted push all.
+    private IEnumerable<LifePathNode> ExpandOptionLists(IEnumerable<List<LifePathNode>> optionLists)
     {
-        if (option.OptionLists.Count == 0) return;
-
-        foreach (var list in option.OptionLists)
+        foreach (var list in optionLists)
         {
             if (list.Sum(x => x.Weight) > 0)
-            {
-                ctx.Nodes.Push(list.GetWeightedItem(_randomizer));
-                return;
-            }
-
-            foreach (var item in list)
-            {
-                ctx.Nodes.Push(item);
-            }
+                yield return list.GetWeightedItem(_randomizer);
+            else
+                foreach (var item in list)
+                    yield return item;
         }
+    }
+
+    // Pushes nodes in reverse so the first item is processed first (LIFO).
+    private void PushAll(LifepathContext ctx, IEnumerable<LifePathNode> nodes)
+    {
+        foreach (var node in nodes.Reverse())
+            ctx.Nodes.Push(node);
     }
 
     public async Task<Ego> GenerateEgo()
@@ -76,16 +71,12 @@ public class LifepathService
         var ctx = new LifepathContext(ego);
 
         var charGenSteps = await _ePDataService.GetCharacterGenTableAsync("LifePathSteps");
-
-        charGenSteps.Reverse();
-
-        charGenSteps.ForEach(x => ctx.Nodes.Push(x));
+        PushAll(ctx, charGenSteps);
 
         while (ctx.Nodes.Any())
         {
             var node = ctx.Nodes.Pop();
-            Console.WriteLine($"{node.Name} {node.Description} {node.Value}");
-            await ApplyBackgroundOption(ctx, node);
+            await DispatchNode(ctx, node);
         }
 
         ego.CharacterGenerationOutput = ctx.Output;
@@ -94,14 +85,18 @@ public class LifepathService
         return ego;
     }
 
-    // This method (ApplyBackgroundOption) is the main dispatcher
-    private async Task ApplyBackgroundOption(LifepathContext ctx, LifePathNode option)
+    private async Task DispatchNode(LifepathContext ctx, LifePathNode node)
     {
-        ctx.Output.Add($"{option.Name} {option.Description}".Trim());
+        ctx.Output.Add($"{node.Name} {node.Description}".Trim());
 
-        if (_applyNodeMethods.TryGetValue(option.Type, out var applyMethod))
-            await applyMethod(ctx, option);
-        ProcessOptionLists(ctx, option);
+        // Skip logic lives here, not on the node — avoids mutating record data.
+        if (node.Type == "CharacterGenStep" && ctx.SkipSections.Contains(node.Value))
+            return;
+
+        if (_applyNodeMethods.TryGetValue(node.Type, out var apply))
+            await apply(ctx, node);
+
+        PushAll(ctx, ExpandOptionLists(node.OptionLists));
     }
 
     private Task ApplyPlayerChoice(LifepathContext ctx, LifePathNode option)
@@ -157,7 +152,7 @@ public class LifepathService
         return Task.CompletedTask;
     }
 
-    private Task ApplySlight(LifepathContext ctx, LifePathNode option)
+    private Task ApplySleight(LifepathContext ctx, LifePathNode option)
     {
         for (var i = 0; i < option.Value; i++)
         {
@@ -202,7 +197,6 @@ public class LifepathService
             _ => string.Empty
         };
 
-        //check if aptitude already exists and add value to it
         var existingAptitude = ctx.Ego.Aptitudes.FirstOrDefault(x => x.Name == aptitudeToChange);
         if (existingAptitude != null)
             existingAptitude.AptitudeValue += option.Value;
@@ -227,9 +221,8 @@ public class LifepathService
             _ => null
         };
         if (repToChange != null)
-        {
             repToChange.Score += option.Value;
-        }
+
         return Task.CompletedTask;
     }
 
@@ -303,25 +296,19 @@ public class LifepathService
         }
     }
 
-    // New extracted methods for logic previously inside lambdas
-
     private Task ApplyCareer(LifepathContext ctx, LifePathNode option)
     {
         ctx.Ego.Career = option.Name;
         return Task.CompletedTask;
     }
 
-    private Task ApplyCharacterGenStep(LifepathContext ctx, LifePathNode option)
-    {
-        if (ctx.SkipSections.Contains(option.Value))
-            option.OptionLists.Clear();
-        return Task.CompletedTask;
-    }
-
+    // Pushes the selected table result back onto the stack so it is dispatched
+    // through the normal flow — preserving its Type effect and OptionLists expansion.
     private async Task ApplyTable(LifepathContext ctx, LifePathNode option)
     {
-        var nodes = await ProcessTableRequest(option.Name, option.Value, ctx);
-        nodes.ForEach(x => ctx.Nodes.Push(x));
+        var result = (await _ePDataService.GetCharacterGenTableAsync(option.Name))
+            .GetWeightedItem(_randomizer, option.Value);
+        ctx.Nodes.Push(result);
     }
 
     private Task ApplyLifePathStoryEvent(LifepathContext ctx, LifePathNode option)
@@ -339,33 +326,5 @@ public class LifepathService
                 break;
         }
         return Task.CompletedTask;
-    }
-
-    private async Task<List<LifePathNode>> ProcessTableRequest(string tableName, int tableModifier, LifepathContext ctx)
-    {
-        List<LifePathNode> options = new();
-
-        var table = (await _ePDataService.GetCharacterGenTableAsync(tableName)).GetWeightedItem(_randomizer, tableModifier);
-
-        ctx.Output.Add($"{table.Name} {table.Description}".Trim());
-
-        if (table.OptionLists.Count == 0)
-        {
-            return [table];
-        }
-
-        foreach (var nodeList in table.OptionLists)
-        {
-            if (nodeList.Sum(x => x.Weight) > 0)
-            {
-                options.Add(nodeList.GetWeightedItem(_randomizer));
-            }
-            else
-            {
-                options.AddRange(nodeList);
-            }
-        }
-
-        return options;
     }
 }
