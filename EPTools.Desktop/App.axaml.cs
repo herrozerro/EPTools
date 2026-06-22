@@ -44,8 +44,8 @@ public partial class App : Application
         services.AddSingleton<IUserDataStore, FileUserDataStore>();
         services.AddSingleton<IRandomizer, DefaultRandomizer>();
         services.AddSingleton<IEpDataService, EpDataService>();
-        services.AddSingleton<EgoService>();
-        services.AddSingleton<LifepathService>();
+        services.AddSingleton<IEgoService, EgoService>();
+        services.AddSingleton<ILifepathService, LifepathService>();
         services.AddSingleton<EgoManager>();
 
         // ViewModels

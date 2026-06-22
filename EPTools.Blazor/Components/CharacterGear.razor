@@ -1,8 +1,10 @@
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Core.Models.Data
 @using EPTools.Core.Models.Ego
+@using EPTools.Core.Services
 @inject IDialogService DialogService
 @inject ISnackbar Snackbar
+@inject EgoManager EgoManager
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
     <MudGrid Spacing="4">
@@ -109,7 +111,7 @@
                                     else { <MudMenuItem Disabled="true">No Caches</MudMenuItem> }
                                 </ChildContent>
                             </MudMenu>
-                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => CurrentEgo.Inventory.Remove(context))" />
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => EgoManager.RemoveInventoryItem(CurrentEgo, context))" />
                         </MudTd>
                     </RowTemplate>
                 </MudTable>
@@ -236,12 +238,12 @@
         // 3. Add to the correct location
         if (targetCache != null)
         {
-            targetCache.Inventory.Add(newItem);
+            EgoManager.AddItemToCache(targetCache, newItem);
             Snackbar.Add($"Added new item to {targetCache.Location}", Severity.Success);
         }
         else
         {
-            CurrentEgo.Inventory.Add(newItem);
+            EgoManager.AddInventoryItem(CurrentEgo, newItem);
             Snackbar.Add($"Added new item to inventory", Severity.Success);
         }
 
@@ -250,41 +252,23 @@
     
     private void AddCache()
     {
-        CurrentEgo.Caches.Add(new InventoryCache { Location = "New Cache Location" });
+        EgoManager.AddCache(CurrentEgo, "New Cache Location");
     }
 
     private void DeleteCache(InventoryCache cache)
     {
-        CurrentEgo.Caches.Remove(cache);
+        EgoManager.RemoveCache(CurrentEgo, cache);
     }
-    
+
     private void MoveToLocal(InventoryCache sourceCache, InventoryItem item)
     {
-        // 1. Remove from cache
-        sourceCache.Inventory.Remove(item);
-        
-        // 2. Add to local
-        item.Equipped = false; // Reset state when moving
-        item.Active = false;
-        CurrentEgo.Inventory.Add(item);
-        
-        // 3. Notify UI (Optional, but often needed for cross-list moves)
-        StateHasChanged(); 
+        EgoManager.MoveItemFromCache(CurrentEgo, item, sourceCache);
+        StateHasChanged();
     }
-    
+
     private void MoveToCache(InventoryItem item, InventoryCache targetCache)
     {
-        // 1. Remove from Local
-        CurrentEgo.Inventory.Remove(item);
-
-        // 2. Logic Reset (You can't "Equip" something that is sitting in a box 50 miles away)
-        item.Equipped = false;
-        item.Active = false;
-
-        // 3. Add to the specific target cache
-        targetCache.Inventory.Add(item);
-
-        // 4. Feedback
+        EgoManager.MoveItemToCache(CurrentEgo, item, targetCache);
         Snackbar.Add($"Moved {item.Name} to {targetCache.Location}", Severity.Success);
     }
 
@@ -317,7 +301,7 @@
             else
             {
                 // B. Add to Local Inventory (Left Column)
-                CurrentEgo.Inventory.Add(newItem);
+                EgoManager.AddInventoryItem(CurrentEgo, newItem);
                 Snackbar.Add($"Added {selectedGear.Name} to Inventory", Severity.Success);
             }
         }

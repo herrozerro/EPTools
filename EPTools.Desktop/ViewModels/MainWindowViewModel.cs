@@ -17,8 +17,8 @@ public partial class MainWindowViewModel : ViewModelBase
 {
     private const string StorageKey = "EP_CurrentCharacter";
 
-    private readonly EgoService _egoService;
-    private readonly LifepathService _lifepathService;
+    private readonly IEgoService _egoService;
+    private readonly ILifepathService _lifepathService;
     private readonly IUserDataStore _userDataStore;
     private readonly EgoManager _egoManager;
 
@@ -270,8 +270,8 @@ public partial class MainWindowViewModel : ViewModelBase
     }
 
     public MainWindowViewModel(
-        EgoService egoService,
-        LifepathService lifepathService,
+        IEgoService egoService,
+        ILifepathService lifepathService,
         IUserDataStore userDataStore,
         EgoManager egoManager)
     {

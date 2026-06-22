@@ -6,43 +6,45 @@ using EPTools.Core.Constants;
 
 namespace EPTools.Core.Services;
 
-public class LifepathService
+public class LifepathService : ILifepathService
 {
-    private readonly Dictionary<string, Func<LifepathContext, LifePathNode, Task>> _applyNodeMethods = new();
+    private readonly Dictionary<LifePathNodeType, Func<LifepathContext, LifePathNode, Task>> _applyNodeMethods = new();
     private readonly IEpDataService _ePDataService;
-    private readonly EgoService _egoService;
+    private readonly IEgoService _egoService;
     private readonly IRandomizer _randomizer;
+    private readonly EgoManager _egoManager;
 
-    public LifepathService(IEpDataService ePDataService, EgoService egoService, IRandomizer randomizer)
+    public LifepathService(IEpDataService ePDataService, IEgoService egoService, IRandomizer randomizer, EgoManager egoManager)
     {
         _ePDataService = ePDataService;
         _egoService = egoService;
         _randomizer = randomizer;
+        _egoManager = egoManager;
         InitializeApplyMethods();
     }
 
     private void InitializeApplyMethods()
     {
-        _applyNodeMethods["Morph"] = ApplyMorph;
-        _applyNodeMethods["Skill"] = ApplySkill;
-        _applyNodeMethods["Trait"] = ApplyTrait;
-        _applyNodeMethods["Aptitude"] = ApplyAptitude;
-        _applyNodeMethods["ForcedInterest"] = ApplyForcedInterest;
-        _applyNodeMethods["Language"] = ApplyLanguage;
-        _applyNodeMethods["Pool"] = ApplyPool;
-        _applyNodeMethods["Reputation"] = ApplyReputation;
-        _applyNodeMethods["Sleight"] = ApplySleight;
-        _applyNodeMethods["Faction"] = ApplyFaction;
-        _applyNodeMethods["Age"] = ApplyAge;
-        _applyNodeMethods["Motivation"] = ApplyMotivation;
-        _applyNodeMethods["Skip"] = ApplySkip;
-        _applyNodeMethods["PlayerChoice"] = ApplyPlayerChoice;
-        _applyNodeMethods["Interest"] = ApplyInterest;
-        _applyNodeMethods["Career"] = ApplyCareer;
-        _applyNodeMethods["BackgroundOption"] = ApplyBackground;
-        _applyNodeMethods["Table"] = ApplyTable;
-        _applyNodeMethods["LifePathStoryEvent"] = ApplyLifePathStoryEvent;
-        _applyNodeMethods["Attribute"] = ApplyAttribute;
+        _applyNodeMethods[LifePathNodeType.Morph] = ApplyMorph;
+        _applyNodeMethods[LifePathNodeType.Skill] = ApplySkill;
+        _applyNodeMethods[LifePathNodeType.Trait] = ApplyTrait;
+        _applyNodeMethods[LifePathNodeType.Aptitude] = ApplyAptitude;
+        _applyNodeMethods[LifePathNodeType.ForcedInterest] = ApplyForcedInterest;
+        _applyNodeMethods[LifePathNodeType.Language] = ApplyLanguage;
+        _applyNodeMethods[LifePathNodeType.Pool] = ApplyPool;
+        _applyNodeMethods[LifePathNodeType.Reputation] = ApplyReputation;
+        _applyNodeMethods[LifePathNodeType.Sleight] = ApplySleight;
+        _applyNodeMethods[LifePathNodeType.Faction] = ApplyFaction;
+        _applyNodeMethods[LifePathNodeType.Age] = ApplyAge;
+        _applyNodeMethods[LifePathNodeType.Motivation] = ApplyMotivation;
+        _applyNodeMethods[LifePathNodeType.Skip] = ApplySkip;
+        _applyNodeMethods[LifePathNodeType.PlayerChoice] = ApplyPlayerChoice;
+        _applyNodeMethods[LifePathNodeType.Interest] = ApplyInterest;
+        _applyNodeMethods[LifePathNodeType.Career] = ApplyCareer;
+        _applyNodeMethods[LifePathNodeType.BackgroundOption] = ApplyBackground;
+        _applyNodeMethods[LifePathNodeType.Table] = ApplyTable;
+        _applyNodeMethods[LifePathNodeType.LifePathStoryEvent] = ApplyLifePathStoryEvent;
+        _applyNodeMethods[LifePathNodeType.Attribute] = ApplyAttribute;
     }
 
     // Expands each option list independently: weighted lists pick one, unweighted push all.
@@ -90,7 +92,7 @@ public class LifepathService
         ctx.Output.Add($"{node.Name} {node.Description}".Trim());
 
         // Skip logic lives here, not on the node — avoids mutating record data.
-        if (node.Type == "CharacterGenStep" && ctx.SkipSections.Contains(node.Value))
+        if (node.Type == LifePathNodeType.CharacterGenStep && ctx.SkipSections.Contains(node.Value))
             return;
 
         if (_applyNodeMethods.TryGetValue(node.Type, out var apply))
@@ -156,7 +158,7 @@ public class LifepathService
     {
         for (var i = 0; i < option.Value; i++)
         {
-            ctx.Ego.Psi.Sleights.Add(new EgoSleight
+            _egoManager.AddSleight(ctx.Ego, new EgoSleight
             {
                 Name = "Random or chosen",
                 Description = string.Empty,
@@ -172,11 +174,12 @@ public class LifepathService
     private async Task ApplyTrait(LifepathContext ctx, LifePathNode option)
     {
         var trait = (await _ePDataService.GetTraitsAsync()).FirstOrDefault(x => x.Name == option.Name.Split("-")[0]);
-        ctx.Ego.EgoTraits.Add(new EgoTrait {
+        _egoManager.AddEgoTrait(ctx.Ego, new EgoTrait
+        {
             Name = option.Name,
             Description = trait?.Description ?? "",
             Level = option.Value,
-            CostTiers = string.Join(",",trait?.Cost ?? []),
+            CostTiers = string.Join(",", trait?.Cost ?? []),
             Cost = trait?.Cost[Math.Clamp(option.Value - 1, 0, trait.Cost.Count - 1)] ?? 0,
             Type = trait?.Type ?? "",
             Summary = trait?.Summary ?? "",
@@ -209,20 +212,7 @@ public class LifepathService
         if (ctx.Ego.Identities.Count == 0)
             return Task.CompletedTask;
 
-        var identity = ctx.Ego.Identities[0];
-        var repToChange = option.Name switch
-        {
-            "ARep" => identity.ARep,
-            "CRep" => identity.CRep,
-            "GRep" => identity.GRep,
-            "IRep" => identity.IRep,
-            "XRep" => identity.XRep,
-            "RRep" => identity.RRep,
-            _ => null
-        };
-        if (repToChange != null)
-            repToChange.Score += option.Value;
-
+        _egoManager.AddReputation(ctx.Ego.Identities[0], option.Name, option.Value);
         return Task.CompletedTask;
     }
 
@@ -246,57 +236,41 @@ public class LifepathService
     private async Task ApplySkill(LifepathContext ctx, LifePathNode option)
     {
         var skills = await _ePDataService.GetSkillsAsync();
-        var skillName = option.Name.Split("-")[0];
-        var skillType = skillName switch
+        var parts = option.Name.Split("-");
+        var skillName = parts[0];
+        var specialization = parts.Length > 1 ? parts[1] : "";
+        var template = skills.FirstOrDefault(x => x.Name == skillName.Split(":")[0].Trim());
+        var skillType = template switch
         {
-            { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
-            { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
+            { Know: true } => SkillType.KnowledgeSkill,
+            { Name: var n } when n.StartsWith("Exotic Skill", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
             _ => SkillType.EgoSkill
         };
 
         if (ctx.Ego.Skills.Any(x => x.Name == skillName))
         {
-            ctx.Ego.Skills.First(x=>x.Name == skillName).Rank += option.Value;
-            var specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "";
-            ctx.Ego.Skills.First(x=>x.Name == skillName).Specialization += specialization;
+            var existing = ctx.Ego.Skills.First(x => x.Name == skillName);
+            existing.Rank += option.Value;
+            existing.Specialization += specialization;
         }
         else
         {
-            ctx.Ego.Skills.Add(
-                new EgoSkill
-                {
-                    Name = option.Name.Split("-")[0],
-                    Rank = option.Value,
-                    Specialization = option.Name.Split("-").Length > 1 ? option.Name.Split("-")[1] : "",
-                    Aptitude = skills.FirstOrDefault(x=>x.Name == option.Name.Split("-")[0].Split(":")[0])?.Aptitude ?? "",
-                    SkillType = skillType
-                });
+            ctx.Ego.Skills.Add(new EgoSkill
+            {
+                Name = skillName,
+                Rank = option.Value,
+                Specialization = specialization,
+                Aptitude = template?.Aptitude ?? "",
+                SkillType = skillType
+            });
         }
     }
 
     private async Task ApplyMorph(LifepathContext ctx, LifePathNode option)
     {
-        var selectedMorph = (await _ePDataService.GetMorphsAsync()).FirstOrDefault(x => x.Name == option.Name);
-        if (selectedMorph != null)
-        {
-            ctx.Ego.Morphs.Clear();
-            ctx.Ego.Morphs.Add(new Morph
-            {
-                Name = option.Name,
-                ActiveMorph = true,
-                MorphType = selectedMorph.Type,
-                MorphSex = "",
-                Insight = selectedMorph.Pools.Insight,
-                Moxie = selectedMorph.Pools.Moxie,
-                Vigor = selectedMorph.Pools.Vigor,
-                MorphFlex = selectedMorph.Pools.Flex,
-                Durability = selectedMorph.Durability,
-                WoundThreshold = selectedMorph.WoundThreshold,
-                DeathRating = selectedMorph.DeathRating,
-                Traits = selectedMorph.MorphTraits.Select(x => new EgoTrait { Name = x.Name, Level = x.Level }).ToList(),
-                Wares = selectedMorph.Ware.Select(x => new Ware { Name = x }).ToList()
-            });
-        }
+        var template = (await _ePDataService.GetMorphsAsync()).FirstOrDefault(x => x.Name == option.Name);
+        if (template != null)
+            _egoManager.ApplyMorphTemplate(ctx.Ego, template);
     }
 
     private Task ApplyCareer(LifepathContext ctx, LifePathNode option)

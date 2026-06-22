@@ -1,4 +1,5 @@
 using EPTools.Core.Constants;
+using EPTools.Core.Models.Data;
 using EPTools.Core.Models.Ego;
 
 namespace EPTools.Core.Services;
@@ -117,6 +118,33 @@ public class EgoManager
     #region Morphs
 
     /// <summary>
+    /// Instantiates a morph from a template, clears existing morphs, and sets it as active.
+    /// Used by lifepath generation to assign the character's starting morph.
+    /// </summary>
+    public Morph ApplyMorphTemplate(Ego ego, MorphTemplate template)
+    {
+        ego.Morphs.Clear();
+        var morph = new Morph
+        {
+            Name = template.Name,
+            MorphType = template.Type,
+            MorphSex = "",
+            ActiveMorph = true,
+            Insight = template.Pools.Insight,
+            Moxie = template.Pools.Moxie,
+            Vigor = template.Pools.Vigor,
+            MorphFlex = template.Pools.Flex,
+            Durability = template.Durability,
+            WoundThreshold = template.WoundThreshold,
+            DeathRating = template.DeathRating,
+            Traits = template.MorphTraits.Select(x => new EgoTrait { Name = x.Name, Level = x.Level }).ToList(),
+            Wares = template.Ware.Select(x => new Ware { Name = x }).ToList()
+        };
+        ego.Morphs.Add(morph);
+        return morph;
+    }
+
+    /// <summary>
     /// Adds a new morph to the ego. If this is the first morph, it becomes active automatically.
     /// </summary>
     public Morph AddMorph(Ego ego, string name = "New Morph", string morphType = "Biomorph", string size = "Medium")
@@ -222,6 +250,16 @@ public class EgoManager
 
     #endregion
 
+    #region Psi
+
+    public EgoSleight AddSleight(Ego ego, EgoSleight sleight)
+    {
+        ego.Psi.Sleights.Add(sleight);
+        return sleight;
+    }
+
+    #endregion
+
     #region Identities
 
     /// <summary>
@@ -232,6 +270,32 @@ public class EgoManager
         var identity = new Identity { Alias = alias };
         ego.Identities.Add(identity);
         return identity;
+    }
+
+    public void AddIdentity(Ego ego, Identity identity)
+    {
+        ego.Identities.Add(identity);
+    }
+
+    /// <summary>
+    /// Adds rep to a specific network on an identity. Returns false if the network name is unknown.
+    /// </summary>
+    public bool AddReputation(Identity identity, string network, int amount)
+    {
+        var rep = network switch
+        {
+            "ARep" => identity.ARep,
+            "CRep" => identity.CRep,
+            "FRep" => identity.FRep,
+            "GRep" => identity.GRep,
+            "IRep" => identity.IRep,
+            "RRep" => identity.RRep,
+            "XRep" => identity.XRep,
+            _ => null
+        };
+        if (rep == null) return false;
+        rep.Score += amount;
+        return true;
     }
 
     /// <summary>
@@ -251,7 +315,16 @@ public class EgoManager
     #region Ego Traits
 
     /// <summary>
-    /// Adds a trait to the ego.
+    /// Adds a pre-built trait to the ego (used when applying from a catalog or lifepath).
+    /// </summary>
+    public EgoTrait AddEgoTrait(Ego ego, EgoTrait trait)
+    {
+        ego.EgoTraits.Add(trait);
+        return trait;
+    }
+
+    /// <summary>
+    /// Adds a blank trait to the ego.
     /// </summary>
     public EgoTrait AddEgoTrait(Ego ego, string name = "New Trait")
     {
@@ -273,15 +346,20 @@ public class EgoManager
     #region Inventory
 
     /// <summary>
-    /// Adds an item to the ego's local inventory.
+    /// Adds a pre-built item to the ego's local inventory.
+    /// </summary>
+    public InventoryItem AddInventoryItem(Ego ego, InventoryItem item)
+    {
+        ego.Inventory.Add(item);
+        return item;
+    }
+
+    /// <summary>
+    /// Adds a blank item to the ego's local inventory.
     /// </summary>
     public InventoryItem AddInventoryItem(Ego ego, string name = "New Item", int quantity = 1)
     {
-        var item = new InventoryItem
-        {
-            Name = name,
-            Quantity = quantity
-        };
+        var item = new InventoryItem { Name = name, Quantity = quantity };
         ego.Inventory.Add(item);
         return item;
     }
@@ -295,25 +373,31 @@ public class EgoManager
     }
 
     /// <summary>
-    /// Moves an item from local inventory to a cache.
+    /// Moves an item from local inventory to a cache. Resets equipped/active state
+    /// since a cached item cannot be in use.
     /// </summary>
     public bool MoveItemToCache(Ego ego, InventoryItem item, InventoryCache cache)
     {
         if (!ego.Inventory.Remove(item))
             return false;
 
+        item.Equipped = false;
+        item.Active = false;
         cache.Inventory.Add(item);
         return true;
     }
 
     /// <summary>
-    /// Moves an item from a cache to local inventory.
+    /// Moves an item from a cache to local inventory. Resets equipped/active state
+    /// so the player consciously re-equips after retrieving.
     /// </summary>
     public bool MoveItemFromCache(Ego ego, InventoryItem item, InventoryCache cache)
     {
         if (!cache.Inventory.Remove(item))
             return false;
 
+        item.Equipped = false;
+        item.Active = false;
         ego.Inventory.Add(item);
         return true;
     }
@@ -341,15 +425,20 @@ public class EgoManager
     }
 
     /// <summary>
-    /// Adds an item directly to a cache.
+    /// Adds a pre-built item directly to a cache.
+    /// </summary>
+    public InventoryItem AddItemToCache(InventoryCache cache, InventoryItem item)
+    {
+        cache.Inventory.Add(item);
+        return item;
+    }
+
+    /// <summary>
+    /// Adds a blank item directly to a cache.
     /// </summary>
     public InventoryItem AddItemToCache(InventoryCache cache, string name = "New Item", int quantity = 1)
     {
-        var item = new InventoryItem
-        {
-            Name = name,
-            Quantity = quantity
-        };
+        var item = new InventoryItem { Name = name, Quantity = quantity };
         cache.Inventory.Add(item);
         return item;
     }

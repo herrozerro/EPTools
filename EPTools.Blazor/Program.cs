@@ -22,8 +22,8 @@ builder.Services.AddScoped<IEpDataService, EpDataService>();
 
 builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddScoped<StatBlockTemplateService>();
-builder.Services.AddScoped<EgoService>();
-builder.Services.AddScoped<DiscordWebhookService>();
-builder.Services.AddScoped<LifepathService>();
+builder.Services.AddScoped<EgoManager>();
+builder.Services.AddScoped<IEgoService, EgoService>();
+builder.Services.AddScoped<ILifepathService, LifepathService>();
 builder.Services.AddMudServices();
 await builder.Build().RunAsync();

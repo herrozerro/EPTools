@@ -2,6 +2,7 @@
 
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
 using EPTools.Core.Services;
@@ -14,8 +15,9 @@ var fileFetchService = new FileFetchService();
 var userDataStore = new FileUserDataStore();
 var randomizer = new DefaultRandomizer();
 var epDataService = new EpDataService(fileFetchService, userDataStore);
-var egoService = new EgoService(epDataService);
-var lifepathService = new LifepathService(epDataService, egoService, randomizer);
+IEgoService egoService = new EgoService(epDataService);
+var egoManager = new EgoManager();
+ILifepathService lifepathService = new LifepathService(epDataService, egoService, randomizer, egoManager);
 
 await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");
 

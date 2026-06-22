@@ -111,8 +111,8 @@ public class MainWindowViewModelTests
         randomizer ??= new MockRandomizer();
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
-        var lifepathService = new LifepathService(dataService, egoService, randomizer);
         var egoManager = new EgoManager();
+        var lifepathService = new LifepathService(dataService, egoService, randomizer, egoManager);
 
         return new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);
     }
@@ -359,8 +359,8 @@ public class MainWindowUITests
         randomizer ??= new MockRandomizer();
         var dataService = new EpDataService(fetchService, userDataStore);
         var egoService = new EgoService(dataService);
-        var lifepathService = new LifepathService(dataService, egoService, randomizer);
         var egoManager = new EgoManager();
+        var lifepathService = new LifepathService(dataService, egoService, randomizer, egoManager);
 
         var viewModel = new MainWindowViewModel(egoService, lifepathService, userDataStore, egoManager);
 
