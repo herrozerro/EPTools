@@ -16,7 +16,7 @@ public enum LifePathNodeType
     BackgroundAdvancedAge, BackgroundAge, BackgroundNativeTongue, BackgroundPath,
     BackgroundYouthEvent, CareerPath, CharacterGenAptitude, CharacterGenFaction,
     CharacterGenInterest, Disorder, FallEvent, PostFallEvent, PreFallEvent,
-    UserChoice, LifePathEventCrime, LifePathEventFirewall, LifePathEventGatecrashing,
+    UserChoice, LifePathEventCrime, LifePathEventFirewall, LifePathEventGatecrashing, None,
 
     // Data file typos — kept as separate members so JSON round-trips cleanly;
     // LifepathService maps these to the same handler as their correct counterparts.
