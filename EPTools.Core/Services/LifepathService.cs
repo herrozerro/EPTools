@@ -1,8 +1,8 @@
+using EPTools.Core.Constants;
 using EPTools.Core.Extensions;
 using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 using EPTools.Core.Models.LifePathGen;
-using EPTools.Core.Constants;
 
 namespace EPTools.Core.Services;
 
@@ -12,9 +12,9 @@ public class LifepathService : ILifepathService
     private readonly IEpDataService _ePDataService;
     private readonly IEgoService _egoService;
     private readonly IRandomizer _randomizer;
-    private readonly EgoManager _egoManager;
+    private readonly IEgoManager _egoManager;
 
-    public LifepathService(IEpDataService ePDataService, IEgoService egoService, IRandomizer randomizer, EgoManager egoManager)
+    public LifepathService(IEpDataService ePDataService, IEgoService egoService, IRandomizer randomizer, IEgoManager egoManager)
     {
         _ePDataService = ePDataService;
         _egoService = egoService;
@@ -45,6 +45,10 @@ public class LifepathService : ILifepathService
         _applyNodeMethods[LifePathNodeType.Table] = ApplyTable;
         _applyNodeMethods[LifePathNodeType.LifePathStoryEvent] = ApplyLifePathStoryEvent;
         _applyNodeMethods[LifePathNodeType.Attribute] = ApplyAttribute;
+
+        // Data file typo aliases
+        _applyNodeMethods[LifePathNodeType.Slight] = ApplySleight;
+        _applyNodeMethods[LifePathNodeType.Trail] = ApplyTrait;
     }
 
     // Expands each option list independently: weighted lists pick one, unweighted push all.

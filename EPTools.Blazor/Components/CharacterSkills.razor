@@ -2,7 +2,7 @@
 @using EPTools.Core.Models.Ego
 @using EPTools.Core.Services
 @inject IDialogService DialogService
-@inject EgoManager EgoManager
+@inject IEgoManager EgoManager
 
 <MudTable T="EgoSkill" Items="@CurrentEgo.Skills" Breakpoint="Breakpoint.Sm" GroupBy="@_groupDefinition" 
           GroupHeaderStyle="background-color:var(--mud-palette-background-gray)"

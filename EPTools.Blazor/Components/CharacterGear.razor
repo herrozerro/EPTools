@@ -4,7 +4,7 @@
 @using EPTools.Core.Services
 @inject IDialogService DialogService
 @inject ISnackbar Snackbar
-@inject EgoManager EgoManager
+@inject IEgoManager EgoManager
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
     <MudGrid Spacing="4">
@@ -166,18 +166,44 @@
                                              <MudTooltip Text="Move to Local Inventory">
                                                 <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Color="Color.Success" OnClick="@(() => MoveToLocal(cache, item))" />
                                             </MudTooltip>
-                                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Default" OnClick="@(() => cache.Inventory.Remove(item))" />
+                                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Default" OnClick="@(() => EgoManager.RemoveItemFromCache(cache, item))" />
                                         </MudTd>
                                     </RowTemplate>
                                 </MudTable>
                                 
-                                @if(cache.Morphs.Any())
+                                @if(cache.Morphs.Any() || CurrentEgo.Morphs.Any())
                                 {
-                                    <MudText Typo="Typo.subtitle2" Class="mt-2">Stored Morphs</MudText>
-                                    <MudList Dense="true" T="string">
-                                        @foreach(var morph in cache.Morphs)
+                                    <div class="d-flex justify-space-between align-center mt-2 mb-1">
+                                        <MudText Typo="Typo.subtitle2">Stored Morphs</MudText>
+                                        @if (CurrentEgo.Morphs.Any())
                                         {
-                                            <MudListItem Icon="@Icons.Material.Filled.Person">@morph.Name (@morph.MorphType)</MudListItem>
+                                            <MudMenu StartIcon="@Icons.Material.Filled.PersonAdd" Label="Store Morph" Size="Size.Small" Color="Color.Secondary" Variant="Variant.Outlined">
+                                                @foreach (var m in CurrentEgo.Morphs)
+                                                {
+                                                    var morphToStore = m;
+                                                    <MudMenuItem OnClick="@(() => EgoManager.AddMorphToCache(CurrentEgo, morphToStore, cache))">
+                                                        @morphToStore.Name (@morphToStore.MorphType)
+                                                    </MudMenuItem>
+                                                }
+                                            </MudMenu>
+                                        }
+                                    </div>
+                                    <MudList Dense="true" T="string">
+                                        @foreach (var morph in cache.Morphs)
+                                        {
+                                            var storedMorph = morph;
+                                            <MudListItem>
+                                                <div class="d-flex justify-space-between align-center">
+                                                    <div class="d-flex align-center gap-1">
+                                                        <MudIcon Icon="@Icons.Material.Filled.Person" Size="Size.Small" />
+                                                        <MudText Typo="Typo.caption">@storedMorph.Name (@storedMorph.MorphType)</MudText>
+                                                    </div>
+                                                    <MudTooltip Text="Return to active morphs">
+                                                        <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Color="Color.Success"
+                                                                       OnClick="@(() => EgoManager.RemoveMorphFromCache(CurrentEgo, storedMorph, cache))" />
+                                                    </MudTooltip>
+                                                </div>
+                                            </MudListItem>
                                         }
                                     </MudList>
                                 }
@@ -295,7 +321,7 @@
             if (targetCache != null)
             {
                 // A. Add to the specific Cache (Right Column)
-                targetCache.Inventory.Add(newItem);
+                EgoManager.AddItemToCache(targetCache, newItem);
                 Snackbar.Add($"Added {selectedGear.Name} to {targetCache.Location}", Severity.Success);
             }
             else

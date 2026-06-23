@@ -16,7 +16,7 @@ var userDataStore = new FileUserDataStore();
 var randomizer = new DefaultRandomizer();
 var epDataService = new EpDataService(fileFetchService, userDataStore);
 IEgoService egoService = new EgoService(epDataService);
-var egoManager = new EgoManager();
+IEgoManager egoManager = new EgoManager();
 ILifepathService lifepathService = new LifepathService(epDataService, egoService, randomizer, egoManager);
 
 await fileFetchService.GetTFromEpFileAsync<List<LifePathNode>>("LifePathTableSynthmorphs");

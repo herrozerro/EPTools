@@ -76,7 +76,7 @@ public class InventoryCacheViewModelTests
     {
         var cache = new InventoryCache { Location = "Mars Habitat" };
 
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
 
         Assert.Equal("Mars Habitat", vm.Location);
     }
@@ -94,7 +94,7 @@ public class InventoryCacheViewModelTests
             }
         };
 
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
 
         Assert.Equal(2, vm.Items.Count);
         Assert.Equal("Item 1", vm.Items[0].Name);
@@ -105,7 +105,7 @@ public class InventoryCacheViewModelTests
     public void Location_UpdatesModel()
     {
         var cache = new InventoryCache { Location = "Original" };
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
 
         vm.Location = "Updated Location";
 
@@ -116,7 +116,7 @@ public class InventoryCacheViewModelTests
     public void AddItem_AddsToModelAndCollection()
     {
         var cache = new InventoryCache();
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
         var item = new InventoryItem { Name = "New Item" };
 
         vm.AddItem(item);
@@ -133,7 +133,7 @@ public class InventoryCacheViewModelTests
         {
             Inventory = new List<InventoryItem> { new() { Name = "Item" } }
         };
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
         var itemVm = vm.Items[0];
 
         vm.RemoveItem(itemVm);
@@ -146,7 +146,7 @@ public class InventoryCacheViewModelTests
     public void Model_ReturnsUnderlyingCache()
     {
         var cache = new InventoryCache { Location = "Test" };
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, new EgoManager());
 
         Assert.Same(cache, vm.Model);
     }

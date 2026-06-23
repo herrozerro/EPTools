@@ -11,7 +11,7 @@
 @inject ILocalStorageService LocalStorage
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
-@inject EgoManager EgoManager
+@inject IEgoManager EgoManager
 
 <MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter">Generate Lifepath</MudButton>
 <MudButton Color="Color.Secondary" @onclick="DownloadText">Export</MudButton>
@@ -40,12 +40,12 @@
             <CharacterGear></CharacterGear>
         </MudTabPanel>
         <MudTabPanel Text="Traits" Icon="@Icons.Material.Filled.Portrait">
-            <CharacterTraits EgoTraits="@_egoModel.EgoTraits" />
+            <CharacterTraits />
         </MudTabPanel>
         @if(_egoModel.EgoTraits.Any(x=>x.Name.Contains("Psi", StringComparison.OrdinalIgnoreCase)))
         {
             <MudTabPanel Text="PSI" Icon="@Icons.Material.Filled.Coronavirus">
-                <CharacterPsi PsiModel="@_egoModel.Psi"/>
+                <CharacterPsi />
             </MudTabPanel>
         }
     </MudTabs>

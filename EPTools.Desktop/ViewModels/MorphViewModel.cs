@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 
 namespace EPTools.Desktop.ViewModels;
@@ -8,6 +9,7 @@ namespace EPTools.Desktop.ViewModels;
 public partial class MorphViewModel : ObservableObject
 {
     private readonly Morph _model;
+    private readonly IEgoManager _egoManager;
 
     public static IReadOnlyList<string> AvailableMorphTypes { get; } = new[]
     {
@@ -19,21 +21,16 @@ public partial class MorphViewModel : ObservableObject
         "Very Small", "Small", "Medium", "Large", "Very Large"
     };
 
-    public MorphViewModel(Morph model)
+    public MorphViewModel(Morph model, IEgoManager egoManager)
     {
         _model = model;
+        _egoManager = egoManager;
 
-        // Build trait view models
         foreach (var trait in model.Traits)
-        {
             Traits.Add(new MorphTraitViewModel(trait));
-        }
 
-        // Build ware view models
         foreach (var ware in model.Wares)
-        {
             Wares.Add(new MorphWareViewModel(ware));
-        }
     }
 
     public Morph Model => _model;
@@ -97,27 +94,25 @@ public partial class MorphViewModel : ObservableObject
 
     public void AddTrait()
     {
-        var trait = new EgoTrait { Name = "New Trait" };
-        _model.Traits.Add(trait);
+        var trait = _egoManager.AddMorphTrait(_model);
         Traits.Add(new MorphTraitViewModel(trait));
     }
 
     public void RemoveTrait(MorphTraitViewModel traitVm)
     {
-        _model.Traits.Remove(traitVm.Model);
+        _egoManager.RemoveMorphTrait(_model, traitVm.Model);
         Traits.Remove(traitVm);
     }
 
     public void AddWare()
     {
-        var ware = new Ware { Name = "New Ware", Quantity = 1 };
-        _model.Wares.Add(ware);
+        var ware = _egoManager.AddMorphWare(_model);
         Wares.Add(new MorphWareViewModel(ware));
     }
 
     public void RemoveWare(MorphWareViewModel wareVm)
     {
-        _model.Wares.Remove(wareVm.Model);
+        _egoManager.RemoveMorphWare(_model, wareVm.Model);
         Wares.Remove(wareVm);
     }
 }

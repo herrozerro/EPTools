@@ -1,9 +1,11 @@
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Core.Models.Data
 @using EPTools.Core.Models.Ego
+@using EPTools.Core.Services
 @inject IDialogService DialogService
 @inject IEpDataService EpDataService
 @inject ISnackbar Snackbar
+@inject IEgoManager EgoManager
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
     <MudGrid Spacing="4">
@@ -20,13 +22,13 @@
                 <div class="d-flex justify-space-between align-center mb-1">
                     <MudText Typo="Typo.body2">Positive Traits</MudText>
                     <MudChip T="string" Size="Size.Small" Color="Color.Success" Variant="Variant.Outlined">
-                        @EgoTraits.Where(t => t.Type == "Positive").Sum(t => t.Cost) CP
+                        @CurrentEgo.EgoTraits.Where(t => t.Type == "Positive").Sum(t => t.Cost) CP
                     </MudChip>
                 </div>
                 <div class="d-flex justify-space-between align-center mb-1">
                     <MudText Typo="Typo.body2">Negative Traits</MudText>
                     <MudChip T="string" Size="Size.Small" Color="Color.Error" Variant="Variant.Outlined">
-                        @EgoTraits.Where(t => t.Type == "Negative").Sum(t => t.Cost) CP
+                        @CurrentEgo.EgoTraits.Where(t => t.Type == "Negative").Sum(t => t.Cost) CP
                     </MudChip>
                 </div>
             </MudPaper>
@@ -34,15 +36,15 @@
 
         <MudItem xs="12" md="9">
             <MudPaper Class="pa-4 h-100" Outlined="true">
-                <MudTable T="EgoTrait" 
-                          Items="@EgoTraits" 
-                          Dense="true" 
-                          Hover="true" 
-                          Striped="true" 
+                <MudTable T="EgoTrait"
+                          Items="@CurrentEgo.EgoTraits"
+                          Dense="true"
+                          Hover="true"
+                          Striped="true"
                           Elevation="0"
                           OnRowClick="TraitRowClick"
                           RowClass="cursor-pointer">
-                    
+
                     <ToolBarContent>
                         <MudText Typo="Typo.h6">Active Traits</MudText>
                         <MudSpacer />
@@ -59,33 +61,33 @@
                         <MudTh>Summary</MudTh>
                         <MudTh></MudTh>
                     </HeaderContent>
-                    
+
                     <RowTemplate>
                         <MudTd DataLabel="Name">
                             <MudText Typo="Typo.body2" Style="font-weight:bold;">@context.Name</MudText>
                         </MudTd>
-                        
+
                         <MudTd DataLabel="Type">
                             <MudChip T="string" Size="Size.Small" Color="@GetTypeColor(context.Type)" Variant="Variant.Text">@context.Type</MudChip>
                         </MudTd>
-                        
+
                         <MudTd DataLabel="Level">
                             <div @onclick:stopPropagation="true">
                                 <MudNumericField @bind-Value="@context.Level" Margin="Margin.Dense" HideSpinButtons="true" Style="width:40px;" Variant="Variant.Text"/>
                             </div>
                         </MudTd>
-                        
+
                         <MudTd DataLabel="Summary">
                              <MudText Typo="Typo.caption">@context.Summary</MudText>
                         </MudTd>
-                        
+
                         <MudTd Style="text-align:right">
                             <div @onclick:stopPropagation="true">
-                                <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => EgoTraits.Remove(context))"/>
+                                <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => EgoManager.RemoveEgoTrait(CurrentEgo, context))"/>
                             </div>
                         </MudTd>
                     </RowTemplate>
-                    
+
                     <NoRecordsContent>
                          <MudText Typo="Typo.caption" Class="pa-4">No traits selected.</MudText>
                     </NoRecordsContent>
@@ -97,12 +99,11 @@
 </MudContainer>
 
 @code {
-    [Parameter] public List<EgoTrait> EgoTraits { get; set; } = [];
+    [CascadingParameter(Name = "EgoModel")]
+    public required Ego CurrentEgo { get; set; }
 
-    // --- ROW CLICK HANDLER ---
     private async Task TraitRowClick(TableRowClickEventArgs<EgoTrait> args)
     {
-        // args.Item contains the Trait object of the row clicked
         if (args.Item != null) await ShowTraitDetails(args.Item);
     }
 
@@ -113,8 +114,6 @@
         "neutral" => Color.Info,
         _ => Color.Default
     };
-
-    // --- ACTIONS ---
 
     private async Task OpenTraitPicker()
     {
@@ -137,31 +136,30 @@
                 Description = selectedRecord.Description,
                 AdditionalRules = selectedRecord.AdditionalRules
             };
-            EgoTraits.Add(newTrait);
+            EgoManager.AddEgoTrait(CurrentEgo, newTrait);
             Snackbar.Add($"Added {newTrait.Name}", Severity.Success);
         }
     }
 
     private void AddCustomTrait()
     {
-        EgoTraits.Add(new EgoTrait { Name = "New Trait", Type = "Positive", Level = 10, Summary = "Custom.", Description = "" });
+        EgoManager.AddEgoTrait(CurrentEgo, new EgoTrait { Name = "New Trait", Type = "Positive", Level = 10, Summary = "Custom.", Description = "" });
     }
 
-    // Opens your full editor dialog
     private async Task ShowTraitDetails(EgoTrait trait)
     {
         var parameters = new DialogParameters<EgoTraitDetailDialog> { { x => x.OriginalTrait, trait } };
         var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        
+
         var dialog = await DialogService.ShowAsync<EgoTraitDetailDialog>("Edit Trait", parameters, options);
         var result = await dialog.Result;
 
-        if (result is { Canceled: false, Data: EgoTrait updatedTrait})
+        if (result is { Canceled: false, Data: EgoTrait updatedTrait })
         {
-            var index = EgoTraits.IndexOf(trait);
+            var index = CurrentEgo.EgoTraits.IndexOf(trait);
             if (index != -1)
             {
-                EgoTraits[index] = updatedTrait;
+                CurrentEgo.EgoTraits[index] = updatedTrait;
                 Snackbar.Add("Trait updated.", Severity.Success);
             }
         }

@@ -390,7 +390,7 @@ public class EgoManagerTests
     #region Calculation Tests
 
     [Fact]
-    public void CalculateSkillTotal_ReturnsRankPlusAptitude()
+    public void GetSkillTotal_ReturnsRankPlusAptitude()
     {
         var ego = new Ego
         {
@@ -404,7 +404,7 @@ public class EgoManagerTests
             }
         };
 
-        var total = _manager.CalculateSkillTotal(ego, ego.Skills[0]);
+        var total = _manager.GetSkillTotal(ego, ego.Skills[0]);
 
         Assert.Equal(55, total);
     }

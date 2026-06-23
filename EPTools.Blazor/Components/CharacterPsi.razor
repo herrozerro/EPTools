@@ -1,13 +1,15 @@
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Core.Models.Data
 @using EPTools.Core.Models.Ego
+@using EPTools.Core.Services
 @inject IDialogService DialogService
 @inject ISnackbar Snackbar
 @inject IEpDataService EpDataService
+@inject IEgoManager EgoManager
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
     <MudGrid Spacing="4">
-        
+
         <MudItem xs="12" md="4">
             <MudPaper Class="pa-4 h-100" Outlined="true" Style="border-top: 4px solid var(--mud-palette-error);">
                 <div class="d-flex align-center gap-2 mb-4">
@@ -18,24 +20,24 @@
                     </div>
                 </div>
 
-                <MudTextField @bind-Value="PsiModel.Substrain" 
-                              Label="Substrain" 
-                              Variant="Variant.Outlined" 
-                              Margin="Margin.Dense" 
+                <MudTextField @bind-Value="CurrentEgo.Psi.Substrain"
+                              Label="Substrain"
+                              Variant="Variant.Outlined"
+                              Margin="Margin.Dense"
                               Class="mb-4"
                               Adornment="Adornment.End"
                               AdornmentIcon="@Icons.Material.Filled.Science" />
 
-                <MudText Typo="Typo.body2" Class="mb-1">Infection Rating: <b>@PsiModel.InfectionRating</b></MudText>
-                <MudProgressLinear Color="@GetInfectionColor()" 
-                                   Value="@PsiModel.InfectionRating" 
-                                   Max="100" 
-                                   Size="Size.Large" 
-                                   Class="rounded-lg mb-4" 
+                <MudText Typo="Typo.body2" Class="mb-1">Infection Rating: <b>@CurrentEgo.Psi.InfectionRating</b></MudText>
+                <MudProgressLinear Color="@GetInfectionColor()"
+                                   Value="@CurrentEgo.Psi.InfectionRating"
+                                   Max="100"
+                                   Size="Size.Large"
+                                   Class="rounded-lg mb-4"
                                    Striped="true">
-                    <MudText Typo="Typo.subtitle2" Color="Color.Dark">@PsiModel.InfectionRating / 100</MudText>
+                    <MudText Typo="Typo.subtitle2" Color="Color.Dark">@CurrentEgo.Psi.InfectionRating / 100</MudText>
                 </MudProgressLinear>
-                
+
                 <div class="d-flex justify-space-between mb-4">
                     <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Success" OnClick="@(() => AdjustInfection(-1))">-1</MudButton>
                     <MudButton Size="Size.Small" Variant="Variant.Outlined" Color="Color.Error" OnClick="@(() => AdjustInfection(5))">+5</MudButton>
@@ -48,18 +50,18 @@
                     <MudText Typo="Typo.subtitle2">Trauma / Events</MudText>
                     <MudIconButton Icon="@Icons.Material.Filled.Add" Size="Size.Small" OnClick="AddInfectionEvent"/>
                 </div>
-                
+
                 <MudList T="string" Dense="true" Style="max-height: 200px; overflow-y: auto; background-color: var(--mud-palette-background-grey);" Class="rounded">
-                    @foreach (var evt in PsiModel.InfectionEvents)
+                    @foreach (var evt in CurrentEgo.Psi.InfectionEvents)
                     {
                         <MudListItem>
                             <div class="d-flex justify-space-between">
                                 <MudText Typo="Typo.caption">@evt</MudText>
-                                <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" OnClick="@(() => PsiModel.InfectionEvents.Remove(evt))"/>
+                                <MudIconButton Icon="@Icons.Material.Filled.Close" Size="Size.Small" Color="Color.Default" OnClick="@(() => EgoManager.RemoveInfectionEvent(CurrentEgo, evt))"/>
                             </div>
                         </MudListItem>
                     }
-                    @if (!PsiModel.InfectionEvents.Any())
+                    @if (!CurrentEgo.Psi.InfectionEvents.Any())
                     {
                         <MudText Typo="Typo.caption" Class="pa-2 mud-text-secondary">No infection events recorded.</MudText>
                     }
@@ -70,21 +72,21 @@
 
         <MudItem xs="12" md="8">
             <MudPaper Class="pa-4 h-100" Outlined="true">
-                <MudTable 
+                <MudTable
                     T="EgoSleight"
-                    Items="@PsiModel.Sleights" 
-                    Dense="true" Hover="true" 
-                    Striped="true" 
+                    Items="@CurrentEgo.Psi.Sleights"
+                    Dense="true" Hover="true"
+                    Striped="true"
                     Elevation="0"
                     OnRowClick="SleightRowClick"
                     RowClass="cursor-pointer">
                     <ToolBarContent>
                         <MudText Typo="Typo.h6">Active Sleights</MudText>
                         <MudSpacer />
-                        
-                        <MudMenu StartIcon="@Icons.Material.Filled.Add" Label="Add Slight" Color="Color.Primary" Variant="Variant.Filled">
-                            <MudMenuItem OnClick="OpenSlightPicker">From Catalog...</MudMenuItem>
-                            <MudMenuItem OnClick="AddSlight">Custom Slight</MudMenuItem>
+
+                        <MudMenu StartIcon="@Icons.Material.Filled.Add" Label="Add Sleight" Color="Color.Primary" Variant="Variant.Filled">
+                            <MudMenuItem OnClick="OpenSleightPicker">From Catalog...</MudMenuItem>
+                            <MudMenuItem OnClick="AddCustomSleight">Custom Sleight</MudMenuItem>
                         </MudMenu>
                     </ToolBarContent>
 
@@ -95,7 +97,7 @@
                         <MudTh>Duration</MudTh>
                         <MudTh></MudTh>
                     </HeaderContent>
-                    
+
                     <RowTemplate>
                         <MudTd DataLabel="Name">
                             <MudTooltip Text="@context.Summary">
@@ -112,11 +114,11 @@
                             <MudText Typo="Typo.caption">@context.Duration</MudText>
                         </MudTd>
                         <MudTd Style="text-align:right">
-                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => PsiModel.Sleights.Remove(context))"/>
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => EgoManager.RemoveSleight(CurrentEgo, context))"/>
                         </MudTd>
                     </RowTemplate>
                     <NoRecordsContent>
-                         <MudText Typo="Typo.caption" Class="pa-4">No slights known.</MudText>
+                         <MudText Typo="Typo.caption" Class="pa-4">No sleights known.</MudText>
                     </NoRecordsContent>
                 </MudTable>
             </MudPaper>
@@ -126,31 +128,26 @@
 </MudContainer>
 
 @code {
-    [Parameter] public EgoPsi PsiModel { get; set; } = new(); 
+    [CascadingParameter(Name = "EgoModel")]
+    public required Ego CurrentEgo { get; set; }
 
-    // --- LOGIC: Infection Color Coding ---
     private Color GetInfectionColor()
     {
-        if (PsiModel.InfectionRating < 33) return Color.Success;
-        if (PsiModel.InfectionRating < 66) return Color.Warning;
+        if (CurrentEgo.Psi.InfectionRating < 33) return Color.Success;
+        if (CurrentEgo.Psi.InfectionRating < 66) return Color.Warning;
         return Color.Error;
     }
-    
-    // --- ROW CLICK HANDLER ---
+
     private async Task SleightRowClick(TableRowClickEventArgs<EgoSleight> args)
     {
-        // args.Item contains the Trait object of the row clicked
-        if (args.Item != null) await ShowSlightDetails(args.Item);
+        if (args.Item != null) await ShowSleightDetails(args.Item);
     }
 
     private void AdjustInfection(int amount)
     {
-        PsiModel.InfectionRating += amount;
-        if (PsiModel.InfectionRating < 0) PsiModel.InfectionRating = 0;
-        if (PsiModel.InfectionRating > 100) PsiModel.InfectionRating = 100;
+        EgoManager.SetInfectionRating(CurrentEgo, CurrentEgo.Psi.InfectionRating + amount);
     }
 
-    // --- LOGIC: Visuals ---
     private Color GetLevelColor(string level) => level.ToLower() switch
     {
         "chi" => Color.Info,
@@ -160,81 +157,74 @@
         _ => Color.Default
     };
 
-    // --- ACTIONS ---
     private Task AddInfectionEvent()
     {
-        const string newEvent = "New Trauma Event"; 
-        PsiModel.InfectionEvents.Add(newEvent);
+        EgoManager.AddInfectionEvent(CurrentEgo, "New Trauma Event");
         return Task.CompletedTask;
     }
 
-    private void AddSlight()
+    private void AddCustomSleight()
     {
-        // Add a blank template
-        PsiModel.Sleights.Add(new EgoSleight 
-        { 
-            Name = "New Slight", 
-            Level = "Chi", 
-            Action = "Quick", 
+        EgoManager.AddSleight(CurrentEgo, new EgoSleight
+        {
+            Name = "New Sleight",
+            Level = "Chi",
+            Action = "Quick",
             Duration = "Instant",
             Summary = "Description of effect..."
         });
     }
-    
-    private async Task OpenSlightPicker()
+
+    private async Task OpenSleightPicker()
     {
-        // 1. Get the list (Make sure your DataService has a GetAllSlights method)
-        var allSlights = await EpDataService.GetSleightsAsync();
+        var allSleights = await EpDataService.GetSleightsAsync();
 
         var parameters = new DialogParameters<SleightPickerDialog>
         {
-            { x => x.SlightList, allSlights }
+            { x => x.SlightList, allSleights }
         };
 
         var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        
-        var dialog = await DialogService.ShowAsync<SleightPickerDialog>("Select Slight", parameters, options);
+
+        var dialog = await DialogService.ShowAsync<SleightPickerDialog>("Select Sleight", parameters, options);
         var result = await dialog.Result;
 
         if (result is { Canceled: false, Data: not null })
         {
-            var selectedSlight = (Sleight)result.Data;
+            var selected = (Sleight)result.Data;
 
-            var newSlight = new EgoSleight()
+            EgoManager.AddSleight(CurrentEgo, new EgoSleight
             {
-                Action = selectedSlight.Action,
-                Description = selectedSlight.Description,
-                Duration = selectedSlight.Duration,
-                Level = selectedSlight.Level,
-                Name = selectedSlight.Name,
-                Summary = selectedSlight.Summary
-            };
+                Action = selected.Action,
+                Description = selected.Description,
+                Duration = selected.Duration,
+                Level = selected.Level,
+                Name = selected.Name,
+                Summary = selected.Summary
+            });
 
-            PsiModel.Sleights.Add(newSlight); 
-            
-            Snackbar.Add($"Learned {selectedSlight.Name}", Severity.Success);
+            Snackbar.Add($"Learned {selected.Name}", Severity.Success);
         }
     }
 
-    private async Task ShowSlightDetails(EgoSleight slight)
+    private async Task ShowSleightDetails(EgoSleight sleight)
     {
         var parameters = new DialogParameters<SleightDetailDialog>
         {
-            { x => x.OriginalSleight, slight }
+            { x => x.OriginalSleight, sleight }
         };
 
         var options = new DialogOptions { MaxWidth = MaxWidth.Medium, FullWidth = true };
-        
+
         var dialog = await DialogService.ShowAsync<SleightDetailDialog>("Edit Sleight", parameters, options);
         var result = await dialog.Result;
 
         if (!result.Canceled && result.Data is EgoSleight updatedSleight)
         {
-            // Find and Replace logic
-            var index = PsiModel.Sleights.IndexOf(slight);
+            var index = CurrentEgo.Psi.Sleights.IndexOf(sleight);
             if (index != -1)
             {
-                PsiModel.Sleights[index] = updatedSleight;
+                CurrentEgo.Psi.Sleights[index] = updatedSleight;
                 Snackbar.Add("Sleight updated.", Severity.Success);
             }
         }

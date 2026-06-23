@@ -20,7 +20,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private readonly IEgoService _egoService;
     private readonly ILifepathService _lifepathService;
     private readonly IUserDataStore _userDataStore;
-    private readonly EgoManager _egoManager;
+    private readonly IEgoManager _egoManager;
 
     [ObservableProperty]
     private Ego _currentEgo = new();
@@ -91,7 +91,7 @@ public partial class MainWindowViewModel : ViewModelBase
         Morphs.Clear();
         foreach (var morph in value.Morphs)
         {
-            Morphs.Add(new MorphViewModel(morph));
+            Morphs.Add(new MorphViewModel(morph, _egoManager));
         }
 
         // Select active morph or first morph
@@ -108,7 +108,7 @@ public partial class MainWindowViewModel : ViewModelBase
         Caches.Clear();
         foreach (var cache in value.Caches)
         {
-            Caches.Add(new InventoryCacheViewModel(cache));
+            Caches.Add(new InventoryCacheViewModel(cache, _egoManager));
         }
         SelectedCache = Caches.FirstOrDefault();
 
@@ -156,7 +156,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public void AddMorph()
     {
         var morph = _egoManager.AddMorph(CurrentEgo);
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, _egoManager);
         Morphs.Add(vm);
         SelectedMorph = vm;
     }
@@ -197,7 +197,7 @@ public partial class MainWindowViewModel : ViewModelBase
     public void AddCache()
     {
         var cache = _egoManager.AddCache(CurrentEgo);
-        var vm = new InventoryCacheViewModel(cache);
+        var vm = new InventoryCacheViewModel(cache, _egoManager);
         Caches.Add(vm);
         SelectedCache = vm;
     }
@@ -243,6 +243,24 @@ public partial class MainWindowViewModel : ViewModelBase
         }
     }
 
+    public void MoveMorphToCache(MorphViewModel morphVm, InventoryCacheViewModel cacheVm)
+    {
+        if (_egoManager.AddMorphToCache(CurrentEgo, morphVm.Model, cacheVm.Model))
+        {
+            Morphs.Remove(morphVm);
+            cacheVm.AddMorphViewModel(morphVm.Model);
+        }
+    }
+
+    public void MoveMorphFromCache(MorphViewModel morphVm, InventoryCacheViewModel cacheVm)
+    {
+        if (_egoManager.RemoveMorphFromCache(CurrentEgo, morphVm.Model, cacheVm.Model))
+        {
+            cacheVm.RemoveMorphViewModel(morphVm);
+            Morphs.Add(new MorphViewModel(morphVm.Model, _egoManager));
+        }
+    }
+
     public void AddEgoTrait()
     {
         var trait = _egoManager.AddEgoTrait(CurrentEgo);
@@ -273,7 +291,7 @@ public partial class MainWindowViewModel : ViewModelBase
         IEgoService egoService,
         ILifepathService lifepathService,
         IUserDataStore userDataStore,
-        EgoManager egoManager)
+        IEgoManager egoManager)
     {
         _egoService = egoService;
         _lifepathService = lifepathService;

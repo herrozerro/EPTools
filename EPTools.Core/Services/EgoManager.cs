@@ -1,4 +1,5 @@
 using EPTools.Core.Constants;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Data;
 using EPTools.Core.Models.Ego;
 
@@ -8,7 +9,7 @@ namespace EPTools.Core.Services;
 /// Manages mutations to an Ego, providing a centralized API for adding, removing,
 /// and modifying character data. This ensures consistent business rules across all clients.
 /// </summary>
-public class EgoManager
+public class EgoManager : IEgoManager
 {
     /// <summary>
     /// Valid aptitudes for knowledge skills (COG or INT only).
@@ -258,6 +259,26 @@ public class EgoManager
         return sleight;
     }
 
+    public bool RemoveSleight(Ego ego, EgoSleight sleight)
+    {
+        return ego.Psi.Sleights.Remove(sleight);
+    }
+
+    public void AddInfectionEvent(Ego ego, string infectionEvent)
+    {
+        ego.Psi.InfectionEvents.Add(infectionEvent);
+    }
+
+    public bool RemoveInfectionEvent(Ego ego, string infectionEvent)
+    {
+        return ego.Psi.InfectionEvents.Remove(infectionEvent);
+    }
+
+    public void SetInfectionRating(Ego ego, int rating)
+    {
+        ego.Psi.InfectionRating = Math.Clamp(rating, 0, 100);
+    }
+
     #endregion
 
     #region Identities
@@ -451,6 +472,30 @@ public class EgoManager
         return cache.Inventory.Remove(item);
     }
 
+    /// <summary>
+    /// Moves a morph from the ego's active morph list into a cache (sleeved-out for storage).
+    /// The morph is deactivated and removed from ego.Morphs.
+    /// </summary>
+    public bool AddMorphToCache(Ego ego, Morph morph, InventoryCache cache)
+    {
+        if (!ego.Morphs.Contains(morph)) return false;
+        morph.ActiveMorph = false;
+        ego.Morphs.Remove(morph);
+        cache.Morphs.Add(morph);
+        return true;
+    }
+
+    /// <summary>
+    /// Returns a morph from a cache back into the ego's active morph list.
+    /// </summary>
+    public bool RemoveMorphFromCache(Ego ego, Morph morph, InventoryCache cache)
+    {
+        if (!cache.Morphs.Contains(morph)) return false;
+        cache.Morphs.Remove(morph);
+        ego.Morphs.Add(morph);
+        return true;
+    }
+
     #endregion
 
     #region Roll Modifiers
@@ -554,12 +599,6 @@ public class EgoManager
             Flex:    ego.EgoFlex + (activeMorph?.TotalFlex ?? 0)
         );
     }
-
-    /// <summary>
-    /// Kept for backwards compatibility — prefer GetSkillTotal which includes roll modifiers.
-    /// </summary>
-    public int CalculateSkillTotal(Ego ego, EgoSkill skill) =>
-        GetSkillTotal(ego, skill, GetActiveMorph(ego));
 
     private static int SumActive(IEnumerable<RollModifier> modifiers, RollModifierType type, string? name = null) =>
         modifiers.Where(x => x.IsActive && x.Type == type && (name == null || x.Name == name))
