@@ -1,4 +1,6 @@
 using EPTools.Core.Constants;
+using EPTools.Core.Interfaces;
+using EPTools.Core.Models.Data;
 using EPTools.Core.Models.Ego;
 
 namespace EPTools.Core.Services;
@@ -7,7 +9,7 @@ namespace EPTools.Core.Services;
 /// Manages mutations to an Ego, providing a centralized API for adding, removing,
 /// and modifying character data. This ensures consistent business rules across all clients.
 /// </summary>
-public class EgoManager
+public class EgoManager : IEgoManager
 {
     /// <summary>
     /// Valid aptitudes for knowledge skills (COG or INT only).
@@ -117,6 +119,33 @@ public class EgoManager
     #region Morphs
 
     /// <summary>
+    /// Instantiates a morph from a template, clears existing morphs, and sets it as active.
+    /// Used by lifepath generation to assign the character's starting morph.
+    /// </summary>
+    public Morph ApplyMorphTemplate(Ego ego, MorphTemplate template)
+    {
+        ego.Morphs.Clear();
+        var morph = new Morph
+        {
+            Name = template.Name,
+            MorphType = template.Type,
+            MorphSex = "",
+            ActiveMorph = true,
+            Insight = template.Pools.Insight,
+            Moxie = template.Pools.Moxie,
+            Vigor = template.Pools.Vigor,
+            MorphFlex = template.Pools.Flex,
+            Durability = template.Durability,
+            WoundThreshold = template.WoundThreshold,
+            DeathRating = template.DeathRating,
+            Traits = template.MorphTraits.Select(x => new EgoTrait { Name = x.Name, Level = x.Level }).ToList(),
+            Wares = template.Ware.Select(x => new Ware { Name = x }).ToList()
+        };
+        ego.Morphs.Add(morph);
+        return morph;
+    }
+
+    /// <summary>
     /// Adds a new morph to the ego. If this is the first morph, it becomes active automatically.
     /// </summary>
     public Morph AddMorph(Ego ego, string name = "New Morph", string morphType = "Biomorph", string size = "Medium")
@@ -222,6 +251,36 @@ public class EgoManager
 
     #endregion
 
+    #region Psi
+
+    public EgoSleight AddSleight(Ego ego, EgoSleight sleight)
+    {
+        ego.Psi.Sleights.Add(sleight);
+        return sleight;
+    }
+
+    public bool RemoveSleight(Ego ego, EgoSleight sleight)
+    {
+        return ego.Psi.Sleights.Remove(sleight);
+    }
+
+    public void AddInfectionEvent(Ego ego, string infectionEvent)
+    {
+        ego.Psi.InfectionEvents.Add(infectionEvent);
+    }
+
+    public bool RemoveInfectionEvent(Ego ego, string infectionEvent)
+    {
+        return ego.Psi.InfectionEvents.Remove(infectionEvent);
+    }
+
+    public void SetInfectionRating(Ego ego, int rating)
+    {
+        ego.Psi.InfectionRating = Math.Clamp(rating, 0, 100);
+    }
+
+    #endregion
+
     #region Identities
 
     /// <summary>
@@ -232,6 +291,32 @@ public class EgoManager
         var identity = new Identity { Alias = alias };
         ego.Identities.Add(identity);
         return identity;
+    }
+
+    public void AddIdentity(Ego ego, Identity identity)
+    {
+        ego.Identities.Add(identity);
+    }
+
+    /// <summary>
+    /// Adds rep to a specific network on an identity. Returns false if the network name is unknown.
+    /// </summary>
+    public bool AddReputation(Identity identity, string network, int amount)
+    {
+        var rep = network switch
+        {
+            "ARep" => identity.ARep,
+            "CRep" => identity.CRep,
+            "FRep" => identity.FRep,
+            "GRep" => identity.GRep,
+            "IRep" => identity.IRep,
+            "RRep" => identity.RRep,
+            "XRep" => identity.XRep,
+            _ => null
+        };
+        if (rep == null) return false;
+        rep.Score += amount;
+        return true;
     }
 
     /// <summary>
@@ -251,7 +336,16 @@ public class EgoManager
     #region Ego Traits
 
     /// <summary>
-    /// Adds a trait to the ego.
+    /// Adds a pre-built trait to the ego (used when applying from a catalog or lifepath).
+    /// </summary>
+    public EgoTrait AddEgoTrait(Ego ego, EgoTrait trait)
+    {
+        ego.EgoTraits.Add(trait);
+        return trait;
+    }
+
+    /// <summary>
+    /// Adds a blank trait to the ego.
     /// </summary>
     public EgoTrait AddEgoTrait(Ego ego, string name = "New Trait")
     {
@@ -273,15 +367,20 @@ public class EgoManager
     #region Inventory
 
     /// <summary>
-    /// Adds an item to the ego's local inventory.
+    /// Adds a pre-built item to the ego's local inventory.
+    /// </summary>
+    public InventoryItem AddInventoryItem(Ego ego, InventoryItem item)
+    {
+        ego.Inventory.Add(item);
+        return item;
+    }
+
+    /// <summary>
+    /// Adds a blank item to the ego's local inventory.
     /// </summary>
     public InventoryItem AddInventoryItem(Ego ego, string name = "New Item", int quantity = 1)
     {
-        var item = new InventoryItem
-        {
-            Name = name,
-            Quantity = quantity
-        };
+        var item = new InventoryItem { Name = name, Quantity = quantity };
         ego.Inventory.Add(item);
         return item;
     }
@@ -295,25 +394,31 @@ public class EgoManager
     }
 
     /// <summary>
-    /// Moves an item from local inventory to a cache.
+    /// Moves an item from local inventory to a cache. Resets equipped/active state
+    /// since a cached item cannot be in use.
     /// </summary>
     public bool MoveItemToCache(Ego ego, InventoryItem item, InventoryCache cache)
     {
         if (!ego.Inventory.Remove(item))
             return false;
 
+        item.Equipped = false;
+        item.Active = false;
         cache.Inventory.Add(item);
         return true;
     }
 
     /// <summary>
-    /// Moves an item from a cache to local inventory.
+    /// Moves an item from a cache to local inventory. Resets equipped/active state
+    /// so the player consciously re-equips after retrieving.
     /// </summary>
     public bool MoveItemFromCache(Ego ego, InventoryItem item, InventoryCache cache)
     {
         if (!cache.Inventory.Remove(item))
             return false;
 
+        item.Equipped = false;
+        item.Active = false;
         ego.Inventory.Add(item);
         return true;
     }
@@ -341,15 +446,20 @@ public class EgoManager
     }
 
     /// <summary>
-    /// Adds an item directly to a cache.
+    /// Adds a pre-built item directly to a cache.
+    /// </summary>
+    public InventoryItem AddItemToCache(InventoryCache cache, InventoryItem item)
+    {
+        cache.Inventory.Add(item);
+        return item;
+    }
+
+    /// <summary>
+    /// Adds a blank item directly to a cache.
     /// </summary>
     public InventoryItem AddItemToCache(InventoryCache cache, string name = "New Item", int quantity = 1)
     {
-        var item = new InventoryItem
-        {
-            Name = name,
-            Quantity = quantity
-        };
+        var item = new InventoryItem { Name = name, Quantity = quantity };
         cache.Inventory.Add(item);
         return item;
     }
@@ -362,32 +472,137 @@ public class EgoManager
         return cache.Inventory.Remove(item);
     }
 
+    /// <summary>
+    /// Moves a morph from the ego's active morph list into a cache (sleeved-out for storage).
+    /// The morph is deactivated and removed from ego.Morphs.
+    /// </summary>
+    public bool AddMorphToCache(Ego ego, Morph morph, InventoryCache cache)
+    {
+        if (!ego.Morphs.Contains(morph)) return false;
+        morph.ActiveMorph = false;
+        ego.Morphs.Remove(morph);
+        cache.Morphs.Add(morph);
+        return true;
+    }
+
+    /// <summary>
+    /// Returns a morph from a cache back into the ego's active morph list.
+    /// </summary>
+    public bool RemoveMorphFromCache(Ego ego, Morph morph, InventoryCache cache)
+    {
+        if (!cache.Morphs.Contains(morph)) return false;
+        cache.Morphs.Remove(morph);
+        ego.Morphs.Add(morph);
+        return true;
+    }
+
+    #endregion
+
+    #region Roll Modifiers
+
+    public RollModifier AddEgoModifier(Ego ego, RollModifier modifier)
+    {
+        ego.RollModifiers.Add(modifier);
+        return modifier;
+    }
+
+    public bool RemoveEgoModifier(Ego ego, RollModifier modifier) =>
+        ego.RollModifiers.Remove(modifier);
+
+    /// <summary>
+    /// Removes all ego modifiers created by a specific source (e.g. when a trait is removed).
+    /// </summary>
+    public void RemoveEgoModifiersBySource(Ego ego, string source) =>
+        ego.RollModifiers.RemoveAll(x => x.Source == source);
+
+    public RollModifier AddMorphModifier(Morph morph, RollModifier modifier)
+    {
+        morph.RollModifiers.Add(modifier);
+        return modifier;
+    }
+
+    public bool RemoveMorphModifier(Morph morph, RollModifier modifier) =>
+        morph.RollModifiers.Remove(modifier);
+
+    /// <summary>
+    /// Removes all morph modifiers created by a specific source (e.g. when a ware is removed).
+    /// </summary>
+    public void RemoveMorphModifiersBySource(Morph morph, string source) =>
+        morph.RollModifiers.RemoveAll(x => x.Source == source);
+
     #endregion
 
     #region Calculations
 
     /// <summary>
-    /// Calculates the total value for a skill (rank + linked aptitude).
+    /// Full skill total: rank + linked aptitude + active modifiers from both ego and morph.
+    /// Skill modifiers match by skill name; aptitude-check modifiers match by the skill's linked aptitude.
     /// </summary>
-    public int CalculateSkillTotal(Ego ego, EgoSkill skill)
+    public int GetSkillTotal(Ego ego, EgoSkill skill, Morph? activeMorph = null)
     {
-        return ego.SkillTotal(skill);
+        var baseTotal = ego.SkillTotal(skill);
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.Skill, skill.Name);
+        var morphMods = activeMorph == null ? 0
+                      : SumActive(activeMorph.RollModifiers, RollModifierType.Skill, skill.Name);
+        return baseTotal + egoMods + morphMods;
     }
 
     /// <summary>
-    /// Gets the total pools combining ego flex and active morph pools.
+    /// Aptitude check total: (aptitude * 3 + checkMod) + active AptitudeCheck modifiers from both ego and morph.
+    /// Match modifiers by full aptitude name (e.g. "Cognition") stored in RollModifier.Name.
+    /// </summary>
+    public int GetAptitudeCheckTotal(Ego ego, string aptitudeName, Morph? activeMorph = null)
+    {
+        var aptitude = ego.Aptitudes.Find(x => x.Name == aptitudeName || x.ShortName == aptitudeName);
+        if (aptitude == null) return 0;
+
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.AptitudeCheck, aptitude.Name);
+        var morphMods = activeMorph == null ? 0
+                      : SumActive(activeMorph.RollModifiers, RollModifierType.AptitudeCheck, aptitude.Name);
+        return aptitude.CheckRating + egoMods + morphMods;
+    }
+
+    /// <summary>
+    /// Initiative: (REF + INT) / 5 + active modifiers from both ego and morph.
+    /// </summary>
+    public int GetInitiative(Ego ego, Morph? activeMorph = null)
+    {
+        var reflexes  = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Reflexes)?.AptitudeValue ?? 0;
+        var intuition = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Intuition)?.AptitudeValue ?? 0;
+        var egoMods   = SumActive(ego.RollModifiers, RollModifierType.Initiative);
+        var morphMods = activeMorph == null ? 0 : SumActive(activeMorph.RollModifiers, RollModifierType.Initiative);
+        return (reflexes + intuition) / 5 + egoMods + morphMods;
+    }
+
+    public int GetLucidity(Ego ego)
+    {
+        var willpower = ego.Aptitudes.Find(x => x.Name == AptitudeNames.Willpower)?.AptitudeValue ?? 0;
+        return willpower * 2 + SumActive(ego.RollModifiers, RollModifierType.Lucidity);
+    }
+
+    public int GetTraumaThreshold(Ego ego) =>
+        GetLucidity(ego) / 5 + SumActive(ego.RollModifiers, RollModifierType.TraumaThreshold);
+
+    public int GetInsanityRating(Ego ego) =>
+        GetLucidity(ego) * 2 + SumActive(ego.RollModifiers, RollModifierType.InsanityRating);
+
+    /// <summary>
+    /// Gets the total pools combining ego flex and the active morph's modified pool values.
     /// </summary>
     public (int Insight, int Moxie, int Vigor, int Flex) GetTotalPools(Ego ego)
     {
         var activeMorph = GetActiveMorph(ego);
-
         return (
-            Insight: activeMorph?.Insight ?? 0,
-            Moxie: activeMorph?.Moxie ?? 0,
-            Vigor: activeMorph?.Vigor ?? 0,
-            Flex: ego.EgoFlex + (activeMorph?.MorphFlex ?? 0)
+            Insight: activeMorph?.TotalInsight ?? 0,
+            Moxie:   activeMorph?.TotalMoxie   ?? 0,
+            Vigor:   activeMorph?.TotalVigor   ?? 0,
+            Flex:    ego.EgoFlex + (activeMorph?.TotalFlex ?? 0)
         );
     }
+
+    private static int SumActive(IEnumerable<RollModifier> modifiers, RollModifierType type, string? name = null) =>
+        modifiers.Where(x => x.IsActive && x.Type == type && (name == null || x.Name == name))
+                 .Sum(x => x.Value);
 
     #endregion
 }

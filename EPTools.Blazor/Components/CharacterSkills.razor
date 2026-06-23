@@ -1,6 +1,8 @@
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Core.Models.Ego
+@using EPTools.Core.Services
 @inject IDialogService DialogService
+@inject IEgoManager EgoManager
 
 <MudTable T="EgoSkill" Items="@CurrentEgo.Skills" Breakpoint="Breakpoint.Sm" GroupBy="@_groupDefinition" 
           GroupHeaderStyle="background-color:var(--mud-palette-background-gray)"
@@ -104,18 +106,19 @@
     {
         if (key is SkillType type)
         {
-            CurrentEgo.Skills.Add(new EgoSkill{ SkillType = type, Name = "New Skill"});
-        }
-        else
-        {
-            Console.WriteLine("Error: 'context.Key' was not a valid SkillType.");
+            _ = type switch
+            {
+                SkillType.KnowledgeSkill => EgoManager.AddKnowledgeSkill(CurrentEgo),
+                SkillType.ExoticSkill    => EgoManager.AddExoticSkill(CurrentEgo),
+                _ => null
+            };
         }
         return Task.CompletedTask;
     }
 
     private Task DeleteSkill(EgoSkill skillToDelete)
     {
-        CurrentEgo.Skills.Remove(skillToDelete);
+        EgoManager.RemoveSkill(CurrentEgo, skillToDelete);
         return Task.CompletedTask;
     }
     

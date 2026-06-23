@@ -1,5 +1,6 @@
 using EPTools.Desktop.ViewModels;
 using EPTools.Core.Models.Ego;
+using EPTools.Core.Services;
 
 namespace EPTools.Desktop.Tests;
 
@@ -21,7 +22,7 @@ public class MorphViewModelTests
             ActiveMorph = true
         };
 
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         Assert.Equal("Splicer", vm.Name);
         Assert.Equal("Biomorph", vm.MorphType);
@@ -38,7 +39,7 @@ public class MorphViewModelTests
     public void Name_UpdatesModel()
     {
         var morph = new Morph { Name = "Original" };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.Name = "Updated";
 
@@ -49,7 +50,7 @@ public class MorphViewModelTests
     public void MorphType_UpdatesModel()
     {
         var morph = new Morph { MorphType = "Biomorph" };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.MorphType = "Synthmorph";
 
@@ -60,7 +61,7 @@ public class MorphViewModelTests
     public void Pools_UpdateModel()
     {
         var morph = new Morph();
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.Vigor = 2;
         vm.Insight = 3;
@@ -77,7 +78,7 @@ public class MorphViewModelTests
     public void ActiveMorph_UpdatesModel()
     {
         var morph = new Morph { ActiveMorph = false };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.ActiveMorph = true;
 
@@ -88,7 +89,7 @@ public class MorphViewModelTests
     public void Model_ReturnsUnderlyingMorph()
     {
         var morph = new Morph { Name = "Test" };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         Assert.Same(morph, vm.Model);
     }
@@ -105,7 +106,7 @@ public class MorphViewModelTests
             }
         };
 
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         Assert.Equal(2, vm.Traits.Count);
         Assert.Equal("Trait 1", vm.Traits[0].Name);
@@ -124,7 +125,7 @@ public class MorphViewModelTests
             }
         };
 
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         Assert.Equal(2, vm.Wares.Count);
         Assert.Equal("Ware 1", vm.Wares[0].Name);
@@ -135,7 +136,7 @@ public class MorphViewModelTests
     public void AddTrait_AddsToModelAndCollection()
     {
         var morph = new Morph();
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.AddTrait();
 
@@ -151,7 +152,7 @@ public class MorphViewModelTests
         {
             Traits = new List<EgoTrait> { new() { Name = "Trait 1" } }
         };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
         var traitVm = vm.Traits[0];
 
         vm.RemoveTrait(traitVm);
@@ -164,7 +165,7 @@ public class MorphViewModelTests
     public void AddWare_AddsToModelAndCollection()
     {
         var morph = new Morph();
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
 
         vm.AddWare();
 
@@ -180,7 +181,7 @@ public class MorphViewModelTests
         {
             Wares = new List<Ware> { new() { Name = "Ware 1" } }
         };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
         var wareVm = vm.Wares[0];
 
         vm.RemoveWare(wareVm);
@@ -216,7 +217,7 @@ public class MorphViewModelTests
     public void PropertyChanged_RaisedForName()
     {
         var morph = new Morph { Name = "Original" };
-        var vm = new MorphViewModel(morph);
+        var vm = new MorphViewModel(morph, new EgoManager());
         var raised = false;
         vm.PropertyChanged += (_, e) =>
         {

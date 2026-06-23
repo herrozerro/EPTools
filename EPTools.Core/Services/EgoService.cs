@@ -3,8 +3,7 @@ using EPTools.Core.Models.Ego;
 
 namespace EPTools.Core.Services;
 
-
-public class EgoService(IEpDataService dataService)
+public class EgoService(IEpDataService dataService) : IEgoService
 {
     private IEpDataService DataService { get; set; } = dataService;
 
@@ -27,10 +26,10 @@ public class EgoService(IEpDataService dataService)
 
         foreach (var skill in skills)
         {
-            SkillType skillType = skill.Name switch
+            SkillType skillType = skill switch
             {
-                { } s when s.Contains("know", StringComparison.OrdinalIgnoreCase) => SkillType.KnowledgeSkill,
-                { } s when s.Contains("exotic", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
+                { Know: true } => SkillType.KnowledgeSkill,
+                { Name: var n } when n.StartsWith("Exotic Skill", StringComparison.OrdinalIgnoreCase) => SkillType.ExoticSkill,
                 _ => SkillType.EgoSkill
             };
             newEgo.Skills.Add(new EgoSkill { Name = skill.Name, Rank = 0, Specialization = "", Aptitude = skill.Aptitude, SkillType = skillType });

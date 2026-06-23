@@ -1,8 +1,6 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Data.Core.Plugins;
 using System;
-using System.Linq;
 using Avalonia.Markup.Xaml;
 using EPTools.Core.Interfaces;
 using EPTools.Core.Services;
@@ -25,9 +23,6 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            // Avoid duplicate validations from both Avalonia and the CommunityToolkit.
-            DisableAvaloniaDataAnnotationValidation();
-
             // Set up dependency injection
             var services = new ServiceCollection();
             ConfigureServices(services);
@@ -49,24 +44,13 @@ public partial class App : Application
         services.AddSingleton<IUserDataStore, FileUserDataStore>();
         services.AddSingleton<IRandomizer, DefaultRandomizer>();
         services.AddSingleton<IEpDataService, EpDataService>();
-        services.AddSingleton<EgoService>();
-        services.AddSingleton<LifepathService>();
-        services.AddSingleton<EgoManager>();
+        services.AddSingleton<IEgoService, EgoService>();
+        services.AddSingleton<ILifepathService, LifepathService>();
+        services.AddSingleton<IEgoManager, EgoManager>();
 
         // ViewModels
         services.AddTransient<MainWindowViewModel>();
     }
 
-    private void DisableAvaloniaDataAnnotationValidation()
-    {
-        // Get an array of plugins to remove
-        var dataValidationPluginsToRemove =
-            BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
 
-        // remove each entry found
-        foreach (var plugin in dataValidationPluginsToRemove)
-        {
-            BindingPlugins.DataValidators.Remove(plugin);
-        }
-    }
 }

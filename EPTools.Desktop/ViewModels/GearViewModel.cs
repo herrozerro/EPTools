@@ -1,6 +1,7 @@
 using System;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
+using EPTools.Core.Interfaces;
 using EPTools.Core.Models.Ego;
 
 namespace EPTools.Desktop.ViewModels;
@@ -65,22 +66,18 @@ public partial class InventoryItemViewModel : ObservableObject
 public partial class InventoryCacheViewModel : ObservableObject
 {
     private readonly InventoryCache _model;
+    private readonly IEgoManager _egoManager;
 
-    public InventoryCacheViewModel(InventoryCache model)
+    public InventoryCacheViewModel(InventoryCache model, IEgoManager egoManager)
     {
         _model = model;
+        _egoManager = egoManager;
 
-        // Build inventory item view models
         foreach (var item in model.Inventory)
-        {
             Items.Add(new InventoryItemViewModel(item));
-        }
 
-        // Build morph view models
         foreach (var morph in model.Morphs)
-        {
-            Morphs.Add(new MorphViewModel(morph));
-        }
+            Morphs.Add(new MorphViewModel(morph, _egoManager));
     }
 
     public InventoryCache Model => _model;
@@ -96,25 +93,23 @@ public partial class InventoryCacheViewModel : ObservableObject
 
     public void AddItem(InventoryItem item)
     {
-        _model.Inventory.Add(item);
+        _egoManager.AddItemToCache(_model, item);
         Items.Add(new InventoryItemViewModel(item));
     }
 
     public void RemoveItem(InventoryItemViewModel itemVm)
     {
-        _model.Inventory.Remove(itemVm.Model);
+        _egoManager.RemoveItemFromCache(_model, itemVm.Model);
         Items.Remove(itemVm);
     }
 
-    public void AddMorph(Morph morph)
+    public void AddMorphViewModel(Morph morph)
     {
-        _model.Morphs.Add(morph);
-        Morphs.Add(new MorphViewModel(morph));
+        Morphs.Add(new MorphViewModel(morph, _egoManager));
     }
 
-    public void RemoveMorph(MorphViewModel morphVm)
+    public void RemoveMorphViewModel(MorphViewModel morphVm)
     {
-        _model.Morphs.Remove(morphVm.Model);
         Morphs.Remove(morphVm);
     }
 }

@@ -4,12 +4,14 @@
 @using EPTools.Blazor.Components.Dialogs
 @using EPTools.Blazor.Components
 @using EPTools.Core.Models.Ego
-@inject LifepathService LifepathService
-@inject EgoService EgoService
+@using EPTools.Core.Services
+@inject ILifepathService LifepathService
+@inject IEgoService EgoService
 @inject IJSRuntime JsRuntime
 @inject ILocalStorageService LocalStorage
 @inject ISnackbar Snackbar
 @inject IDialogService DialogService
+@inject IEgoManager EgoManager
 
 <MudButton Color="Color.Primary" @onclick="GenerateRandomCharacter">Generate Lifepath</MudButton>
 <MudButton Color="Color.Secondary" @onclick="DownloadText">Export</MudButton>
@@ -38,12 +40,12 @@
             <CharacterGear></CharacterGear>
         </MudTabPanel>
         <MudTabPanel Text="Traits" Icon="@Icons.Material.Filled.Portrait">
-            <CharacterTraits EgoTraits="@_egoModel.EgoTraits" />
+            <CharacterTraits />
         </MudTabPanel>
         @if(_egoModel.EgoTraits.Any(x=>x.Name.Contains("Psi", StringComparison.OrdinalIgnoreCase)))
         {
             <MudTabPanel Text="PSI" Icon="@Icons.Material.Filled.Coronavirus">
-                <CharacterPsi PsiModel="@_egoModel.Psi"/>
+                <CharacterPsi />
             </MudTabPanel>
         }
     </MudTabs>
@@ -152,11 +154,8 @@
     
     private void HandleIdentityAdded(Identity newIdentity)
     {
-        // ACTUAL LOGIC: Parent modifies the list
-        _egoModel.Identities.Add(newIdentity);
-        
-        // Force UI refresh (Blazor usually does this automatically for EventCallbacks)
-        StateHasChanged(); 
+        EgoManager.AddIdentity(_egoModel, newIdentity);
+        StateHasChanged();
     }
 
 }

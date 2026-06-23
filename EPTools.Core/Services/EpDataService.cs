@@ -1,6 +1,6 @@
 using EPTools.Core.Interfaces;
 using EPTools.Core.Models;
-using EPTools.Core.Models.EPDataModels;
+using EPTools.Core.Models.Data;
 using EPTools.Core.Models.LifePathGen;
 
 namespace EPTools.Core.Services;

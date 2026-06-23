@@ -1,8 +1,10 @@
 @using EPTools.Blazor.Components.Dialogs
+@using EPTools.Core.Models.Data
 @using EPTools.Core.Models.Ego
-@using EPTools.Core.Models.EPDataModels
+@using EPTools.Core.Services
 @inject IDialogService DialogService
 @inject ISnackbar Snackbar
+@inject IEgoManager EgoManager
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge" Class="pa-0">
     <MudGrid Spacing="4">
@@ -91,7 +93,7 @@
                         
                         <MudTd Style="text-align:right">
                              <MudMenu Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Info" Size="Size.Small" Dense="true">
-                                <ActivatorContent>
+                                <ActivatorContent Context="menuContext">
                                     <MudTooltip Text="Move to Cache">
                                         <MudIconButton Icon="@Icons.Material.Filled.ArrowForward" Color="Color.Info" Size="Size.Small" />
                                     </MudTooltip>
@@ -109,7 +111,7 @@
                                     else { <MudMenuItem Disabled="true">No Caches</MudMenuItem> }
                                 </ChildContent>
                             </MudMenu>
-                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => CurrentEgo.Inventory.Remove(context))" />
+                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Error" OnClick="@(() => EgoManager.RemoveInventoryItem(CurrentEgo, context))" />
                         </MudTd>
                     </RowTemplate>
                 </MudTable>
@@ -164,18 +166,44 @@
                                              <MudTooltip Text="Move to Local Inventory">
                                                 <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Color="Color.Success" OnClick="@(() => MoveToLocal(cache, item))" />
                                             </MudTooltip>
-                                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Default" OnClick="@(() => cache.Inventory.Remove(item))" />
+                                            <MudIconButton Icon="@Icons.Material.Filled.Delete" Size="Size.Small" Color="Color.Default" OnClick="@(() => EgoManager.RemoveItemFromCache(cache, item))" />
                                         </MudTd>
                                     </RowTemplate>
                                 </MudTable>
                                 
-                                @if(cache.Morphs.Any())
+                                @if(cache.Morphs.Any() || CurrentEgo.Morphs.Any())
                                 {
-                                    <MudText Typo="Typo.subtitle2" Class="mt-2">Stored Morphs</MudText>
-                                    <MudList Dense="true" T="string">
-                                        @foreach(var morph in cache.Morphs)
+                                    <div class="d-flex justify-space-between align-center mt-2 mb-1">
+                                        <MudText Typo="Typo.subtitle2">Stored Morphs</MudText>
+                                        @if (CurrentEgo.Morphs.Any())
                                         {
-                                            <MudListItem Icon="@Icons.Material.Filled.Person">@morph.Name (@morph.MorphType)</MudListItem>
+                                            <MudMenu StartIcon="@Icons.Material.Filled.PersonAdd" Label="Store Morph" Size="Size.Small" Color="Color.Secondary" Variant="Variant.Outlined">
+                                                @foreach (var m in CurrentEgo.Morphs)
+                                                {
+                                                    var morphToStore = m;
+                                                    <MudMenuItem OnClick="@(() => EgoManager.AddMorphToCache(CurrentEgo, morphToStore, cache))">
+                                                        @morphToStore.Name (@morphToStore.MorphType)
+                                                    </MudMenuItem>
+                                                }
+                                            </MudMenu>
+                                        }
+                                    </div>
+                                    <MudList Dense="true" T="string">
+                                        @foreach (var morph in cache.Morphs)
+                                        {
+                                            var storedMorph = morph;
+                                            <MudListItem>
+                                                <div class="d-flex justify-space-between align-center">
+                                                    <div class="d-flex align-center gap-1">
+                                                        <MudIcon Icon="@Icons.Material.Filled.Person" Size="Size.Small" />
+                                                        <MudText Typo="Typo.caption">@storedMorph.Name (@storedMorph.MorphType)</MudText>
+                                                    </div>
+                                                    <MudTooltip Text="Return to active morphs">
+                                                        <MudIconButton Icon="@Icons.Material.Filled.ArrowBack" Size="Size.Small" Color="Color.Success"
+                                                                       OnClick="@(() => EgoManager.RemoveMorphFromCache(CurrentEgo, storedMorph, cache))" />
+                                                    </MudTooltip>
+                                                </div>
+                                            </MudListItem>
                                         }
                                     </MudList>
                                 }
@@ -236,12 +264,12 @@
         // 3. Add to the correct location
         if (targetCache != null)
         {
-            targetCache.Inventory.Add(newItem);
+            EgoManager.AddItemToCache(targetCache, newItem);
             Snackbar.Add($"Added new item to {targetCache.Location}", Severity.Success);
         }
         else
         {
-            CurrentEgo.Inventory.Add(newItem);
+            EgoManager.AddInventoryItem(CurrentEgo, newItem);
             Snackbar.Add($"Added new item to inventory", Severity.Success);
         }
 
@@ -250,41 +278,23 @@
     
     private void AddCache()
     {
-        CurrentEgo.Caches.Add(new InventoryCache { Location = "New Cache Location" });
+        EgoManager.AddCache(CurrentEgo, "New Cache Location");
     }
 
     private void DeleteCache(InventoryCache cache)
     {
-        CurrentEgo.Caches.Remove(cache);
+        EgoManager.RemoveCache(CurrentEgo, cache);
     }
-    
+
     private void MoveToLocal(InventoryCache sourceCache, InventoryItem item)
     {
-        // 1. Remove from cache
-        sourceCache.Inventory.Remove(item);
-        
-        // 2. Add to local
-        item.Equipped = false; // Reset state when moving
-        item.Active = false;
-        CurrentEgo.Inventory.Add(item);
-        
-        // 3. Notify UI (Optional, but often needed for cross-list moves)
-        StateHasChanged(); 
+        EgoManager.MoveItemFromCache(CurrentEgo, item, sourceCache);
+        StateHasChanged();
     }
-    
+
     private void MoveToCache(InventoryItem item, InventoryCache targetCache)
     {
-        // 1. Remove from Local
-        CurrentEgo.Inventory.Remove(item);
-
-        // 2. Logic Reset (You can't "Equip" something that is sitting in a box 50 miles away)
-        item.Equipped = false;
-        item.Active = false;
-
-        // 3. Add to the specific target cache
-        targetCache.Inventory.Add(item);
-
-        // 4. Feedback
+        EgoManager.MoveItemToCache(CurrentEgo, item, targetCache);
         Snackbar.Add($"Moved {item.Name} to {targetCache.Location}", Severity.Success);
     }
 
@@ -311,13 +321,13 @@
             if (targetCache != null)
             {
                 // A. Add to the specific Cache (Right Column)
-                targetCache.Inventory.Add(newItem);
+                EgoManager.AddItemToCache(targetCache, newItem);
                 Snackbar.Add($"Added {selectedGear.Name} to {targetCache.Location}", Severity.Success);
             }
             else
             {
                 // B. Add to Local Inventory (Left Column)
-                CurrentEgo.Inventory.Add(newItem);
+                EgoManager.AddInventoryItem(CurrentEgo, newItem);
                 Snackbar.Add($"Added {selectedGear.Name} to Inventory", Severity.Success);
             }
         }

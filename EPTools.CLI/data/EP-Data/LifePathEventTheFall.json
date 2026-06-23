@@ -743,7 +743,7 @@
       [
         {
           "Name": "Mental Disorder",
-          "Type": "Trail",
+          "Type": "Trait",
           "Description": "PTSD",
           "Value": 1,
           "Weight": 0,
@@ -1130,7 +1130,7 @@
         },
         {
           "Name": "Async",
-          "Type": "forcedInterest",
+          "Type": "ForcedInterest",
           "Description": null,
           "Value": 10,
           "Weight": 0,

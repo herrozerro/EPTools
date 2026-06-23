@@ -8,7 +8,9 @@ public sealed class RollModifier
     public RollModifierType Type { get; set; }
     public int Value { get; set; }
     public bool IsActive { get; set; } = true;
-    public bool IsDerived { get; set; } = false;
+    // Null = manually added by player. Non-null = name of the trait/ware that created this modifier.
+    // Used by EgoManager to remove all modifiers from a source when that trait/ware is removed.
+    public string? Source { get; set; }
 }
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
