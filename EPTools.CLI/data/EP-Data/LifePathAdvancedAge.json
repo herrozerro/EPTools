@@ -123,7 +123,7 @@
       [
         {
           "Name": "No effect",
-          "Type": "",
+          "Type": "None",
           "Description": "No effect",
           "Value": 0,
           "Weight": 0,
